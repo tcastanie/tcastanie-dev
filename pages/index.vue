@@ -15,11 +15,15 @@
       <span class="i-mingcute-package-line mr-2 h-8 w-8 inline-flex align-bottom text-bego-0" />
       Je mets à disposition mes compétences de développeur senior et m'applique à assurer une modernité technique et des services web épurés.
     </p>
-    <p class="mb-6">
+    <p class="mb-8">
       <span class="i-mingcute-run-line mr-2 h-8 w-8 inline-flex align-bottom text-bego-0" /> Entre deux projets dev, sérieux ou non, j'aime courir des
       marathons et randonner autour de <span class="i-mingcute-triumphal-arch-line h-6 w-6 inline-flex align-sub" /> Montpellier
     </p>
-    <div class="align-center my-16 w-full flex flex-row items-center text-center">
+    <NuxtLink to="/contact" class="inline-flex items-center gap-x-2 border border-bego-0 rounded-md bg-transparent px-3 py-2 text-sm text-bego-0 font-medium hover:bg-bego-5/10">
+      <span class="i-mingcute-send-plane-line h-5 w-5" aria-hidden="true" />
+      <span>Contactez-moi !</span>
+    </NuxtLink>
+    <div class="align-center my-12 w-full flex flex-row items-center text-center">
       <div class="w-full flex border-t" />
       <div class="mx-3 flex whitespace-nowrap font-medium">
         <span class="i-mingcute-code-line h-6 w-6" />
@@ -46,7 +50,6 @@
 <script lang="ts" setup>
 const links = [
   { label: 'linkedin', href: 'https://www.linkedin.com/in/tcastanie', icon: 'i-mingcute-linkedin-line', blank: true },
-  { label: 'github', href: 'https://github.com/tcastanie', icon: 'i-mingcute-github-line', blank: true },
-  { label: 'mail', href: '/contact', icon: 'i-mingcute-mail-send-line' }
+  { label: 'github', href: 'https://github.com/tcastanie', icon: 'i-mingcute-github-line', blank: true }
 ]
 </script>

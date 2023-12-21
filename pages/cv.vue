@@ -1,16 +1,16 @@
 <template>
-  <div v-auto-animate class="relative mb-16">
+  <div v-auto-animate class="relative">
     <div v-if="!hackerzMode" class="overflow-hidden rounded-lg bg-bego-5/10 ring-1 ring-bego-0 divide-y-1 divide-bego-0">
       <div
         class="glitch tcastanie absolute right-0 top-0 mr-4 mt-5 h-20 w-20 cursor-pointer sm:mr-6 sm:mt-6"
         @click="switchToHackerzMode"
       />
       <div class="px-4 py-5 sm:p-6">
-        <div class="flex flex-col gap-x-12 sm:flex-row">
+        <div class="flex flex-col gap-x-12 pr-21 sm:flex-row sm:items-end">
           <h1 class="text-3xl/8 font-bold tracking-tight">
             Thibaut Castanié
           </h1>
-          <div class="mt-2 flex items-center gap-x-3">
+          <div class="mt-4 flex items-center gap-x-3 sm:mt-0">
             <div class="inline-flex">
               <span class="i-mingcute-location-2-line mr-1 h-6 w-6 align-bottom" /> Montpellier
             </div>
@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="mt-4 text-lg font-semibold">
-          Développeur web front-end
+          Développeur web front-end indépendant
         </div>
       </div>
       <div class="px-4 py-5 sm:p-6">
@@ -152,7 +152,7 @@
           <span class="i-logos-nuxt-icon h-10 w-10" title="Nuxt" />
           <span class="i-logos-javascript h-10 w-10" title="JavaScript" />
           <span class="i-logos-typescript-icon h-10 w-10" title="TypeScript" />
-          <span class="i-logos-unocss h-10 w-10" title="UnoCSS" />
+          <!-- <span class="i-logos-unocss h-10 w-10" title="UnoCSS" /> -->
           <span class="i-logos-tailwindcss-icon h-10 w-10" title="tailwind" />
           <span class="i-logos-git-icon h-10 w-10" title="git" />
           <span class="i-logos-jest h-10 w-10" title="Jest" />

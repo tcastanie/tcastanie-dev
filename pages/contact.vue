@@ -24,7 +24,7 @@
         </p>
         <p class="mt-1 text-base">
           <span>{{ contact.description }}</span>
-          <kbd v-if="contact.kbd" class="ml-1 rounded bg-bego-5 px-1 font-mono ring-1 ring-bego-0 ring-inset">
+          <kbd v-if="contact.kbd" class="ml-2 rounded bg-bego-5 px-1 font-sans ring-1 ring-bego-0 ring-inset">
             {{ contact.kbd }}
           </kbd>
         </p>
@@ -37,6 +37,6 @@
 const contacts = ref([
   { label: 'Malt', href: 'https://www.malt.fr/profile/tcastanie', icon: 'i-mingcute-laptop-2-line', description: 'Embauchez-moi pour vos projets web.' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/tcastanie', icon: 'i-mingcute-linkedin-line', description: 'Connectons-nous !' },
-  { label: 'Courriel', icon: 'i-mingcute-mail-line', description: 'Contactez-moi directement', kbd: 'contact@tcastanie.dev' }
+  { label: 'Courriel', href: 'mailto:contact@tcastanie.dev', icon: 'i-mingcute-mail-send-line', description: 'Contactez-moi directement', kbd: 'contact@tcastanie.dev' }
 ])
 </script>
