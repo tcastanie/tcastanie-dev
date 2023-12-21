@@ -16,7 +16,7 @@
           </li>
         </ul>
       </div>
-      <div class="flex items-center">
+      <div class="flex items-center text-right">
         <NuxtLink to="/" class="text-xl font-bold sm:text-2xl hover:text-bego-3">
           Thibaut Castanié
         </NuxtLink>
