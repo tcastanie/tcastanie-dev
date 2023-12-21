@@ -9,7 +9,7 @@
     </p>
     <p class="mb-6">
       <span class="i-mingcute-terminal-box-line mr-2 h-8 w-8 inline-flex align-bottom text-bego-0" />
-      J'ai huit ans d'XP en développement web front-end, principalement avec Vue <span class="i-logos-vue h-5 w-5 inline-flex align-sub" /> et Nuxt <span class="i-logos-nuxt-icon h-6 w-6 inline-flex align-sub" />
+      J'ai huit ans d'xp en développement web front-end, principalement avec Vue <span class="i-logos-vue h-5 w-5 inline-flex align-sub" /> et Nuxt <span class="i-logos-nuxt-icon h-6 w-6 inline-flex align-sub" />
     </p>
     <p class="mb-6">
       <span class="i-mingcute-package-line mr-2 h-8 w-8 inline-flex align-bottom text-bego-0" />
