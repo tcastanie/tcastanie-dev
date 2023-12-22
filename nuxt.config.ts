@@ -5,7 +5,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/eslint-module',
     '@unocss/nuxt',
-    '@formkit/auto-animate/nuxt'
+    '@formkit/auto-animate/nuxt',
+    '@nuxt/image'
   ],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
@@ -13,5 +14,9 @@ export default defineNuxtConfig({
   eslint: {
     lintOnStart: false
   },
-  css: ['@unocss/reset/tailwind.css']
+  css: ['@unocss/reset/tailwind.css'],
+  image: {
+    dir: 'assets',
+    quality: 95
+  }
 })

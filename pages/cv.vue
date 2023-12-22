@@ -74,7 +74,7 @@
           <div class="text-sm text-bego-2 uppercase">
             Fév 2021 -> Avr 2023
           </div>
-          Ingénieur étude et développement (Smile Montpellier)
+          Ingénieur étude et développement - Smile Montpellier (ESN)
         </div>
         <div class="mt-4">
           Développeur et intégrateur front-end de sites e-commerce complexes.
@@ -152,13 +152,13 @@
           <span class="i-logos-nuxt-icon h-10 w-10" title="Nuxt" />
           <span class="i-logos-javascript h-10 w-10" title="JavaScript" />
           <span class="i-logos-typescript-icon h-10 w-10" title="TypeScript" />
-          <!-- <span class="i-logos-unocss h-10 w-10" title="UnoCSS" /> -->
+          <span class="i-logos-unocss h-10 w-10" title="UnoCSS" />
           <span class="i-logos-tailwindcss-icon h-10 w-10" title="tailwind" />
           <span class="i-logos-git-icon h-10 w-10" title="git" />
           <span class="i-logos-jest h-10 w-10" title="Jest" />
           <span class="i-logos-jamstack-icon h-10 w-10" title="JAMStack / SSG" />
           <span class="i-logos-magento h-10 w-10" title="Magento" />
-          <span class="i-logos-cloudflare-icon h-10 w-10" title="Cloudflare" />
+          <!-- <span class="i-logos-cloudflare-icon h-10 w-10" title="Cloudflare" /> -->
         </div>
       </div>
     </div>
@@ -173,9 +173,6 @@
 </template>
 
 <script lang="ts" setup>
-import avatar from '~/assets/avatar_80.jpg'
-import coding from '~/assets/coding.gif'
-
 const hackerzMode = ref(false)
 const switchToHackerzMode = () => {
   hackerzMode.value = true
@@ -183,9 +180,11 @@ const switchToHackerzMode = () => {
 const switchToNormalMode = () => {
   hackerzMode.value = false
 }
-
-const bgAvatar = `url('${avatar}')`
-const bgCoding = `url('${coding}')`
+const img = useImage()
+const avatarUrl = img('/avatar.jpg', { width: 160, height: 160, quality: 95, format: 'webp' })
+const codingUrl = img('/coding.gif', { width: 80, height: 80, quality: 95, format: 'gif' })
+const bgAvatar = `url('${avatarUrl}')`
+const bgCoding = `url('${codingUrl}')`
 
 const links = [
   { label: 'linkedin', href: 'https://www.linkedin.com/in/tcastanie', icon: 'i-mingcute-linkedin-line' },
@@ -224,7 +223,7 @@ const links = [
 }
 
 .matrix,
-.matrix.before {
+.matrix:before {
   background-image: v-bind(bgCoding);
   background-size: auto;
 }

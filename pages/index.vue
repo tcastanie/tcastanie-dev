@@ -1,7 +1,14 @@
 <template>
   <div v-auto-animate class="text-lg">
     <h1 class="mb-12 flex items-center text-3xl/6 font-bold tracking-tight sm:text-4xl/8">
-      <img src="~/assets/avatar_56.jpg" alt="Thibaut Castanié" class="mr-4 h-14 w-14 rounded-full">
+      <NuxtImg
+        src="/avatar.jpg"
+        alt="Thibaut Castanié"
+        format="webp"
+        width="56"
+        height="56"
+        class="mr-4 rounded-full"
+      />
       <span>tcastanie</span>
     </h1>
     <p class="mb-8">
