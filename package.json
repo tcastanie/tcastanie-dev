@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@formkit/auto-animate": "0.8.1",
+    "@iconify-json/game-icons": "1.1.7",
     "@iconify-json/logos": "1.1.41",
     "@iconify-json/mingcute": "1.1.14",
     "@nuxt/devtools": "1.0.6",

@@ -37,7 +37,19 @@ export default defineNuxtConfig({
         '/_ipx/f_gif&q_95&s_90x200/alien.gif',
         '/_ipx/f_gif&q_95&s_180x400/alien.gif',
         '/_ipx/f_gif&q_95&s_416x86/text.gif',
-        '/_ipx/f_gif&q_95&s_208x43/text.gif'
+        '/_ipx/f_gif&q_95&s_208x43/text.gif',
+        '/_ipx/f_gif&q_95&s_60x60/mail.gif',
+        '/_ipx/f_gif&q_95&s_120x120/mail.gif',
+        '/_ipx/f_webp&q_95&s_88x31/valid-html40.png',
+        '/_ipx/f_webp&q_95&s_176x62/valid-html40.png',
+        '/_ipx/f_webp&q_95&s_88x31/valid-css2.png',
+        '/_ipx/f_webp&q_95&s_176x62/valid-css2.png',
+        '/_ipx/f_gif&q_95&s_141x52/contact.gif',
+        '/_ipx/f_gif&q_95&s_282x104/contact.gif',
+        '/_ipx/f_gif&q_95&s_107x35/email.gif',
+        '/_ipx/f_gif&q_95&s_214x70/email.gif',
+        '/_ipx/f_gif&q_95&s_575x10/bluline.gif',
+        '/_ipx/f_gif&q_95&s_1150x20/bluline.gif'
       ]
     }
   }

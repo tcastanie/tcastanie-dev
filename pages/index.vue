@@ -44,13 +44,22 @@
       <span class="i-mingcute-send-plane-line h-5 w-5" aria-hidden="true" />
       <span>Contactez-moi !</span>
     </NuxtLink>
-    <div class="align-center my-12 w-full flex flex-row items-center text-center">
+    <div v-if="!shitMode" class="align-center my-12 w-full flex flex-row items-center text-center">
       <div class="w-full flex border-t" />
       <div class="mx-3 flex whitespace-nowrap font-medium">
         <span class="i-mingcute-code-line h-6 w-6" :class="shitMode ? 'animate-spin' : ''" />
       </div>
       <div class="w-full flex border-t" />
     </div>
+    <NuxtImg
+      v-else
+      src="/bluline.gif"
+      alt="separator"
+      format="gif"
+      width="575"
+      height="10"
+      class="my-14"
+    />
     <div class="flex items-center justify-center gap-x-3">
       <NuxtLink
         v-for="link in links"
