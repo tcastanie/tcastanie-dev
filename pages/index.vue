@@ -51,10 +51,34 @@
         <span :class="link.icon" class="h-5 w-5" aria-hidden="true" />
       </NuxtLink>
     </div>
+    <div v-if="shitMode" class="mt-16 flex flex-wrap items-center justify-center gap-x-12">
+      <NuxtImg
+        src="/earth.gif"
+        alt="stars"
+        format="gif"
+        width="36"
+        height="36"
+      />
+      <NuxtImg
+        src="/alien.gif"
+        alt="stars"
+        format="gif"
+        width="90"
+        height="200"
+      />
+      <NuxtImg
+        src="/ufo.gif"
+        alt="stars"
+        format="gif"
+        width="200"
+        height="43"
+      />
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+const shitMode = useState('shitMode')
 const links = [
   { label: 'linkedin', href: 'https://www.linkedin.com/in/tcastanie', icon: 'i-mingcute-linkedin-line', blank: true },
   { label: 'github', href: 'https://github.com/tcastanie', icon: 'i-mingcute-github-line', blank: true }

@@ -28,7 +28,7 @@
 <script lang="ts" setup>
 const links = [
   { label: 'CV', href: '/cv', icon: 'i-mingcute-profile-line' },
-  // { label: 'Projets', href: '/projects', icon: 'i-mingcute-folder-more-line' },
+  { label: 'Projets', href: '/projects', icon: 'i-mingcute-folder-more-line' },
   { label: 'Contact', href: '/contact', icon: 'i-mingcute-send-plane-line' }
 ]
 </script>
