@@ -169,6 +169,10 @@
 </template>
 
 <script lang="ts" setup>
+useHead({
+  titleTemplate: 'CV %separator %siteName'
+})
+
 const hackerzMode = ref(false)
 const switchToHackerzMode = () => {
   hackerzMode.value = true

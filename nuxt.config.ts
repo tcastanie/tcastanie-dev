@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   },
   site: {
     url: 'https://tcastanie.dev',
-    name: 'tcastanie.dev',
+    name: 'Thibaut Castanié',
     description: 'Site web personnel de Thibaut Castanié, développeur web indépendant spécialisé en JavaScript, Vue et Nuxt',
     defaultLocale: 'fr'
   },
