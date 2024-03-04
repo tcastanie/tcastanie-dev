@@ -26,9 +26,6 @@ export default defineNuxtConfig({
     description: 'Site web personnel de Thibaut Castanié, développeur web indépendant spécialisé en JavaScript, Vue et Nuxt',
     defaultLocale: 'fr'
   },
-  seo: {
-    redirectToCanonicalSiteUrl: true
-  },
   nitro: {
     prerender: {
       routes: [
