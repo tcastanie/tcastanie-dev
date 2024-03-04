@@ -42,10 +42,6 @@
             class="i-logos-nuxt-icon h-4 w-4 inline-flex align-sub"
           />, Tailwind <span
             class="i-logos-tailwindcss-icon h-4 w-4 inline-flex align-sub"
-          />, Jest <span
-            class="i-logos-jest h-4 w-4 inline-flex align-sub"
-          />, Apollo GraphQL <span
-            class="i-logos-graphql h-4 w-4 inline-flex align-sub"
           /> et Directus.
         </div>
       </div>
@@ -62,8 +58,8 @@
         <div class="mt-4">
           <ul class="list-disc list-inside">
             <li>
-              Création d'un site web de réservations de gîtes. Développement complet du front full-static, déploiement
-              du back-office sur mesure via un CMS et paiements. Accompagnement, aide à la contribution et support
+              Création d'un site web de réservations de gîtes, de cours de dressage et d'achat de chiens de troupeau. Développement complet du front full-static, déploiement
+              du back-office sur mesure via le CMS Directus et paiements. Accompagnement, aide à la contribution et support
               continu.
             </li>
             <li>Formation continue aux dernières versions des outils de l'écosystème Nuxt et Vue</li>

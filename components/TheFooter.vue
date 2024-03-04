@@ -39,6 +39,8 @@
       ref="sg1"
       src="/sg1.mp3"
       controls
+      autoplay
+      loop
       volume="0.4"
       class="fixed bottom-20 left-0 mx-auto lg:bottom-0"
     />

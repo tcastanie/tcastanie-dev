@@ -1,22 +1,39 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <div>
+    <TheHeader />
+    <main :class="shitMode ? 'min-h-[calc(100vh-8.5rem)]' : 'min-h-[calc(100vh-6rem)]'">
+      <div class="mx-auto max-w-2xl px-4 pb-32 pt-8 lg:px-8 sm:px-6 sm:pt-16">
+        <NuxtPage />
+      </div>
+    </main>
+    <TheFooter />
+  </div>
 </template>
 
 <script setup lang="ts">
 const shitMode = useState('shitMode', () => false)
+
 const img = useImage()
 const starsImg = img('/stars.gif', { width: 304, height: 234, quality: 95, format: 'gif' })
 const rocketImg = img('/rocket.gif', { width: 94, height: 50, quality: 95, format: 'gif' })
 
-const htmlAttrs = computed(() => ({
-  lang: 'fr',
-  class: 'bg-zinc-800 text-white',
-  style: shitMode.value ? `background-image: url("${starsImg}"); background-repeat: repeat; cursor: url("${rocketImg}"), auto` : ''
-}))
+watch(shitMode, (newValue) => {
+  if (newValue) {
+    document.documentElement.style.backgroundImage = `url("${starsImg}")`
+    document.documentElement.style.backgroundRepeat = 'repeat'
+    document.documentElement.style.cursor = `url("${rocketImg}"), auto`
+  } else {
+    document.documentElement.style.backgroundImage = ''
+    document.documentElement.style.backgroundRepeat = ''
+    document.documentElement.style.cursor = ''
+  }
+})
+
 useHead({
-  htmlAttrs,
+  htmlAttrs: {
+    lang: 'fr',
+    class: 'bg-zinc-800 text-white'
+  },
   link: [
     {
       rel: 'icon',
@@ -40,13 +57,6 @@ useHead({
       href: '/site.webmanifest'
     }
   ]
-})
-useSeoMeta({
-  title: 'tcastanie.dev',
-  ogTitle: 'tcastanie.dev',
-  description: 'Site web personnel de Thibaut Castanié, développeur web indépendant spécialisé en JavaScript.',
-  ogDescription: 'Site web personnel de Thibaut Castanié, développeur web indépendant spécialisé en JavaScript.',
-  ogUrl: 'https://tcastanie.dev'
 })
 </script>
 

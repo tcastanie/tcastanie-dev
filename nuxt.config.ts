@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@unocss/nuxt',
     '@formkit/auto-animate/nuxt',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/seo'
   ],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
@@ -18,6 +19,12 @@ export default defineNuxtConfig({
   image: {
     dir: 'assets',
     quality: 95
+  },
+  site: {
+    url: 'https://tcastanie.dev',
+    name: 'tcastanie.dev',
+    description: 'Site web personnel de Thibaut Castanié, développeur web indépendant spécialisé en JavaScript, Vue et Nuxt',
+    defaultLocale: 'fr'
   },
   nitro: {
     prerender: {

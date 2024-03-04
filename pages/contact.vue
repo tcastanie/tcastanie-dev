@@ -23,28 +23,27 @@
           target="_blank"
           class="focus:outline-none"
         >
-          <span class="absolute inset-0" aria-hidden="true" />
+          <div class="mb-6 flex">
+            <span v-if="!shitMode || contact.label !== 'Courriel'" class="h-10 w-10 text-bego-0" :class="[{ 'cursor-pointer': contact.href}, contact.icon]" />
+            <NuxtImg
+              v-if="shitMode && contact.label === 'Courriel'"
+              src="/mail.gif"
+              alt="mail"
+              format="gif"
+              width="60"
+              height="60"
+            />
+          </div>
+          <p class="text-lg font-semibold">
+            {{ contact.label }}
+          </p>
+          <p class="mt-1 text-base">
+            <span>{{ contact.description }}</span>
+            <kbd v-if="contact.kbd" class="ml-2 rounded bg-bego-5 px-1 font-sans ring-1 ring-bego-0 ring-inset">
+              {{ contact.kbd }}
+            </kbd>
+          </p>
         </NuxtLink>
-        <div class="mb-6 flex">
-          <span v-if="!shitMode || contact.label !== 'Courriel'" class="h-10 w-10 text-bego-0" :class="[{ 'cursor-pointer': contact.href}, contact.icon]" />
-          <NuxtImg
-            v-if="shitMode && contact.label === 'Courriel'"
-            src="/mail.gif"
-            alt="mail"
-            format="gif"
-            width="60"
-            height="60"
-          />
-        </div>
-        <p class="text-lg font-semibold">
-          {{ contact.label }}
-        </p>
-        <p class="mt-1 text-base">
-          <span>{{ contact.description }}</span>
-          <kbd v-if="contact.kbd" class="ml-2 rounded bg-bego-5 px-1 font-sans ring-1 ring-bego-0 ring-inset">
-            {{ contact.kbd }}
-          </kbd>
-        </p>
       </div>
     </div>
     <NuxtImg
