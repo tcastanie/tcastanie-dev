@@ -1,7 +1,8 @@
 <template>
   <header class="w-full">
-    <div class="mx-auto h-16 max-w-7xl flex items-center justify-between px-4 lg:px-8 sm:px-6">
-      <div class="flex items-center gap-1.5 lg:flex-1">
+    <div class="mx-auto max-w-7xl flex items-center justify-between px-4 lg:px-8 sm:px-6">
+      <ThePlanet class="w-32 h-32" />
+      <div class="flex items-center gap-1.5">
         <ul class="flex items-center gap-x-8">
           <li v-for="link in links" :key="link.label">
             <NuxtLink

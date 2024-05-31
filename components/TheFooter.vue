@@ -28,7 +28,7 @@
     >
       CC BY-NC-SA 4.0
     </NuxtLink>
-    <span>© 2023 tcastanie.dev</span>
+    <span>© {{ currentYear }} tcastanie.dev</span>
     <span
       class="i-game-icons-star-swirl ml-2 h-5 w-5 inline-flex cursor-pointer p-1 align-bottom hover-animate-ping hover:text-bego-0"
       :class="shitMode ? 'animate-spin text-bego-0' : ''"
@@ -48,6 +48,8 @@
 </template>
 
 <script lang="ts" setup>
+const currentYear = new Date().getFullYear()
+
 const shitMode = useState('shitMode')
 const toggleShitMode = () => {
   shitMode.value = !shitMode.value
