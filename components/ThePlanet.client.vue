@@ -24,7 +24,6 @@ onMounted(async () => {
     },
     onDragEnd: function () {
       isSpinning = true
-      toggleShitMode()
     }
   })
   // sphere
