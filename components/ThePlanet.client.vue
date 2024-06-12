@@ -1,5 +1,5 @@
 <template>
-  <canvas class="zdog cursor-move" width="128" height="128" />
+  <canvas class="zdog cursor-[url(/rocket.gif),_pointer]" width="128" height="128" />
 </template>
 
 <script lang="ts" setup>
