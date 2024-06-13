@@ -1,6 +1,10 @@
 <template>
   <div class="lg:-mx-48 md:-mx-12 xl:-mx-68">
-    <pre class="overflow-auto whitespace-pre-wrap break-words rounded-lg p-8" style="background-color:#282A36;color:#F8F8F2" tabindex="0"><code><span><span style="color:#6272A4">// CV tcastanie</span></span>
+    <pre
+      class="overflow-auto whitespace-pre-wrap break-words rounded-lg p-8"
+      style="background-color:#282A36;color:#F8F8F2"
+      tabindex="0"
+    ><code><span><span style="color:#6272A4">// CV tcastanie</span></span>
 <span />
 <span><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Link</span><span style="color:#F8F8F2"> {</span></span>
 <span><span style="color:#FF79C6">  constructor</span><span style="color:#F8F8F2"> (</span><span style="color:#FFB86C;font-style:italic">name</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">url</span><span style="color:#F8F8F2">) {</span></span>

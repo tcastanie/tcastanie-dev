@@ -1,6 +1,9 @@
 <template>
   <div v-auto-animate>
-    <div v-if="shitMode" class="mb-16 flex items-center justify-around">
+    <div
+      v-if="shitMode"
+      class="mb-16 flex items-center justify-around"
+    >
       <NuxtImg
         src="/cmcdconstruction.gif"
         alt="building"
@@ -52,7 +55,11 @@
           <span>{{ project.date }}</span>
         </p>
         <div class="mt-6 flex gap-x-3 text-xs">
-          <span v-for="skill of project.skills" :key="skill" class="rounded-md bg-bego-5 px-2 py-1">{{ skill }}</span>
+          <span
+            v-for="skill of project.skills"
+            :key="skill"
+            class="rounded-md bg-bego-5 px-2 py-1"
+          >{{ skill }}</span>
         </div>
         <div class="mt-6">
           <div
@@ -60,7 +67,10 @@
             :key="link.label"
             class="flex"
           >
-            <span :class="link.icon" class="mr-2 h-5 w-5" />
+            <span
+              :class="link.icon"
+              class="mr-2 h-5 w-5"
+            />
             <NuxtLink
               :to="link.href"
               rel="noopener noreferrer"
@@ -73,10 +83,16 @@
         </div>
       </div>
     </div>
-    <div v-if="!shitMode" class="mt-16 text-center text-xl font-italic opacity-50">
+    <div
+      v-if="!shitMode"
+      class="mt-16 text-center text-xl font-italic opacity-50"
+    >
       &lt;!-- 🚧🚧🏗️🚧🚧 -->
     </div>
-    <div v-if="shitMode" class="mt-16 flex justify-center gap-x-12">
+    <div
+      v-if="shitMode"
+      class="mt-16 flex justify-center gap-x-12"
+    >
       <NuxtImg
         v-for="i in 3"
         :key="i"
@@ -103,19 +119,19 @@ const projects = [
       {
         label: 'Website',
         href: 'https://apod.tcastanie.dev/',
-        icon: 'i-mingcute-external-link-line'
+        icon: 'i-mingcute-external-link-line',
       },
       {
         label: 'Github',
         href: 'https://github.com/tcastanie/another-apod-viewer',
-        icon: 'i-mingcute-github-line'
+        icon: 'i-mingcute-github-line',
       },
       {
         label: 'NASA APOD',
         href: 'https://apod.nasa.gov/',
-        icon: 'i-mingcute-full-moon-line'
-      }
-    ]
-  }
+        icon: 'i-mingcute-full-moon-line',
+      },
+    ],
+  },
 ]
 </script>

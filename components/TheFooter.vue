@@ -1,5 +1,8 @@
 <template>
-  <footer class="text-center text-xs" :class="shitMode ? 'h-16' : 'h-8'">
+  <footer
+    class="text-center text-xs"
+    :class="shitMode ? 'h-16' : 'h-8'"
+  >
     <div
       v-if="shitMode"
       class="mb-2 flex items-center justify-center gap-x-3"

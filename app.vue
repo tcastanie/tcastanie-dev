@@ -22,7 +22,8 @@ watch(shitMode, (newValue) => {
     document.documentElement.style.backgroundImage = `url("${starsImg}")`
     document.documentElement.style.backgroundRepeat = 'repeat'
     document.documentElement.style.cursor = `url("${rocketImg}"), auto`
-  } else {
+  }
+  else {
     document.documentElement.style.backgroundImage = ''
     document.documentElement.style.backgroundRepeat = ''
     document.documentElement.style.cursor = ''
@@ -32,31 +33,31 @@ watch(shitMode, (newValue) => {
 useHead({
   htmlAttrs: {
     lang: 'fr',
-    class: 'bg-zinc-800 text-white'
+    class: 'bg-zinc-800 text-white',
   },
   link: [
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      href: '/favicon-32x32.png'
+      href: '/favicon-32x32.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      href: '/favicon-16x16.png'
+      href: '/favicon-16x16.png',
     },
     {
       rel: 'apple-touch-icon',
       sizes: '180x180',
-      href: '/apple-touch-icon.png'
+      href: '/apple-touch-icon.png',
     },
     {
       rel: 'manifest',
-      href: '/site.webmanifest'
-    }
-  ]
+      href: '/site.webmanifest',
+    },
+  ],
 })
 </script>
 

@@ -1,9 +1,13 @@
 <template>
-  <canvas class="zdog cursor-[url(/rocket.gif),_pointer]" width="128" height="128" />
+  <canvas
+    class="zdog cursor-[url(/rocket.gif),_pointer]"
+    width="128"
+    height="128"
+  />
 </template>
 
 <script lang="ts" setup>
-import { TAU, Illustration, Shape, Anchor, Ellipse } from 'zdog'
+import { TAU, Illustration, Shape, Anchor } from 'zdog'
 
 const shitMode = useState('shitMode')
 const toggleShitMode = () => {
@@ -24,13 +28,13 @@ onMounted(async () => {
     },
     onDragEnd: function () {
       isSpinning = true
-    }
+    },
   })
   // sphere
   const sphere = new Shape({
     addTo: illo,
     stroke: 80,
-    color: '#FF7777'
+    color: '#FF7777',
   })
   // ring
   const nbParts = 32
@@ -38,23 +42,22 @@ onMounted(async () => {
   for (let i = 0; i < nbParts; i++) {
     const anchor = new Anchor({
       addTo: sphere,
-      rotate: { y: TAU*(i/nbParts), x: TAU / 18 }
+      rotate: { y: TAU * (i / nbParts), x: TAU / 18 },
     })
     new Shape({
       addTo: anchor,
-      path: [{ z: -(sizeParts/2) }, { z: sizeParts/2 }],
+      path: [{ z: -(sizeParts / 2) }, { z: sizeParts / 2 }],
       translate: { x: 54, y: 0, z: 0 },
       stroke: 14,
-      color: '#C14777'
+      color: '#C14777',
     })
   }
 
-  function animate () {
+  function animate() {
     illo.rotate.y += isSpinning ? 0.02 : 0
     illo.updateRenderGraph()
     requestAnimationFrame(animate)
   }
   animate()
 })
-
 </script>

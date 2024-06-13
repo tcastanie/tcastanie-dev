@@ -3,7 +3,7 @@ import { defineConfig, presetWind, presetIcons } from 'unocss'
 export default defineConfig({
   presets: [
     presetIcons(),
-    presetWind()
+    presetWind(),
   ],
   theme: {
     colors: {
@@ -14,8 +14,8 @@ export default defineConfig({
         2: '#E05F77',
         3: '#D15377',
         4: '#C14777',
-        5: '#B23C77'
-      }
-    }
-  }
+        5: '#B23C77',
+      },
+    },
+  },
 })

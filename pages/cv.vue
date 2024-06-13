@@ -1,6 +1,12 @@
 <template>
-  <div v-auto-animate class="relative">
-    <div v-if="!hackerzMode" class="overflow-hidden rounded-lg bg-bego-5/10 ring-1 ring-bego-0 divide-y-1 divide-bego-0">
+  <div
+    v-auto-animate
+    class="relative"
+  >
+    <div
+      v-if="!hackerzMode"
+      class="overflow-hidden rounded-lg bg-bego-5/10 ring-1 ring-bego-0 divide-y-1 divide-bego-0"
+    >
       <div
         class="glitch tcastanie absolute right-0 top-0 mr-4 mt-5 h-20 w-20 cursor-pointer sm:mr-6 sm:mt-6"
         @click="switchToHackerzMode"
@@ -25,7 +31,11 @@
               noreferrer
               type="button"
             >
-              <span :class="link.icon" class="h-6 w-6" aria-hidden="true" />
+              <span
+                :class="link.icon"
+                class="h-6 w-6"
+                aria-hidden="true"
+              />
             </a>
           </div>
         </div>
@@ -50,7 +60,11 @@
           <div class="text-sm text-bego-2">
             <span class="uppercase">Sept. 2023 -> </span>
             <div class="inline-block w-fit">
-              <pre class="p-1" style="background-color:#282A36;color:#F8F8F2" tabindex="0"><code><span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#50FA7B"> Date</span><span style="color:#F8F8F2">()</span></span></code></pre>
+              <pre
+                class="p-1"
+                style="background-color:#282A36;color:#F8F8F2"
+                tabindex="0"
+              ><code><span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#50FA7B"> Date</span><span style="color:#F8F8F2">()</span></span></code></pre>
             </div>
           </div>
           Développeur web freelance
@@ -144,17 +158,50 @@
       </div>
       <div class="px-4 py-5 sm:p-6">
         <div class="flex flex-wrap items-center justify-center gap-3">
-          <span class="i-logos-vue h-10 w-10" title="Vue" />
-          <span class="i-logos-nuxt-icon h-10 w-10" title="Nuxt" />
-          <span class="i-logos-javascript h-10 w-10" title="JavaScript" />
-          <span class="i-logos-typescript-icon h-10 w-10" title="TypeScript" />
-          <span class="i-logos-unocss h-10 w-10" title="UnoCSS" />
-          <span class="i-logos-tailwindcss-icon h-10 w-10" title="tailwind" />
-          <span class="i-logos-git-icon h-10 w-10" title="git" />
-          <span class="i-logos-jest h-10 w-10" title="Jest" />
-          <span class="i-logos-jamstack-icon h-10 w-10" title="JAMStack / SSG" />
-          <span class="i-logos-magento h-10 w-10" title="Magento" />
-          <!-- <span class="i-logos-cloudflare-icon h-10 w-10" title="Cloudflare" /> -->
+          <span
+            class="i-logos-vue h-10 w-10"
+            title="Vue"
+          />
+          <span
+            class="i-logos-nuxt-icon h-10 w-10"
+            title="Nuxt"
+          />
+          <span
+            class="i-logos-javascript h-10 w-10"
+            title="JavaScript"
+          />
+          <span
+            class="i-logos-typescript-icon h-10 w-10"
+            title="TypeScript"
+          />
+          <span
+            class="i-logos-unocss h-10 w-10"
+            title="UnoCSS"
+          />
+          <span
+            class="i-logos-tailwindcss-icon h-10 w-10"
+            title="tailwind"
+          />
+          <span
+            class="i-logos-git-icon h-10 w-10"
+            title="git"
+          />
+          <span
+            class="i-logos-jest h-10 w-10"
+            title="Jest"
+          />
+          <span
+            class="i-logos-jamstack-icon h-10 w-10"
+            title="JAMStack / SSG"
+          />
+          <!-- <span
+            class="i-logos-magento h-10 w-10"
+            title="Magento"
+          /> -->
+          <span
+            class="i-logos-cloudflare-icon h-10 w-10"
+            title="Cloudflare"
+          />
         </div>
       </div>
     </div>
@@ -170,7 +217,7 @@
 
 <script lang="ts" setup>
 useHead({
-  titleTemplate: 'CV %separator %siteName'
+  titleTemplate: 'CV %separator %siteName',
 })
 
 const hackerzMode = ref(false)
@@ -188,7 +235,7 @@ const bgCoding = `url('${codingUrl}')`
 
 const links = [
   { label: 'linkedin', href: 'https://www.linkedin.com/in/tcastanie', icon: 'i-mingcute-linkedin-line' },
-  { label: 'github', href: 'https://github.com/tcastanie', icon: 'i-mingcute-github-line' }
+  { label: 'github', href: 'https://github.com/tcastanie', icon: 'i-mingcute-github-line' },
 ]
 </script>
 

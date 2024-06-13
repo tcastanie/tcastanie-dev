@@ -6,25 +6,32 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@formkit/auto-animate/nuxt',
     '@nuxt/image',
-    '@nuxtjs/seo'
+    '@nuxtjs/seo',
+    '@nuxt/eslint',
   ],
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
   css: ['@unocss/reset/tailwind.css'],
   image: {
     dir: 'assets',
-    quality: 95
+    quality: 95,
+  },
+  eslint: {
+    config: {
+      stylistic: true,
+    },
   },
   site: {
     url: 'https://tcastanie.dev',
     name: 'Thibaut Castanié',
     description: 'Site web personnel de Thibaut Castanié, développeur web indépendant spécialisé en JavaScript, Vue et Nuxt',
-    defaultLocale: 'fr'
+    defaultLocale: 'fr',
   },
   nitro: {
     prerender: {
       routes: [
+        '/',
         '/_ipx/f_gif&q_95&s_200x43/ufo.gif',
         '/_ipx/f_gif&q_95&s_400x86/ufo.gif',
         '/_ipx/f_gif&q_95&s_36x36/earth.gif',
@@ -52,8 +59,8 @@ export default defineNuxtConfig({
         '/_ipx/f_gif&q_95&s_107x35/email.gif',
         '/_ipx/f_gif&q_95&s_214x70/email.gif',
         '/_ipx/f_gif&q_95&s_575x10/bluline.gif',
-        '/_ipx/f_gif&q_95&s_1150x20/bluline.gif'
-      ]
-    }
-  }
+        '/_ipx/f_gif&q_95&s_1150x20/bluline.gif',
+      ],
+    },
+  },
 })
