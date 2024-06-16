@@ -44,11 +44,12 @@
         <p class="text-lg font-semibold">
           {{ project.title }}
         </p>
-        <p class="text-base text-lg tracking-tight opacity-50">
+        <p class="text-base text-lg tracking-tight opacity-75">
           <span>{{ project.subtitle }}</span>
         </p>
         <p class="mt-6 text-base">
-          <span>{{ project.description }}</span>
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <span v-html="project.description" />
         </p>
         <p class="mt-6 text-sm">
           <span class="i-mingcute-calendar-line mr-2 h-5 w-5 inline-flex align-text-bottom text-bego-0" />
@@ -112,13 +113,13 @@ const projects = [
   {
     title: 'Another APOD viewer',
     subtitle: 'Simple appli de visualisation de l\'image du jour de la NASA',
-    description: 'Petit projet personnel pour améliorer mes compétences sur Vue, son écosystème, et tout le reste. Principalement Vue 3 et la Composition API, Vite, Pinia, Vitest, Github CI... tout cela prêt à l\'emploi dans un environnement convivial pour les développeurs.',
-    date: 'Août 2022',
-    skills: ['Vue 3', 'Vite', 'Pinia', 'Vitest'],
+    description: 'Petit projet personnel pour améliorer mes compétences sur Vue, son écosystème, et tout le reste. Principalement Vue 3 et la Composition API, Vite, Pinia, Vitest, Github CI... tout cela prêt à l\'emploi dans un environnement convivial pour les développeurs.<br/>v2 : Réusinage complet avec Nuxt, Nuxt UI et un proxy pour l\'API de la NASA.',
+    date: 'v1 : août 2022, v2 : juin 2024',
+    skills: ['Nuxt', 'Nuxt UI', 'Vue 3', 'Vite', 'Pinia', 'Vitest'],
     links: [
       {
         label: 'Website',
-        href: 'https://apod.tcastanie.dev/',
+        href: 'https://apod.tcastanie.dev',
         icon: 'i-mingcute-external-link-line',
       },
       {
@@ -128,7 +129,7 @@ const projects = [
       },
       {
         label: 'NASA APOD',
-        href: 'https://apod.nasa.gov/',
+        href: 'https://apod.nasa.gov',
         icon: 'i-mingcute-full-moon-line',
       },
     ],
