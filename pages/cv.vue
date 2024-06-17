@@ -1,3 +1,30 @@
+<script lang="ts" setup>
+useHead({ titleTemplate: 'CV %separator %siteName' })
+
+const hackerzMode = ref(false)
+const toggleHackerzMode = () => {
+  hackerzMode.value = !hackerzMode.value
+}
+const img = useImage()
+const avatarUrl = img('/avatar.jpg', { width: 160, height: 160, quality: 95, format: 'webp' })
+const codingUrl = img('/coding.gif', { width: 80, height: 80, quality: 95, format: 'gif' })
+const bgAvatar = `url('${avatarUrl}')`
+const bgCoding = `url('${codingUrl}')`
+
+const links = [
+  {
+    label: 'linkedin',
+    href: 'https://www.linkedin.com/in/tcastanie',
+    icon: 'i-mingcute-linkedin-line',
+  },
+  {
+    label: 'github',
+    href: 'https://github.com/tcastanie',
+    icon: 'i-mingcute-github-line',
+  },
+]
+</script>
+
 <template>
   <div
     v-auto-animate
@@ -9,7 +36,7 @@
     >
       <div
         class="glitch tcastanie absolute right-0 top-0 mr-4 mt-5 h-20 w-20 cursor-pointer sm:mr-6 sm:mt-6"
-        @click="switchToHackerzMode"
+        @click="toggleHackerzMode"
       />
       <div class="px-4 py-5 sm:p-6">
         <div class="flex flex-col gap-x-12 pr-21 sm:flex-row sm:items-end">
@@ -31,11 +58,7 @@
               noreferrer
               type="button"
             >
-              <span
-                :class="link.icon"
-                class="h-6 w-6"
-                aria-hidden="true"
-              />
+              <span :class="link.icon" class="h-6 w-6" aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -46,13 +69,7 @@
       <div class="px-4 py-5 sm:p-6">
         <div class="mb-2">
           Fort de 8 ans d'expériences professionnelles dans le développement web front-end, ainsi que la création &
-          gestion d'une entreprise, je me suis spécialisé dans une gamme d'outils incluant Vue.js <span
-            class="i-logos-vue h-4 w-4 inline-flex align-sub"
-          />, Nuxt <span
-            class="i-logos-nuxt-icon h-4 w-4 inline-flex align-sub"
-          />, Tailwind <span
-            class="i-logos-tailwindcss-icon h-4 w-4 inline-flex align-sub"
-          /> et Directus.
+          gestion d'une entreprise, je me suis spécialisé dans une gamme d'outils incluant Vue.js <span class="i-logos-vue h-4 w-4 inline-flex align-sub" />, Nuxt <span class="i-logos-nuxt-icon h-4 w-4 inline-flex align-sub" />, Tailwind <span class="i-logos-tailwindcss-icon h-4 w-4 inline-flex align-sub" /> et Directus <span class="i-simple-icons-directus h-4 w-4 inline-flex align-sub" />
         </div>
       </div>
       <div class="px-4 py-5 sm:p-6">
@@ -60,11 +77,7 @@
           <div class="text-sm text-bego-2">
             <span class="uppercase">Sept. 2023 -> </span>
             <div class="inline-block w-fit">
-              <pre
-                class="p-1"
-                style="background-color:#282A36;color:#F8F8F2"
-                tabindex="0"
-              ><code><span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#50FA7B"> Date</span><span style="color:#F8F8F2">()</span></span></code></pre>
+              <pre class="p-1" style="background-color:#282A36;color:#F8F8F2" tabindex="0"><code><span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#50FA7B"> Date</span><span style="color:#F8F8F2">()</span></span></code></pre>
             </div>
           </div>
           Développeur web freelance
@@ -158,86 +171,30 @@
       </div>
       <div class="px-4 py-5 sm:p-6">
         <div class="flex flex-wrap items-center justify-center gap-3">
-          <span
-            class="i-logos-vue h-10 w-10"
-            title="Vue"
-          />
-          <span
-            class="i-logos-nuxt-icon h-10 w-10"
-            title="Nuxt"
-          />
-          <span
-            class="i-logos-javascript h-10 w-10"
-            title="JavaScript"
-          />
-          <span
-            class="i-logos-typescript-icon h-10 w-10"
-            title="TypeScript"
-          />
-          <span
-            class="i-logos-unocss h-10 w-10"
-            title="UnoCSS"
-          />
-          <span
-            class="i-logos-tailwindcss-icon h-10 w-10"
-            title="tailwind"
-          />
-          <span
-            class="i-logos-git-icon h-10 w-10"
-            title="git"
-          />
-          <span
-            class="i-logos-jest h-10 w-10"
-            title="Jest"
-          />
-          <span
-            class="i-logos-jamstack-icon h-10 w-10"
-            title="JAMStack / SSG"
-          />
-          <!-- <span
-            class="i-logos-magento h-10 w-10"
-            title="Magento"
-          /> -->
-          <span
-            class="i-logos-cloudflare-icon h-10 w-10"
-            title="Cloudflare"
-          />
+          <span class="i-logos-vue h-10 w-10" title="Vue" />
+          <span class="i-logos-nuxt-icon h-10 w-10" title="Nuxt" />
+          <span class="i-logos-javascript h-10 w-10" title="JavaScript" />
+          <span class="i-logos-typescript-icon h-10 w-10" title="TypeScript" />
+          <span class="i-logos-tailwindcss-icon h-10 w-10" title="tailwind" />
+          <span class="i-logos-unocss h-10 w-10" title="UnoCSS" />
+          <span class="i-simple-icons-directus h-10 w-10" title="Directus" />
+          <span class="i-logos-jest h-10 w-10" title="Jest" />
+          <span class="i-logos-git-icon h-10 w-10" title="git" />
+          <span class="i-logos-jamstack-icon h-10 w-10" title="JAMStack / SSG" />
+          <!-- <span class="i-logos-magento h-10 w-10" title="Magento" /> -->
+          <span class="i-logos-cloudflare-icon h-10 w-10" title="Cloudflare" />
         </div>
       </div>
     </div>
     <div v-if="hackerzMode">
       <div
         class="glitch matrix absolute right-0 top-0 mr-4 mt-5 h-20 w-20 cursor-pointer sm:mr-6 sm:mt-6"
-        @click="switchToNormalMode"
+        @click="toggleHackerzMode"
       />
       <TheCV />
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-useHead({
-  titleTemplate: 'CV %separator %siteName',
-})
-
-const hackerzMode = ref(false)
-const switchToHackerzMode = () => {
-  hackerzMode.value = true
-}
-const switchToNormalMode = () => {
-  hackerzMode.value = false
-}
-const img = useImage()
-const avatarUrl = img('/avatar.jpg', { width: 160, height: 160, quality: 95, format: 'webp' })
-const codingUrl = img('/coding.gif', { width: 80, height: 80, quality: 95, format: 'gif' })
-const bgAvatar = `url('${avatarUrl}')`
-const bgCoding = `url('${codingUrl}')`
-
-const links = [
-  { label: 'linkedin', href: 'https://www.linkedin.com/in/tcastanie', icon: 'i-mingcute-linkedin-line' },
-  { label: 'github', href: 'https://github.com/tcastanie', icon: 'i-mingcute-github-line' },
-]
-</script>
 
 <style scoped>
 .glitch {

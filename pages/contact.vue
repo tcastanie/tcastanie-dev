@@ -1,8 +1,28 @@
+<script lang="ts" setup>
+const { shitMode } = useShitMode()
+const contacts = ref([
+  {
+    label: 'Malt',
+    href: 'https://www.malt.fr/profile/tcastanie',
+    icon: 'i-mingcute-laptop-2-line',
+    description: 'Embauchez-moi pour vos projets web.',
+  },
+  { label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/tcastanie',
+    icon: 'i-mingcute-linkedin-line',
+    description: 'Connectons-nous !',
+  },
+  { label: 'Courriel',
+    href: 'mailto:contact@tcastanie.dev',
+    icon: 'i-mingcute-mail-send-line',
+    description: 'Contactez-moi directement',
+    kbd: 'contact@tcastanie.dev',
+  },
+])
+</script>
+
 <template>
-  <div
-    v-auto-animate
-    class="flex flex-col gap-8 text-lg"
-  >
+  <div v-auto-animate class="flex flex-col gap-8 text-lg">
     <NuxtImg
       v-if="shitMode"
       src="/contact.gif"
@@ -67,12 +87,3 @@
     />
   </div>
 </template>
-
-<script lang="ts" setup>
-const shitMode = useState('shitMode')
-const contacts = ref([
-  { label: 'Malt', href: 'https://www.malt.fr/profile/tcastanie', icon: 'i-mingcute-laptop-2-line', description: 'Embauchez-moi pour vos projets web.' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/tcastanie', icon: 'i-mingcute-linkedin-line', description: 'Connectons-nous !' },
-  { label: 'Courriel', href: 'mailto:contact@tcastanie.dev', icon: 'i-mingcute-mail-send-line', description: 'Contactez-moi directement', kbd: 'contact@tcastanie.dev' },
-])
-</script>

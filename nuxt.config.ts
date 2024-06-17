@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/seo',
     '@nuxt/eslint',
+    '@vueuse/nuxt',
   ],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },

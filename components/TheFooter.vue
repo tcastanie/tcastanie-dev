@@ -1,12 +1,11 @@
+<script lang="ts" setup>
+const { shitMode, toggleShitMode } = useShitMode()
+const currentYear = new Date().getFullYear()
+</script>
+
 <template>
-  <footer
-    class="text-center text-xs"
-    :class="shitMode ? 'h-16' : 'h-8'"
-  >
-    <div
-      v-if="shitMode"
-      class="mb-2 flex items-center justify-center gap-x-3"
-    >
+  <footer class="text-center text-xs" :class="shitMode ? 'h-16' : 'h-8'">
+    <div v-if="shitMode" class="mb-2 flex items-center justify-center gap-x-3">
       <NuxtImg
         src="/valid-html40.png"
         alt="valid-html40"
@@ -33,7 +32,7 @@
     </NuxtLink>
     <span>© {{ currentYear }} tcastanie.dev</span>
     <span
-      class="i-game-icons-star-swirl ml-2 h-5 w-5 inline-flex cursor-pointer p-1 align-bottom hover-animate-ping hover:text-bego-0"
+      class="i-game-icons-star-swirl ml-2 h-5 w-5 inline-flex cursor-pointer p-1 align-bottom hover-animate-bounce hover:text-bego-0"
       :class="shitMode ? 'animate-spin text-bego-0' : ''"
       @click="toggleShitMode()"
     />
@@ -49,12 +48,3 @@
     />
   </footer>
 </template>
-
-<script lang="ts" setup>
-const currentYear = new Date().getFullYear()
-
-const shitMode = useState('shitMode')
-const toggleShitMode = () => {
-  shitMode.value = !shitMode.value
-}
-</script>
