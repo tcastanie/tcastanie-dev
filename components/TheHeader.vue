@@ -2,22 +2,22 @@
 const links = [
   {
     label: 'CV',
-    href: '/cv',
+    to: '/cv',
     icon: 'i-mingcute-profile-line',
   },
   // {
   //   label: 'Services',
-  //   href: '/services',
-  //   icon: 'i-eos-icons-service',
+  //   to: '/services',
+  //   icon: 'i-mingcute-server-line',
   // },
   {
     label: 'Projets',
-    href: '/projets',
+    to: '/projets',
     icon: 'i-mingcute-folder-more-line',
   },
   {
     label: 'Contact',
-    href: '/contact',
+    to: '/contact',
     icon: 'i-mingcute-send-plane-line',
   },
 ]
@@ -35,9 +35,9 @@ const links = [
       <ul class="flex items-center justify-evenly sm:justify-end gap-x-8 col-span-2">
         <li v-for="link in links" :key="link.label">
           <NuxtLink
-            :to="link.href"
+            :to="link.to"
             class="flex flex-col items-center gap-1 text-sm font-semibold sm:flex-row hover:text-bego-0"
-            :class="{ 'text-bego-0': $route.path === link.href }"
+            :class="{ 'text-bego-0': $route.path === link.to }"
             :aria-label="link.label"
           >
             <span :class="link.icon" class="h-6 w-6" aria-hidden="true" />

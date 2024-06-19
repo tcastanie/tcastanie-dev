@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-const { shitMode, toggleShitMode } = useShitMode()
-const currentYear = new Date().getFullYear()
+const { shitMode } = useShitMode()
 </script>
 
 <template>
@@ -30,12 +29,7 @@ const currentYear = new Date().getFullYear()
     >
       CC BY-NC-SA 4.0
     </NuxtLink>
-    <span>© {{ currentYear }} tcastanie.dev</span>
-    <span
-      class="i-game-icons-star-swirl ml-2 h-5 w-5 inline-flex cursor-pointer p-1 align-bottom hover-animate-bounce hover:text-bego-0"
-      :class="shitMode ? 'animate-spin text-bego-0' : ''"
-      @click="toggleShitMode()"
-    />
+    <span>© {{ new Date().getFullYear() }} tcastanie.dev</span>
     <audio
       v-if="shitMode"
       ref="sg1"

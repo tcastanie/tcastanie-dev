@@ -36,7 +36,7 @@ export const useZdog = () => {
         path: [{ z: -(sizeParts / 2) }, { z: sizeParts / 2 }],
         translate: { x: 54, y: 0, z: 0 },
         stroke: 14,
-        color: '#C14777',
+        color: '#C31C56',
       })
     }
 
