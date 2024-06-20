@@ -55,8 +55,7 @@ const { shitMode } = useShitMode()
       Contactez-moi !
     </UiButton>
     <UiButton
-      v-if="0"
-      to="/services"
+      to="/prestations"
       icon="i-mingcute-arrow-right-line"
       variant="link"
       size="lg"

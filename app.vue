@@ -6,7 +6,6 @@
     <NuxtLoadingIndicator color="#E02956" />
     <TheHeader />
     <NuxtPage />
-    <!-- divider -->
     <TheFooter />
   </Body>
 </template>
