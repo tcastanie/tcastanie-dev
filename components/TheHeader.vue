@@ -5,11 +5,11 @@ const links = [
     to: '/cv',
     icon: 'i-mingcute-profile-line',
   },
-  // {
-  //   label: 'Services',
-  //   to: '/services',
-  //   icon: 'i-mingcute-server-line',
-  // },
+  {
+    label: 'Prestations',
+    to: '/prestations',
+    icon: 'i-mingcute-server-line',
+  },
   {
     label: 'Projets',
     to: '/projets',
@@ -24,6 +24,7 @@ const links = [
 </script>
 
 <template>
+  <UiTheHeader title="Thibaut Castanié" />
   <header class="w-full mb-8 sm:mb-0">
     <div class="mx-auto max-w-7xl grid grid-cols-2 px-4 lg:px-8 sm:px-6 sm:grid-cols-4 gap-y-2">
       <div class="flex items-center">
