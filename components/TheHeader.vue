@@ -24,15 +24,14 @@ const links = [
 </script>
 
 <template>
-  <UiTheHeader title="Thibaut Castanié" />
-  <header class="w-full mb-8 sm:mb-0">
+  <UiTheHeader title="Thibaut Castanié" :links="links" />
+  <!-- <header class="w-full mb-8 sm:mb-0">
     <div class="mx-auto max-w-7xl grid grid-cols-2 px-4 lg:px-8 sm:px-6 sm:grid-cols-4 gap-y-2">
       <div class="flex items-center">
         <NuxtLink to="/" class="text-xl font-bold sm:text-2xl hover:text-bego-3">
           Thibaut Castanié
         </NuxtLink>
       </div>
-      <ThePlanet class="w-24 h-24 sm:w-32 sm:h-32 justify-self-end" />
       <ul class="flex items-center justify-evenly sm:justify-end gap-x-8 col-span-2">
         <li v-for="link in links" :key="link.label">
           <NuxtLink
@@ -47,5 +46,5 @@ const links = [
         </li>
       </ul>
     </div>
-  </header>
+  </header> -->
 </template>

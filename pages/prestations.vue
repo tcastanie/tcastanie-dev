@@ -18,7 +18,7 @@
     </p>
     <ul class="list-disc list-image-[url(/favicon-16x16.png)]">
       <li>
-        Site simple : 5€/mois ou 50€/an
+        Site simple : 5€/mois ou 60€/an
         <ul class="list-disc list-inside">
           <li>Disponible 99,9% du temps</li>
           <li>Mises à jour de sécurité</li>
@@ -26,7 +26,7 @@
         </ul>
       </li>
       <li>
-        Web app : 10€/mois ou 100€/an
+        Web app : 10€/mois ou 120€/an
         <ul class="list-disc list-inside">
           <li>Accès à une plateforme pour modifier des parties du site</li>
           <li>+2€/mois par accès supplémentaire à la plateforme</li>
@@ -35,5 +35,8 @@
       </li>
       <li>Nom de domaine : prix coûtant de la location (en général 10€~20€/an)</li>
     </ul>
+  </div>
+  <div v-else>
+    soon...
   </div>
 </template>
