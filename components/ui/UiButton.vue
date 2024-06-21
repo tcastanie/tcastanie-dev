@@ -9,25 +9,25 @@ const props = withDefaults(defineProps<{
   square?: boolean
   size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
   variant?: 'solid' | 'outline' | 'soft' | 'ghost' | 'link'
-  color?: string
   icon?: `i-${string}`
   noPadding?: boolean
   loading?: boolean
   loadingIcon?: `i-${string}`
   trailing?: boolean
+  white?: boolean
 }>(), {
   truncate: false,
   block: false,
-  square: false,
+  square: ({ icon }) => !!icon && !useSlots().default,
   size: 'sm',
   variant: 'solid',
-  color: 'bego',
   loading: false,
-  loadingIcon: 'i-mingcute-loading-fill',
+  loadingIcon: 'i-mingcute-loading-line',
   noPadding: false,
   trailing: false,
+  white: false,
 })
-const { size, square, variant, icon, loading, loadingIcon, noPadding } = toRefs(props)
+const { size, square, variant, icon, loading, loadingIcon } = toRefs(props)
 
 const buttonSizeClasses = computed(() => {
   switch (size.value) {
@@ -99,14 +99,20 @@ const iconClasses = computed(() => {
 })
 
 const iconSizeClasses = computed(() => {
-  if (size.value === '2xs' || size.value === 'xs') {
-    return 'w-4 h-4'
-  } else if (size.value === 'sm' || size.value === 'md' || size.value === 'lg') {
-    return 'w-5 h-5'
-  } else if (size.value === 'xl' || size.value === '2xl') {
-    return 'w-6 h-6'
+  switch (size.value) {
+    case '2xs':
+    case 'xs':
+      return 'w-4 h-4'
+    case 'sm':
+    case 'md':
+    case 'lg':
+      return 'w-5 h-5'
+    case 'xl':
+    case '2xl':
+      return 'w-6 h-6'
+    default:
+      return ''
   }
-  return ''
 })
 </script>
 
@@ -121,6 +127,7 @@ const iconSizeClasses = computed(() => {
       'w-full flex': block,
       'w-20': truncate,
       '!p-0': noPadding,
+      '!text-white': white,
     }, buttonSizeClasses, buttonColorClasses]"
   >
     <span
