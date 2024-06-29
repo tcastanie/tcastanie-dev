@@ -4,7 +4,7 @@ import { NuxtLink } from '#components'
 const props = withDefaults(defineProps<{
   title?: string
   to?: `/${string}` | ''
-  links?: { label: string, to: string, icon?: string }[]
+  links?: { label: string, to: string, icon?: string, target?: string }[]
   container?: boolean
 }>(), {
   to: '/',
@@ -13,11 +13,18 @@ const props = withDefaults(defineProps<{
 const { title, to, links, container } = toRefs(props)
 
 const [panel, togglePanel] = useToggle()
+
+const theHeader = ref(null)
+onClickOutside(theHeader, () => {
+  if (panel.value) {
+    togglePanel(false)
+  }
+})
 </script>
 
 <template>
-  <header class="bg-zinc-900/75 backdrop-blur border-b border-zinc-800 -mb-px sticky top-0 z-50">
-    <div :class="[{ 'max-w-7xl': container }, 'flex items-center justify-between gap-3 h-[--header-height] mx-auto px-4 sm:px-6 lg:px-8']">
+  <header ref="theHeader" class="bg-zinc-900/75 backdrop-blur border-b border-zinc-800 -mb-px sticky top-0 z-50">
+    <div :class="[{ 'max-w-5xl': container }, 'flex items-center justify-between gap-3 h-[--header-height] mx-auto px-4 sm:px-6 lg:px-8']">
       <div class="lg:flex-1 flex items-center gap-1.5">
         <template v-if="$slots.left">
           <slot name="left" />
@@ -27,6 +34,7 @@ const [panel, togglePanel] = useToggle()
           v-else-if="$slots.logo"
           :to="to"
           class="flex-shrink-0 font-bold text-xl text-white flex items-end gap-1.5"
+          @click="to ? togglePanel(false) : null"
         >
           <slot name="logo" />
         </component>
@@ -35,6 +43,7 @@ const [panel, togglePanel] = useToggle()
           v-else-if="title"
           :to="to"
           class="font-bold text-xl text-white flex items-end"
+          @click="to ? togglePanel(false) : null"
         >
           {{ title }}
         </component>
@@ -47,6 +56,7 @@ const [panel, togglePanel] = useToggle()
               'text-bego-400': $route.path === linkTo,
               'hover:text-bego-400': $route.path !== linkTo,
             }, 'text-sm/6 font-semibold flex items-center gap-1']"
+            @click="togglePanel(false)"
           >
             <span v-if="icon" :class="[icon, 'shrink-0 w-5 h-5']" />
             {{ label }}
@@ -59,6 +69,7 @@ const [panel, togglePanel] = useToggle()
       <div class="flex items-center justify-end lg:flex-1 gap-1.5">
         <slot name="right" />
         <UiButton
+          v-if="links || $slots.panel"
           white
           variant="link"
           :icon="panel ? 'i-mingcute-close-line' : 'i-mingcute-menu-line'"
@@ -67,11 +78,42 @@ const [panel, togglePanel] = useToggle()
         />
       </div>
     </div>
-    <div v-if="links && panel" class="fixed w-full z-50 bg-zinc-900 lg:hidden top-[calc(var(--header-height)+1px)] px-4 sm:px-6 pt-3 pb-6">
-      <div>{{ links }}</div>
-    </div>
-    <div v-else-if="$slots.panel && panel">
-      <slot name="panel" />
+    <div
+      v-if="panel"
+      class="fixed w-full z-50 lg:hidden top-[calc(var(--header-height)+1px)] px-4 sm:px-6 py-3 bg-zinc-900/75 backdrop-blur border-b border-zinc-800"
+    >
+      <div v-if="links" class="space-y-3 mb-3 lg:mb-6 -mx-1 lg:mx-0">
+        <NuxtLink
+          v-for="{ label, to: linkTo, icon, target } of links"
+          :key="label"
+          :to="linkTo"
+          :target="target"
+          :class="[{
+            'text-bego-400': $route.path === linkTo,
+            'text-zinc-400 hover:text-zinc-200 font-medium': $route.path !== linkTo,
+          }, 'flex items-center gap-1.5 lg:gap-2 group']"
+        >
+          <div
+            v-if="icon"
+            :class="[{
+              'bg-bego-400 ring-bego-400 text-zinc-900': $route.path === linkTo,
+              'bg-zinc-800/50 ring-zinc-700 group-hover:bg-bego-400 group-hover:ring-bego-400 group-hover:text-zinc-900': $route.path !== linkTo,
+            }, 'rounded-md p-1 inline-flex ring-inset ring-1']"
+          >
+            <span
+              :class="[icon, 'w-4 h-4 shrink-0']"
+              aria-hidden="true"
+            />
+          </div>
+          <span class="text-sm/6 relative">
+            {{ label }}
+            <span v-if="target==='_blank'" class="i-mingcute-external-link-line w-3 h-3 absolute top-0.5 -right-3.5 text-zinc-500" />
+          </span>
+        </NuxtLink>
+      </div>
+      <div v-else-if="$slots.panel">
+        <slot name="panel" />
+      </div>
     </div>
   </header>
 </template>

@@ -35,7 +35,7 @@ const { shitMode } = useShitMode()
       </div>
     </template>
     <TheIntroduction />
-    <div v-if="shitMode" class="mt-16 flex flex-wrap items-center justify-center gap-x-12">
+    <div v-if="shitMode" class="flex flex-wrap items-center justify-center gap-x-12">
       <NuxtImg
         src="/earth.gif"
         alt="earth"

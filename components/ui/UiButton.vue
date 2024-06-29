@@ -2,14 +2,14 @@
 import { NuxtLink } from '#components'
 
 const props = withDefaults(defineProps<{
-  to?: `/${string}`
-  target?: '_blank' | '_self' | '_parent' | '_top'
+  to?: string
+  target?: string | '_blank' | '_self' | '_parent' | '_top'
   truncate?: boolean
   block?: boolean
   square?: boolean
   size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
   variant?: 'solid' | 'outline' | 'soft' | 'ghost' | 'link'
-  icon?: `i-${string}`
+  icon?: string | `i-${string}`
   noPadding?: boolean
   loading?: boolean
   loadingIcon?: `i-${string}`
@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<{
 }>(), {
   truncate: false,
   block: false,
-  square: ({ icon }) => !!icon && !useSlots().default,
+  square: false,
   size: 'sm',
   variant: 'solid',
   loading: false,
@@ -138,9 +138,7 @@ const iconSizeClasses = computed(() => {
     />
     <component
       :is="to || icon ? 'span' : 'p'"
-      :class="{
-        'text-left break-all line-clamp-1': truncate,
-      }"
+      :class="{ 'text-left break-all line-clamp-1': truncate }"
     >
       <slot />
     </component>
