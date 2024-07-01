@@ -1,6 +1,13 @@
 <script lang="ts" setup>
 const { shitMode, toggleShitMode } = useShitMode()
-const { links } = useLinks()
+
+const links = [
+  { label: 'CV', to: '/cv' },
+  { label: 'Prestations', to: '/prestations' },
+  { label: 'Projets', to: '/projets' },
+  { label: 'Contact', to: '/contact' },
+]
+
 const linksRight = [
   {
     label: 'Linkedin',
