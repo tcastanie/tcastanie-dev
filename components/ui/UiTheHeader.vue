@@ -24,7 +24,7 @@ onClickOutside(theHeader, () => {
 
 <template>
   <header ref="theHeader" class="bg-zinc-900/75 backdrop-blur border-b border-zinc-800 -mb-px sticky top-0 z-50">
-    <div :class="[{ 'max-w-5xl': container }, 'flex items-center justify-between gap-3 h-[--header-height] mx-auto px-4 sm:px-6 lg:px-8']">
+    <div :class="[{ 'max-w-7xl': container }, 'flex items-center justify-between gap-3 h-[--header-height] mx-auto px-4 sm:px-6 lg:px-8']">
       <div class="lg:flex-1 flex items-center gap-1.5">
         <template v-if="$slots.left">
           <slot name="left" />

@@ -17,7 +17,7 @@ const { links, container } = toRefs(props)
     <div
       v-if="$slots.left || links || $slots.center || $slots.right"
       :class="[{
-        'max-w-5xl': container,
+        'max-w-7xl': container,
       }, 'mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-4 lg:flex lg:items-center lg:justify-between lg:gap-x-3']"
     >
       <div class="lg:flex-1 flex items-center justify-center lg:justify-end gap-x-1.5 lg:order-3">

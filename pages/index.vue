@@ -4,36 +4,34 @@ const { shitMode } = useShitMode()
 
 <template>
   <UiPage>
-    <template #hero>
-      <div class="grid grid-cols-2 items-center">
-        <UiHero description="Développeur web front-end freelance">
-          <template #title>
-            <div class="flex items-center gap-4">
-              <NuxtImg
-                src="/avatar.jpg"
-                alt="Thibaut Castanié"
-                format="webp"
-                width="56"
-                height="56"
-                class="rounded-full"
-                :class="shitMode ? 'animate-bounce' : ''"
-              />
-              <NuxtImg
-                v-if="shitMode"
-                src="/text.gif"
-                alt="Thibaut Castanié"
-                format="gif"
-                width="208"
-                height="43"
-                class="animate-bounce"
-              />
-              <span v-else>tcastanie</span>
-            </div>
-          </template>
-        </UiHero>
-        <ThePlanet class="w-24 h-24 sm:w-32 sm:h-32 justify-self-end" />
-      </div>
-    </template>
+    <div class="grid grid-cols-2 items-center">
+      <UiHero description="Développeur web front-end freelance">
+        <template #title>
+          <div class="flex items-center gap-4">
+            <NuxtImg
+              src="/avatar.jpg"
+              alt="Thibaut Castanié"
+              format="webp"
+              width="56"
+              height="56"
+              class="rounded-full"
+              :class="shitMode ? 'animate-bounce' : ''"
+            />
+            <NuxtImg
+              v-if="shitMode"
+              src="/text.gif"
+              alt="Thibaut Castanié"
+              format="gif"
+              width="208"
+              height="43"
+              class="animate-bounce"
+            />
+            <span v-else>tcastanie</span>
+          </div>
+        </template>
+      </UiHero>
+      <ThePlanet class="w-24 h-24 sm:w-32 sm:h-32 justify-self-end" />
+    </div>
     <TheIntroduction />
     <div v-if="shitMode" class="flex flex-wrap items-center justify-center gap-x-12">
       <NuxtImg

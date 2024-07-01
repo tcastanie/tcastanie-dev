@@ -29,7 +29,8 @@ const projects = [
 </script>
 
 <template>
-  <div v-auto-animate>
+  <UiPage v-auto-animate>
+    <UiHero title="Projets" icon="i-mingcute-folder-more-line" />
     <div v-if="shitMode" class="mb-16 flex items-center justify-around">
       <NuxtImg
         src="/cmcdconstruction.gif"
@@ -116,5 +117,5 @@ const projects = [
         height="53"
       />
     </div>
-  </div>
+  </UiPage>
 </template>
