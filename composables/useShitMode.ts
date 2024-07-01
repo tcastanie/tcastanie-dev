@@ -8,13 +8,13 @@ export const useShitMode = () => {
 
   watch(shitMode, (newValue) => {
     if (newValue) {
-      document.documentElement.style.backgroundImage = `url("${starsImg}")`
-      document.documentElement.style.backgroundRepeat = 'repeat'
-      document.documentElement.style.cursor = `url("${rocketImg}"), auto`
+      document.body.style.backgroundImage = `url("${starsImg}")`
+      document.body.style.backgroundRepeat = 'repeat'
+      document.body.style.cursor = `url("${rocketImg}"), auto`
     } else {
-      document.documentElement.style.backgroundImage = ''
-      document.documentElement.style.backgroundRepeat = ''
-      document.documentElement.style.cursor = ''
+      document.body.style.backgroundImage = ''
+      document.body.style.backgroundRepeat = ''
+      document.body.style.cursor = ''
     }
   })
 
