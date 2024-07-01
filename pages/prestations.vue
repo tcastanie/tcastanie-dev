@@ -36,7 +36,7 @@
       <li>Nom de domaine : prix coûtant de la location (en général 10€~20€/an)</li>
     </ul>
   </div>
-  <div v-else>
-    soon...
-  </div>
+  <UiPage v-else>
+    <UiHero title="Prestations" icon="i-mingcute-server-line" />
+  </UiPage>
 </template>

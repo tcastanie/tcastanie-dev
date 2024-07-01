@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const { shitMode, toggleShitMode } = useShitMode()
 const links = [
   { label: 'CV', to: '/cv', icon: 'i-mingcute-profile-line' },
   { label: 'Prestations', to: '/prestations', icon: 'i-mingcute-server-line' },
@@ -8,5 +9,16 @@ const links = [
 </script>
 
 <template>
-  <UiTheHeader title="Thibaut Castanié" :links="links" />
+  <UiTheHeader title="Thibaut Castanié" :links="links">
+    <template #right>
+      <UiButton
+        variant="ghost"
+        icon="i-mingcute-planet-line"
+        square
+        :white="!shitMode"
+        :class="{ 'animate-spin': shitMode }"
+        @click="toggleShitMode()"
+      />
+    </template>
+  </UiTheHeader>
 </template>
