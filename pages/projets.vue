@@ -2,16 +2,32 @@
 const { shitMode } = useShitMode()
 const projects = [
   {
+    title: `Domaine l'Angélus`,
+    subtitle: 'Site web de location de gîtes et de cours de dressage de chiens de troupeaux',
+    description: `Création d'un site web pour le <b>Domaine l'Angélus</b> servant de vitrine et permettant également la réservation de gîtes et de cours de dressage de chiens de troupeaux. Développement complet du front <i>full static</i>, déploiement du back-office sur mesure, gestion des paiements et système de réservation réalisé <i>from scratch</i>.<br/>Accompagnement, aide à la contribution et support continu.`,
+    image: '/doma_social.png',
+    date: 'juillet 2024',
+    skills: ['Nuxt', 'Directus', 'Stripe', 'Cloudflare workers', 'UnoCSS', 'SSG', 'VCalendar'],
+    links: [
+      {
+        label: 'www.domaine-langelus.fr',
+        to: 'https://www.domaine-langelus.fr/',
+        icon: 'i-mingcute-link-line',
+      },
+    ],
+  },
+  {
     title: 'Another APOD viewer',
     subtitle: 'Simple appli de visualisation de l\'image du jour de la NASA',
     description: 'Petit projet personnel pour améliorer mes compétences sur Vue, son écosystème, et tout le reste. Principalement Vue 3 et la <i>Composition API</i>, Vite, Pinia, Vitest... tout cela prêt à l\'emploi dans un environnement convivial pour les développeurs.<br/><b>v2</b> : Réusinage complet avec Nuxt, Nuxt UI et un proxy pour l\'API de la NASA.',
+    image: '/APOD_social.png',
     date: 'v1 : août 2022, v2 : juin 2024',
     skills: ['Vue 3', 'Vite', 'Pinia', 'Vitest', 'Nuxt', 'Nuxt UI'],
     links: [
       {
         label: 'apod.tcastanie.dev',
         to: 'https://apod.tcastanie.dev',
-        icon: 'i-mingcute-planet-line',
+        icon: 'i-mingcute-link-line',
       },
       {
         label: 'tcastanie/another-apod-viewer',
@@ -21,7 +37,7 @@ const projects = [
       {
         label: 'apod.nasa.gov',
         to: 'https://apod.nasa.gov',
-        icon: 'i-mingcute-full-moon-line',
+        icon: 'i-simple-icons-nasa',
       },
     ],
   },
@@ -51,39 +67,48 @@ const projects = [
         height="85"
       >
     </div>
-    <div class="grid">
+    <div class="grid gap-y-4 lg:gap-y-8">
       <UiCard
-        v-for="{ title, subtitle, description, date, skills, links } of projects"
+        v-for="{ title, subtitle, description, image, date, skills, links } of projects"
         :key="title"
-        class="grid gap-y-6"
+        :class="[{ '!bg-zinc-800/50': shitMode }, 'overflow-hidden']"
       >
+        <div v-if="shitMode && title === `Domaine l'Angélus`" class="absolute -z-1 -bottom-46 -left-40">
+          <img
+            src="~/assets/corgiswim.gif"
+            alt="corgiswimming"
+            width="700"
+            height="700"
+          >
+        </div>
         <div class="grid gap-y-6">
           <NuxtImg
-            src="/APOD_social.png"
-            alt="Another APOD viewer logo"
+            v-if="image"
+            :src="image"
+            :alt="title + ' social'"
             format="webp"
             width="672"
             height="336"
             class="rounded-md"
           />
           <UiH2>{{ title }}</UiH2>
-          <div class="-mt-4 text-lg text-zinc-400">
+          <div v-if="subtitle" class="-mt-4 text-lg text-zinc-400">
             {{ subtitle }}
           </div>
-          <p class="text-base text-zinc-200 text-pretty">
+          <p v-if="description" class="text-base text-zinc-200 text-pretty">
             <!-- eslint-disable-next-line vue/no-v-html -->
             <span v-html="description" />
           </p>
-          <div>
+          <div v-if="date">
             <span class="i-mingcute-calendar-2-line mr-2 h-6 w-6 inline-flex align-text-bottom text-bego-400" />
             <span>{{ date }}</span>
           </div>
-          <div class="flex gap-x-3">
+          <div v-if="skills?.length" class="flex gap-x-3">
             <UiBadge v-for="skill of skills" :key="skill" variant="subtle">
               {{ skill }}
             </UiBadge>
           </div>
-          <div class="grid justify-items-start">
+          <div v-if="links?.length" class="grid justify-items-start">
             <UiButton
               v-for="{ label, to, icon } of links"
               :key="label"

@@ -17,7 +17,7 @@ defineProps<{
       'hover:ring-2 hover:ring-bego-400 hover:bg-zinc-800/50 cursor-pointer': to,
       'ring-bego-400 divide-bego-400 bg-bego-950/10': primary,
       'ring-zinc-800 divide-zinc-800 bg-zinc-900': !primary,
-    }, 'divide-y ring-1 rounded-lg shadow']"
+    }, 'divide-y ring-1 rounded-lg shadow relative']"
   >
     <div v-if="$slots.header" class="px-4 py-5 sm:px-6">
       <slot name="header" />
