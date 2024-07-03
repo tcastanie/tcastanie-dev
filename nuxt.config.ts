@@ -1,13 +1,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
+  compatibilityDate: '2024-07-03',
   modules: [
-    '@unocss/nuxt',
     '@formkit/auto-animate/nuxt',
-    '@nuxt/image',
-    '@nuxtjs/seo',
-    '@nuxt/eslint',
+    '@unocss/nuxt',
     '@vueuse/nuxt',
+    '@nuxtjs/seo',
+    '@nuxt/image',
+    '@nuxt/eslint',
     'nuxt-shiki',
   ],
   app: {
@@ -80,6 +81,8 @@ export default defineNuxtConfig({
         '/_ipx/f_gif&q_95&s_214x70/email.gif',
         '/_ipx/f_gif&q_95&s_575x10/bluline.gif',
         '/_ipx/f_gif&q_95&s_1150x20/bluline.gif',
+        '/_ipx/q_95&f_webp&s_160x160/avatar.jpg',
+        '/_ipx/q_95&f_gif&s_80x80/coding.gif',
       ],
     },
   },
