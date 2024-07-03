@@ -58,5 +58,23 @@ const { shitMode } = useShitMode()
         class="animate-bounce"
       />
     </div>
+    <div v-if="shitMode" class="mt-8 flex items-center justify-center gap-x-12">
+      <NuxtImg
+        src="/valid-html40.png"
+        alt="valid-html40"
+        format="webp"
+        width="88"
+        height="31"
+        class="animate-spin"
+      />
+      <NuxtImg
+        src="/valid-css2.png"
+        alt="valid-css2"
+        format="webp"
+        width="88"
+        height="31"
+        class="animate-ping"
+      />
+    </div>
   </UiPage>
 </template>

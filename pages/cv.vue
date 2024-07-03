@@ -15,14 +15,16 @@ const { title, subtitle, description, location, experiences } = theCv
 
 <template>
   <UiPage v-auto-animate>
-    <UiHero title="Curriculum Vitae" icon="i-mingcute-profile-line" />
+    <UiHero title="Curriculum Vitae" icon="i-mingcute-profile-fill" />
     <UiCard v-if="!hackerzMode" class="relative" primary>
       <template #header>
         <div>
           <UiHero :title="title" :description="subtitle" class="flex-1 !py-0 pr-20" />
           <div
-            :class="{ 'animate-spin': shitMode }"
-            class="glitch tcastanie absolute right-4 top-4 h-20 w-20 cursor-pointer"
+            :class="[
+              { 'animate-spin': shitMode },
+              'glitch tcastanie absolute right-4 top-4 h-20 w-20 cursor-pointer',
+            ]"
             @click="toggleHackerzMode()"
           />
         </div>
@@ -80,8 +82,10 @@ const { title, subtitle, description, location, experiences } = theCv
     </UiCard>
     <div v-else class="relative bg-[#282c34] rounded px-4 py-2 text-sm">
       <div
-        class="glitch matrix absolute right-4 top-4 h-20 w-20 cursor-pointer"
-        :class="{ 'animate-spin': shitMode }"
+        :class="[
+          { 'animate-spin': shitMode },
+          'glitch matrix absolute right-4 top-4 h-20 w-20 cursor-pointer',
+        ]"
         @click="toggleHackerzMode()"
       />
       <Shiki lang="json" :code="`// cv-tcastanie.json\n\n${JSON.stringify(theCv, undefined, 2)}`" class="whitespace-break-spaces" />

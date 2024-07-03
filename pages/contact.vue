@@ -24,7 +24,7 @@ const contacts = [
 
 <template>
   <UiPage v-auto-animate>
-    <UiHero v-if="!shitMode" title="Contact" icon="i-mingcute-send-plane-line" />
+    <UiHero v-if="!shitMode" title="Contact" icon="i-mingcute-send-plane-fill" />
     <NuxtImg
       v-else
       src="/contact.gif"

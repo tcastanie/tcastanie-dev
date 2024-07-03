@@ -1,6 +1,6 @@
 <template>
   <UiPage>
-    <UiHero title="Prestations" icon="i-mingcute-server-line" />
+    <UiHero title="Prestations" icon="i-mingcute-necktie-fill" />
     <UiP class="italic mb-4 text-sm">
       Tous les prix sont donnés à titre indicatif et sont susceptibles de varier en fonction de la complexité technique du projet et des contraintes métiers liées à celui-ci.
     </UiP>
@@ -13,6 +13,7 @@
       Contactez-moi pour un devis sur mesure
     </UiButton>
     <div class="grid gap-8">
+      <UiDivider icon="i-mingcute-hammer-fill" type="dashed" title="Développement et construction" />
       <PriceCard
         icon="i-mingcute-web-line"
         title="Site web"
@@ -58,59 +59,52 @@
         </template>
       </PriceCard>
       <div class="flex">
-        <UiButton
-          to="/contact"
-          icon="i-mingcute-send-plane-line"
-          variant="solid"
-          size="lg"
-        >
+        <UiButton to="/contact" icon="i-mingcute-send-plane-line" variant="solid">
           Contactez-moi
         </UiButton>
       </div>
-      <UiDivider label="Déploiement et maintenance" />
+      <UiDivider icon="i-mingcute-server-fill" type="dashed" title="Hébergement et maintenance" />
       <PriceCard
+        icon="i-mingcute-display-line"
         title="Formule « Site vitrine »"
-        description="Déploiement et maintient en ligne du site"
+        description="Déploiement et maintien en ligne du site"
         price="5€"
         cycle="/mois"
         :features="[
           { label: 'Disponibilité 99,9%' },
           { label: 'Mises à jour de sécurité', icon: 'i-mingcute-safety-certificate-line' },
-          { label: 'Affichage ultra-rapide', icon: 'i-mingcute-train-line' },
+          { label: 'Affichage ultra-rapide', icon: 'i-mingcute-dashboard-3-line' },
           { label: 'Support par mail', icon: 'i-mingcute-mail-send-line' },
         ]"
       />
       <PriceCard
+        icon="i-mingcute-report-forms-line"
         title="Formule « Web app »"
         description="Accès à la modification des composants du site"
         price="10€"
         cycle="/mois"
         :features="[
+          { label: 'Services de « Site vitrine »', icon: 'i-mingcute-display-line' },
           { label: 'Plateforme de contribution', icon: 'i-mingcute-edit-2-line' },
           { label: 'Adaptation contraintes métier', icon: 'i-mingcute-briefcase-line' },
           { label: 'Sections personnalisables', icon: 'i-mingcute-layout-2-line' },
-          { label: 'Services de « Site vitrine »' },
         ]"
       >
         <template #cta>
           <UiP class="italic text-center text-xs">
-            +2€/mois par accès supplémentaire à la plateforme
+            +2€/mois par accès supplémentaire à la plateforme de contribution
           </UiP>
         </template>
       </PriceCard>
+      <PriceCard
+        title="Nom de domaine"
+        description="Déploiement et renouvellement du nom de domaine (.fr, .com, ...) au prix de sa location (généralement 10~20€/an)"
+      />
       <div class="flex">
-        <UiButton
-          to="/contact"
-          icon="i-mingcute-send-plane-line"
-          variant="solid"
-          size="lg"
-        >
+        <UiButton to="/contact" icon="i-mingcute-send-plane-line" variant="solid">
           Contactez-moi
         </UiButton>
       </div>
-      <UiP>
-        Si vous souhaitez que je m'occupe de la gestion du nom de domaine, je facturerai le prix de la location (en général 10€~20€/an).
-      </UiP>
     </div>
   </UiPage>
 </template>

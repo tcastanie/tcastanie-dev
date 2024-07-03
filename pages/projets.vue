@@ -30,7 +30,7 @@ const projects = [
 
 <template>
   <UiPage v-auto-animate>
-    <UiHero v-if="!shitMode" title="Projets" icon="i-mingcute-folder-more-line" />
+    <UiHero v-if="!shitMode" title="Projets" icon="i-mingcute-folder-more-fill" />
     <div v-else class="py-6 sm:py-12 flex items-center justify-around">
       <NuxtImg
         src="/cmcdconstruction.gif"

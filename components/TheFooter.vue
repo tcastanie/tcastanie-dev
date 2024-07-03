@@ -1,6 +1,11 @@
 <script lang="ts" setup>
 const { shitMode, toggleShitMode } = useShitMode()
-
+const footerLinks = [
+  { label: 'CV', to: '/cv' },
+  { label: 'Projets', to: '/projets' },
+  { label: 'Prestations', to: '/prestations' },
+  { label: 'Contact', to: '/contact' },
+]
 const linksRight = [
   {
     label: 'Linkedin',
@@ -19,26 +24,6 @@ const linksRight = [
 
 <template>
   <UiFooter :links="footerLinks">
-    <template v-if="shitMode" #top>
-      <div class="mb-2 flex items-center justify-center gap-x-3">
-        <NuxtImg
-          src="/valid-html40.png"
-          alt="valid-html40"
-          format="webp"
-          width="88"
-          height="31"
-          class="animate-spin"
-        />
-        <NuxtImg
-          src="/valid-css2.png"
-          alt="valid-css2"
-          format="webp"
-          width="88"
-          height="31"
-          class="animate-ping"
-        />
-      </div>
-    </template>
     <template #left>
       <div class="flex items-center">
         <UiIcon icon="i-mingcute-copyright-line" />

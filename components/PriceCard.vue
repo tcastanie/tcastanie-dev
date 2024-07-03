@@ -23,7 +23,7 @@ defineProps<{
         <UiP v-if="description" class="mt-3">
           {{ description }}
         </UiP>
-        <UiDivider class="my-6 lg:my-8" />
+        <UiDivider v-if="features?.length" class="my-6 lg:my-8" />
         <div v-if="features?.length" class="flex-1">
           <ul class="grid lg:grid-cols-2 text-sm gap-3">
             <li v-for="{ label, icon: fIcon } of features" :key="label" class="flex items-center gap-x-2 min-w-0">
