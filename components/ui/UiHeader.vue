@@ -92,6 +92,7 @@ onClickOutside(theHeader, () => {
             'text-bego-400': $route.path === linkTo,
             'text-zinc-400 hover:text-zinc-200 font-medium': $route.path !== linkTo,
           }, 'flex items-center gap-1.5 lg:gap-2 group']"
+          @click="togglePanel(false)"
         >
           <div
             v-if="icon"

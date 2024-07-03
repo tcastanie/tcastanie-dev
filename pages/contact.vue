@@ -25,15 +25,14 @@ const contacts = [
 <template>
   <UiPage v-auto-animate>
     <UiHero v-if="!shitMode" title="Contact" icon="i-mingcute-send-plane-fill" />
-    <NuxtImg
+    <img
       v-else
-      src="/contact.gif"
+      src="~/assets/contact.gif"
       alt="contact"
-      format="gif"
       width="141"
       height="52"
       class="mx-auto py-8 sm:py-16"
-    />
+    >
     <div class="grid gap-4 lg:gap-8">
       <UiCard
         v-for="{ label, to, icon, description, kbd } of contacts"
@@ -48,14 +47,13 @@ const contacts = [
             size="xl"
             :class="{ 'animate-spin': shitMode }"
           />
-          <NuxtImg
+          <img
             v-else-if="shitMode && label === 'Courriel'"
-            src="/mail.gif"
+            src="~/assets/mail.gif"
             alt="mail"
-            format="gif"
             width="60"
             height="60"
-          />
+          >
           <SvgMalt v-if="label === 'Malt'" class="h-7 w-7" :class="{ 'animate-spin': shitMode }" />
         </div>
         <p class="text-lg font-semibold">
@@ -69,14 +67,13 @@ const contacts = [
         </p>
       </UiCard>
     </div>
-    <NuxtImg
+    <img
       v-if="shitMode"
-      src="/email.gif"
+      src="~/assets/email.gif"
       alt="email"
-      format="gif"
       width="107"
       height="35"
       class="mx-auto mt-8"
-    />
+    >
   </UiPage>
 </template>

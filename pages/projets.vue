@@ -29,30 +29,27 @@ const projects = [
 </script>
 
 <template>
-  <UiPage v-auto-animate>
+  <UiPage>
     <UiHero v-if="!shitMode" title="Projets" icon="i-mingcute-folder-more-fill" />
     <div v-else class="py-6 sm:py-12 flex items-center justify-around">
-      <NuxtImg
-        src="/cmcdconstruction.gif"
+      <img
+        src="~/assets/cmcdconstruction.gif"
         alt="building"
-        format="gif"
         width="50"
         height="82"
-      />
-      <NuxtImg
-        src="/construction.gif"
+      >
+      <img
+        src="~/assets/construction.gif"
         alt="building"
-        format="gif"
         width="96"
         height="66"
-      />
-      <NuxtImg
-        src="/construction2.gif"
+      >
+      <img
+        src="~/assets/construction2.gif"
         alt="building"
-        format="gif"
         width="90"
         height="85"
-      />
+      >
     </div>
     <div class="grid">
       <UiCard
@@ -107,15 +104,14 @@ const projects = [
       &lt;!-- 🚧🚧🏗️🚧🚧 -->
     </div>
     <div v-if="shitMode" class="mt-16 flex justify-center gap-x-12">
-      <NuxtImg
+      <img
         v-for="i in 3"
         :key="i"
-        src="/building.gif"
+        src="~/assets/building.gif"
         alt="building"
-        format="gif"
         width="78"
         height="53"
-      />
+      >
     </div>
   </UiPage>
 </template>

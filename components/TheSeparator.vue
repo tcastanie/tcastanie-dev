@@ -11,14 +11,13 @@ const { shitMode } = useShitMode()
       size="xs"
       type="dashed"
     />
-    <NuxtImg
+    <img
       v-else
-      src="/bluline.gif"
+      src="~/assets/bluline.gif"
       alt="separator"
-      format="gif"
       width="575"
       height="10"
       class="mx-auto"
-    />
+    >
   </div>
 </template>

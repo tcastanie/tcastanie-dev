@@ -36,7 +36,7 @@ const { title, subtitle, description, location, experiences } = theCv
           {{ description }}
         </UiP>
       </template>
-      <div class="grid gap-8 text-lg">
+      <div class="grid gap-y-8 text-lg">
         <div v-for="exp in experiences" :key="exp.startDate">
           <div class="text-sm text-bego-50 uppercase flex items-center gap-1">
             <span>{{ formatDate(exp.startDate) }}</span>

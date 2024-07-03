@@ -17,15 +17,14 @@ const { shitMode } = useShitMode()
               class="rounded-full"
               :class="shitMode ? 'animate-bounce' : ''"
             />
-            <NuxtImg
+            <img
               v-if="shitMode"
-              src="/text.gif"
+              src="~/assets/text.gif"
               alt="Thibaut Castanié"
-              format="gif"
               width="208"
               height="43"
               class="animate-bounce"
-            />
+            >
             <span v-else>tcastanie</span>
           </div>
         </template>
@@ -34,47 +33,42 @@ const { shitMode } = useShitMode()
     </div>
     <TheIntroduction />
     <div v-if="shitMode" class="flex flex-wrap items-center justify-center gap-x-12">
-      <NuxtImg
-        src="/earth.gif"
+      <img
+        src="~/assets/earth.gif"
         alt="earth"
-        format="gif"
         width="36"
         height="36"
         class="animate-bounce"
-      />
-      <NuxtImg
-        src="/alien.gif"
+      >
+      <img
+        src="~/assets/alien.gif"
         alt="alien"
-        format="gif"
         width="90"
         height="200"
-      />
-      <NuxtImg
-        src="/ufo.gif"
+      >
+      <img
+        src="~/assets/ufo.gif"
         alt="ufo"
-        format="gif"
         width="200"
         height="43"
         class="animate-bounce"
-      />
+      >
     </div>
     <div v-if="shitMode" class="mt-8 flex items-center justify-center gap-x-12">
-      <NuxtImg
-        src="/valid-html40.png"
+      <img
+        src="~/assets/valid-html40.png"
         alt="valid-html40"
-        format="webp"
         width="88"
         height="31"
         class="animate-spin"
-      />
-      <NuxtImg
-        src="/valid-css2.png"
+      >
+      <img
+        src="~/assets/valid-css2.png"
         alt="valid-css2"
-        format="webp"
         width="88"
         height="31"
         class="animate-ping"
-      />
+      >
     </div>
   </UiPage>
 </template>

@@ -21,14 +21,13 @@ const handleError = () => clearError({ redirect: '/' })
         </template>
         <UiP v-if="error.statusCode === 404" class="mb-4">
           You found a <b>dead link</b> 😱
-          <NuxtImg
+          <img
             src="/404link.jpg"
-            format="webp"
             alt="dead link"
             width="512"
             height="384"
             class="rounded-lg mt-4"
-          />
+          >
         </UiP>
         <div class="font-mono">
           {{ error.message }}
