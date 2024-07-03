@@ -17,7 +17,7 @@ const { shitMode } = useShitMode()
     </UiP>
     <UiP class="group hover:text-zinc-400">
       <span class="i-mingcute-package-line mr-2 h-8 w-8 inline-flex align-bottom text-bego-400 group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />
-      Je mets à disposition mes compétences de développeur senior et m'applique à assurer une modernité technique et des services web épurés. Cela passe par un développement scrupuleux des interfaces liées aux fonctionnalités clés de votre application, ainsi que par un soutien didactique lors du déploiement de vos outils de travail.
+      Je mets à disposition mes compétences de développeur senior et m'applique à assurer une modernité technique et des services web épurés. Cela passe par un développement scrupuleux des interfaces et des fonctionnalités clés de l'application, ainsi que par un soutien didactique lors du déploiement des outils de travail.
     </UiP>
     <UiP class="group hover:text-zinc-400">
       <span class="i-mingcute-run-line mr-2 h-8 w-8 inline-flex align-bottom text-bego-400 group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />

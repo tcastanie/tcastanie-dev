@@ -15,28 +15,6 @@
     <div class="grid gap-8">
       <UiDivider icon="i-mingcute-hammer-fill" type="dashed" title="Développement et construction" />
       <PriceCard
-        icon="i-mingcute-web-line"
-        title="Site web"
-        description="Conception et création sur mesure, de la simple vitrine aux applications les plus complexes"
-        price="500€"
-        discount="450€"
-        cycle="/j"
-        :features="[
-          { label: 'Code léger et ultra-rapide', icon: 'i-mingcute-lightning-line' },
-          { label: 'Adapté à tous les écrans', icon: 'i-mingcute-cellphone-2-line' },
-          { label: 'Poids écolo et économique', icon: 'i-mingcute-leaf-line' },
-          { label: 'Optimisations SEO', icon: 'i-mingcute-search-3-line' },
-          { label: 'Technos dernier cri', icon: 'i-simple-icons-vuedotjs' },
-          { label: 'Intégration services paiements', icon: 'i-mingcute-bank-card-line' },
-        ]"
-      >
-        <template #cta>
-          <UiP class="italic text-center text-xs">
-            (TJM donné à titre indicatif, devis sur mesure)
-          </UiP>
-        </template>
-      </PriceCard>
-      <PriceCard
         icon="i-mingcute-tool-line"
         title="Support technique"
         description="Interventions sur code existant"
@@ -50,6 +28,28 @@
           { label: 'Corrections bugs', icon: 'i-mingcute-bug-line' },
           { label: 'Maintenance', icon: 'i-mingcute-chart-line-line' },
           { label: 'Assistance technique', icon: 'i-mingcute-lifebuoy-line' },
+        ]"
+      >
+        <template #cta>
+          <UiP class="italic text-center text-xs">
+            (TJM donné à titre indicatif, devis sur mesure)
+          </UiP>
+        </template>
+      </PriceCard>
+      <PriceCard
+        icon="i-mingcute-web-line"
+        title="Site web"
+        description="Conception et création sur mesure, de la simple vitrine aux applications les plus complexes"
+        price="500€"
+        discount="450€"
+        cycle="/j"
+        :features="[
+          { label: 'Code léger et ultra-rapide', icon: 'i-mingcute-lightning-line' },
+          { label: 'Adapté à tous les écrans', icon: 'i-mingcute-cellphone-2-line' },
+          { label: 'Poids écolo et économique', icon: 'i-mingcute-leaf-line' },
+          { label: 'Optimisations SEO', icon: 'i-mingcute-search-3-line' },
+          { label: 'Technologies dernier cri', icon: 'i-simple-icons-vuedotjs' },
+          { label: 'Intégration services paiements', icon: 'i-mingcute-bank-card-line' },
         ]"
       >
         <template #cta>
