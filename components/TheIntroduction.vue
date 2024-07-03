@@ -3,7 +3,7 @@ const { shitMode } = useShitMode()
 </script>
 
 <template>
-  <div class="cursor-default">
+  <div class="cursor-default text-pretty">
     <UiH2 class="mb-4" :class="{ 'animate-bounce': shitMode }">
       Bonjour !
     </UiH2>
@@ -17,27 +17,7 @@ const { shitMode } = useShitMode()
     </UiP>
     <UiP class="mb-2 group hover:text-zinc-400">
       <span class="i-mingcute-package-line mr-2 h-8 w-8 inline-flex align-bottom text-bego-400 group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />
-      Je mets à disposition mes compétences de développeur senior et m'applique à assurer une modernité technique et des services web épurés :
-    </UiP>
-    <UiP class="mb-2 ml-10 group hover:text-zinc-400">
-      <span class="i-mingcute-web-line mr-2 h-7 w-7 inline-flex align-bottom text-bego-400 group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />
-      Conception et création de sites web sur mesure, de la simple vitrine aux applications complexes
-    </UiP>
-    <UiP class="ml-20 group hover:text-zinc-400">
-      <span class="i-mingcute-lightning-line mr-2 h-6 w-6 inline-flex align-bottom text-bego-400 group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />
-      Utilisation des technos dernier cri, pour un code léger, ultra-rapide, économique et écolo
-    </UiP>
-    <UiP class="ml-20 group hover:text-zinc-400">
-      <span class="i-mingcute-search-3-line mr-2 h-6 w-6 inline-flex align-bottom text-bego-400 group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />
-      Optimisation pour les moteurs de recherche (SEO)
-    </UiP>
-    <UiP class="mb-4 ml-20 group hover:text-zinc-400">
-      <span class="i-mingcute-cellphone-line mr-2 h-6 w-6 inline-flex align-bottom text-bego-400 group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />
-      Adaptation pour tous les tailles d'écran (responsive design)
-    </UiP>
-    <UiP class="mb-8 ml-10 group hover:text-zinc-400">
-      <span class="i-mingcute-tool-line mr-2 h-7 w-7 inline-flex align-bottom text-bego-400 group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />
-      Refontes, optimisations du code et des performances, maintenance, corrections et assistance technique sur projets existants
+      Je mets à disposition mes compétences de développeur senior et m'applique à assurer une modernité technique et des services web épurés. Cela passe par un développement scrupuleux des interfaces liées aux fonctionnalités clés de votre application, ainsi que par un soutien didactique lors du déploiement de vos outils de travail.
     </UiP>
     <UiP class="mb-8 group hover:text-zinc-400">
       <span class="i-mingcute-run-line mr-2 h-8 w-8 inline-flex align-bottom text-bego-400 group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />

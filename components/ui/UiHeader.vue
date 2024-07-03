@@ -80,7 +80,7 @@ onClickOutside(theHeader, () => {
     </div>
     <div
       v-if="panel"
-      class="fixed w-full z-50 lg:hidden top-[calc(var(--header-height)+1px)] px-4 sm:px-6 py-3 bg-zinc-900/75 backdrop-blur border-b border-zinc-800"
+      class="fixed w-full z-50 lg:hidden top-[calc(var(--header-height)+1px)] px-4 sm:px-6 py-3 bg-zinc-900 border-b border-zinc-800"
     >
       <div v-if="links" class="space-y-3 mb-3 lg:mb-6 -mx-1 lg:mx-0">
         <NuxtLink

@@ -4,23 +4,23 @@ const projects = [
   {
     title: 'Another APOD viewer',
     subtitle: 'Simple appli de visualisation de l\'image du jour de la NASA',
-    description: 'Petit projet personnel pour améliorer mes compétences sur Vue, son écosystème, et tout le reste. Principalement Vue 3 et la Composition API, Vite, Pinia, Vitest, Github CI... tout cela prêt à l\'emploi dans un environnement convivial pour les développeurs.<br/>v2 : Réusinage complet avec Nuxt, Nuxt UI et un proxy pour l\'API de la NASA.',
+    description: 'Petit projet personnel pour améliorer mes compétences sur Vue, son écosystème, et tout le reste. Principalement Vue 3 et la <i>Composition API</i>, Vite, Pinia, Vitest... tout cela prêt à l\'emploi dans un environnement convivial pour les développeurs.<br/><b>v2</b> : Réusinage complet avec Nuxt, Nuxt UI et un proxy pour l\'API de la NASA.',
     date: 'v1 : août 2022, v2 : juin 2024',
-    skills: ['Nuxt', 'Nuxt UI', 'Vue 3', 'Vite', 'Pinia', 'Vitest'],
+    skills: ['Vue 3', 'Vite', 'Pinia', 'Vitest', 'Nuxt', 'Nuxt UI'],
     links: [
       {
-        label: 'Website',
-        href: 'https://apod.tcastanie.dev',
-        icon: 'i-mingcute-external-link-line',
+        label: 'apod.tcastanie.dev',
+        to: 'https://apod.tcastanie.dev',
+        icon: 'i-mingcute-planet-line',
       },
       {
-        label: 'Github',
-        href: 'https://github.com/tcastanie/another-apod-viewer',
+        label: 'tcastanie/another-apod-viewer',
+        to: 'https://github.com/tcastanie/another-apod-viewer',
         icon: 'i-mingcute-github-line',
       },
       {
-        label: 'NASA APOD',
-        href: 'https://apod.nasa.gov',
+        label: 'apod.nasa.gov',
+        to: 'https://apod.nasa.gov',
         icon: 'i-mingcute-full-moon-line',
       },
     ],
@@ -30,8 +30,8 @@ const projects = [
 
 <template>
   <UiPage v-auto-animate>
-    <UiHero title="Projets" icon="i-mingcute-folder-more-line" />
-    <div v-if="shitMode" class="mb-16 flex items-center justify-around">
+    <UiHero v-if="!shitMode" title="Projets" icon="i-mingcute-folder-more-line" />
+    <div v-else class="py-6 sm:py-12 flex items-center justify-around">
       <NuxtImg
         src="/cmcdconstruction.gif"
         alt="building"
@@ -54,54 +54,54 @@ const projects = [
         height="85"
       />
     </div>
-    <div
-      v-for="project of projects"
-      :key="project.title"
-      class="relative mb-4 w-full rounded-lg shadow ring-1 ring-bego-1 hover:bg-bego-5/10 hover:ring-2"
-    >
-      <div class="px-4 py-5 sm:p-6">
-        <div class="mb-6 flex">
+    <div class="grid">
+      <UiCard
+        v-for="{ title, subtitle, description, date, skills, links } of projects"
+        :key="title"
+        class="grid gap-y-6"
+      >
+        <div class="grid gap-y-6">
           <NuxtImg
             src="/APOD_social.png"
             alt="Another APOD viewer logo"
             format="webp"
-            width="640"
-            height="320"
+            width="672"
+            height="336"
+            class="rounded-md"
           />
-        </div>
-        <p class="text-lg font-semibold">
-          {{ project.title }}
-        </p>
-        <p class="text-base text-lg tracking-tight opacity-75">
-          <span>{{ project.subtitle }}</span>
-        </p>
-        <p class="mt-6 text-base">
-          <!-- eslint-disable-next-line vue/no-v-html -->
-          <span v-html="project.description" />
-        </p>
-        <p class="mt-6 text-sm">
-          <span class="i-mingcute-calendar-line mr-2 h-5 w-5 inline-flex align-text-bottom text-bego-0" />
-          <span>{{ project.date }}</span>
-        </p>
-        <div class="mt-6 flex gap-x-3 text-xs">
-          <div v-for="skill of project.skills" :key="skill" class="rounded-md bg-bego-5 px-2 py-1">
-            {{ skill }}
+          <UiH2>{{ title }}</UiH2>
+          <div class="-mt-4 text-lg text-zinc-400">
+            {{ subtitle }}
           </div>
-        </div>
-        <div class="mt-6">
-          <div v-for="link of project.links" :key="link.label" class="flex">
-            <span :class="link.icon" class="mr-2 h-5 w-5" />
-            <NuxtLink
-              :to="link.href"
-              rel="noopener noreferrer"
+          <p class="text-base text-zinc-200 text-pretty">
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <span v-html="description" />
+          </p>
+          <div>
+            <span class="i-mingcute-calendar-2-line mr-2 h-6 w-6 inline-flex align-text-bottom text-bego-400" />
+            <span>{{ date }}</span>
+          </div>
+          <div class="flex gap-x-3">
+            <UiBadge v-for="skill of skills" :key="skill" variant="subtle">
+              {{ skill }}
+            </UiBadge>
+          </div>
+          <div class="grid justify-items-start">
+            <UiButton
+              v-for="{ label, to, icon } of links"
+              :key="label"
+              :to="to"
               target="_blank"
-              class="text-bego-0 hover:text-bego-3"
+              variant="ghost"
+              :icon="icon"
+              white
+              class="-ml-2"
             >
-              {{ link.href }}
-            </NuxtLink>
+              {{ label }}
+            </UiButton>
           </div>
         </div>
-      </div>
+      </UiCard>
     </div>
     <div v-if="!shitMode" class="mt-16 text-center text-xl font-italic opacity-50">
       &lt;!-- 🚧🚧🏗️🚧🚧 -->

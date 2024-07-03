@@ -61,7 +61,7 @@ const dividerBorderClasses = computed(() => {
         <slot />
       </template>
       <span v-else-if="label" class="text-sm">{{ label }}</span>
-      <span v-else-if="icon" :class="[icon, 'flex-shrink-0 w-5 h-5']">{{ label }}</span>
+      <UiIcon v-else-if="icon" :icon="icon" size="md" />
     </div>
     <div :class="dividerBorderClasses" />
   </div>

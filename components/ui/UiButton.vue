@@ -50,42 +50,18 @@ const buttonSizeClasses = computed(() => {
   }
 })
 
-const textClasses = {
-  'bego-400': 'text-bego-400',
-  'bego-500': 'text-bego-500',
-  'hover-bego-500': 'hover:text-bego-500',
-}
-
-const bgClasses = {
-  'bego-400': 'bg-bego-400',
-  'bego-950': 'bg-bego-950',
-  'hover-bego-500': 'hover:bg-bego-500',
-  'hover-bego-900': 'hover:bg-bego-900',
-  'hover-bego-950': 'hover:bg-bego-950',
-  'disabled-bego-400': 'disabled:bg-bego-400',
-  'disabled-bego-950': 'disabled:bg-bego-950',
-}
-
-const outlineClasses = {
-  'bego-400': 'focus-visible:outline-bego-400',
-}
-
-const ringClasses = {
-  'bego-400': 'focus-visible:ring-bego-400',
-}
-
 const buttonColorClasses = computed(() => {
   switch (variant.value) {
     case 'solid':
-      return `shadow-sm text-zinc-900 ${bgClasses['bego-400']} ${bgClasses['hover-bego-500']} ${bgClasses['disabled-bego-400']} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${outlineClasses['bego-400']}`
+      return `shadow-sm text-zinc-900 bg-bego-400 hover:bg-bego-500 disabled:bg-bego-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bego-400`
     case 'outline':
-      return `ring-1 ring-inset ring-current ${textClasses['bego-400']} ${bgClasses['hover-bego-950']} disabled:bg-transparent focus-visible:ring-2 ${ringClasses['bego-400']}`
+      return `ring-1 ring-inset ring-current text-bego-400 hover:bg-bego-950 disabled:bg-transparent focus-visible:ring-2 focus-visible:ring-bego-400`
     case 'soft':
-      return `${textClasses['bego-400']} ${bgClasses['bego-950']} ${bgClasses['hover-bego-900']} ${bgClasses['disabled-bego-950']} focus-visible:ring-2 focus-visible:ring-inset ${ringClasses['bego-400']}`
+      return `text-bego-400 bg-bego-950 hover:bg-bego-900 disabled:bg-bego-950 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-bego-400`
     case 'ghost':
-      return `${textClasses['bego-400']} ${bgClasses['hover-bego-950']} disabled:bg-transparent focus-visible:ring-2 focus-visible:ring-inset ${ringClasses['bego-400']}`
+      return `text-bego-400 hover:bg-bego-950 disabled:bg-transparent focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-bego-400`
     case 'link':
-      return `${textClasses['bego-400']} ${textClasses['hover-bego-500']} ${bgClasses['disabled-bego-400']} underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-inset ${ringClasses['bego-400']}`
+      return `text-bego-400 hover:text-bego-500 disabled:bg-bego-400 underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-bego-400`
     default:
       return ''
   }

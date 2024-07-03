@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
@@ -9,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/eslint',
     '@vueuse/nuxt',
+    'nuxt-shiki',
   ],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -25,6 +25,11 @@ export default defineNuxtConfig({
   image: {
     dir: 'assets',
     quality: 95,
+  },
+  shiki: {
+    bundledLangs: ['json', 'javascript'],
+    bundledThemes: ['one-dark-pro'],
+    defaultTheme: 'one-dark-pro',
   },
   eslint: {
     config: {
