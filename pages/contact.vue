@@ -1,89 +1,79 @@
 <script lang="ts" setup>
 const { shitMode } = useShitMode()
-const contacts = ref([
+const contacts = [
   {
     label: 'Malt',
-    href: 'https://www.malt.fr/profile/tcastanie',
-    icon: 'i-mingcute-laptop-2-line',
+    to: 'https://www.malt.fr/profile/tcastanie',
     description: 'Embauchez-moi pour vos projets web.',
   },
-  { label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/tcastanie',
+  {
+    label: 'LinkedIn',
+    to: 'https://www.linkedin.com/in/tcastanie',
     icon: 'i-mingcute-linkedin-line',
     description: 'Connectons-nous !',
   },
-  { label: 'Courriel',
-    href: 'mailto:contact@tcastanie.dev',
+  {
+    label: 'Courriel',
+    to: 'mailto:contact@tcastanie.dev',
     icon: 'i-mingcute-mail-send-line',
     description: 'Contactez-moi directement',
     kbd: 'contact@tcastanie.dev',
   },
-])
+]
 </script>
 
 <template>
-  <div v-auto-animate class="flex flex-col gap-8 text-lg">
-    <NuxtImg
-      v-if="shitMode"
-      src="/contact.gif"
+  <UiPage v-auto-animate>
+    <UiHero v-if="!shitMode" title="Contact" icon="i-mingcute-send-plane-fill" />
+    <img
+      v-else
+      src="~/assets/contact.gif"
       alt="contact"
-      format="gif"
       width="141"
       height="52"
-      class="mx-auto"
-    />
-    <div
-      v-for="contact of contacts"
-      :key="contact.label"
-      class="relative w-full rounded-lg shadow ring-1 ring-bego-1"
-      :class="{ 'hover:bg-bego-5/10 hover:ring-2': contact.href }"
+      class="mx-auto py-8 sm:py-16"
     >
-      <div class="px-4 py-5 sm:p-6">
-        <NuxtLink
-          v-if="contact.href"
-          :to="contact.href"
-          rel="noopener noreferrer"
-          target="_blank"
-          class="focus:outline-none"
-        >
-          <div class="mb-6 flex">
-            <span
-              v-if="!shitMode || contact.label !== 'Courriel'"
-              class="h-10 w-10 text-bego-0"
-              :class="[{ 'cursor-pointer': contact.href }, contact.icon]"
-            />
-            <NuxtImg
-              v-if="shitMode && contact.label === 'Courriel'"
-              src="/mail.gif"
-              alt="mail"
-              format="gif"
-              width="60"
-              height="60"
-            />
-          </div>
-          <p class="text-lg font-semibold">
-            {{ contact.label }}
-          </p>
-          <p class="mt-1 text-base">
-            <span>{{ contact.description }}</span>
-            <kbd
-              v-if="contact.kbd"
-              class="ml-2 rounded bg-bego-5 px-1 font-sans ring-1 ring-bego-0 ring-inset"
-            >
-              {{ contact.kbd }}
-            </kbd>
-          </p>
-        </NuxtLink>
-      </div>
+    <div class="grid gap-4 lg:gap-8">
+      <UiCard
+        v-for="{ label, to, icon, description, kbd } of contacts"
+        :key="label"
+        :to="to"
+        target="_blank"
+      >
+        <div v-auto-animate class="mb-6 flex">
+          <UiIcon
+            v-if="icon && (!shitMode || label !== 'Courriel')"
+            :icon="icon ? icon : ''"
+            size="xl"
+            :class="{ 'animate-spin': shitMode }"
+          />
+          <img
+            v-else-if="shitMode && label === 'Courriel'"
+            src="~/assets/mail.gif"
+            alt="mail"
+            width="60"
+            height="60"
+          >
+          <SvgMalt v-if="label === 'Malt'" class="h-7 w-7" :class="{ 'animate-spin': shitMode }" />
+        </div>
+        <p class="text-lg font-semibold">
+          {{ label }}
+        </p>
+        <p class="mt-1 text-base">
+          <span>{{ description }}</span>
+          <UiKbd v-if="kbd" size="md" class="ml-2">
+            {{ kbd }}
+          </UiKbd>
+        </p>
+      </UiCard>
     </div>
-    <NuxtImg
+    <img
       v-if="shitMode"
-      src="/email.gif"
+      src="~/assets/email.gif"
       alt="email"
-      format="gif"
       width="107"
       height="35"
-      class="mx-auto"
-    />
-  </div>
+      class="mx-auto mt-8"
+    >
+  </UiPage>
 </template>

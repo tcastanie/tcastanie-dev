@@ -1,50 +1,91 @@
 <script lang="ts" setup>
 const { shitMode, toggleShitMode } = useShitMode()
-const currentYear = new Date().getFullYear()
+const footerLinks = [
+  { label: 'CV', to: '/cv' },
+  { label: 'Projets', to: '/projets' },
+  { label: 'Prestations', to: '/prestations' },
+  { label: 'Contact', to: '/contact' },
+]
+const linksRight = [
+  {
+    label: 'Linkedin',
+    to: 'https://www.linkedin.com/in/tcastanie',
+    icon: 'i-mingcute-linkedin-line',
+    target: '_blank',
+  },
+  {
+    label: 'Github',
+    to: 'https://github.com/tcastanie',
+    icon: 'i-mingcute-github-line',
+    target: '_blank',
+  },
+]
 </script>
 
 <template>
-  <footer class="text-center text-xs" :class="shitMode ? 'h-16' : 'h-8'">
-    <div v-if="shitMode" class="mb-2 flex items-center justify-center gap-x-3">
-      <NuxtImg
-        src="/valid-html40.png"
-        alt="valid-html40"
-        format="webp"
-        width="88"
-        height="31"
+  <UiFooter :links="footerLinks">
+    <template #left>
+      <div class="flex items-center">
+        <UiIcon icon="i-mingcute-copyright-line" />
+        <UiButton
+          to="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          target="_blank"
+          variant="link"
+          size="sm"
+          white
+        >
+          CC BY-NC-SA 4.0
+        </UiButton>
+        <span>tcastanie.dev {{ new Date().getFullYear() }}</span>
+      </div>
+    </template>
+    <template #right>
+      <UiButton
+        v-for="{ label, to, icon, target } of linksRight"
+        :key="label"
+        :to="to"
+        :target="target"
+        :icon="icon"
+        variant="link"
+        size="lg"
+        square
+        white
+        :title="label"
+        :aria-label="label"
       />
-      <NuxtImg
-        src="/valid-css2.png"
-        alt="valid-css2"
-        format="webp"
-        width="88"
-        height="31"
+      <UiButton
+        to="https://www.malt.fr/profile/tcastanie"
+        target="_blank"
+        variant="link"
+        size="lg"
+        square
+        white
+        title="Malt"
+        aria-label="Malt"
+      >
+        <SvgMalt class="h-4 w-4" />
+      </UiButton>
+      <UiButton
+        v-if="shitMode"
+        icon="i-mingcute-planet-line"
+        variant="link"
+        size="lg"
+        square
+        title="Turn off party mode"
+        aria-label="Party mode"
+        class="animate-spin"
+        @click="toggleShitMode()"
       />
-    </div>
-    <NuxtLink
-      to="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-      class="underline-offset-2 hover:text-bleu hover:underline"
-      target="_blank"
-      noopener
-      noreferrer
-    >
-      CC BY-NC-SA 4.0
-    </NuxtLink>
-    <span>© {{ currentYear }} tcastanie.dev</span>
-    <span
-      class="i-game-icons-star-swirl ml-2 h-5 w-5 inline-flex cursor-pointer p-1 align-bottom hover-animate-bounce hover:text-bego-0"
-      :class="shitMode ? 'animate-spin text-bego-0' : ''"
-      @click="toggleShitMode()"
-    />
-    <audio
-      v-if="shitMode"
-      ref="sg1"
-      src="/sg1.mp3"
-      controls
-      autoplay
-      loop
-      volume="0.4"
-      class="fixed bottom-20 left-0 mx-auto lg:bottom-0"
-    />
-  </footer>
+    </template>
+  </UiFooter>
+  <audio
+    v-if="shitMode"
+    ref="sg1"
+    src="/sg1.mp3"
+    controls
+    autoplay
+    loop
+    volume="0.4"
+    class="fixed lg:bottom-16 left-0 mx-auto bottom-0"
+  />
 </template>
