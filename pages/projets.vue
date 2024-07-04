@@ -71,9 +71,9 @@ const projects = [
       <UiCard
         v-for="{ title, subtitle, description, image, date, skills, links } of projects"
         :key="title"
-        :class="[{ '!bg-zinc-800/50': shitMode }, 'overflow-hidden']"
+        :class="{ '!bg-zinc-800/50 overflow-hidden': shitMode }"
       >
-        <div v-if="shitMode && title === `Domaine l'Angélus`" class="absolute -z-1 -bottom-46 -left-40">
+        <div v-if="shitMode && title === `Domaine l'Angélus`" class="absolute -z-1 -bottom-36 -left-36">
           <img
             src="~/assets/corgiswim.gif"
             alt="corgiswimming"
@@ -103,7 +103,7 @@ const projects = [
             <span class="i-mingcute-calendar-2-line mr-2 h-6 w-6 inline-flex align-text-bottom text-bego-400" />
             <span>{{ date }}</span>
           </div>
-          <div v-if="skills?.length" class="flex gap-x-3">
+          <div v-if="skills?.length" class="flex flex-wrap gap-3">
             <UiBadge v-for="skill of skills" :key="skill" variant="subtle">
               {{ skill }}
             </UiBadge>
