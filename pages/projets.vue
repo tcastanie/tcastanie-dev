@@ -7,7 +7,7 @@ const projects = [
     description: `Création d'un site web pour le <b>Domaine l'Angélus</b> servant de vitrine et permettant également la réservation de gîtes et de cours de dressage de chiens de troupeaux. Développement complet du front <i>full static</i>, déploiement du back-office sur mesure, gestion des paiements et système de réservation réalisé <i>from scratch</i>.<br/>Accompagnement, aide à la contribution et support continu.`,
     image: '/doma_social.png',
     date: 'juillet 2024',
-    skills: ['Nuxt', 'Directus', 'Stripe', 'Cloudflare workers', 'UnoCSS', 'SSG', 'VCalendar'],
+    skills: ['Nuxt', 'Vue', 'Directus', 'Stripe', 'Cloudflare Workers', 'UnoCSS', 'SSG'],
     links: [
       {
         label: 'www.domaine-langelus.fr',
