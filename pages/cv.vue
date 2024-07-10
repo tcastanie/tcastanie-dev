@@ -14,12 +14,12 @@ const { title, subtitle, description, location, experiences } = theCv
 </script>
 
 <template>
-  <UiPage v-auto-animate>
-    <UiHero title="Curriculum Vitae" icon="i-mingcute-profile-fill" />
-    <UiCard v-if="!hackerzMode" class="relative" primary>
+  <BegoPage v-auto-animate>
+    <BegoHero title="Curriculum Vitae" icon="i-mingcute-profile-fill" />
+    <BegoCard v-if="!hackerzMode" class="relative" primary>
       <template #header>
         <div>
-          <UiHero :title="title" :description="subtitle" class="flex-1 !py-0 pr-20" />
+          <BegoHero :title="title" :description="subtitle" class="flex-1 !py-0 pr-20" />
           <div
             :class="[
               { 'animate-spin': shitMode },
@@ -29,18 +29,18 @@ const { title, subtitle, description, location, experiences } = theCv
           />
         </div>
         <div class="flex gap-2 mt-4 items-center group">
-          <UiIcon icon="i-mingcute-map-pin-line" size="lg" class="group-hover:text-bego-400" />
+          <BegoIcon icon="i-mingcute-map-pin-line" size="lg" class="group-hover:text-bego-400" />
           {{ location }}
         </div>
-        <UiP class="mt-8">
+        <BegoP class="mt-8">
           {{ description }}
-        </UiP>
+        </BegoP>
       </template>
       <div class="grid gap-y-8 text-lg">
         <div v-for="exp in experiences" :key="exp.startDate">
           <div class="text-sm text-bego-50 uppercase flex items-center gap-1">
             <span>{{ formatDate(exp.startDate) }}</span>
-            <UiIcon icon="i-mingcute-arrow-right-line" />
+            <BegoIcon icon="i-mingcute-arrow-right-line" />
             <span v-if="exp.endDate === 'new Date()'" class="px-1 rounded bg-[#282c34] normal-case">
               <Shiki lang="javascript" :code="exp.endDate" />
             </span>
@@ -49,11 +49,11 @@ const { title, subtitle, description, location, experiences } = theCv
           <div class="text-xl/6 font-semibold sm:text-2xl/8 text-balance">
             {{ `${exp.title} ${exp.company ? ` - ${exp.company}` : ''}` }}
           </div>
-          <UiP v-if="exp.description">
+          <BegoP v-if="exp.description">
             {{ exp.description }}
-          </UiP>
+          </BegoP>
           <div v-if="exp.location" class="flex gap-2 items-center group">
-            <UiIcon icon="i-mingcute-map-pin-line" size="md" class="group-hover:text-bego-400" />
+            <BegoIcon icon="i-mingcute-map-pin-line" size="md" class="group-hover:text-bego-400" />
             {{ exp.location }}
           </div>
           <ul v-if="exp.missions?.length" class="mt-4 ml-6 list-disc whitespace-pre-wrap grid gap-y-2 text-base/5 text-zinc-300 cursor-default">
@@ -65,21 +65,21 @@ const { title, subtitle, description, location, experiences } = theCv
       </div>
       <template #footer>
         <div class="grid grid-cols-4 sm:grid-cols-6 place-items-center gap-8" :class="{ 'animate-bounce': shitMode }">
-          <UiIcon icon="i-logos-vue" size="2xl" title="Vue.js" />
-          <UiIcon icon="i-logos-nuxt-icon" size="2xl" title="Nuxt" />
-          <UiIcon icon="i-logos-javascript" size="2xl" title="JavaScript" />
-          <UiIcon icon="i-logos-typescript-icon" size="2xl" title="TypeScript" />
-          <UiIcon icon="i-logos-tailwindcss-icon" size="2xl" title="TailwindCSS" />
-          <UiIcon icon="i-logos-unocss" size="2xl" title="UnoCSS" />
-          <UiIcon icon="i-simple-icons-directus" size="2xl" title="Directus" />
-          <UiIcon icon="i-logos-jest" size="2xl" title="Jest / Unit testing" />
-          <UiIcon icon="i-logos-git-icon" size="2xl" title="git" />
-          <UiIcon icon="i-logos-jamstack-icon" size="2xl" title="JAMStack / SSG" />
-          <UiIcon icon="i-logos-graphql" size="2xl" title="GraphQL" />
-          <UiIcon icon="i-logos-cloudflare-icon" size="2xl" title="Cloudflare" />
+          <BegoIcon icon="i-logos-vue" size="2xl" title="Vue.js" />
+          <BegoIcon icon="i-logos-nuxt-icon" size="2xl" title="Nuxt" />
+          <BegoIcon icon="i-logos-javascript" size="2xl" title="JavaScript" />
+          <BegoIcon icon="i-logos-typescript-icon" size="2xl" title="TypeScript" />
+          <BegoIcon icon="i-logos-tailwindcss-icon" size="2xl" title="TailwindCSS" />
+          <BegoIcon icon="i-logos-unocss" size="2xl" title="UnoCSS" />
+          <BegoIcon icon="i-simple-icons-directus" size="2xl" title="Directus" />
+          <BegoIcon icon="i-logos-jest" size="2xl" title="Jest / Unit testing" />
+          <BegoIcon icon="i-logos-git-icon" size="2xl" title="git" />
+          <BegoIcon icon="i-logos-jamstack-icon" size="2xl" title="JAMStack / SSG" />
+          <BegoIcon icon="i-logos-graphql" size="2xl" title="GraphQL" />
+          <BegoIcon icon="i-logos-cloudflare-icon" size="2xl" title="Cloudflare" />
         </div>
       </template>
-    </UiCard>
+    </BegoCard>
     <div v-else class="relative bg-[#282c34] rounded px-4 py-2 text-sm">
       <div
         :class="[
@@ -90,7 +90,7 @@ const { title, subtitle, description, location, experiences } = theCv
       />
       <Shiki lang="json" :code="`// cv-tcastanie.json\n\n${JSON.stringify(theCv, undefined, 2)}`" class="whitespace-break-spaces" />
     </div>
-  </UiPage>
+  </BegoPage>
 </template>
 
 <style scoped>

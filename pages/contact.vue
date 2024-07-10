@@ -23,8 +23,8 @@ const contacts = [
 </script>
 
 <template>
-  <UiPage v-auto-animate>
-    <UiHero v-if="!shitMode" title="Contact" icon="i-mingcute-send-plane-fill" />
+  <BegoPage v-auto-animate>
+    <BegoHero v-if="!shitMode" title="Contact" icon="i-mingcute-send-plane-fill" />
     <img
       v-else
       src="~/assets/contact.gif"
@@ -34,14 +34,14 @@ const contacts = [
       class="mx-auto py-8 sm:py-16"
     >
     <div class="grid gap-4 lg:gap-8">
-      <UiCard
+      <BegoCard
         v-for="{ label, to, icon, description, kbd } of contacts"
         :key="label"
         :to="to"
         target="_blank"
       >
         <div v-auto-animate class="mb-6 flex">
-          <UiIcon
+          <BegoIcon
             v-if="icon && (!shitMode || label !== 'Courriel')"
             :icon="icon ? icon : ''"
             size="xl"
@@ -61,11 +61,11 @@ const contacts = [
         </p>
         <p class="mt-1 text-base">
           <span>{{ description }}</span>
-          <UiKbd v-if="kbd" size="md" class="ml-2">
+          <BegoKbd v-if="kbd" size="md" class="ml-2">
             {{ kbd }}
-          </UiKbd>
+          </BegoKbd>
         </p>
-      </UiCard>
+      </BegoCard>
     </div>
     <img
       v-if="shitMode"
@@ -75,5 +75,5 @@ const contacts = [
       height="35"
       class="mx-auto mt-8"
     >
-  </UiPage>
+  </BegoPage>
 </template>

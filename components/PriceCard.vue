@@ -11,23 +11,23 @@ defineProps<{
 </script>
 
 <template>
-  <UiCard>
+  <BegoCard>
     <div class="gap-6 lg:gap-x-8 xl:gap-x-10 flex flex-col lg:grid lg:grid-cols-10">
       <div class="lg:col-span-7">
         <div class="flex items-center gap-3">
-          <UiIcon v-if="icon" :icon="icon" size="xl" />
+          <BegoIcon v-if="icon" :icon="icon" size="xl" />
           <p class="text-lg sm:text-2xl font-semibold truncate">
             {{ title }}
           </p>
         </div>
-        <UiP v-if="description" class="mt-3">
+        <BegoP v-if="description" class="mt-3">
           {{ description }}
-        </UiP>
-        <UiDivider v-if="features?.length" class="my-6 lg:my-8" />
+        </BegoP>
+        <BegoDivider v-if="features?.length" class="my-6 lg:my-8" />
         <div v-if="features?.length" class="flex-1">
           <ul class="grid lg:grid-cols-2 text-sm gap-3">
             <li v-for="{ label, icon: fIcon } of features" :key="label" class="flex items-center gap-x-2 min-w-0">
-              <UiIcon :icon="fIcon ? fIcon : 'i-mingcute-check-fill'" size="md" class="text-bego-400" />
+              <BegoIcon :icon="fIcon ? fIcon : 'i-mingcute-check-fill'" size="md" class="text-bego-400" />
               <span class="text-zinc-400 truncate" :title="label">{{ label }}</span>
             </li>
           </ul>
@@ -55,5 +55,5 @@ defineProps<{
         </template>
       </div>
     </div>
-  </UiCard>
+  </BegoCard>
 </template>

@@ -4,7 +4,7 @@ const { shitMode } = useShitMode()
 
 <template>
   <div v-auto-animate class="w-full">
-    <UiDivider
+    <BegoDivider
       v-if="!shitMode"
       orientation="horizontal"
       icon="i-mingcute-code-line"

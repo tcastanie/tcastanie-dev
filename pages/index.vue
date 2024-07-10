@@ -3,9 +3,9 @@ const { shitMode } = useShitMode()
 </script>
 
 <template>
-  <UiPage>
+  <BegoPage>
     <div class="grid grid-cols-2 items-center">
-      <UiHero description="Développeur web front-end freelance">
+      <BegoHero description="Développeur web front-end freelance">
         <template #title>
           <div class="flex items-center gap-4">
             <NuxtImg
@@ -28,7 +28,7 @@ const { shitMode } = useShitMode()
             <span v-else>tcastanie</span>
           </div>
         </template>
-      </UiHero>
+      </BegoHero>
       <ThePlanet class="w-24 h-24 sm:w-32 sm:h-32 justify-self-end" />
     </div>
     <TheIntroduction />
@@ -70,5 +70,5 @@ const { shitMode } = useShitMode()
         class="animate-ping"
       >
     </div>
-  </UiPage>
+  </BegoPage>
 </template>

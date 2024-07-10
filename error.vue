@@ -15,11 +15,11 @@ const handleError = () => clearError({ redirect: '/' })
 <template>
   <Body class="bg-zinc-900 text-white">
     <div class="grid place-content-center justify-items-center h-screen">
-      <UiCard class="text-center overflow-y-auto">
+      <BegoCard class="text-center overflow-y-auto">
         <template #header>
-          <UiH1>Erreur {{ error.statusCode }}</UiH1>
+          <BegoH1>Erreur {{ error.statusCode }}</BegoH1>
         </template>
-        <UiP v-if="error.statusCode === 404" class="mb-4">
+        <BegoP v-if="error.statusCode === 404" class="mb-4">
           You found a <b>dead link</b> 😱
           <img
             src="/404link.jpg"
@@ -28,16 +28,16 @@ const handleError = () => clearError({ redirect: '/' })
             height="384"
             class="rounded-lg mt-4"
           >
-        </UiP>
+        </BegoP>
         <div class="font-mono">
           {{ error.message }}
         </div>
         <template #footer>
-          <UiButton icon="i-mingcute-exit-door-line" @click="handleError">
+          <BegoButton icon="i-mingcute-exit-door-line" @click="handleError">
             Retour à l'accueil
-          </UiButton>
+          </BegoButton>
         </template>
-      </UiCard>
+      </BegoCard>
     </div>
   </Body>
 </template>

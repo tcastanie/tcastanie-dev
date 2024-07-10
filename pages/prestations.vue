@@ -1,19 +1,19 @@
 <template>
-  <UiPage>
-    <UiHero title="Prestations" icon="i-mingcute-necktie-fill" />
-    <UiP class="italic mb-4 text-sm">
+  <BegoPage>
+    <BegoHero title="Prestations" icon="i-mingcute-necktie-fill" />
+    <BegoP class="italic mb-4 text-sm">
       Tous les prix sont donnés à titre indicatif et sont susceptibles de varier en fonction de la complexité technique du projet et des contraintes métiers liées à celui-ci.
-    </UiP>
-    <UiButton
+    </BegoP>
+    <BegoButton
       to="/contact"
       icon="i-mingcute-send-plane-line"
       variant="solid"
       class="mb-12"
     >
       Contactez-moi pour un devis sur mesure
-    </UiButton>
+    </BegoButton>
     <div class="grid gap-8">
-      <UiDivider icon="i-mingcute-hammer-fill" type="dashed" title="Développement et construction" />
+      <BegoDivider icon="i-mingcute-hammer-fill" type="dashed" title="Développement et construction" />
       <PriceCard
         icon="i-mingcute-tool-line"
         title="Support technique"
@@ -31,9 +31,9 @@
         ]"
       >
         <template #cta>
-          <UiP class="italic text-center text-xs">
+          <BegoP class="italic text-center text-xs">
             (TJM donné à titre indicatif, devis sur mesure)
-          </UiP>
+          </BegoP>
         </template>
       </PriceCard>
       <PriceCard
@@ -53,17 +53,17 @@
         ]"
       >
         <template #cta>
-          <UiP class="italic text-center text-xs">
+          <BegoP class="italic text-center text-xs">
             (TJM donné à titre indicatif, devis sur mesure)
-          </UiP>
+          </BegoP>
         </template>
       </PriceCard>
       <div class="flex">
-        <UiButton to="/contact" icon="i-mingcute-send-plane-line" variant="solid">
+        <BegoButton to="/contact" icon="i-mingcute-send-plane-line" variant="solid">
           Contactez-moi
-        </UiButton>
+        </BegoButton>
       </div>
-      <UiDivider icon="i-mingcute-server-fill" type="dashed" title="Hébergement et maintenance" />
+      <BegoDivider icon="i-mingcute-server-fill" type="dashed" title="Hébergement et maintenance" />
       <PriceCard
         icon="i-mingcute-display-line"
         title="Formule « Site vitrine »"
@@ -91,9 +91,9 @@
         ]"
       >
         <template #cta>
-          <UiP class="italic text-center text-xs">
+          <BegoP class="italic text-center text-xs">
             +2€/mois par accès supplémentaire à la plateforme de contribution
-          </UiP>
+          </BegoP>
         </template>
       </PriceCard>
       <PriceCard
@@ -101,10 +101,10 @@
         description="Déploiement et renouvellement du nom de domaine (.fr, .com, ...) au prix de sa location (généralement 10~20€/an)"
       />
       <div class="flex">
-        <UiButton to="/contact" icon="i-mingcute-send-plane-line" variant="solid">
+        <BegoButton to="/contact" icon="i-mingcute-send-plane-line" variant="solid">
           Contactez-moi
-        </UiButton>
+        </BegoButton>
       </div>
     </div>
-  </UiPage>
+  </BegoPage>
 </template>

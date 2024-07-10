@@ -9,9 +9,9 @@ const headerLinks = [
 </script>
 
 <template>
-  <UiHeader title="Thibaut Castanié" :links="headerLinks">
+  <BegoHeader title="Thibaut Castanié" :links="headerLinks">
     <template #right>
-      <UiButton
+      <BegoButton
         variant="ghost"
         icon="i-mingcute-planet-line"
         square
@@ -20,5 +20,5 @@ const headerLinks = [
         @click="toggleShitMode()"
       />
     </template>
-  </UiHeader>
+  </BegoHeader>
 </template>

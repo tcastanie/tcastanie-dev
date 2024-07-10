@@ -2,6 +2,19 @@
 const { shitMode } = useShitMode()
 const projects = [
   {
+    title: 'Nuxt Bego UI',
+    subtitle: '🚧 WIP',
+    description: `<i>Nuxt Layer</i> avec des configs personnelles par défaut. Fortement inspiré par <i>Nuxt UI</i> mais avec <i>UnoCSS</i> au lieu de <i>TailwindCSS</i>. Le but est de pouvoir démarrer rapidement certains de mes projets. Ce site est d'ailleurs construit avec.`,
+    skills: ['Nuxt layers'],
+    links: [
+      {
+        label: 'tcastanie/nuxt-bego-ui',
+        to: 'https://github.com/tcastanie/nuxt-bego-ui',
+        icon: 'i-mingcute-github-line',
+      },
+    ],
+  },
+  {
     title: `Domaine l'Angélus`,
     subtitle: 'Site web de location de gîtes et de cours de dressage de chiens de troupeaux',
     description: `Création d'un site web pour le <b>Domaine l'Angélus</b> servant de vitrine et permettant également la réservation de gîtes et de cours de dressage de chiens de troupeaux. Développement complet du front <i>full static</i>, déploiement du back-office sur mesure, gestion des paiements et système de réservation réalisé <i>from scratch</i>.<br/>Accompagnement, aide à la contribution et support continu.`,
@@ -45,8 +58,8 @@ const projects = [
 </script>
 
 <template>
-  <UiPage>
-    <UiHero v-if="!shitMode" title="Projets" icon="i-mingcute-folder-more-fill" />
+  <BegoPage>
+    <BegoHero v-if="!shitMode" title="Projets" icon="i-mingcute-folder-more-fill" />
     <div v-else class="py-6 sm:py-12 flex items-center justify-around">
       <img
         src="~/assets/cmcdconstruction.gif"
@@ -68,7 +81,7 @@ const projects = [
       >
     </div>
     <div class="grid gap-y-4 lg:gap-y-8">
-      <UiCard
+      <BegoCard
         v-for="{ title, subtitle, description, image, date, skills, links } of projects"
         :key="title"
         :class="{ '!bg-zinc-800/50 overflow-hidden': shitMode }"
@@ -91,7 +104,7 @@ const projects = [
             height="336"
             class="rounded-md"
           />
-          <UiH2>{{ title }}</UiH2>
+          <BegoH2>{{ title }}</BegoH2>
           <div v-if="subtitle" class="-mt-4 text-lg text-zinc-400">
             {{ subtitle }}
           </div>
@@ -104,12 +117,12 @@ const projects = [
             <span>{{ date }}</span>
           </div>
           <div v-if="skills?.length" class="flex flex-wrap gap-3">
-            <UiBadge v-for="skill of skills" :key="skill" variant="subtle">
+            <BegoBadge v-for="skill of skills" :key="skill" variant="subtle">
               {{ skill }}
-            </UiBadge>
+            </BegoBadge>
           </div>
           <div v-if="links?.length" class="grid justify-items-start">
-            <UiButton
+            <BegoButton
               v-for="{ label, to, icon } of links"
               :key="label"
               :to="to"
@@ -120,10 +133,10 @@ const projects = [
               class="-ml-2"
             >
               {{ label }}
-            </UiButton>
+            </BegoButton>
           </div>
         </div>
-      </UiCard>
+      </BegoCard>
     </div>
     <div v-if="!shitMode" class="mt-16 text-center text-xl font-italic opacity-50">
       &lt;!-- 🚧🚧🏗️🚧🚧 -->
@@ -138,5 +151,5 @@ const projects = [
         height="53"
       >
     </div>
-  </UiPage>
+  </BegoPage>
 </template>

@@ -1,14 +1,12 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
   ssr: true,
   compatibilityDate: '2024-07-03',
+  extends: [
+    ['github:tcastanie/nuxt-bego-ui', { install: true }],
+  ],
   modules: [
-    '@formkit/auto-animate/nuxt',
-    '@unocss/nuxt',
-    '@vueuse/nuxt',
     '@nuxtjs/seo',
     '@nuxt/image',
-    '@nuxt/eslint',
     'nuxt-shiki',
   ],
   app: {
@@ -22,7 +20,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ['@unocss/reset/tailwind.css', '/assets/css/main.css'],
   image: {
     dir: 'assets',
     quality: 90,
@@ -31,11 +28,6 @@ export default defineNuxtConfig({
     bundledLangs: ['json', 'javascript'],
     bundledThemes: ['one-dark-pro'],
     defaultTheme: 'one-dark-pro',
-  },
-  eslint: {
-    config: {
-      stylistic: true,
-    },
   },
   site: {
     url: 'https://tcastanie.dev',

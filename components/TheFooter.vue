@@ -23,11 +23,11 @@ const linksRight = [
 </script>
 
 <template>
-  <UiFooter :links="footerLinks">
+  <BegoFooter :links="footerLinks">
     <template #left>
       <div class="flex items-center">
-        <UiIcon icon="i-mingcute-copyright-line" />
-        <UiButton
+        <BegoIcon icon="i-mingcute-copyright-line" />
+        <BegoButton
           to="https://creativecommons.org/licenses/by-nc-sa/4.0/"
           target="_blank"
           variant="link"
@@ -35,12 +35,12 @@ const linksRight = [
           white
         >
           CC BY-NC-SA 4.0
-        </UiButton>
+        </BegoButton>
         <span>tcastanie.dev {{ new Date().getFullYear() }}</span>
       </div>
     </template>
     <template #right>
-      <UiButton
+      <BegoButton
         v-for="{ label, to, icon, target } of linksRight"
         :key="label"
         :to="to"
@@ -53,7 +53,7 @@ const linksRight = [
         :title="label"
         :aria-label="label"
       />
-      <UiButton
+      <BegoButton
         to="https://www.malt.fr/profile/tcastanie"
         target="_blank"
         variant="link"
@@ -64,8 +64,8 @@ const linksRight = [
         aria-label="Malt"
       >
         <SvgMalt class="h-4 w-4" />
-      </UiButton>
-      <UiButton
+      </BegoButton>
+      <BegoButton
         v-if="shitMode"
         icon="i-mingcute-planet-line"
         variant="link"
@@ -77,7 +77,7 @@ const linksRight = [
         @click="toggleShitMode()"
       />
     </template>
-  </UiFooter>
+  </BegoFooter>
   <audio
     v-if="shitMode"
     ref="sg1"
