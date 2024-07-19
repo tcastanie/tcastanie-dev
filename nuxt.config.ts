@@ -1,14 +1,18 @@
 export default defineNuxtConfig({
+  devtools: { enabled: true },
   ssr: true,
   compatibilityDate: '2024-07-03',
-  extends: [
-    ['github:tcastanie/nuxt-bego-ui', { install: true }],
-  ],
+  extends: 'github:tcastanie/nuxt-bego-ui',
   modules: [
-    '@nuxtjs/seo',
+    '@formkit/auto-animate/nuxt',
+    '@nuxt/eslint',
     '@nuxt/image',
+    '@nuxtjs/seo',
+    '@unocss/nuxt',
+    '@vueuse/nuxt',
     'nuxt-shiki',
   ],
+  css: ['@unocss/reset/tailwind.css'],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
@@ -18,6 +22,11 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         { rel: 'manifest', href: '/site.webmanifest' },
       ],
+    },
+  },
+  eslint: {
+    config: {
+      stylistic: true,
     },
   },
   image: {
