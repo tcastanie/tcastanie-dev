@@ -3,14 +3,20 @@ const { shitMode } = useShitMode()
 const projects = [
   {
     title: 'Nuxt Bego UI',
-    subtitle: '🚧 WIP',
-    description: `<i>Nuxt Layer</i> avec des configs personnelles par défaut. Fortement inspiré par <i>Nuxt UI</i> mais avec <i>UnoCSS</i> au lieu de <i>TailwindCSS</i>. Le but est de pouvoir démarrer rapidement certains de mes projets. Ce site est d'ailleurs construit avec.`,
-    skills: ['Nuxt layers'],
+    subtitle: 'Nuxt Layer avec des configs personnelles par défaut.',
+    description: `Fortement inspiré par <i>Nuxt UI</i> mais avec <i>UnoCSS</i> au lieu de <i>TailwindCSS</i>. Le but est de pouvoir démarrer rapidement certains de mes projets. Ce site est d'ailleurs construit avec.`,
+    skills: ['Nuxt', 'Nuxt layers'],
+    date: 'juillet 2024',
     links: [
       {
         label: 'tcastanie/nuxt-bego-ui',
         to: 'https://github.com/tcastanie/nuxt-bego-ui',
         icon: 'i-mingcute-github-line',
+      },
+      {
+        label: 'nuxt-bego-ui.tcastanie.dev (showcase)',
+        to: 'https://nuxt-bego-ui.tcastanie.dev/',
+        icon: 'i-mingcute-grid-2-line',
       },
     ],
   },
@@ -21,6 +27,13 @@ const projects = [
     image: '/doma_social.png',
     date: 'juillet 2024',
     skills: ['Nuxt', 'Vue', 'Directus', 'Stripe', 'Cloudflare Workers', 'UnoCSS', 'SSG'],
+    lighthouse: {
+      performance: 84,
+      a11y: 96,
+      bestPractices: 100,
+      seo: 99,
+    },
+    lighthousePages: 25,
     links: [
       {
         label: 'www.domaine-langelus.fr',
@@ -82,7 +95,7 @@ const projects = [
     </div>
     <div class="grid gap-y-4 lg:gap-y-8">
       <BegoCard
-        v-for="{ title, subtitle, description, image, date, skills, links } of projects"
+        v-for="{ title, subtitle, description, image, date, skills, links, lighthouse, lighthousePages } of projects"
         :key="title"
         :class="{ '!bg-zinc-800/50 overflow-hidden': shitMode }"
       >
@@ -134,6 +147,12 @@ const projects = [
             >
               {{ label }}
             </BegoButton>
+          </div>
+          <div v-if="lighthouse">
+            <span class="i-mingcute-lighthouse-line mr-2 h-6 w-6 inline-flex align-text-bottom text-bego-400" />
+            <span v-if="lighthousePages">Score Lighthouse (moyenne des {{ lighthousePages }} pages) :</span>
+            <span v-else>Score Lighthouse :</span>
+            <LighthouseDisplay v-bind="lighthouse" class="mt-4" />
           </div>
         </div>
       </BegoCard>
