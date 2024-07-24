@@ -12,7 +12,7 @@ const props = defineProps<{
     <div
       v-for="(metric, key) of props"
       :key="key"
-      class="grid place-items-center h-28 w-28 rounded-full border-8"
+      class="grid place-items-center h-14 w-14 sm:h-28 sm:w-28 rounded-full border-4 sm:border-8"
       :class="{
         'bg-green border-green-800 text-green-800': metric > 89,
         'bg-yellow border-yellow-800 text-yellow-800': metric <= 89 && metric > 49,
@@ -20,7 +20,7 @@ const props = defineProps<{
       }"
       :title="capitalize(key)"
     >
-      <span class="text-5xl font-bold font-mono">{{ metric }}</span>
+      <span class="text-2xl sm:text-5xl font-bold font-mono">{{ metric }}</span>
     </div>
   </div>
 </template>
