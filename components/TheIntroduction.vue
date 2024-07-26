@@ -25,7 +25,7 @@ const { shitMode } = useShitMode()
     </BegoP>
     <BegoP class="group hover:text-zinc-400">
       <span class="i-mingcute-run-line mr-2 h-8 w-8 inline-flex align-bottom text-bego-400 group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />
-      Entre deux projets dev, sérieux ou non, j'aime courir des marathons et randonner autour de <span class="i-mingcute-triumphal-arch-line h-6 w-6 inline-flex align-sub" /> Montpellier
+      Entre deux projets dev, sérieux ou non, j'aime courir des marathons ou des ultra-trails autour de <span class="i-mingcute-triumphal-arch-line h-6 w-6 inline-flex align-sub" /> Montpellier
     </BegoP>
   </div>
   <div class="flex items-center flex-wrap gap-x-6 gap-y-3 my-8 lg:my-16">

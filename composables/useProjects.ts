@@ -1,0 +1,67 @@
+// @unocss-include
+export const useProjects = () => {
+  const projects = ref([
+    {
+      title: 'Nuxt Bego UI',
+      description: `Fortement inspiré par <i>Nuxt UI</i> mais avec <i>UnoCSS</i> au lieu de <i>TailwindCSS</i>. Le but est de pouvoir démarrer rapidement certains de mes projets. Ce site est d'ailleurs construit avec.`,
+      date: 'juillet 2024',
+      skills: ['Nuxt layer'],
+      links: [
+        {
+          label: 'nuxt-bego-ui.tcastanie.dev (showcase)',
+          to: 'https://nuxt-bego-ui.tcastanie.dev/',
+          icon: 'i-mingcute-grid-2-line',
+        },
+        {
+          label: 'tcastanie/nuxt-bego-ui',
+          to: 'https://github.com/tcastanie/nuxt-bego-ui',
+          icon: 'i-mingcute-github-line',
+        },
+      ],
+    },
+    {
+      primary: true,
+      title: `Domaine l'Angélus`,
+      subtitle: 'Site web de location de gîtes et de cours de dressage de chiens de troupeaux',
+      description: `Création d'un site web pour le <b>Domaine l'Angélus</b> servant de vitrine et permettant également la réservation de gîtes et de cours de dressage de chiens de troupeaux. Développement complet du front <i>full static</i>, déploiement du back-office sur mesure, gestion des paiements et système de réservation réalisé <i>from scratch</i>.<br/>Accompagnement, aide à la contribution et support continu.`,
+      image: '/doma_social.png',
+      date: 'juillet 2024',
+      skills: ['Nuxt', 'Vue', 'Directus', 'UnoCSS', 'SSG', 'Stripe', 'Cloudflare Workers'],
+      lighthouse: { perf: 84, a11y: 96, bp: 100, seo: 99 },
+      lighthousePages: 25,
+      links: [
+        {
+          label: 'www.domaine-langelus.fr',
+          to: 'https://www.domaine-langelus.fr/',
+          icon: 'i-mingcute-link-line',
+        },
+      ],
+    },
+    {
+      title: 'Another APOD viewer',
+      subtitle: 'Simple appli de visualisation de l\'image du jour de la NASA',
+      description: 'Petit projet personnel pour améliorer mes compétences sur Vue, son écosystème, et tout le reste. Principalement Vue 3 et la <i>Composition API</i>, Vite, Pinia, Vitest... tout cela prêt à l\'emploi dans un environnement convivial pour les développeurs.<br/><b>v2</b> : Réusinage complet avec Nuxt, Nuxt UI et un proxy pour l\'API de la NASA.',
+      image: '/APOD_social.png',
+      date: 'v1 : août 2022, v2 : juin 2024',
+      skills: ['Vue 3', 'Vite', 'Pinia', 'Vitest', 'Nuxt', 'Nuxt UI'],
+      links: [
+        {
+          label: 'apod.tcastanie.dev',
+          to: 'https://apod.tcastanie.dev',
+          icon: 'i-mingcute-link-line',
+        },
+        {
+          label: 'tcastanie/another-apod-viewer',
+          to: 'https://github.com/tcastanie/another-apod-viewer',
+          icon: 'i-mingcute-github-line',
+        },
+        {
+          label: 'apod.nasa.gov',
+          to: 'https://apod.nasa.gov',
+          icon: 'i-simple-icons-nasa',
+        },
+      ],
+    },
+  ])
+  return { projects }
+}

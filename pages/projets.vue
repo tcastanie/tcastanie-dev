@@ -1,73 +1,6 @@
 <script lang="ts" setup>
 const { shitMode } = useShitMode()
-const projects = [
-  {
-    title: 'Nuxt Bego UI',
-    subtitle: 'Nuxt Layer avec des configs personnelles par défaut.',
-    description: `Fortement inspiré par <i>Nuxt UI</i> mais avec <i>UnoCSS</i> au lieu de <i>TailwindCSS</i>. Le but est de pouvoir démarrer rapidement certains de mes projets. Ce site est d'ailleurs construit avec.`,
-    skills: ['Nuxt', 'Nuxt layers'],
-    date: 'juillet 2024',
-    links: [
-      {
-        label: 'tcastanie/nuxt-bego-ui',
-        to: 'https://github.com/tcastanie/nuxt-bego-ui',
-        icon: 'i-mingcute-github-line',
-      },
-      {
-        label: 'nuxt-bego-ui.tcastanie.dev (showcase)',
-        to: 'https://nuxt-bego-ui.tcastanie.dev/',
-        icon: 'i-mingcute-grid-2-line',
-      },
-    ],
-  },
-  {
-    title: `Domaine l'Angélus`,
-    subtitle: 'Site web de location de gîtes et de cours de dressage de chiens de troupeaux',
-    description: `Création d'un site web pour le <b>Domaine l'Angélus</b> servant de vitrine et permettant également la réservation de gîtes et de cours de dressage de chiens de troupeaux. Développement complet du front <i>full static</i>, déploiement du back-office sur mesure, gestion des paiements et système de réservation réalisé <i>from scratch</i>.<br/>Accompagnement, aide à la contribution et support continu.`,
-    image: '/doma_social.png',
-    date: 'juillet 2024',
-    skills: ['Nuxt', 'Vue', 'Directus', 'Stripe', 'Cloudflare Workers', 'UnoCSS', 'SSG'],
-    lighthouse: {
-      performance: 84,
-      a11y: 96,
-      bestPractices: 100,
-      seo: 99,
-    },
-    lighthousePages: 25,
-    links: [
-      {
-        label: 'www.domaine-langelus.fr',
-        to: 'https://www.domaine-langelus.fr/',
-        icon: 'i-mingcute-link-line',
-      },
-    ],
-  },
-  {
-    title: 'Another APOD viewer',
-    subtitle: 'Simple appli de visualisation de l\'image du jour de la NASA',
-    description: 'Petit projet personnel pour améliorer mes compétences sur Vue, son écosystème, et tout le reste. Principalement Vue 3 et la <i>Composition API</i>, Vite, Pinia, Vitest... tout cela prêt à l\'emploi dans un environnement convivial pour les développeurs.<br/><b>v2</b> : Réusinage complet avec Nuxt, Nuxt UI et un proxy pour l\'API de la NASA.',
-    image: '/APOD_social.png',
-    date: 'v1 : août 2022, v2 : juin 2024',
-    skills: ['Vue 3', 'Vite', 'Pinia', 'Vitest', 'Nuxt', 'Nuxt UI'],
-    links: [
-      {
-        label: 'apod.tcastanie.dev',
-        to: 'https://apod.tcastanie.dev',
-        icon: 'i-mingcute-link-line',
-      },
-      {
-        label: 'tcastanie/another-apod-viewer',
-        to: 'https://github.com/tcastanie/another-apod-viewer',
-        icon: 'i-mingcute-github-line',
-      },
-      {
-        label: 'apod.nasa.gov',
-        to: 'https://apod.nasa.gov',
-        icon: 'i-simple-icons-nasa',
-      },
-    ],
-  },
-]
+const { projects } = useProjects()
 </script>
 
 <template>
@@ -93,13 +26,15 @@ const projects = [
         height="85"
       >
     </div>
-    <div class="grid gap-y-4 lg:gap-y-8">
+    <div class="grid gap-y-4 lg:gap-y-6">
       <BegoCard
-        v-for="{ title, subtitle, description, image, date, skills, links, lighthouse, lighthousePages } of projects"
-        :key="title"
+        v-for="project of projects"
+        :key="project.title"
+        :primary="project.primary"
         :class="{ '!bg-zinc-800/50 overflow-hidden': shitMode }"
+        class=""
       >
-        <div v-if="shitMode && title === `Domaine l'Angélus`" class="absolute -z-1 -bottom-36 -left-36">
+        <div v-if="shitMode && project.title === `Domaine l'Angélus`" class="absolute -z-1 -bottom-36 -left-36">
           <img
             src="~/assets/corgiswim.gif"
             alt="corgiswimming"
@@ -107,52 +42,58 @@ const projects = [
             height="700"
           >
         </div>
-        <div class="grid gap-y-6">
+        <div class="grid gap-y-3">
           <NuxtImg
-            v-if="image"
-            :src="image"
-            :alt="title + ' social'"
+            v-if="project.image"
+            :src="project.image"
+            :alt="project.title + ' social'"
             format="webp"
             width="672"
             height="336"
             class="rounded-md"
           />
-          <BegoH2>{{ title }}</BegoH2>
-          <div v-if="subtitle" class="-mt-4 text-lg text-zinc-400">
-            {{ subtitle }}
+          <BegoH2>{{ project.title }}</BegoH2>
+          <div v-if="project.subtitle" class="-mt-4 text-lg text-zinc-400">
+            {{ project.subtitle }}
           </div>
-          <p v-if="description" class="text-base text-zinc-200 text-pretty">
+          <p v-if="project.description" class="text-base text-zinc-200 text-pretty">
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <span v-html="description" />
+            <span v-html="project.description" />
           </p>
-          <div v-if="date">
+          <div v-if="project.date">
             <span class="i-mingcute-calendar-2-line mr-2 h-6 w-6 inline-flex align-text-bottom text-bego-400" />
-            <span>{{ date }}</span>
+            <span>{{ project.date }}</span>
           </div>
-          <div v-if="skills?.length" class="flex flex-wrap gap-3">
-            <BegoBadge v-for="skill of skills" :key="skill" variant="subtle">
+          <div v-if="project.skills?.length" class="flex flex-wrap gap-3">
+            <BegoBadge v-for="skill of project.skills" :key="skill" variant="subtle">
               {{ skill }}
             </BegoBadge>
           </div>
-          <div v-if="links?.length" class="grid justify-items-start">
+          <div v-if="project.lighthouse">
+            <span class="i-mingcute-lighthouse-line mr-2 h-6 w-6 inline-flex align-text-bottom text-bego-400" />
+            <span v-if="project.lighthousePages">Score Lighthouse (moyenne des {{ project.lighthousePages }} pages via <BegoButton
+              to="https://unlighthouse.dev/"
+              target="_blank"
+              variant="link"
+              no-padding
+              size="xl"
+            >Unlighthouse</BegoButton>) :</span>
+            <span v-else>Score Lighthouse :</span>
+            <LighthouseDisplay v-bind="project.lighthouse" class="my-4" />
+          </div>
+          <div v-if="project.links?.length" class="grid justify-items-start">
             <BegoButton
-              v-for="{ label, to, icon } of links"
+              v-for="{ label, to, icon } of project.links"
               :key="label"
               :to="to"
               target="_blank"
-              variant="ghost"
+              :variant="project.primary ? 'outline' : 'ghost'"
               :icon="icon"
-              white
+              :white="!project.primary"
               class="-ml-2"
             >
               {{ label }}
             </BegoButton>
-          </div>
-          <div v-if="lighthouse">
-            <span class="i-mingcute-lighthouse-line mr-2 h-6 w-6 inline-flex align-text-bottom text-bego-400" />
-            <span v-if="lighthousePages">Score Lighthouse (moyenne des {{ lighthousePages }} pages) :</span>
-            <span v-else>Score Lighthouse :</span>
-            <LighthouseDisplay v-bind="lighthouse" class="mt-4" />
           </div>
         </div>
       </BegoCard>

@@ -1,25 +1,6 @@
 <script lang="ts" setup>
 const { shitMode, toggleShitMode } = useShitMode()
-const footerLinks = [
-  { label: 'CV', to: '/cv' },
-  { label: 'Projets', to: '/projets' },
-  { label: 'Prestations', to: '/prestations' },
-  { label: 'Contact', to: '/contact' },
-]
-const linksRight = [
-  {
-    label: 'Linkedin',
-    to: 'https://www.linkedin.com/in/tcastanie',
-    icon: 'i-mingcute-linkedin-line',
-    target: '_blank',
-  },
-  {
-    label: 'Github',
-    to: 'https://github.com/tcastanie',
-    icon: 'i-mingcute-github-line',
-    target: '_blank',
-  },
-]
+const { footerLinks, footerLinksRight } = useLinks()
 </script>
 
 <template>
@@ -41,7 +22,7 @@ const linksRight = [
     </template>
     <template #right>
       <BegoButton
-        v-for="{ label, to, icon, target } of linksRight"
+        v-for="{ label, to, icon, target } of footerLinksRight"
         :key="label"
         :to="to"
         :target="target"

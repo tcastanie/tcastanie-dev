@@ -2,15 +2,8 @@
 useHead({ titleTemplate: 'CV %separator %siteName' })
 
 const { shitMode } = useShitMode()
-const [hackerzMode, toggleHackerzMode] = useToggle()
-
-const img = useImage()
-const avatarUrl = img('/avatar.jpg', { width: 160, height: 160, quality: 95, format: 'webp' })
-const codingUrl = img('/coding.gif', { width: 80, height: 80, quality: 95, format: 'gif' })
-const bgAvatar = `url('${avatarUrl}')`
-const bgCoding = `url('${codingUrl}')`
-
-const { title, subtitle, description, location, experiences } = theCv
+const { hackerzMode, toggleHackerzMode, bgAvatar, bgCoding } = useHackerz()
+const { title, subtitle, description, location, experiences } = useCV()
 </script>
 
 <template>
@@ -88,7 +81,7 @@ const { title, subtitle, description, location, experiences } = theCv
         ]"
         @click="toggleHackerzMode()"
       />
-      <Shiki lang="json" :code="`// cv-tcastanie.json\n\n${JSON.stringify(theCv, undefined, 2)}`" class="whitespace-break-spaces" />
+      <Shiki lang="json" :code="`// composables/useCV.ts\n\n${JSON.stringify(useCV(), undefined, 2)}`" class="whitespace-break-spaces" />
     </div>
   </BegoPage>
 </template>
