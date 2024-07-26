@@ -2,6 +2,24 @@
 export const useProjects = () => {
   const projects = ref([
     {
+      title: 'Wacky Planets',
+      description: `Petite application SPA rapide et superflue utilisant le module Nuxt I18n. Développement chronométré afin d'améliorer mon efficacité et de m'auto-évaluer.`,
+      date: 'juillet 2024',
+      skills: ['Nuxt', 'SPA', 'I18n'],
+      links: [
+        {
+          label: 'wacky-planets.tcastanie.dev',
+          to: 'https://wacky-planets.tcastanie.dev/',
+          icon: 'i-mingcute-link-line',
+        },
+        {
+          label: 'tcastanie/wacky-planets',
+          to: 'https://github.com/tcastanie/wacky-planets',
+          icon: 'i-mingcute-github-line',
+        },
+      ],
+    },
+    {
       title: 'Nuxt Bego UI',
       description: `Fortement inspiré par <i>Nuxt UI</i> mais avec <i>UnoCSS</i> au lieu de <i>TailwindCSS</i>. Le but est de pouvoir démarrer rapidement certains de mes projets. Ce site est d'ailleurs construit avec.`,
       date: 'juillet 2024',
