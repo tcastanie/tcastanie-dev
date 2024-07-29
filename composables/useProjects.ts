@@ -45,8 +45,8 @@ export const useProjects = () => {
       image: '/doma_social.png',
       date: 'juillet 2024',
       skills: ['Nuxt', 'Vue', 'Directus', 'UnoCSS', 'SSG', 'Stripe', 'Cloudflare Workers'],
-      lighthouse: { perf: 84, a11y: 96, bp: 100, seo: 99 },
-      lighthousePages: 25,
+      lighthouse: { perf: 85, a11y: 98, bp: 100, seo: 100 },
+      lighthousePages: 26,
       links: [
         {
           label: 'www.domaine-langelus.fr',
