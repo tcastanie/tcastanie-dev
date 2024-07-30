@@ -4,7 +4,7 @@ export const useProjects = () => {
     {
       title: 'Wacky Planets',
       description: `Petite application SPA rapide et superflue utilisant le module Nuxt I18n. Développement chronométré afin d'améliorer mon efficacité et de m'auto-évaluer.`,
-      date: 'juillet 2024',
+      date: 'Juillet 2024',
       skills: ['Nuxt', 'SPA', 'I18n'],
       links: [
         {
@@ -21,9 +21,10 @@ export const useProjects = () => {
     },
     {
       title: 'Nuxt Bego UI',
+      subtitle: 'Librairie de composants pour Nuxt',
       description: `Fortement inspiré par <i>Nuxt UI</i> mais avec <i>UnoCSS</i> au lieu de <i>TailwindCSS</i>. Le but est de pouvoir démarrer rapidement certains de mes projets. Ce site est d'ailleurs construit avec.`,
-      date: 'juillet 2024',
-      skills: ['Nuxt layer'],
+      date: 'Juillet 2024',
+      skills: ['Nuxt layer', 'Open source'],
       links: [
         {
           label: 'nuxt-bego-ui.tcastanie.dev (showcase)',
@@ -40,10 +41,10 @@ export const useProjects = () => {
     {
       primary: true,
       title: `Domaine l'Angélus`,
-      subtitle: 'Site web de location de gîtes et de cours de dressage de chiens de troupeaux',
+      subtitle: 'Location de gîtes et de cours de dressage de chiens de troupeaux',
       description: `Création d'un site web pour le <b>Domaine l'Angélus</b> servant de vitrine et permettant également la réservation de gîtes et de cours de dressage de chiens de troupeaux. Développement complet du front <i>full static</i>, déploiement du back-office sur mesure, gestion des paiements et système de réservation réalisé <i>from scratch</i>.<br/>Accompagnement, aide à la contribution et support continu.`,
       image: '/doma_social.png',
-      date: 'juillet 2024',
+      date: 'Juillet 2024',
       skills: ['Nuxt', 'Vue', 'Directus', 'UnoCSS', 'SSG', 'Stripe', 'Cloudflare Workers'],
       lighthouse: { perf: 85, a11y: 98, bp: 100, seo: 100 },
       lighthousePages: 26,
@@ -57,11 +58,11 @@ export const useProjects = () => {
     },
     {
       title: 'Another APOD viewer',
-      subtitle: 'Simple appli de visualisation de l\'image du jour de la NASA',
-      description: 'Petit projet personnel pour améliorer mes compétences sur Vue, son écosystème, et tout le reste. Principalement Vue 3 et la <i>Composition API</i>, Vite, Pinia, Vitest... tout cela prêt à l\'emploi dans un environnement convivial pour les développeurs.<br/><b>v2</b> : Réusinage complet avec Nuxt, Nuxt UI et un proxy pour l\'API de la NASA.',
+      subtitle: `Simple appli de visualisation de l'image du jour de la NASA`,
+      description: `Petit projet personnel pour améliorer mes compétences sur Vue, son écosystème, et tout le reste. Principalement Vue 3 et la <i>Composition API</i>, Vite, Pinia, Vitest... tout cela prêt à l'emploi dans un environnement convivial pour les développeurs.<br/><b>Juin 2024 :</b> Réusinage complet avec Nuxt, Nuxt UI et création d'un proxy avec Nitro (serveur Nuxt) pour l'API de la NASA.`,
       image: '/APOD_social.png',
-      date: 'v1 : août 2022, v2 : juin 2024',
-      skills: ['Vue 3', 'Vite', 'Pinia', 'Vitest', 'Nuxt', 'Nuxt UI'],
+      date: 'Août 2022',
+      skills: ['Vue 3', 'Vite', 'Pinia', 'Vitest', 'Nuxt', 'Nuxt UI', 'Nitro'],
       links: [
         {
           label: 'apod.tcastanie.dev',

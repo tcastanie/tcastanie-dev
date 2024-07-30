@@ -39,14 +39,14 @@ const { shitMode } = useShitMode()
       Contactez-moi !
     </BegoButton>
     <BegoButton
-      to="/prestations"
+      to="/projets"
       icon="i-mingcute-arrow-right-line"
       variant="link"
       size="lg"
       trailing
       :class="{ 'animate-pulse': shitMode }"
     >
-      Mes prestations
+      Mes projets et expérimentations
     </BegoButton>
   </div>
 </template>
