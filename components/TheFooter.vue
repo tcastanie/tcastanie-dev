@@ -29,8 +29,9 @@ const { footerLinks, footerLinksRight } = useLinks()
         :icon="icon"
         variant="link"
         size="lg"
-        square
+
         white
+        square
         :title="label"
         :aria-label="label"
       />
@@ -67,6 +68,6 @@ const { footerLinks, footerLinksRight } = useLinks()
     autoplay
     loop
     volume="0.4"
-    class="fixed lg:bottom-16 left-0 mx-auto bottom-0"
+    class="fixed bottom-0 left-0 mx-auto lg:bottom-16"
   />
 </template>

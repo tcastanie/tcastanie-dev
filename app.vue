@@ -1,11 +1,17 @@
+<script setup lang="ts">
+useHead({
+  bodyAttrs: {
+    class: 'bg-zinc-900 text-white',
+  },
+})
+</script>
+
 <template>
-  <Body class="bg-zinc-900 text-white">
-    <NuxtLoadingIndicator color="#E02956" />
-    <TheHeader />
-    <NuxtPage />
-    <TheSeparator />
-    <TheFooter />
-  </Body>
+  <NuxtLoadingIndicator color="#E02956" />
+  <TheHeader />
+  <NuxtPage />
+  <TheSeparator />
+  <TheFooter />
 </template>
 
 <style>

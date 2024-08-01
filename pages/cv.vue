@@ -12,7 +12,7 @@ const { title, subtitle, description, location, experiences } = useCV()
     <BegoCard v-if="!hackerzMode" class="relative" primary>
       <template #header>
         <div>
-          <BegoHero :title="title" :description="subtitle" class="flex-1 !py-0 pr-20" />
+          <BegoHero :title="title" :description="subtitle" class="flex-1 pr-20 !py-0" />
           <div
             :class="[
               { 'animate-spin': shitMode },
@@ -21,7 +21,7 @@ const { title, subtitle, description, location, experiences } = useCV()
             @click="toggleHackerzMode()"
           />
         </div>
-        <div class="flex gap-2 mt-4 items-center group">
+        <div class="group mt-4 flex items-center gap-2">
           <BegoIcon icon="i-mingcute-map-pin-line" size="lg" class="group-hover:text-bego-400" />
           {{ location }}
         </div>
@@ -31,25 +31,25 @@ const { title, subtitle, description, location, experiences } = useCV()
       </template>
       <div class="grid gap-y-8 text-lg">
         <div v-for="exp in experiences" :key="exp.startDate">
-          <div class="text-sm text-bego-50 uppercase flex items-center gap-1">
+          <div class="flex items-center gap-1 text-sm text-bego-50 uppercase">
             <span>{{ formatDate(exp.startDate) }}</span>
             <BegoIcon icon="i-mingcute-arrow-right-line" />
-            <span v-if="exp.endDate === 'new Date()'" class="px-1 rounded bg-[#282c34] normal-case">
+            <span v-if="exp.endDate === 'new Date()'" class="rounded bg-[#282c34] px-1 normal-case">
               <Shiki lang="javascript" :code="exp.endDate" />
             </span>
             <span v-else>{{ formatDate(exp.endDate) }}</span>
           </div>
-          <div class="text-xl/6 font-semibold sm:text-2xl/8 text-balance">
+          <div class="text-balance text-xl/6 font-semibold sm:text-2xl/8">
             {{ `${exp.title} ${exp.company ? ` - ${exp.company}` : ''}` }}
           </div>
           <BegoP v-if="exp.description">
             {{ exp.description }}
           </BegoP>
-          <div v-if="exp.location" class="flex gap-2 items-center group">
+          <div v-if="exp.location" class="group flex items-center gap-2">
             <BegoIcon icon="i-mingcute-map-pin-line" size="md" class="group-hover:text-bego-400" />
             {{ exp.location }}
           </div>
-          <ul v-if="exp.missions?.length" class="mt-4 ml-6 list-disc whitespace-pre-wrap grid gap-y-2 text-base/5 text-zinc-300 cursor-default">
+          <ul v-if="exp.missions?.length" class="grid ml-6 mt-4 cursor-default list-disc gap-y-2 whitespace-pre-wrap text-base/5 text-zinc-300">
             <li v-for="task in exp.missions" :key="task" class="hover:text-zinc-50">
               {{ task }}
             </li>
@@ -57,7 +57,7 @@ const { title, subtitle, description, location, experiences } = useCV()
         </div>
       </div>
       <template #footer>
-        <div class="grid grid-cols-4 sm:grid-cols-6 place-items-center gap-8" :class="{ 'animate-bounce': shitMode }">
+        <div class="grid grid-cols-4 place-items-center gap-8 sm:grid-cols-6" :class="{ 'animate-bounce': shitMode }">
           <BegoIcon icon="i-logos-vue" size="2xl" title="Vue.js" />
           <BegoIcon icon="i-logos-nuxt-icon" size="2xl" title="Nuxt" />
           <BegoIcon icon="i-logos-javascript" size="2xl" title="JavaScript" />
@@ -73,7 +73,7 @@ const { title, subtitle, description, location, experiences } = useCV()
         </div>
       </template>
     </BegoCard>
-    <div v-else class="relative bg-[#282c34] rounded px-4 py-2 text-sm">
+    <div v-else class="relative rounded bg-[#282c34] px-4 py-2 text-sm">
       <div
         :class="[
           { 'animate-spin': shitMode },

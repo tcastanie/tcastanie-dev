@@ -29,7 +29,7 @@ const { shitMode } = useShitMode()
           </div>
         </template>
       </BegoHero>
-      <ThePlanet class="w-24 h-24 sm:w-32 sm:h-32 justify-self-end" />
+      <ThePlanet class="h-24 w-24 justify-self-end sm:h-32 sm:w-32" />
     </div>
     <TheIntroduction />
     <div v-if="shitMode" class="flex flex-wrap items-center justify-center gap-x-12">

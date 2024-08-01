@@ -3,7 +3,7 @@ const { shitMode } = useShitMode()
 </script>
 
 <template>
-  <div class="cursor-default text-pretty grid gap-y-8">
+  <div class="grid cursor-default gap-y-8 text-pretty">
     <BegoH2 class="" :class="{ 'animate-bounce': shitMode }">
       Bonjour !
     </BegoH2>
@@ -13,7 +13,7 @@ const { shitMode } = useShitMode()
     </BegoP>
     <BegoP class="group hover:text-zinc-400">
       <span class="i-mingcute-terminal-box-line mr-2 h-8 w-8 inline-flex align-bottom text-bego-400 group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />
-      J'ai huit ans d'xp en développement web, principalement en front-end et dans l'écosystème de Vue <span class="i-logos-vue h-5 w-5 inline-flex align-sub mx-0.5 mb-0.5" /> et Nuxt <span class="i-logos-nuxt-icon h-6 w-6 inline-flex align-sub mx-0.5" />.
+      J'ai huit ans d'xp en développement web, principalement en front-end et dans l'écosystème de Vue <span class="i-logos-vue mx-0.5 mb-0.5 h-5 w-5 inline-flex align-sub" /> et Nuxt <span class="i-logos-nuxt-icon mx-0.5 h-6 w-6 inline-flex align-sub" />.
     </BegoP>
     <BegoP class="group hover:text-zinc-400">
       <span class="i-mingcute-tool-line mr-2 h-8 w-8 inline-flex align-bottom text-bego-400 group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />
@@ -28,7 +28,7 @@ const { shitMode } = useShitMode()
       Entre deux projets dev, sérieux ou non, j'aime courir des marathons ou des ultra-trails autour de <span class="i-mingcute-triumphal-arch-line h-6 w-6 inline-flex align-sub" /> Montpellier
     </BegoP>
   </div>
-  <div class="flex items-center flex-wrap gap-x-6 gap-y-3 my-8 lg:my-16">
+  <div class="my-8 flex flex-wrap items-center gap-x-6 gap-y-3 lg:my-16">
     <BegoButton
       to="/contact"
       icon="i-mingcute-send-plane-line"

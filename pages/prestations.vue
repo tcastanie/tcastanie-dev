@@ -1,7 +1,7 @@
 <template>
   <BegoPage>
     <BegoHero title="Prestations" icon="i-mingcute-necktie-fill" />
-    <BegoP class="italic mb-4 text-sm">
+    <BegoP class="mb-4 text-sm italic">
       Tous les prix sont donnés à titre indicatif et sont susceptibles de varier en fonction de la complexité technique du projet et des contraintes métiers liées à celui-ci.
     </BegoP>
     <BegoButton
@@ -31,7 +31,7 @@
         ]"
       >
         <template #cta>
-          <BegoP class="italic text-center text-xs">
+          <BegoP class="text-center text-xs italic">
             (TJM donné à titre indicatif, devis sur mesure)
           </BegoP>
         </template>
@@ -53,7 +53,7 @@
         ]"
       >
         <template #cta>
-          <BegoP class="italic text-center text-xs">
+          <BegoP class="text-center text-xs italic">
             (TJM donné à titre indicatif, devis sur mesure)
           </BegoP>
         </template>
@@ -91,7 +91,7 @@
         ]"
       >
         <template #cta>
-          <BegoP class="italic text-center text-xs">
+          <BegoP class="text-center text-xs italic">
             +2€/mois par accès supplémentaire à la plateforme de contribution
           </BegoP>
         </template>

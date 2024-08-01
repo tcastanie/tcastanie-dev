@@ -31,7 +31,7 @@ defineProps<{
       <div v-if="project.subtitle" class="text-lg text-zinc-400">
         {{ project.subtitle }}
       </div>
-      <p v-if="project.description" class="text-base text-zinc-200 text-pretty">
+      <p v-if="project.description" class="text-pretty text-base text-zinc-200">
         <!-- eslint-disable-next-line vue/no-v-html -->
         <span v-html="project.description" />
       </p>
@@ -71,7 +71,7 @@ defineProps<{
         </BegoButton>
       </div>
     </div>
-    <div v-if="shitMode && project.title === `Domaine l'Angélus`" class="absolute -z-1 -bottom-36 -left-36">
+    <div v-if="shitMode && project.title === `Domaine l'Angélus`" class="absolute -bottom-36 -left-36 -z-1">
       <img
         src="~/assets/corgiswim.gif"
         alt="corgiswimming"

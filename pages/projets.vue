@@ -6,7 +6,7 @@ const { projects } = useProjects()
 <template>
   <BegoPage>
     <BegoHero v-if="!shitMode" title="Projets" icon="i-mingcute-folder-more-fill" />
-    <div v-else class="py-6 sm:py-12 flex items-center justify-around">
+    <div v-else class="flex items-center justify-around py-6 sm:py-12">
       <img
         src="~/assets/cmcdconstruction.gif"
         alt="building"
@@ -34,7 +34,7 @@ const { projects } = useProjects()
             :items="[{ label: project.title, slot: slugify(project.title) }]"
             variant="ghost"
             size="2xl"
-            class="-mx-4 -mt-5 -mb-6.5 sm:-mx-6 !w-auto"
+            class="-mx-4 -mb-6.5 -mt-5 !w-auto sm:-mx-6"
           >
             <template #[slugify(project.title)]>
               <ProjectContent :project small />
