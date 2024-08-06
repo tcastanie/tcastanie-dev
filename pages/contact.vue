@@ -2,6 +2,13 @@
 const { shitMode } = useShitMode()
 const contacts = [
   {
+    label: 'Courriel',
+    to: 'mailto:contact@tcastanie.dev',
+    icon: 'i-mingcute-mail-send-line',
+    description: 'Contactez-moi directement',
+    kbd: 'contact@tcastanie.dev',
+  },
+  {
     label: 'Malt',
     to: 'https://www.malt.fr/profile/tcastanie',
     description: 'Embauchez-moi pour vos projets web.',
@@ -11,13 +18,6 @@ const contacts = [
     to: 'https://www.linkedin.com/in/tcastanie',
     icon: 'i-mingcute-linkedin-line',
     description: 'Connectons-nous !',
-  },
-  {
-    label: 'Courriel',
-    to: 'mailto:contact@tcastanie.dev',
-    icon: 'i-mingcute-mail-send-line',
-    description: 'Contactez-moi directement',
-    kbd: 'contact@tcastanie.dev',
   },
 ]
 </script>
@@ -31,7 +31,7 @@ const contacts = [
       alt="contact"
       width="141"
       height="52"
-      class="mx-auto py-8 sm:py-16"
+      class="py-8 sm:py-16"
     >
     <div class="grid gap-4 lg:gap-8">
       <BegoCard

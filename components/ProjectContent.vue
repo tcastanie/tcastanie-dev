@@ -36,7 +36,7 @@ defineProps<{
         <span v-html="project.description" />
       </p>
       <div v-if="project.date">
-        <span class="i-mingcute-calendar-2-line mr-2 h-6 w-6 inline-flex align-text-bottom text-bego-400" />
+        <span class="i-mingcute-calendar-2-line mr-2 inline-block h-6 w-6 align-text-bottom text-bego-400" />
         <span>{{ project.date }}</span>
       </div>
       <div v-if="project.skills?.length" class="flex flex-wrap gap-3">
@@ -45,7 +45,7 @@ defineProps<{
         </BegoBadge>
       </div>
       <div v-if="project.lighthouse">
-        <span class="i-mingcute-lighthouse-line mr-2 h-6 w-6 inline-flex align-text-bottom text-bego-400" />
+        <span class="i-mingcute-lighthouse-line mr-2 inline-block h-6 w-6 align-text-bottom text-bego-400" />
         <span v-if="project.lighthousePages">Score Lighthouse (moyenne des {{ project.lighthousePages }} pages via <BegoButton
           to="https://unlighthouse.dev/"
           target="_blank"
