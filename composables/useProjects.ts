@@ -45,7 +45,7 @@ export const useProjects = () => {
       description: `Création d'un site web pour le <b>Domaine l'Angélus</b> servant de vitrine et permettant également la réservation de gîtes et de cours de dressage de chiens de troupeaux. Développement complet du front <i>full static</i>, déploiement du back-office sur mesure, gestion des paiements et système de réservation réalisé <i>from scratch</i>.<br/>Accompagnement, aide à la contribution et support continu.`,
       image: '/doma_social.png',
       date: 'Juillet 2024',
-      skills: ['Nuxt', 'Vue', 'Directus', 'UnoCSS', 'SSG', 'Stripe', 'Cloudflare Workers'],
+      skills: ['Nuxt', 'Vue.js', 'TypeScript', 'Directus', 'UnoCSS', 'Stripe', 'Cloudflare', 'Node.js'],
       lighthouse: { perf: 85, a11y: 98, bp: 100, seo: 100 },
       lighthousePages: 26,
       links: [

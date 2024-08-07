@@ -50,10 +50,36 @@ const { title, subtitle, description, location, experiences } = useCV()
             {{ exp.location }}
           </div>
           <ul v-if="exp.missions?.length" class="grid ml-6 mt-4 cursor-default list-disc gap-y-2 whitespace-pre-wrap text-base/5 text-zinc-300">
-            <li v-for="task in exp.missions" :key="task" class="hover:text-zinc-50">
+            <li v-for="task in exp.missions" :key="task" class="text-pretty hover:text-zinc-50">
               {{ task }}
             </li>
           </ul>
+          <div v-if="exp.links" class="mt-4">
+            <div class="font-semibold">
+              Portfolio (cf. <BegoButton
+                variant="link"
+                size="xl"
+                to="/projets"
+                no-padding
+                class="font-semibold"
+              >
+                Mes Projets
+              </BegoButton>) :
+            </div>
+            <ul>
+              <li v-for="{ url, label, icon } of exp.links" :key="url">
+                <BegoButton
+                  :to="url"
+                  variant="outline"
+                  target="_blank"
+                  :icon="icon ? icon : 'i-mingcute-link-line'"
+                  class="mt-2"
+                >
+                  {{ label }} 🡕
+                </BegoButton>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <template #footer>
@@ -65,7 +91,7 @@ const { title, subtitle, description, location, experiences } = useCV()
           <BegoIcon icon="i-logos-tailwindcss-icon" size="2xl" title="TailwindCSS" />
           <BegoIcon icon="i-logos-unocss" size="2xl" title="UnoCSS" />
           <BegoIcon icon="i-simple-icons-directus" size="2xl" title="Directus" />
-          <BegoIcon icon="i-logos-jest" size="2xl" title="Jest / Unit testing" />
+          <BegoIcon icon="i-logos-jest" size="2xl" title="Jest / Test unitaire" />
           <BegoIcon icon="i-logos-git-icon" size="2xl" title="git" />
           <BegoIcon icon="i-logos-jamstack-icon" size="2xl" title="JAMStack / SSG" />
           <BegoIcon icon="i-logos-graphql" size="2xl" title="GraphQL" />

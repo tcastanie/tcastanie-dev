@@ -3,7 +3,7 @@ export const useCV = () => {
   const subtitle = 'Développeur web front-end indépendant'
   const picture = 'tcastanie.jpg'
   const location = 'Montpellier'
-  const description = `Fort de 8 ans d'expérience dans le développement web, je mets à disposition mes compétences de développeur front-end spécialisé en JavaScript, Vue et Nuxt. Je m'applique à assurer une modernité technique et des services web épurés. Cela passe par un développement scrupuleux des interfaces liées aux fonctionnalités clés de votre application, ainsi que par un soutien didactique lors du déploiement de vos outils de travail.`
+  const description = `Bonjour ! Fort de 8 ans d'expérience dans le développement web, je mets à disposition mes compétences de développeur web senior, spécialisé notamment avec l'écosystème Vue.js et Nuxt. Je m'applique à assurer une modernité technique et des services web épurés.`
 
   const experiences = [
     {
@@ -11,11 +11,19 @@ export const useCV = () => {
       location: 'Montpellier',
       startDate: '2023-09-01',
       endDate: 'new Date()',
-      description: 'Auto-entrepreneur',
+      description: 'Micro entreprise',
       missions: [
-        `Création du site web du Domaine l'Angélus, permettant notamment la réservation de gîtes et de cours de chiens de troupeaux. Développement complet du front full-static (Nuxt), déploiement du back-office sur mesure (Directus) et gestion des paiements (Stripe). Accompagnement, aide à la contribution et support continu.`,
-        `Formation continue aux dernières versions des outils de l'écosystème Nuxt et Vue`,
-        `Développement de mini projets personnels`,
+        `1ᵉʳ semestre 2024 : Création du site web du Domaine l'Angélus, permettant la réservation de gîtes et de cours de chiens de troupeaux. Développement complet du front full static (Nuxt), déploiement du back-office sur mesure (Directus) et gestion des paiements (Stripe). Accompagnement, aide à la contribution et support continu.`,
+        `Formation continue aux dernières versions des outils de l'écosystème Nuxt et Vue.js`,
+        `Micro mission via Malt`,
+        `Développement de petits projets personnels`,
+      ],
+      links: [
+        {
+          url: 'https://www.domaine-langelus.fr/',
+          label: 'www.domaine-langelus.fr',
+          icon: 'i-mingcute-home-7-line',
+        },
       ],
     },
     {
@@ -24,11 +32,10 @@ export const useCV = () => {
       location: 'Montpellier',
       startDate: '2021-02-01',
       endDate: '2023-04-30',
-      description: 'Développeur et intégrateur front-end de sites e-commerce complexes.',
+      description: 'Développeur web front-end sur des sites e-commerce complexes.',
       missions: [
-        `Gestion complète du front du site e-commerce Snowleader, intégration de fonctionnalités (dont SSR, SEO, tests unitaires), optimisations des performances (web, scores SEO et paiements), amélioration continue et support. Accompagnement d'un alternant et d'un stagiaire.`,
-        `Intégration web de maquettes (Avène, Aderma, Klorane)`,
-        `Aide ponctuelle sur d'autres projets`,
+        `Gestion complète du front du site e-commerce Snowleader : intégration de fonctionnalités (SEO, tests unitaires), optimisations des performances (SSR, scores SEO et paiements), migration Vue2/Nuxt2 vers Vue3/Nuxt3, amélioration continue et support. Accompagnement d'un alternant et d'un stagiaire.`,
+        `Aide ponctuelle sur d'autres projets (Avène, Aderma, Klorane)`,
       ],
     },
     {
@@ -41,7 +48,7 @@ export const useCV = () => {
       missions: [
         `Création et gestion d'une société dans le domaine du jeu-vidéo et de l'apprentissage. (EdTech)`,
         `Développement de Grammaticus, un jeu mobile d’apprentissage de la grammaire française à destination des enfants en ﬁn du primaire.`,
-        `Création de Gameji, une application web & mobile permettant de créer et partager son jeu en quelques minutes.`,
+        `Création de Gameji, une application web & mobile permettant de créer et partager son jeu sérieux en quelques minutes.`,
       ],
     },
     {
@@ -55,6 +62,13 @@ export const useCV = () => {
         `Développement d'une plateforme proposant une solution complète pour créer des jeux sérieux dans le domaine de la formation et de la RH. (1 an et demi sous contrat avec la SATT AxLR)`,
         `Maintenance et amélioration continue de la plateforme.`,
       ],
+    },
+    {
+      title: 'Chemin de Compostelle',
+      location: 'Santiago de Compostela, Espagne',
+      startDate: '2016-08-01',
+      endDate: '2016-09-30',
+      description: 'Randonnée sur 2 mois, en partant de Montpellier',
     },
     {
       title: 'Master Informatique',
