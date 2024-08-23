@@ -17,7 +17,7 @@ const { shitMode } = useShitMode()
     </BegoP>
     <div class="group text-pretty text-lg text-zinc-300 hover:text-zinc-400">
       <span class="i-mingcute-package-line mr-2 inline-block h-8 w-8 align-bottom text-bego-400 group-hover:animate-ping group-hover:text-bego-700" :class="{ 'animate-bounce': shitMode }" />
-      <TextSwitcher :text="['Je construis', '&nbsp;&nbsp;&nbsp;&nbsp;Je répare', '&nbsp;&nbsp;J\'améliore']" class="w-23" /> votre <TextSwitcher :text="['app', 'site']" delay class="w-7.5" /> web sur mesure, en accord avec vos besoins et vos contraintes métier.
+      <TextSwitcher :text="['Je construis', '&nbsp;&nbsp;&nbsp;&nbsp;Je répare', '&nbsp;&nbsp;J\'améliore']" class="w-24" /> votre <TextSwitcher :text="['app', 'site']" delay class="w-8" /> web sur mesure, en accord avec vos besoins et vos contraintes métier.
       <BegoButton
         to="/prestations"
         variant="link"
