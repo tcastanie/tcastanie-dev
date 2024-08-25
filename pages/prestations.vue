@@ -13,7 +13,7 @@
       Contactez-moi pour un devis sur mesure
     </BegoButton>
     <div class="grid gap-8">
-      <BegoDivider icon="i-mingcute-hammer-fill" type="dashed" title="Développement et construction" />
+      <BegoDivider label="🏗️ Développement et construction 🔨" type="dashed" />
       <PriceCard
         icon="i-mingcute-tool-line"
         title="Support technique"
@@ -49,7 +49,7 @@
           { label: 'Poids écolo et économique', icon: 'i-mingcute-leaf-line' },
           { label: 'Optimisations SEO', icon: 'i-mingcute-search-3-line' },
           { label: 'Technologies dernier cri', icon: 'i-simple-icons-vuedotjs' },
-          { label: 'Intégration services paiements', icon: 'i-mingcute-bank-card-line' },
+          { label: 'Intégration paiements (Stripe)', icon: 'i-mingcute-bank-card-line' },
         ]"
       >
         <template #cta>
@@ -63,26 +63,26 @@
           Contactez-moi
         </BegoButton>
       </div>
-      <BegoDivider icon="i-mingcute-server-fill" type="dashed" title="Hébergement et maintenance" />
+      <BegoDivider label="🚀 Hébergement et maintenance 🛎️" type="dashed" />
       <PriceCard
         icon="i-mingcute-display-line"
         title="Formule « Site vitrine »"
         description="Déploiement et maintien en ligne du site"
-        price="5€"
-        cycle="/mois"
+        price="60€"
+        cycle="/an"
         :features="[
           { label: 'Disponibilité 99,9%' },
           { label: 'Mises à jour de sécurité', icon: 'i-mingcute-safety-certificate-line' },
           { label: 'Affichage ultra-rapide', icon: 'i-mingcute-dashboard-3-line' },
-          { label: 'Support par mail', icon: 'i-mingcute-mail-send-line' },
+          { label: 'Support par e-mail', icon: 'i-mingcute-mail-send-line' },
         ]"
       />
       <PriceCard
         icon="i-mingcute-report-forms-line"
         title="Formule « Web app »"
         description="Accès à la modification des composants du site"
-        price="10€"
-        cycle="/mois"
+        price="120€"
+        cycle="/an"
         :features="[
           { label: 'Services de « Site vitrine »', icon: 'i-mingcute-display-line' },
           { label: 'Plateforme de contribution', icon: 'i-mingcute-edit-2-line' },
@@ -92,13 +92,13 @@
       >
         <template #cta>
           <BegoP class="text-center text-xs italic">
-            +2€/mois par accès supplémentaire à la plateforme de contribution
+            +10€/an par accès supplémentaire à la plateforme de contribution
           </BegoP>
         </template>
       </PriceCard>
       <PriceCard
         title="Nom de domaine"
-        description="Déploiement et renouvellement du nom de domaine (.fr, .com, ...) au prix de sa location (généralement 10~20€/an)"
+        description="Déploiement et renouvellement annuel de votre nom de domaine (.fr, .com, .net, etc.) au prix de sa location (généralement 10~20€/an)"
       />
       <div class="flex">
         <BegoButton to="/contact" icon="i-mingcute-send-plane-line" variant="solid">

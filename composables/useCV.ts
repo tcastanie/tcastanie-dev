@@ -1,3 +1,4 @@
+// @unocss-include
 export const useCV = () => {
   const title = 'Thibaut Castanié'
   const subtitle = 'Développeur web front-end indépendant'
