@@ -1,10 +1,29 @@
+<script lang="ts" setup>
+const route = useRoute()
+const { data } = await useAsyncData(
+  'article',
+  () => queryContent('blog', route.params.slug[0]).findOne(),
+)
+
+useSchemaOrg([
+  defineArticle({
+    '@type': 'BlogPosting',
+    'headline': data.value?.title,
+    'description': data.value?.description,
+    'datePublished': data.value?.publishedAt,
+    'dateModified': data.value?.updatedAt || data.value?.publishedAt,
+    'inLanguage': data.value?.language,
+  }),
+])
+</script>
+
 <template>
   <BegoPage>
-    <ContentDoc>
+    <ContentRenderer v-if="data" class="text-justify">
       <template #not-found>
         <ThrowNotFound />
       </template>
-      <template #default="{ doc }">
+      <template #default>
         <BegoButton
           to="/blog"
           variant="ghost"
@@ -14,13 +33,13 @@
           Retour
         </BegoButton>
         <article>
-          <div v-if="doc.publishedAt" class="mb-12 text-zinc-500">
-            <span>Publié le {{ formatDate(doc.publishedAt) }}</span>
-            <span v-if="doc.updatedAt">, mis à jour le {{ formatDate(doc.updatedAt) }}</span>
+          <div v-if="data?.publishedAt" class="mb-12 text-zinc-500">
+            <span>Publié le {{ formatDate(data.publishedAt) }}</span>
+            <span v-if="data.updatedAt">, mis à jour le {{ formatDate(data.updatedAt) }}</span>
           </div>
-          <ContentRenderer :value="doc" class="text-justify" />
+          <ContentRendererMarkdown :value="data" />
         </article>
       </template>
-    </ContentDoc>
+    </ContentRenderer>
   </BegoPage>
 </template>

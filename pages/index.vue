@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+useSchemaOrg([
+  defineWebPage({ '@type': 'ProfilePage' }),
+])
 useHead({ titleTemplate: 'Thibaut Castanié' })
 const { shitMode } = useShitMode()
 </script>

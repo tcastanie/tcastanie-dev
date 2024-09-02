@@ -50,6 +50,16 @@ export default defineNuxtConfig({
     enabled: false,
   },
   schemaOrg: {
-    identity: 'Person',
+    identity: {
+      type: 'Person',
+      name: 'Thibaut Castanié',
+      url: 'https://tcastanie.dev',
+      image: 'https://tcastanie.dev/_ipx/f_webp&q_95&s_160x160/avatar.jpg',
+      sameAs: [
+        'https://github.com/tcastanie',
+        'https://www.linkedin.com/in/tcastanie/',
+        'https://www.malt.fr/profile/tcastanie',
+      ],
+    },
   },
 })

@@ -7,15 +7,10 @@ const articles = { path: '/blog', sort: [{ publishedAt: -1 }] }
   <BegoPage>
     <BegoHero
       title="Blog"
-      description="Hydratation en cours..."
-      icon="i-mingcute-file-code-line"
+      description="Rédaction en cours..."
+      icon="i-mingcute-file-code-fill"
     />
     <ContentList :query="articles">
-      <template #not-found>
-        <div class="grid h-100 place-items-center">
-          <BegoIcon icon="i-mingcute:pencil-3-line" class="text-zinc-300 h-40! w-40!" />
-        </div>
-      </template>
       <template #default="{ list }">
         <div class="grid gap-8">
           <BegoCard
