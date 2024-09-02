@@ -1,15 +1,13 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
 
-const props = defineProps<{
-  error: NuxtError
-}>()
+const props = defineProps<{ error: NuxtError }>()
 
 useHead({
   bodyAttrs: {
     class: 'bg-zinc-900 text-white',
   },
-  title: `Erreur ${props.error.statusCode}`,
+  title: `${props.error.statusCode} ${props.error.statusMessage}`,
 })
 
 const handleError = () => clearError({ redirect: '/' })
@@ -19,7 +17,7 @@ const handleError = () => clearError({ redirect: '/' })
   <div class="grid h-screen place-content-center justify-items-center">
     <BegoCard class="overflow-y-auto text-center">
       <template #header>
-        <BegoH1>Erreur {{ error.statusCode }}</BegoH1>
+        <BegoH1>{{ error.statusCode }} {{ error.statusMessage }}</BegoH1>
       </template>
       <BegoP v-if="error.statusCode === 404" class="mb-4">
         You found a <b>dead link</b> 😱

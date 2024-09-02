@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+useHead({ title: 'Projets' })
 const { shitMode } = useShitMode()
 const { projects } = useProjects()
 </script>

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+useHead({ titleTemplate: 'Thibaut Castanié' })
 const { shitMode } = useShitMode()
 </script>
 

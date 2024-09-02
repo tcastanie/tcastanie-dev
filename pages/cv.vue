@@ -9,7 +9,7 @@ const { title, subtitle, description, location, experiences } = useCV()
 <template>
   <BegoPage v-auto-animate>
     <BegoHero title="Curriculum Vitae" icon="i-mingcute-profile-fill" />
-    <BegoCard v-if="!hackerzMode" class="relative" primary>
+    <BegoCard v-show="!hackerzMode" class="relative" primary>
       <template #header>
         <div>
           <BegoHero :title="title" :description="subtitle" class="flex-1 pr-20 !py-0" />
@@ -32,10 +32,10 @@ const { title, subtitle, description, location, experiences } = useCV()
       <div class="grid gap-y-8 text-lg">
         <div v-for="exp in experiences" :key="exp.startDate">
           <div class="flex items-center gap-1 text-sm text-bego-50 uppercase">
-            <span>{{ formatDate(exp.startDate) }}</span>
+            <span>{{ formatShortDate(exp.startDate) }}</span>
             <BegoIcon icon="i-mingcute-arrow-right-line" />
             <span v-if="exp.endDate === 'new Date()'" class="rounded bg-[#282c34] px-1 normal-case">
-              <Shiki lang="javascript" :code="exp.endDate" />
+              <ContentDoc path="/date" />
             </span>
             <span v-else>{{ formatDate(exp.endDate) }}</span>
           </div>
@@ -99,7 +99,7 @@ const { title, subtitle, description, location, experiences } = useCV()
         </div>
       </template>
     </BegoCard>
-    <div v-else class="relative rounded bg-[#282c34] px-4 py-2 text-sm">
+    <div v-show="hackerzMode" class="relative rounded bg-[#282c34] px-4 py-2 text-sm">
       <div
         :class="[
           { 'animate-spin': shitMode },
@@ -107,7 +107,7 @@ const { title, subtitle, description, location, experiences } = useCV()
         ]"
         @click="toggleHackerzMode()"
       />
-      <Shiki lang="json" :code="`// composables/useCV.ts\n\n${JSON.stringify(useCV(), undefined, 2)}`" class="whitespace-break-spaces" />
+      <ContentDoc path="/cv" class="*:whitespace-break-spaces" />
     </div>
   </BegoPage>
 </template>

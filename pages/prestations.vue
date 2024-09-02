@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+useHead({ title: 'Prestations' })
+</script>
+
 <template>
   <BegoPage>
     <BegoHero title="Prestations" icon="i-mingcute-necktie-fill" />

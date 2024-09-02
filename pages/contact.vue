@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+useHead({ title: 'Contact' })
 const { shitMode } = useShitMode()
 const contacts = [
   {

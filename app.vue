@@ -1,12 +1,9 @@
 <script setup lang="ts">
-useHead({
-  bodyAttrs: {
-    class: 'bg-zinc-900 text-white',
-  },
-})
+useHead({ bodyAttrs: { class: 'bg-zinc-900 text-white' } })
 </script>
 
 <template>
+  <NuxtRouteAnnouncer />
   <NuxtLoadingIndicator color="#E02956" />
   <TheHeader />
   <NuxtPage />
