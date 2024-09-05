@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 const route = useRoute()
+const slug = route.params.slug[0]
 const { data } = await useAsyncData(
-  'article',
-  () => queryContent('blog', route.params.slug[0]).findOne(),
+  `article-${slug}`,
+  () => queryContent('blog', slug).findOne(),
 )
 
 useHead({ title: data.value?.title ?? 'Blog' })
