@@ -18,6 +18,24 @@ const { title, subtitle, description, location, experiences } = useCV()
 <template>
   <BegoPage v-auto-animate>
     <BegoHero title="Curriculum Vitae" icon="i-mingcute-profile-fill" />
+    <div class="mb-2 flex justify-between">
+      <BegoButton
+        variant="link"
+        to="/cv/CV_Thibaut_Castanié.pdf"
+        icon="i-mingcute-external-link-line"
+        target="_blank"
+      >
+        Version PDF
+      </BegoButton>
+      <BegoButton
+        variant="link"
+        to="/cv/CV_Thibaut_Castanié_EN.pdf"
+        icon="i-mingcute-external-link-line"
+        target="_blank"
+      >
+        PDF english version
+      </BegoButton>
+    </div>
     <BegoCard v-show="!hackerzMode" class="relative" primary>
       <template #header>
         <div>
