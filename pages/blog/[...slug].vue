@@ -5,6 +5,7 @@ const { data } = await useAsyncData(
   () => queryContent('blog', route.params.slug[0]).findOne(),
 )
 
+useHead({ title: data.value?.title ?? 'Blog' })
 useSchemaOrg([
   defineArticle({
     '@type': 'BlogPosting',
