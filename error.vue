@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
 
-const props = defineProps<{ error: NuxtError }>()
+const { error } = defineProps<{ error: NuxtError }>()
 
 useHead({
   bodyAttrs: {
     class: 'bg-zinc-900 text-white',
   },
-  title: `${props.error.statusCode} ${props.error.statusMessage}`,
+  title: `${error.statusCode} ${error.statusMessage}`,
 })
 
 const handleError = () => clearError({ redirect: '/' })

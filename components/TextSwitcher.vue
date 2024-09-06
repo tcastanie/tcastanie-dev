@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-const props = defineProps<{
+const { text, delay } = defineProps<{
   text: string[]
   delay?: boolean
 }>()
 
-const { counter, reset } = useInterval(props.delay ? 3000 : 3500, { controls: true })
+const { counter, reset } = useInterval(delay ? 3000 : 3500, { controls: true })
 watch(counter, () => {
-  if (counter.value === props.text.length) reset()
+  if (counter.value === text.length) reset()
 })
 </script>
 

@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const { shitMode } = useShitMode()
-const { projects } = useProjects()
+const { projects: _projects } = useProjects()
 defineProps<{
-  project: typeof projects.value[number]
+  project: typeof _projects.value[number]
   small?: boolean
 }>()
 </script>

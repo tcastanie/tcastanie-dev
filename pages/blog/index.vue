@@ -24,8 +24,7 @@ const articles = { path: '/blog', sort: [{ publishedAt: -1 }] }
             {{ description }}
           </BegoP>
           <div v-if="publishedAt" class="text-sm text-zinc-600">
-            Publié le {{ formatDate(publishedAt) }}
-            <span v-if="updatedAt">, mis à jour le {{ formatDate(updatedAt) }}</span>
+            {{ `Publié le ${formatDate(publishedAt)}${updatedAt ? `, mis à jour le ${formatDate(updatedAt)}` : ''}` }}
           </div>
         </BegoCard>
       </div>
