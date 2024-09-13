@@ -29,7 +29,6 @@ const { footerLinks, footerLinksRight } = useLinks()
         :icon="icon"
         variant="link"
         size="lg"
-
         white
         square
         :title="label"
