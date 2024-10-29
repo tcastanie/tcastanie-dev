@@ -2,6 +2,24 @@
 export const useProjects = () => {
   const projects = ref([
     {
+      title: 'Quick UI designs',
+      description: `Intégrations de quelques designs créés par <u><a href="https://www.uidesigndaily.com/" target="_blank">uidesigndaily.com</a></u>. Pour le fun.<br/><s>Mobile</s>Desktop-first 🙃`,
+      date: '2024',
+      skills: ['Vue', 'Vite', 'UnoCSS', 'TailwindCSS', 'Radix Vue', 'Apache ECharts'],
+      links: [
+        {
+          label: 'quick-ui-designs.tcastanie.dev',
+          to: 'https://quick-ui-designs.tcastanie.dev/',
+          icon: 'i-mingcute-grid-2-line',
+        },
+        {
+          label: 'tcastanie/quick-ui-designs',
+          to: 'https://github.com/tcastanie/quick-ui-designs',
+          icon: 'i-mingcute-github-line',
+        },
+      ],
+    },
+    {
       title: 'Wacky Planets',
       description: `Petite application SPA rapide et superflue utilisant le module Nuxt I18n. Développement chronométré afin d'améliorer mon efficacité et de m'auto-évaluer.`,
       date: 'Juillet 2024',
@@ -45,7 +63,7 @@ export const useProjects = () => {
       description: `Création d'un site web pour le <b>Domaine l'Angélus</b> servant de vitrine et permettant également la réservation de gîtes et de cours de dressage de chiens de troupeaux. Développement complet du front <i>full static</i>, déploiement du back-office sur mesure, gestion des paiements et système de réservation réalisé <i>from scratch</i>.<br/>Accompagnement, aide à la contribution et support continu.`,
       image: '/doma_social.png',
       date: 'Juillet 2024',
-      skills: ['Nuxt', 'Vue.js', 'TypeScript', 'Directus', 'UnoCSS', 'Stripe', 'Cloudflare', 'Node.js'],
+      skills: ['Nuxt', 'Vue.js', 'TypeScript', 'Directus', 'UnoCSS', 'Stripe', 'Cloudflare', 'Node.js', 'SEO'],
       lighthouse: { perf: 85, a11y: 98, bp: 100, seo: 100 },
       lighthousePages: 26,
       links: [
