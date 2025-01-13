@@ -2,6 +2,15 @@
 export const useProjects = () => {
   const projects = ref([
     {
+      primary: true,
+      title: `Stoneybatter Cross Training App`,
+      subtitle: `🚧 Développement en cours`,
+      description: `App de gestion des abonnements, du planning et de la réservation des cours d'une salle de crossfit dublinoise`,
+      image: '/bora_wip.png',
+      date: 'Février 2025',
+      skills: ['Nuxt', 'Vue.js', 'TypeScript', 'Nitro', 'Directus', 'Nuxt UI', 'Stripe'],
+    },
+    {
       title: 'Quick UI designs',
       description: `Intégrations de quelques designs créés par <u><a href="https://www.uidesigndaily.com/" target="_blank">uidesigndaily.com</a></u>. Pour le fun.<br/><s>Mobile</s>Desktop-first 🙃`,
       date: '2024',
