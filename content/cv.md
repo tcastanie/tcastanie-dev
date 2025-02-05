@@ -18,7 +18,7 @@
         "1ᵉʳ semestre 2024 : Création du site web du Domaine l'Angélus, permettant la réservation de gîtes et de cours de chiens de troupeaux. Développement complet du front full static (Nuxt), déploiement du back-office sur mesure (Directus) et gestion des paiements (Stripe). Accompagnement, aide à la contribution et support continu.",
         "Formation continue aux dernières versions des outils de l'écosystème Nuxt et Vue.js",
         "Micro mission via Malt",
-        "Développement de petits projets personnels"
+        "Développement de projets personnels"
       ],
       "links": [
         {
