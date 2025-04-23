@@ -1,0 +1,133 @@
+---
+type: pro
+date: 2025-03-01
+wip: true
+description: A custom web application that reduced the monthly web management fees of a Dublin crossfit gym by 97%
+---
+
+<!-- ![Aperçu du projet SCT App]() -->
+
+# Stoneybatter Cross Training App
+
+Web app for Stoneybatter Cross Training, a crossfit gym located in Dublin, Ireland.
+
+::card-group
+
+  ::card
+  ---
+  icon: i-mingcute-calendar-2-line
+  ---
+  Mars 2025
+  ::
+
+  ::card
+  ---
+  icon: i-mingcute-tool-line
+  ---
+  ::badge
+  :icon{name="i-logos-nuxt-icon"} Nuxt
+  ::
+  ::badge
+  :icon{name="i-logos-vue"}
+  ::
+  ::badge
+  Nuxt UI v1
+  ::
+  :icon{name="i-logos-nuxt-icon"} :icon{name="i-logos-vue"}
+  ::
+
+::
+
+
+
+-> [app.stoneybattercrosstraining.ie](https://app.stoneybattercrosstraining.ie/)
+
+::note
+L'accès à l'app est réservé aux membres
+::
+
+## Contexte
+
+Stoneybatter Cross Training est une salle de sport, spécialisée dans le Crossfit située à Dublin en Irlande. Des cours et des séances de renforcement sont proposés aux membres qui réservent leur place en avance. Les membres ont le choix entre acheter directement une ou plusieurs places, ou un abonnement mensuel à un tarif avantageux.
+
+Le gérant de la salle utilisait une solution externe *SaaS* pour gérer les réservations, les paiements et la planification des cours avec les coachs. Le service ne répondait pas aux besoins métier du dirigeant, car il se voyait obligé d'envoyer des liens de paiement Stripe par WhatsApp, de maintenir à jour manuellement un tableur de suivi des membres et de relancer manuellement en cas d'échec de renouvellement. 
+
+Ce qui peut se résumer, en exagérant légèrement, à un carnet et un stylo... au tarif démesuré de 273€ par mois. 🙃
+
+## Aperçu
+
+<!-- ![Capture d'écran page d'accueil]() -->
+
+L'app web Stoneybatter Cross Training propose à ses membres d'acheter des crédits pour ensuite réserver une place pour un cours de crossfit. Les cours sont composés d'une série d'exercices propres à chaque type de séance, et qui sont créés par les coachs de la salle. Le manager et les coachs ont accès à des fonctionnalités supplémentaires de type *CRUD* pour gérer les cours, les *workouts* et les membres.
+
+## Fonctionnalités
+
+### Calendrier de cours
+
+### Paiements récurrents et uniques
+
+### Gestion par les coachs
+
+### Administration par le gérant
+
+### Envoi automatique de mails
+
+### Tâches serveur récurrentes
+
+## Aspects techniques
+
+L'architecture de l'app web est hébergée sur un serveur contenant la base de données et **Nuxt**.
+
+<!-- ![Schéma FigJam]() -->
+
+La base de donnée **SQLite** est gérée via **Directus**, pour faciliter les fonctionnalités d'authentification et d'autorisations des utilisateurs, et également pour simplifier les requêtes via l'*API*. **Nuxt** est utilisé en mode *SPA* afin de garantir une utilisation fluide du dashboard et est épaulé par **Nuxt UI** pour les styles.  Le serveur **Nitro**, intégré dans **Nuxt**, permet à la fois de gérer les paiements via **Stripe**, de servir d'intermédiaire entre le Front-end et le Backend (*BFF*) mais aussi d'effectuer des tâches récurrentes (cron). Les mails automatiques sont envoyés via **Amazon SES** et leurs flux sont gérés par une instance personelle de **Plunk**. Une sauvegarde automatique de la base de données est mise en place avec **Duplicati**.
+
+
+::collapsible{name="la stack technique" openText="Voir" closeText="Cacher"}
+
+::field-group
+  ::field{name="Front-end"}
+    :icon{name="i-logos-nuxt-icon"} [Nuxt](https://nuxt.com/), :icon{name="i-logos-vue"} Vue.js, TypeScript, Nuxt UI ::badgev1::
+  ::
+
+  ::field{name="Back-end"}
+    Nitro, Directus, SQLite
+  ::
+
+  ::field{name="Paiements"}
+    Stripe
+  ::
+
+  ::field{name="Emails"}
+    Plunk, Amazon SES
+  ::
+::
+
+::
+
+::collapsible{name="le défi technique" openText="Voir" closeText="Cacher"}
+
+
+
+::
+
+## Processus
+
+
+
+## Résultats et impact
+
+version mobile nickel ! interface légère
+
+273€ -> 8€
+
+## Conclusion
+
+
+
+
+
+
+
+
+

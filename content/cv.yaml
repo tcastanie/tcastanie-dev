@@ -1,0 +1,59 @@
+title: Thibaut Castanié
+description: Développeur web front-end indépendant
+location: Montpellier, France
+intro: Fort de 8 ans d'expérience dans le développement web, je mets à disposition mes compétences de développeur web senior, spécialisé notamment avec l'écosystème Vue.js et Nuxt. Je m'applique à assurer une modernité technique et des services web épurés.
+experiences:
+  - title: Développeur web freelance
+    date_begin: Sept. 2023
+    date_end: Aujourd'hui
+    location: Montpellier
+    actions:
+      - Création d'une app web de gestion des abonnements, du planning et de la réservation des cours de la salle de crossfit Stoneybatter Cross Training, à Dublin. Développement d'un front SPA et d'un back-end sur mesure avec Nuxt, gestion des paiements avec Stripe.
+      - Création du site web du Domaine l'Angélus, permettant la réservation de gîtes et de cours de chiens de troupeaux. Développement du front full static avec Nuxt, déploiement du back-office avec Directus et gestion des paiements avec Stripe. Accompagnement, aide à la contribution et support continu.
+      - Formation continue aux dernières versions des outils de l'écosystème Nuxt et Vue.js
+      - Développement de projets personnels
+  - title: Ingénieur étude et développement
+    company: Smile
+    description: Développeur web front-end sur des sites web e-commerce à fort trafic
+    date_begin: Fév. 2021
+    date_end: Mai 2023
+    location: Montpellier
+    actions:
+      - Gestion complète du front du site e-commerce Snowleader. Intégration de fonctionnalités (SEO, tests unitaires), optimisations des performances (SSR, scores SEO et paiements), migration Vue2/Nuxt2 vers Vue3/Nuxt3, amélioration continue et support. Accompagnement d'un alternant et d'un stagiaire.
+      - Aide ponctuelle sur d'autres projets (Pierre Fabre, Biocoop)
+  - title: Co-fondateur & Président
+    company: Qyrolab
+    icon: i-mingcute-group-3-line
+    date_begin: Mars 2019
+    date_end: Oct. 2020
+    location: Montpellier
+    actions:
+      - Création et gestion d'une société dans le domaine du jeu-vidéo et de l'apprentissage. (EdTech)
+      - Développement de Grammaticus, un jeu mobile d’apprentissage de la grammaire française à destination des enfants en ﬁn du primaire.
+      - Création de Gameji, une application web & mobile permettant de créer et partager son jeu sérieux en quelques minutes.
+  - title: Ingénieur front-end
+    company: SATT AxLR / WeAreLearning
+    date_begin: Janv. 2017
+    date_end: Déc. 2018
+    location: Montpellier
+    actions:
+      - Développement d'une plateforme proposant une solution complète pour créer des jeux sérieux dans le domaine de la formation et de la RH. (1 an et demi sous contrat avec la SATT AxLR)
+      - Maintenance et amélioration continue de la plateforme.
+  - title: Chemin de Compostelle
+    description: Randonnée sur 2 mois, en partant de Montpellier
+    icon: i-mingcute-backpack-line
+    date_begin: Août
+    date_end: Sept. 2016
+    location: Santiago de Compostela, Espagne
+  - title: Master Informatique
+    company: Université de Montpellier
+    date_begin: 2014
+    date_end: 2016
+  - title: License Informatique
+    company: Université de Montpellier
+    date_begin: 2013
+    date_end: 2014
+  - title: DUT Informatique
+    company: IUT de Montpellier
+    date_begin: 2011
+    date_end: 2013

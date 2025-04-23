@@ -1,0 +1,52 @@
+---
+type: perso
+date: 2024-07-26
+---
+
+# Wacky Planets
+
+SPA rapide utilisant le module *Nuxt I18n*, pour la pratique.
+
+::card-group
+  ::card
+  ---
+  icon: i-mingcute-link-line
+  title: Wacky Planets
+  to: https://wacky-planets.tcastanie.dev/
+  target: _blank
+  ---
+  wacky-planets.tcastanie.dev
+  ::
+
+  ::card
+  ---
+  icon: i-mingcute-github-line
+  title: Code source
+  to: https://github.com/tcastanie/wacky-planets
+  target: _blank
+  ---
+  tcastanie/wacky-planets
+  ::
+
+  
+  ::card
+  ---
+  icon: i-mingcute-tool-line
+  title: Stack
+  ---
+    ::badge{variant="outline" color="neutral"}
+    :icon{name="i-simple-icons-nuxt"} Nuxt
+    ::
+    ::badge{variant="outline" color="neutral"}
+    :icon{name="i-mingcute-cellphone-line"} SPA
+    ::
+    ::badge{variant="outline" color="neutral"}
+    :icon{name="i-mingcute-earth-2-line"} i18n
+    ::
+  ::
+
+::
+
+Petite application SPA rapide et superflue utilisant le module *Nuxt I18n*.
+
+Développement chronométré pour une auto-évaluation personnelle.

@@ -1,0 +1,20 @@
+{
+  "hello": "Hello!",
+  "main_subtitle": "Front-end web developer",
+  "nav1": "Portfolio",
+  "nav2": "CV",
+  "contact": "Contact",
+  "contact_me": "Contact me",
+  "home1": "I create complete customized websites for all types of business.",
+  "home2": "After 8 years in web development, my expertise lies in front-end (especially Vue.js & Nuxt).",
+  "home3": "Reference Average Daily Rate: €500",
+  "home4": "Let's talk about your future project!",
+  "email": "Email",
+  "lets_connect": "Let's connect!",
+  "hire_me": "Hire me for your projects",
+  "my_projects": "My projects",
+  "my_skills": "My skills and professional experiences",
+  "in_french": "In French",
+  "in_english": "In English",
+  "wip": "Work in progress"
+}

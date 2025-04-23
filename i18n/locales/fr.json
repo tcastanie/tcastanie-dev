@@ -1,0 +1,20 @@
+{
+  "hello": "Bonjour !",
+  "main_subtitle": "Développeur web front-end",
+  "nav1": "Portfolio",
+  "nav2": "CV",
+  "contact": "Contact",
+  "contact_me": "Contactez-moi",
+  "home1": "Je crée des sites web complets sur mesure, pour tous types de métiers.",
+  "home2": "Après 8 ans de développement web, mon expertise se situe côté front-end (notamment Vue.js & Nuxt).",
+  "home3": "Taux Journalier Moyen de référence : 500€",
+  "home4": "Discutons de votre futur projet !",
+  "email": "Courriel",
+  "lets_connect": "Connectons-nous !",
+  "hire_me": "Embauchez-moi pour vos projets",
+  "my_projects": "Mes projets",
+  "my_skills": "Mes compétences et expériences professionnelles",
+  "in_french": "En français",
+  "in_english": "En anglais",
+  "wip": "En cours"
+}

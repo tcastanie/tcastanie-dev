@@ -1,0 +1,168 @@
+---
+type: pro
+date: 2024-07-01
+image: /doma_social.png
+---
+
+<!-- ![Aperçu du projet Domaine l'Angélus]() -->
+
+# Domaine l'Angélus
+
+Site web pour le domaine l'Angélus, situé à Figeac dans le Lot, proposant des gîtes et un élevage de chiens de troupeaux.
+
+::card-group
+  ::card
+  ---
+  icon: i-mingcute-link-line
+  title: Site web
+  to: https://www.domaine-langelus.fr
+  target: _blank
+  ---
+  www.domaine-langelus.fr
+  ::
+
+  ::card
+  ---
+  icon: i-mingcute-calendar-2-line
+  title: Déploiement
+  ---
+  Juillet 2024
+  ::
+
+  ::card
+  ---
+  title: Scores lighthouse
+  icon: i-mingcute-lighthouse-line
+  ---
+  - Performances : 85
+  - Accessibilité : 98
+  - Bonnes pratiques : 100
+  - SEO : 100
+
+  *(Moyenne des 26 pages via [Unlighthouse](https://unlighthouse.dev/))*
+  ::
+
+  ::card
+  ---
+  icon: i-mingcute-tool-line
+  title: Stack technique
+  ---
+
+  ::field-group
+    ::field{name="Front-end" type=""}
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-nuxt"} Nuxt (SSG)
+      ::
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-vuedotjs"} Vue.js
+      ::
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-unocss"} UnoCSS
+      ::
+    ::
+    ::field{name="Back-end & Paiements" type=""}
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-directus"} Directus
+      ::
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-sqlite"} SQLite
+      ::
+      <span>&nbsp;&nbsp;&nbsp;</span>
+
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-hono"} Hono
+      ::
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-stripe"} Stripe API
+      ::
+    ::
+  ::
+  ::
+
+::
+
+Le Domaine L'angélus, situé à Sainte-Colombe (Figeac) dans le Lot, est un lieu qui combine des gîtes reposants avec le dressage de chiens de troupeaux. L'objectif étant de créer un site web permettant la présentation des différentes prestations proposées par le domaine, ainsi que la réservation de nuitées et de cours de dressage de chiens de troupeau.
+
+## Aperçu
+
+<!-- ![Capture d'écran page d'accueil]() -->
+
+Le site est divisé en deux parties distinctes : 
+
+  - Côté gîtes pour la présentation du domaine et la réservation des nuitées.
+  - Côté chiens pour la présentation de l'élevage, ses prestations et sa lignée, et de la réservation de cours.
+
+Chaque section possède un design qui lui est propre : un clair pour les gîtes, un sombre pour l'élevage. Leur point commun est la couleur bronze qui a ensuite été reprise sur la charte graphique des différentes communications du domaine (réseaux et flyers).
+
+## Fonctionnalités
+
+### Réservation en ligne
+
+<!-- ![Capture d'écran Booking Bar]() -->
+
+Les visiteurs peuvent facilement choisir une plage de dates en fonction des disponibilités et payer rapidement leur réservation. La réservation des gîtes est séparée de la réservation des cours.
+
+### Présentation des gîtes et du domaine
+
+<!-- ![Capture d'écran fiche gîte avec une partie du texte et de la galerie photos]() -->
+
+Des pages simples permettant d'afficher les photos du domaine et des gîtes, ainsi que l'ensemble des  aménagements. Dans chaque fiche de gîte, un calendrier de disponibilités est également présent.
+
+### Présentation de l'élevage
+
+<!-- ![Capture d'écran Lignée]() -->
+
+Plusieurs pages avec des détails sur les prestations de l'élevage du domaine, sur les chiens à vendre ou disponibles à la saillie, mais aussi l'affichage de l'arbre généalogique de la lignée.
+
+## Aspects techniques
+
+L'architecture du projet est simple : une base de données pour stocker toutes les données métier (réservations, grille de prix, disponibilités, haute saison, pages...) et un serveur pour héberger le site statique, le CMS et pour gérer les paiements.
+
+### Stack technique
+
+<!-- ![Schéma FigJam]() -->
+
+Le *CMS* est **Directus**, directement branché sur la base de données **SQLite**. Les paiements sont effectués avec **Stripe** et gérés avec le *framework* **Hono**. Le *front-end* est créé avec **Nuxt** et **Vue.js** en mode statique (*SSG*), avec l'aide de **UnoCSS** (syntaxe **Tailwind**).
+
+Le site étant principalement de type vitrine, le choix de générer un site statique s'est imposé de lui-même, en raison du gain important de performances.
+
+Pour assurer la sécurité des données, une sauvegarde automatique de la base de données est mise en place avec **Duplicati**.
+
+### L'UX de la barre de réservation
+
+L'expérience utilisateur de la page de réservation des gîtes fut un défi.
+
+Au début, le visiteur devait choisir son gîte, puis choisir ses dates de séjour pour voir s'il était disponible. Mais cela engendrait trop d'actions d'aller-retour et empêchait l'utilisateur d'avoir une vue globale des dates disponibles. J'ai choisi de "fusionner" le calendrier de disponibilité des gîtes à l'intérieur du sélecteur de dates. Ainsi le visiteur n'a qu'à sélectionner les dates (celles qui sont impossibles à réserver sont désactivées), lancer la recherche, puis faire son choix entre les gîtes disponibles (ou réserver tous les gîtes d'un coup !).
+
+👉 Les clics sont réduits, la sensation de fluidité est renforcée (avec l'aide d'animations légères) et la transition vers le paiement se fait en douceur.
+
+### SEO
+
+La majorité du SEO a été mise en place grace au plugin **Nuxt SEO**. Il simplifie énormément la gestion des graphes Schema.org, et permet de générer rapidement les multiples balises SEO, les images OpenGraph, ainsi que les fichiers *robots.txt* et *sitemap.xml*.
+
+J'ai également utilisé le [Google Indexing Script](https://github.com/goenning/google-indexing-script) pour rapidement référencer l'ensemble des pages du site sur Google et remonter en tête des résultats de recherche basés sur le nom du domaine, en moins d'un mois.
+
+## Processus
+
+Création d'un site web caché (restriction IP) mis à jour automatiquement à chaque ajout de code afin de pouvoir mettre en place une méthode Agile adaptée. Les hôtes du domaine ont pu tester le site à leur aise et faire des retours pour ajuster les fonctionnalités. Le jour du déploiement, le site a simplement été ouvert au public.
+
+La formation des gérants du domaine à l'utilisation du CMS a également été nécessaire afin de pouvoir laisser le champ libre à de futurs ajouts ou modifications du contenu, ainsi que pour gérer les imprévus avec les réservations.
+
+## Résultats et impact
+
+Les clients du domaine sont heureux de pouvoir réserver directement via internet, sans passer par un intermédiaire, ce qui est rare dans ce domaine de la réservation de gîtes. L'affichage simple et sans fioritures des fiches de gîtes et leurs disponibilités plaisent également beaucoup. Les gérants du domaine peuvent directement interagir avec les réservations et notamment en créer manuellement. 
+
+L'affichage détaillé des chiens de lignée de l'élevage et des chiens proposés par le domaine est un élément novateur dans le secteur de l'élevage de troupeaux, qui tarde encore à utiliser le web moderne.
+
+<!-- ![Feedback fb]() -->
+
+## Conclusion
+
+Projet réussi ! Le site web déployé reflète bien la combinaison des gîtes et de l'élevage de chiens de troupeaux et reste simple et efficace dans ses objectifs : présenter le domaine et permettre la réservation.
+
+
+
+
+
+
+
