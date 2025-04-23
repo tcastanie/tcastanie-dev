@@ -1,65 +1,57 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  ssr: true,
-  compatibilityDate: '2024-07-03',
-  extends: 'github:tcastanie/nuxt-bego-ui',
   modules: [
-    '@formkit/auto-animate/nuxt',
+    '@nuxt/ui-pro',
     '@nuxt/content',
-    '@nuxt/eslint',
+    '@nuxtjs/i18n',
     '@nuxt/image',
-    '@nuxtjs/seo',
-    '@unocss/nuxt',
-    '@vueuse/nuxt',
+    '@nuxt/eslint',
   ],
-  css: ['@unocss/reset/tailwind.css'],
+  devtools: { enabled: true },
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' },
-    head: {
-      link: [
-        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-        { rel: 'manifest', href: '/site.webmanifest' },
-      ],
+    rootAttrs: {
+      'data-vaul-drawer-wrapper': '',
+      'class': 'bg-(--ui-bg) font-mona',
     },
   },
+  css: ['~/assets/css/main.css'],
+  future: {
+    compatibilityVersion: 4,
+  },
+  compatibilityDate: '2024-11-01',
   eslint: {
     config: {
+      standalone: false,
       stylistic: true,
     },
   },
-  image: {
-    dir: 'assets',
-    quality: 90,
-  },
-  content: {
-    locales: ['fr'],
-    highlight: {
-      theme: 'one-dark-pro',
-      langs: ['json', 'js', 'vue'],
+  i18n: {
+    baseUrl: 'https://tcastanie.dev',
+    locales: [
+      {
+        code: 'fr',
+        name: 'Français',
+        language: 'fr',
+        file: 'fr.json',
+        dir: 'ltr',
+      },
+      {
+        code: 'en',
+        name: 'English',
+        language: 'en',
+        file: 'en.json',
+        dir: 'ltr',
+      },
+    ],
+    defaultLocale: 'fr',
+    strategy: 'prefix_except_default',
+    bundle: {
+      optimizeTranslationDirective: false,
     },
   },
-  site: {
-    url: 'https://tcastanie.dev',
-    name: 'tcastanie.dev',
-    description: 'Site web personnel de Thibaut Castanié, développeur web indépendant spécialisé en JavaScript, Vue et Nuxt',
-    defaultLocale: 'fr',
-  },
-  ogImage: {
-    enabled: false,
-  },
-  schemaOrg: {
-    identity: {
-      type: 'Person',
-      name: 'Thibaut Castanié',
-      url: 'https://tcastanie.dev',
-      image: 'https://tcastanie.dev/_ipx/f_webp&q_95&s_160x160/avatar.jpg',
-      sameAs: [
-        'https://github.com/tcastanie',
-        'https://www.linkedin.com/in/tcastanie/',
-        'https://www.malt.fr/profile/tcastanie',
-      ],
+  icon: {
+    clientBundle: {
+      scan: true,
     },
   },
 })

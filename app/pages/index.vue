@@ -1,0 +1,89 @@
+<script setup lang="ts">
+const { t } = useI18n()
+
+const features = ref([
+  {
+    description: t('home1'),
+    icon: 'i-mingcute-layout-6-line',
+    ui: { description: 'text-lg', leadingIcon: 'mt-0.5' },
+  },
+  {
+    description: t('home2'),
+    icon: 'i-mingcute-code-line',
+    ui: { description: 'text-lg', leadingIcon: 'mt-0.5' },
+  },
+  {
+    description: t('home3'),
+    icon: 'i-mingcute-briefcase-line',
+    ui: { description: 'text-lg', leadingIcon: 'mt-0.5' },
+  },
+])
+
+const links = ref([
+  {
+    label: t('nav1'),
+    icon: 'i-mingcute-folder-open-2-line',
+    to: '/portfolio',
+    variant: 'soft' as const,
+  },
+  {
+    label: t('nav2'),
+    icon: 'i-mingcute-profile-line',
+    to: '/cv',
+    variant: 'soft' as const,
+  },
+])
+</script>
+
+<template>
+  <UPage>
+    <UPageBody>
+      <UPageSection
+        :description="$t('hello')"
+        orientation="horizontal"
+        :features="features"
+        :ui="{ description: 'text-lg', links: 'flex-col' }"
+      >
+        <template #title>
+          <UUser
+            name="Thibaut Castanié"
+            :description="$t('main_subtitle')"
+            :avatar="{
+              src: '/tronche.jpg',
+              alt: 'Thibaut Castanié',
+              quality: 95,
+              width: 64,
+              height: 64,
+            }"
+            size="3xl"
+            :ui="{ name: 'font-hubot text-4xl', description: 'font-normal text-2xl tracking-normal', root: 'gap-4', avatar: 'size-16' }"
+            class="mb-16"
+          />
+        </template>
+        <template #links>
+          <div class="text-(--ui-text-muted) text-pretty text-lg">
+            {{ $t('home4') }}
+          </div>
+          <div class="flex flex-wrap gap-x-6 gap-y-3 justify-start mt-8 ">
+            <DrawerContact>
+              <UButton
+                :label="$t('contact_me')"
+                size="lg"
+                icon="i-mingcute-send-plane-line"
+              />
+            </DrawerContact>
+            <ButtonLocale
+              v-for="{ label, icon, to, variant } in links"
+              :key="label"
+              size="lg"
+              :label :icon :variant :to
+            />
+          </div>
+        </template>
+        <ClientOnly>
+          <ThePlanet />
+        </ClientOnly>
+      </UPageSection>
+    </UPageBody>
+  </UPage>
+</template>
