@@ -5,7 +5,18 @@ const { locale, setLocale } = useI18n()
 </script>
 
 <template>
-  <UFooter>
+  <UFooter :ui="{ left: 'text-(--ui-text-muted)' }">
+    <template #left>
+      <UIcon name="i-mingcute-copyright-line" />
+      <UButton
+        label="CC BY-NC-SA 4.0"
+        variant="link"
+        href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+        target="_blank"
+        color="neutral"
+      />
+      <div>tcastanie.dev {{ new Date().getFullYear() }}</div>
+    </template>
     <template #right>
       <ULocaleSelect
         v-model="locale"

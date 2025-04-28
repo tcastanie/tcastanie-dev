@@ -40,11 +40,7 @@ watch(activeTab, updateHash)
 
 <template>
   <UPage>
-    <UPageHero
-      :title="$t('nav1')"
-      :description="$t('my_projects')"
-      headline="🚧🚧🚧"
-    />
+    <UPageHero :title="$t('nav1')" :description="$t('my_projects')" />
 
     <UPageBody>
       <UTabs

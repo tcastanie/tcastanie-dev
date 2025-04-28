@@ -26,7 +26,7 @@ const breadcrumbItems = ref<BreadcrumbItem[]>([
 ])
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
-  return queryCollectionItemSurroundings(`${locale.value}_projects`, route.path, { fields: ['description'] })
+  return queryCollectionItemSurroundings(`${locale.value}_projects`, route.path, { fields: ['description'] }).order('date', 'DESC')
 })
 </script>
 
@@ -36,7 +36,7 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
       <UBreadcrumb :items="breadcrumbItems" />
       <ContentRenderer :value="page" />
       <USeparator />
-      <UContentSurround :surround="surround" />
+      <UContentSurround :surround />
     </UPageBody>
 
     <template v-if="page.type === 'pro'" #right>
