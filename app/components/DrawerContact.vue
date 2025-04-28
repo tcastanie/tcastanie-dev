@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const cards = ref([
+const cards = computed(() => [
   {
     title: t('email'),
     description: 'contact@tcastanie.dev',
