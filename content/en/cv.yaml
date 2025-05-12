@@ -8,7 +8,7 @@ experiences:
     date_end: Present
     location: Montpellier
     actions:
-      - Development of a web app for subscription management, scheduling and booking of classes for Stoneybatter Cross Training gym in Dublin. Development of a SPA front-end and custom back-end with Nuxt, payment processing with Stripe.
+      - Development of a web app for subscription management, scheduling and booking of classes for Stoneybatter Cross Training gym in Dublin. Development of a SPA front-end and a BFF with Nuxt, backend with Directus and payment processing with Stripe.
       - Creation of the Domaine l'Angélus website, enabling booking of holiday cottages and sheepdog training courses. Development of static front-end with Nuxt, deployment of back-office with Directus and payment processing with Stripe. Ongoing guidance, contribution assistance and continuous support.
       - Continuous training on the latest versions of tools in the Nuxt and Vue.js ecosystem
       - Development of personal projects

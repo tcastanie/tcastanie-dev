@@ -21,6 +21,6 @@
 }
 
 :root {
-  --ui-radius: var(--radius-lg);
+  --ui-radius: 0.5rem;
   /* --ui-container: var(--container-4xl); */
 }
