@@ -28,7 +28,7 @@ const cards = computed(() => [
 <template>
   <UDrawer
     should-scale-background
-    set-background-color-on-scale
+    :set-background-color-on-scale="false"
     :title="$t('contact')"
     :ui="{ title: 'font-hubot text-2xl' }"
   >
@@ -37,8 +37,7 @@ const cards = computed(() => [
       <UPageGrid class="mb-4">
         <UPageCard
           v-for="{ title, description, icon, to, target } in cards"
-          :key="title"
-          :title :description :icon :to :target
+          :key="title" :title :description :icon :to :target
           spotlight
         >
           <template v-if="title === 'Malt'" #leading>

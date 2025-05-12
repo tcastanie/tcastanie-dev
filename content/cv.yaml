@@ -8,7 +8,7 @@ experiences:
     date_end: Aujourd'hui
     location: Montpellier
     actions:
-      - Création d'une app web de gestion des abonnements, du planning et de la réservation des cours de la salle de crossfit Stoneybatter Cross Training, à Dublin. Développement d'un front SPA et d'un back-end sur mesure avec Nuxt, gestion des paiements avec Stripe.
+      - Création d'une app web de gestion des abonnements, du planning et de la réservation des cours de la salle de crossfit Stoneybatter Cross Training, à Dublin. Développement d'un front SPA et d'un BFF avec Nuxt, backend avec Directus et gestion des paiements avec Stripe.
       - Création du site web du Domaine l'Angélus, permettant la réservation de gîtes et de cours de chiens de troupeaux. Développement du front full static avec Nuxt, déploiement du back-office avec Directus et gestion des paiements avec Stripe. Accompagnement, aide à la contribution et support continu.
       - Formation continue aux dernières versions des outils de l'écosystème Nuxt et Vue.js
       - Développement de projets personnels
