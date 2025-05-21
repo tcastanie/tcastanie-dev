@@ -61,7 +61,7 @@ const links = ref([
           />
         </template>
         <template #links>
-          <div class="text-(--ui-text-muted) text-pretty text-lg">
+          <div class="text-muted text-pretty text-lg">
             {{ $t('home4') }}
           </div>
           <div class="flex flex-wrap gap-x-6 gap-y-3 justify-start mt-8 ">

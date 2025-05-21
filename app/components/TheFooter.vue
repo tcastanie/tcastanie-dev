@@ -5,7 +5,7 @@ const { locale, setLocale } = useI18n()
 </script>
 
 <template>
-  <UFooter :ui="{ left: 'text-(--ui-text-muted)' }">
+  <UFooter :ui="{ left: 'text-muted' }">
     <template #left>
       <UIcon name="i-mingcute-copyright-line" />
       <UButton

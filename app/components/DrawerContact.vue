@@ -41,7 +41,7 @@ const cards = computed(() => [
           spotlight
         >
           <template v-if="title === 'Malt'" #leading>
-            <SvgMalt class="size-5 text-(--ui-primary)" />
+            <SvgMalt class="size-5 text-primary" />
           </template>
         </UPageCard>
       </UPageGrid>

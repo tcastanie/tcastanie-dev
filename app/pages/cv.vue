@@ -66,7 +66,7 @@ const skills = shallowRef([
               }"
               :ui="{ name: 'font-hubot font-bold tracking-wider' }"
             />
-            <div class="flex items-center gap-x-2 mt-4 text-(--ui-text-toned)">
+            <div class="flex items-center gap-x-2 mt-4 text-toned">
               <UIcon name="i-mingcute-location-3-line" class="size-6" />
               <span>{{ cv.location }}</span>
             </div>
@@ -93,7 +93,7 @@ const skills = shallowRef([
             :title="`${title}${company ? ` - ${company}` : ''}`"
             :description
             variant="ghost"
-            :ui="{ leading: 'text-(--ui-primary)' }"
+            :ui="{ leading: 'text-primary' }"
           >
             <template #leading>
               <UIcon v-if="icon" :name="icon" class="size-5 mr-1" />

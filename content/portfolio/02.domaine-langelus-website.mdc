@@ -4,11 +4,11 @@ date: 2024-07-01
 image: /doma_social.png
 ---
 
-<!-- ![Aperçu du projet Domaine l'Angélus]() -->
-
 # Domaine l'Angélus
 
 Site web pour le domaine l'Angélus, situé à Figeac dans le Lot, proposant des gîtes et un élevage de chiens de troupeaux.
+
+::img{src="/doma_social.png" alt="Aperçu récapitulatif du projet" class="rounded-lg mx-auto mb-8" width=640 height=320}
 
 ::card-group
   ::card
@@ -34,7 +34,7 @@ Site web pour le domaine l'Angélus, situé à Figeac dans le Lot, proposant des
   title: Scores lighthouse
   icon: i-mingcute-lighthouse-line
   ---
-  - Performances : 85
+  - Performances : 
   - Accessibilité : 98
   - Bonnes pratiques : 100
   - SEO : 100
@@ -81,11 +81,11 @@ Site web pour le domaine l'Angélus, situé à Figeac dans le Lot, proposant des
 
 ::
 
-Le Domaine L'angélus, situé à Sainte-Colombe (Figeac) dans le Lot, est un lieu qui combine des gîtes reposants avec le dressage de chiens de troupeaux. L'objectif étant de créer un site web permettant la présentation des différentes prestations proposées par le domaine, ainsi que la réservation de nuitées et de cours de dressage de chiens de troupeau.
+Le Domaine l'Angélus, situé à Sainte-Colombe (Figeac) dans le Lot, est un lieu qui combine des gîtes reposants avec le dressage de chiens de troupeaux. L'objectif étant de créer un site web permettant la présentation des différentes prestations proposées par le domaine, ainsi que la réservation de nuitées et de cours de dressage de chiens de troupeau.
 
 ## Aperçu
 
-<!-- ![Capture d'écran page d'accueil]() -->
+::img{src="/doma/homepage.png" alt="Page d'accueil" class="rounded-lg mx-auto mb-8" width=640 height=381}
 
 Le site est divisé en deux parties distinctes : 
 
@@ -98,9 +98,9 @@ Chaque section possède un design qui lui est propre : un clair pour les gîtes,
 
 ### Réservation en ligne
 
-<!-- ![Capture d'écran Booking Bar]() -->
+Les visiteurs peuvent facilement choisir une plage de dates en fonction des disponibilités et payer rapidement leur réservation. La réservation des gîtes est séparée de la réservation des cours de dressage.
 
-Les visiteurs peuvent facilement choisir une plage de dates en fonction des disponibilités et payer rapidement leur réservation. La réservation des gîtes est séparée de la réservation des cours.
+::img{src="/doma/booking-bar.png" alt="Barre de réservation" class="rounded-lg mx-auto mb-8" width=640 height=118}
 
 ### Présentation des gîtes et du domaine
 
@@ -108,11 +108,13 @@ Les visiteurs peuvent facilement choisir une plage de dates en fonction des disp
 
 Des pages simples permettant d'afficher les photos du domaine et des gîtes, ainsi que l'ensemble des  aménagements. Dans chaque fiche de gîte, un calendrier de disponibilités est également présent.
 
+::img{src="/doma/fiche-gite.png" alt="Aperçu fiche gîte" class="rounded-lg mx-auto mb-8" width=640 height=381}
+
 ### Présentation de l'élevage
 
-<!-- ![Capture d'écran Lignée]() -->
-
 Plusieurs pages avec des détails sur les prestations de l'élevage du domaine, sur les chiens à vendre ou disponibles à la saillie, mais aussi l'affichage de l'arbre généalogique de la lignée.
+
+::img{src="/doma/page-lignee.png" alt="Aperçu page lignée" class="rounded-lg mx-auto mb-8" width=640 height=379}
 
 ## Aspects techniques
 
@@ -120,21 +122,11 @@ L'architecture du projet est simple : une base de données pour stocker toutes l
 
 ### Stack technique
 
-<!-- ![Schéma FigJam]() -->
-
-Le *CMS* est **Directus**, directement branché sur la base de données **SQLite**. Les paiements sont effectués avec **Stripe** et gérés avec le *framework* **Hono**. Le *front-end* est créé avec **Nuxt** et **Vue.js** en mode statique (*SSG*), avec l'aide de **UnoCSS** (syntaxe **Tailwind**).
+Le *CMS* est **Directus** :icon{name="i-simple-icons-directus" class="size-5"}, directement branché sur la base de données **SQLite** :icon{name="i-simple-icons-sqlite" class="size-5"}. Les paiements sont effectués avec **Stripe** :icon{name="i-simple-icons-stripe" class="size-5"} et gérés avec le *framework* **Hono** :icon{name="i-simple-icons-hono" class="size-5"}. Le *front-end* est créé avec **Nuxt** :icon{name="i-simple-icons-nuxt" class="size-5"} et **Vue.js** :icon{name="i-simple-icons-vuedotjs" class="size-5"} en mode statique (*SSG*), avec l'aide de **UnoCSS** :icon{name="i-simple-icons-unocss" class="size-5"} (syntaxe **Tailwind**).
 
 Le site étant principalement de type vitrine, le choix de générer un site statique s'est imposé de lui-même, en raison du gain important de performances.
 
-Pour assurer la sécurité des données, une sauvegarde automatique de la base de données est mise en place avec **Duplicati**.
-
-### L'UX de la barre de réservation
-
-L'expérience utilisateur de la page de réservation des gîtes fut un défi.
-
-Au début, le visiteur devait choisir son gîte, puis choisir ses dates de séjour pour voir s'il était disponible. Mais cela engendrait trop d'actions d'aller-retour et empêchait l'utilisateur d'avoir une vue globale des dates disponibles. J'ai choisi de "fusionner" le calendrier de disponibilité des gîtes à l'intérieur du sélecteur de dates. Ainsi le visiteur n'a qu'à sélectionner les dates (celles qui sont impossibles à réserver sont désactivées), lancer la recherche, puis faire son choix entre les gîtes disponibles (ou réserver tous les gîtes d'un coup !).
-
-👉 Les clics sont réduits, la sensation de fluidité est renforcée (avec l'aide d'animations légères) et la transition vers le paiement se fait en douceur.
+Pour assurer la sécurité des données, une sauvegarde automatique de la base de données est mise en place avec **Duplicati** :icon{name="i-simple-icons-duplicati" class="size-5"}.
 
 ### SEO
 
@@ -154,7 +146,7 @@ Les clients du domaine sont heureux de pouvoir réserver directement via interne
 
 L'affichage détaillé des chiens de lignée de l'élevage et des chiens proposés par le domaine est un élément novateur dans le secteur de l'élevage de troupeaux, qui tarde encore à utiliser le web moderne.
 
-<!-- ![Feedback fb]() -->
+::img{src="/doma/fb-feedback.png" alt="Feedback Facebook" class="rounded-lg mx-auto mb-8" width=551 height=1133}
 
 ## Conclusion
 
