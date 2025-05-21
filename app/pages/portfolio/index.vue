@@ -6,7 +6,7 @@ const route = useRoute()
 const { data: projects } = await useAsyncData(`${locale.value}_projects`, () => {
   return queryCollection(`${locale.value}_projects`)
     .select('id', 'path', 'title', 'description', 'date', 'type', 'wip', 'image')
-    .order('date', 'DESC')
+    .order('id', 'DESC')
     .all()
 })
 
@@ -59,7 +59,6 @@ watch(activeTab, updateHash)
           :to="localePath(project.path)"
           :date="project.date"
           :badge="project.wip ? $t('wip') : undefined"
-          :image="project.image"
           :ui="{ image: 'object-center' }"
         />
       </UBlogPosts>

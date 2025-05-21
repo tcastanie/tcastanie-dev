@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   app: {
     rootAttrs: {
       'data-vaul-drawer-wrapper': '',
-      'class': 'bg-(--ui-bg) font-mona',
+      'class': 'font-mona',
     },
   },
   css: ['~/assets/css/main.css'],
