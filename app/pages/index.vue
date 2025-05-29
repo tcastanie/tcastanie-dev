@@ -26,13 +26,13 @@ const links = ref([
     label: t('nav1'),
     icon: 'i-mingcute-folder-open-2-line',
     to: '/portfolio',
-    variant: 'soft' as const,
+    variant: 'soft',
   },
   {
     label: t('nav2'),
     icon: 'i-mingcute-profile-line',
     to: '/cv',
-    variant: 'soft' as const,
+    variant: 'soft',
   },
 ])
 </script>
@@ -49,7 +49,6 @@ const links = ref([
         <template #title>
           <div class="relative grid h-[240px] content-end overflow-hidden">
             <UUser
-              name="Thibaut Castanié"
               :description="$t('main_subtitle')"
               :avatar="{
                 src: '/profile-photo.jpg',
@@ -59,9 +58,15 @@ const links = ref([
                 height: 64,
               }"
               size="3xl"
-              :ui="{ name: 'font-hubot text-4xl', description: 'font-normal text-2xl tracking-normal', root: 'gap-4', avatar: 'size-16' }"
+              :ui="{ description: 'font-normal text-2xl tracking-normal', root: 'gap-4', avatar: 'size-16' }"
               class="mb-16"
-            />
+            >
+              <template #name>
+                <h1 class="font-medium text-highlighted font-hubot text-4xl">
+                  Thibaut Castanié
+                </h1>
+              </template>
+            </UUser>
             <InteractiveGridPattern
               class="[mask-image:radial-gradient(250px_circle_at_center,white,transparent)] inset-0 h-[200%] -skew-x-6 -skew-y-3"
             />

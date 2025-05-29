@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import * as locales from '@nuxt/ui-pro/locale'
+import { en, fr } from '@nuxt/ui-pro/locale'
 
+const locales = { fr, en }
 const { locale } = useI18n()
 const head = useLocaleHead()
 useHead({ ...head.value })
@@ -9,7 +10,7 @@ useHead({ ...head.value })
 <template>
   <UApp :locale="locales[locale]">
     <NuxtRouteAnnouncer />
-    <NuxtLoadingIndicator color="#e02956" />
+    <NuxtLoadingIndicator color="#e6375a" />
 
     <TheHeader />
 
