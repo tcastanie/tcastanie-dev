@@ -1,0 +1,41 @@
+---
+type: perso
+date: 2024-07
+---
+
+# 🌺 Nuxt Bego UI
+
+Component library for Nuxt.
+
+::card-group
+  ::card
+  ---
+  icon: i-mingcute-grid-2-line
+  title: Showcase
+  to: https://nuxt-bego-ui.tcastanie.dev/
+  target: _blank
+  ---
+  nuxt-bego-ui.tcastanie.dev
+  ::
+
+  ::card
+  ---
+  icon: i-mingcute-github-line
+  title: Source code
+  to: https://github.com/tcastanie/nuxt-bego-ui
+  target: _blank
+  ---
+  tcastanie/nuxt-bego-ui
+  ::
+
+::
+
+<br />
+
+::badge{variant="outline"}
+:icon{name="i-simple-icons-nuxt"} Nuxt layers
+::
+
+Heavily inspired by *Nuxt UI* but with *UnoCSS* instead of *TailwindCSS*. The goal is to be able to quickly bootstrap some of my projects.
+
+The v1 of this site was actually built with it.

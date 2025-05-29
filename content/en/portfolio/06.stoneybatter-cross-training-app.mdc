@@ -1,0 +1,157 @@
+---
+type: pro
+date: 2025-03-01
+description: A bespoke web application that reduced a Dublin CrossFit gym's monthly web management costs by 97%
+image: /stoneybatter_social.webp
+---
+
+# Stoneybatter Cross Training App
+
+Web application for *Stoneybatter Cross Training*, a CrossFit gym located in Dublin, Ireland.
+
+::img{src="/stoneybatter_social.webp" alt="Overview summary of the Stoneybatter Cross Training project" class="rounded-lg mx-auto mb-8" width=640 height=320}
+
+::callout{icon="i-mingcute-fast-forward-line"}
+By moving from a SaaS solution to a bespoke web application, the gym manager reduced their monthly management costs from €273 to €8.
+::
+
+::card-group
+  ::card
+  ---
+  icon: i-mingcute-link-line
+  title: Website
+  to: https://app.stoneybattercrosstraining.ie/
+  target: _blank
+  ---
+  app.stoneybattercrosstraining.ie
+  ::
+
+  ::card
+  ---
+  icon: i-mingcute-calendar-2-line
+  title: Deployment
+  ---
+  26th February 2025
+  ::
+
+  ::card
+  ---
+  icon: i-mingcute-layout-11-line
+  title: Front-end Stack
+  ---
+  ::badge{variant="outline" color="neutral"}
+  :icon{name="i-simple-icons-nuxt"} Nuxt
+  ::
+  ::badge{variant="outline" color="neutral"}
+  :icon{name="i-simple-icons-vuedotjs"} Vue.js
+  ::
+  ::badge{variant="outline" color="neutral"}
+  :icon{name="i-simple-icons-nuxt"} Nuxt UI
+  ::
+  ::badge{variant="outline" color="neutral"}
+  :icon{name="i-simple-icons-typescript"} TypeScript
+  ::
+  ::
+
+  ::card
+  ---
+  icon: i-mingcute-server-2-line
+  title: Back-end Stack, Payments & Emails
+  ---
+  ::badge{variant="outline" color="neutral"}
+  :icon{name="i-simple-icons-directus"} Directus
+  ::
+  ::badge{variant="outline" color="neutral"}
+  :icon{name="i-simple-icons-unjs"} Nitro
+  ::
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  ::badge{variant="outline" color="neutral"}
+  :icon{name="i-simple-icons-stripe"} Stripe
+  ::
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  ::badge{variant="outline" color="neutral"}
+  :icon{name="i-simple-icons-amazonsimpleemailservice"} aws SES
+  ::
+  ::badge{variant="outline" color="neutral"}
+  ::img{src="https://mintlify.s3.us-west-1.amazonaws.com/plunk/logo/plunk-dark.svg" alt="plunk" class="" width=16 height=16}
+  Plunk
+  ::
+::
+
+::note
+Access to the app is restricted to members and requires registration.
+::
+
+## Context
+
+Stoneybatter Cross Training is a gym specialising in CrossFit, located in Dublin, Ireland. Classes and CrossFit sessions are offered to members who book their place in advance. Members can choose between purchasing one or several places directly, or a monthly subscription at an advantageous rate.
+
+The gym manager was using an external *SaaS* solution to manage bookings, payments and class scheduling with coaches. The service did not meet the manager's business needs, as he was forced to send Stripe payment links via WhatsApp, manually maintain a member tracking spreadsheet, and manually follow up on failed renewal attempts.
+
+This amounted to a notebook and pen at the cost of €273 per month.
+
+## Overview
+
+::img{src="/stoneybatter/home.webp" alt="Homepage screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=408}
+
+The Stoneybatter Cross Training web app allows members to purchase credits and then book a place for a CrossFit class. Classes consist of a series of exercises specific to each type of session, created by the gym's coaches. The manager and coaches have access to additional *CRUD* functionality to manage classes, *workouts* and members.
+
+## Features
+
+### Class Calendar
+
+::img{src="/stoneybatter/calendar.webp" alt="Calendar screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=517}
+
+### Recurring and One-off Payments
+
+::img{src="/stoneybatter/paiement.webp" alt="Payment page screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=525}
+
+### Authentication and Member Account Management
+
+::img{src="/stoneybatter/account.webp" alt="Account management page screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=550}
+
+::img{src="/stoneybatter/login.webp" alt="Login page screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=527}
+
+### Administration by Manager and Coaches
+
+The manager and coaches have access to administrative functionality to create, modify and delete app elements, depending on their role.
+
+::img{src="/stoneybatter/admin.webp" alt="Administration example screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=518}
+
+::img{src="/stoneybatter/gestion.webp" alt="Management page screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=386}
+
+### Automatic Email Sending
+
+### Recurring Server Tasks
+
+## Technical Stack
+
+The app's architecture is hosted on a server :icon{name="i-mingcute-server-line" class="size-5"} containing the database and **Nuxt** :icon{name="i-simple-icons-nuxt" class="size-5"}.
+
+The **SQLite** :icon{name="i-simple-icons-sqlite" class="size-5"} database is managed via **Directus** :icon{name="i-simple-icons-directus" class="size-5"}. **Nuxt** :icon{name="i-simple-icons-nuxt" class="size-5"} is used in *SPA* mode to ensure smooth dashboard usage and is supported by **Nuxt UI** for styling. The **Nitro** :icon{name="i-unjs-nitro" class="size-4"} server, integrated into **Nuxt**, handles payments via **Stripe** :icon{name="i-simple-icons-stripe" class="size-5"}, serves as an intermediary between the Front-end and Backend (*BFF*), and also performs recurring tasks (cron). Automatic emails are sent via **Amazon SES** :icon{name="i-simple-icons-amazonsimpleemailservice" class="size-5"} and their flows are managed by a **Plunk** instance. Automatic database backup is implemented with **Duplicati** :icon{name="i-simple-icons-duplicati" class="size-5"}.
+
+## Process
+
+Created a hidden website (IP restriction) automatically updated with each code addition to implement an adapted Agile methodology. The CrossFit gym owner was able to use and test the site regularly to provide feedback on necessary adjustments during the development phase.
+
+On deployment day, the entire member database was imported into the app, then the site was opened to the public. Members were able to log in and use the app immediately, simply by choosing a new password.
+
+## Maintenance and Evolution
+
+In the weeks following deployment, we made improvements and minor bug fixes reported by users.
+
+About a month after the app stabilised, we added a new personal records (*PRs*) feature for members, allowing them to track their progress on all CrossFit exercises and compare them with other members' records, if they wish.
+
+::img{src="/stoneybatter/prs.webp" alt="Personal records leaderboard screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=422}
+
+## Results and Impact
+
+The most striking user feedback was about the fluidity of use. With the lightweight stack and optimised queries, the app is very responsive and fast (sometimes too fast for some members used to the old solution!)
+
+The integration of PWA features reassured some members by allowing them to install it on their phone like a native application.
+
+Although the manager uses his computer for most administrative tasks to be more efficient, he loved being able to handle certain quick tasks from his phone when travelling, without having to postpone them.
+
+The gym manager was also able to reduce his monthly management costs by 97%, from €273 to €8 per month, by using a bespoke solution that exactly meets his business needs.

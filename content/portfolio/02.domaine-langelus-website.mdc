@@ -1,14 +1,14 @@
 ---
 type: pro
 date: 2024-07-01
-image: /doma_social.png
+image: /doma_social.webp
 ---
 
 # Domaine l'Angélus
 
 Site web pour le domaine l'Angélus, situé à Figeac dans le Lot, proposant des gîtes et un élevage de chiens de troupeaux.
 
-::img{src="/doma_social.png" alt="Aperçu récapitulatif du projet" class="rounded-lg mx-auto mb-8" width=640 height=320}
+::img{src="/doma_social.webp" alt="Aperçu récapitulatif du projet" class="rounded-lg mx-auto mb-8" width=640 height=320}
 
 ::card-group
   ::card
@@ -34,7 +34,7 @@ Site web pour le domaine l'Angélus, situé à Figeac dans le Lot, proposant des
   title: Scores lighthouse
   icon: i-mingcute-lighthouse-line
   ---
-  - Performances : 
+  - Performances : 85
   - Accessibilité : 98
   - Bonnes pratiques : 100
   - SEO : 100
@@ -104,8 +104,6 @@ Les visiteurs peuvent facilement choisir une plage de dates en fonction des disp
 
 ### Présentation des gîtes et du domaine
 
-<!-- ![Capture d'écran fiche gîte avec une partie du texte et de la galerie photos]() -->
-
 Des pages simples permettant d'afficher les photos du domaine et des gîtes, ainsi que l'ensemble des  aménagements. Dans chaque fiche de gîte, un calendrier de disponibilités est également présent.
 
 ::img{src="/doma/fiche-gite.png" alt="Aperçu fiche gîte" class="rounded-lg mx-auto mb-8" width=640 height=381}
@@ -130,7 +128,7 @@ Pour assurer la sécurité des données, une sauvegarde automatique de la base d
 
 ### SEO
 
-La majorité du SEO a été mise en place grace au plugin **Nuxt SEO**. Il simplifie énormément la gestion des graphes Schema.org, et permet de générer rapidement les multiples balises SEO, les images OpenGraph, ainsi que les fichiers *robots.txt* et *sitemap.xml*.
+La majorité du SEO a été mise en place grâce au plugin **Nuxt SEO**. Il simplifie énormément la gestion des graphes Schema.org, et permet de générer rapidement les multiples balises SEO, les images OpenGraph, ainsi que les fichiers *robots.txt* et *sitemap.xml*.
 
 J'ai également utilisé le [Google Indexing Script](https://github.com/goenning/google-indexing-script) pour rapidement référencer l'ensemble des pages du site sur Google et remonter en tête des résultats de recherche basés sur le nom du domaine, en moins d'un mois.
 
@@ -147,8 +145,6 @@ Les clients du domaine sont heureux de pouvoir réserver directement via interne
 L'affichage détaillé des chiens de lignée de l'élevage et des chiens proposés par le domaine est un élément novateur dans le secteur de l'élevage de troupeaux, qui tarde encore à utiliser le web moderne.
 
 ::img{src="/doma/fb-feedback.png" alt="Feedback Facebook" class="rounded-lg mx-auto mb-8" width=551 height=1133}
-
-## Conclusion
 
 Le site web déployé reflète bien la combinaison des gîtes et de l'élevage de chiens de troupeaux et reste simple et efficace dans ses objectifs : présenter le domaine et permettre la réservation.
 
