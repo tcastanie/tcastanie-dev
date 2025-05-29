@@ -1,4 +1,8 @@
 {
+  "nuxtSiteConfig": {
+    "name": "Thibaut Castanié",
+    "description": "Site web de Thibaut Castanié, développeur web front-end spécialisé en JavaScript, Vue.js et Nuxt"
+  },
   "hello": "Bonjour !",
   "main_subtitle": "Développeur web front-end",
   "nav1": "Portfolio",

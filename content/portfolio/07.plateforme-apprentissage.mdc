@@ -2,6 +2,14 @@
 type: pro
 wip: true
 image: /default-project.jpg
+ogImage:
+  component: NuxtSeo
+  props:
+    colorMode: "dark"
+    theme: "#E6375A"
+    siteName: "tcastanie.dev"
+sitemap:
+  lastmod: 2025-05-29
 ---
 
 # Plateforme d'apprentissage

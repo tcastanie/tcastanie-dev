@@ -1,7 +1,13 @@
 <script setup lang="ts">
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
+
+useSeoMeta({
+  title: t('nav1'),
+  description: t('my_projects'),
+})
+defaultOgImage()
 
 const { data: projects } = await useAsyncData(`${locale.value}_projects`, () => {
   return queryCollection(`${locale.value}_projects`)
