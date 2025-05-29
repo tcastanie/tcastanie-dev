@@ -96,7 +96,7 @@ const skills = shallowRef([
             :ui="{ leading: 'text-primary' }"
           >
             <template #leading>
-              <UIcon v-if="icon" :name="icon" class="size-5 mr-1" />
+              <UIcon v-if="icon" :name="icon" class="size-5 mr-2" />
               <span>{{ date_begin }} - {{ date_end }}</span>
             </template>
             <UPageFeature
