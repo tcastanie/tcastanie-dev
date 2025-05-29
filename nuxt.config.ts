@@ -1,7 +1,9 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { definePerson } from 'nuxt-schema-org/schema'
+
 export default defineNuxtConfig({
   modules: [
     '@nuxt/ui-pro',
+    '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxtjs/i18n',
     '@nuxt/image',
@@ -15,6 +17,9 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
+  site: {
+    url: 'https://tcastanie.dev',
+  },
   future: {
     compatibilityVersion: 4,
   },
@@ -53,5 +58,22 @@ export default defineNuxtConfig({
     clientBundle: {
       scan: true,
     },
+  },
+  schemaOrg: {
+    identity: definePerson({
+      name: 'Thibaut Castanié',
+      givenName: 'Thibaut',
+      familyName: 'Castanié',
+      image: '/profile-photo.jpg',
+      description: 'Freelance front-end web developer specialized in JavaScript, Vue, and Nuxt',
+      jobTitle: 'Front-end web developer',
+      email: 'contact@tcastanie.dev',
+      url: 'https://tcastanie.dev',
+      sameAs: [
+        'https://github.com/tcastanie',
+        'https://www.linkedin.com/in/tcastanie',
+        'https://www.malt.fr/profile/tcastanie',
+      ],
+    }),
   },
 })

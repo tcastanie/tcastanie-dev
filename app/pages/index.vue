@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
+defaultOgImage('Thibaut Castanié')
+
 const features = ref([
   {
     description: t('home1'),
@@ -50,7 +52,7 @@ const links = ref([
               name="Thibaut Castanié"
               :description="$t('main_subtitle')"
               :avatar="{
-                src: '/tronche.jpg',
+                src: '/profile-photo.jpg',
                 alt: 'Thibaut Castanié',
                 quality: 95,
                 width: 64,

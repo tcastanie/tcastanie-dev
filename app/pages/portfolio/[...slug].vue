@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { BreadcrumbItem } from '@nuxt/ui'
-
 const route = useRoute()
 const { locale } = useI18n()
 const localePath = useLocalePath()
@@ -15,21 +13,29 @@ if (!page.value) {
     fatal: true,
   })
 }
+if (page.value?.ogImage) {
+  defineOgImage(page.value?.ogImage)
+}
+useHead(page.value.head || {})
+useSeoMeta(page.value.seo || {})
 
-const breadcrumbItems = ref<BreadcrumbItem[]>([
-  {
-    label: 'Portfolio',
-    icon: 'i-mingcute-folder-open-2-line',
-    to: localePath(`/portfolio#${page.value.type}`),
-  },
-  { label: page.value.title },
-])
+const items = useBreadcrumbItems({
+  overrides: [
+    false,
+    {
+      label: 'Portfolio',
+      icon: 'i-mingcute-folder-open-2-line',
+      to: localePath(`/portfolio#${page.value.type}`),
+    },
+    { label: page.value.title },
+  ],
+})
 </script>
 
 <template>
   <UPage v-if="page">
     <UPageBody>
-      <UBreadcrumb :items="breadcrumbItems" />
+      <UBreadcrumb :items="items" />
       <ContentRenderer :value="page" />
     </UPageBody>
 

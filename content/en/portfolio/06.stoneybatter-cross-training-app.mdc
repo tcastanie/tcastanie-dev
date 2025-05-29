@@ -3,6 +3,14 @@ type: pro
 date: 2025-03-01
 description: A bespoke web application that reduced a Dublin CrossFit gym's monthly web management costs by 97%
 image: /stoneybatter_social.webp
+ogImage:
+  component: NuxtSeo
+  props:
+    colorMode: "dark"
+    theme: "#E6375A"
+    siteName: "tcastanie.dev"
+sitemap:
+  lastmod: 2025-05-29
 ---
 
 # Stoneybatter Cross Training App

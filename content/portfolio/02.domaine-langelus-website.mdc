@@ -2,6 +2,14 @@
 type: pro
 date: 2024-07-01
 image: /doma_social.webp
+ogImage:
+  component: NuxtSeo
+  props:
+    colorMode: "dark"
+    theme: "#E6375A"
+    siteName: "tcastanie.dev"
+sitemap:
+  lastmod: 2025-05-29
 ---
 
 # Domaine l'Angélus
