@@ -15,6 +15,15 @@ export default defineNuxtConfig({
       'data-vaul-drawer-wrapper': '',
       'class': 'font-mona',
     },
+    head: {
+      link: [
+        { rel: 'manifest', href: '/manifest.webmanifest' },
+        { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
+        { rel: 'icon', href: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+        { rel: 'icon', href: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      ],
+    },
   },
   css: ['~/assets/css/main.css'],
   site: {
@@ -23,7 +32,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2025-05-29',
   eslint: {
     config: {
       standalone: false,

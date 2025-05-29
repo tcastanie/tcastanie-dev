@@ -70,7 +70,7 @@ By moving from a SaaS solution to a bespoke web application, the gym manager red
   :icon{name="i-simple-icons-directus"} Directus
   ::
   ::badge{variant="outline" color="neutral" class="mr-2"}
-  :icon{name="i-simple-icons-unjs"} Nitro
+  :icon{name="i-unjs-nitro"} Nitro
   ::
   ::badge{variant="outline" color="neutral" class="mr-2"}
   :icon{name="i-simple-icons-stripe"} Stripe
