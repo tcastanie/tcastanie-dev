@@ -45,20 +45,25 @@ const links = ref([
         :ui="{ description: 'text-lg', links: 'flex-col' }"
       >
         <template #title>
-          <UUser
-            name="Thibaut Castanié"
-            :description="$t('main_subtitle')"
-            :avatar="{
-              src: '/tronche.jpg',
-              alt: 'Thibaut Castanié',
-              quality: 95,
-              width: 64,
-              height: 64,
-            }"
-            size="3xl"
-            :ui="{ name: 'font-hubot text-4xl', description: 'font-normal text-2xl tracking-normal', root: 'gap-4', avatar: 'size-16' }"
-            class="mb-16"
-          />
+          <div class="relative grid h-[240px] content-end overflow-hidden">
+            <UUser
+              name="Thibaut Castanié"
+              :description="$t('main_subtitle')"
+              :avatar="{
+                src: '/tronche.jpg',
+                alt: 'Thibaut Castanié',
+                quality: 95,
+                width: 64,
+                height: 64,
+              }"
+              size="3xl"
+              :ui="{ name: 'font-hubot text-4xl', description: 'font-normal text-2xl tracking-normal', root: 'gap-4', avatar: 'size-16' }"
+              class="mb-16"
+            />
+            <InteractiveGridPattern
+              class="[mask-image:radial-gradient(250px_circle_at_center,white,transparent)] inset-0 h-[200%] -skew-x-6 -skew-y-3"
+            />
+          </div>
         </template>
         <template #links>
           <div class="text-muted text-pretty text-lg">
