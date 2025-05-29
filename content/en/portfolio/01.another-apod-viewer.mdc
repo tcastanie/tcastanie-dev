@@ -5,7 +5,7 @@ date: 2022-06
 
 # ☄️ Another APOD Viewer
 
-Simple appli de visualisation de l'image du jour de la NASA (Astronomy Picture of the Day)
+Simple application for viewing NASA's Astronomy Picture of the Day
 
 ::card-group
   ::card
@@ -21,7 +21,7 @@ Simple appli de visualisation de l'image du jour de la NASA (Astronomy Picture o
   ::card
   ---
   icon: i-mingcute-github-line
-  title: Code source
+  title: Source code
   to: https://github.com/tcastanie/another-apod-viewer
   target: _blank
   ---
@@ -31,7 +31,7 @@ Simple appli de visualisation de l'image du jour de la NASA (Astronomy Picture o
   ::card
   ---
   icon: i-mingcute-tool-line
-  title: Stack technique
+  title: Tech stack
   ---
 
   ::field-group
@@ -73,27 +73,27 @@ Simple appli de visualisation de l'image du jour de la NASA (Astronomy Picture o
   ::card
   ---
   icon: i-mingcute-calendar-2-line
-  title: Déploiement
+  title: Deployment
   ---
 
   ::field-group
     ::field{name="v2" type="current"}
-    Juin 2024
+    June 2024
     ::
 
     ::field{name="v1" type=""}
-    Août 2022
+    August 2022
     ::
   ::
   ::
 
 ::
 
-Projet personnel pour améliorer mes compétences sur Vue, son écosystème, et tout le reste. Principalement Vue 3 et la Composition API, Vite, Pinia, Vitest... tout cela prêt à l'emploi dans un environnement convivial pour les développeurs.
+Personal project to improve my skills with Vue, its ecosystem, and everything else. Primarily Vue 3 and the Composition API, Vite, Pinia, Vitest... all of this ready to use in a developer-friendly environment.
 
-**v2 :** Réusinage complet avec Nuxt, Nuxt UI et création d'un proxy avec Nitro  pour l'API de la NASA.
+**v2:** Complete refactoring with Nuxt, Nuxt UI and creation of a proxy with Nitro for the NASA API.
 
-## Origine
+## Origin
 
 ::card{title="NASA Astronomy Picture of the Day" icon="i-mingcute-planet-fill" to="https://apod.nasa.gov/"}
 ::

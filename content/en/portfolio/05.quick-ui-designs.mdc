@@ -5,7 +5,7 @@ date: 2024-10-02
 
 # 🎨 Quick UI Designs
 
-Intégrations de quelques designs créés par [uidesigndaily.com](https://www.uidesigndaily.com/). Pour le fun.
+Integrations of a few designs created by [uidesigndaily.com](https://www.uidesigndaily.com/). Just for fun.
 
 ::card-group
   ::card
@@ -22,7 +22,7 @@ Intégrations de quelques designs créés par [uidesigndaily.com](https://www.ui
   ::card
   ---
   icon: i-mingcute-github-line
-  title: Code source
+  title: Source code
   to: https://github.com/tcastanie/quick-ui-designs
   target: _blank
   ---
@@ -33,7 +33,7 @@ Intégrations de quelques designs créés par [uidesigndaily.com](https://www.ui
   ::card
   ---
   icon: i-mingcute-tool-line
-  title: Stack technique
+  title: Tech stack
   ---
     ::badge{variant="outline" color="neutral"}
     :icon{name="i-simple-icons-vite"} Vite

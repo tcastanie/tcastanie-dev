@@ -2,16 +2,18 @@
 type: pro
 date: 2025-03-01
 description: Une application web sur mesure qui a réduit les frais de gestion web mensuels d'une salle de crossfit dublinoise de 97%
-image: /bora_social.png
+image: /stoneybatter_social.webp
 ---
-
-<!-- ![Aperçu du projet SCT App]() -->
 
 # App Stoneybatter Cross Training
 
 Application web pour *Stoneybatter Cross Training*, une salle de crossfit située à Dublin, en Irlande.
 
-tl;pl : En passant d'une solution SaaS à mon application web sur mesure, le gérant de la salle a réduit ses frais de gestion mensuels de 273€ à 8€.
+::img{src="/stoneybatter_social.webp" alt="Aperçu récapitulatif du projet Stoneybatter Cross Training" class="rounded-lg mx-auto mb-8" width=640 height=320}
+
+::callout{icon="i-mingcute-fast-forward-line"}
+En passant d'une solution SaaS à une application web sur mesure, le gérant de la salle a réduit ses frais de gestion mensuels de 273€ à 8€.
+::
 
 ::card-group
   ::card
@@ -84,86 +86,72 @@ L'accès à l'app est réservé aux membres et nécessite une inscription.
 
 ## Contexte
 
-Stoneybatter Cross Training est une salle de sport, spécialisée dans le Crossfit située à Dublin en Irlande. Des cours et des séances de renforcement sont proposés aux membres qui réservent leur place en avance. Les membres ont le choix entre acheter directement une ou plusieurs places, ou un abonnement mensuel à un tarif avantageux.
+Stoneybatter Cross Training est une salle de sport, spécialisée dans le Crossfit située à Dublin en Irlande. Des cours et des séances de crossfit sont proposés aux membres qui réservent leur place en avance. Les membres ont le choix entre acheter directement une ou plusieurs places, ou un abonnement mensuel à un tarif avantageux.
 
 Le gérant de la salle utilisait une solution externe *SaaS* pour gérer les réservations, les paiements et la planification des cours avec les coachs. Le service ne répondait pas aux besoins métier du dirigeant, car il se voyait obligé d'envoyer des liens de paiement Stripe par WhatsApp, de maintenir à jour manuellement un tableur de suivi des membres et de relancer manuellement en cas d'échec de renouvellement. 
 
-Ce qui peut se résumer, en exagérant légèrement, à un carnet et un stylo... au tarif démesuré de 273€ par mois. 🙃
+Ce qui peut se résumer à un carnet et un stylo  au tarif de 273€ par mois.
 
 ## Aperçu
 
-<!-- ![Capture d'écran page d'accueil]() -->
+::img{src="/stoneybatter/home.webp" alt="Capture page d'accueil" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=408}
 
-L'app web Stoneybatter Cross Training propose à ses membres d'acheter des crédits pour ensuite réserver une place pour un cours de crossfit. Les cours sont composés d'une série d'exercices propres à chaque type de séance, et qui sont créés par les coachs de la salle. Le manager et les coachs ont accès à des fonctionnalités supplémentaires de type *CRUD* pour gérer les cours, les *workouts* et les membres.
+L'app web Stoneybatter Cross Training propose à ses membres d'acheter des crédits pour ensuite réserver une place pour un cours de crossfit. Les cours sont composés d'une série d'exercices propre à chaque type de séance, et qui sont créés par les coachs de la salle. Le manager et les coachs ont accès à des fonctionnalités supplémentaires de type *CRUD* pour gérer les cours, les *workouts* et les membres.
 
 ## Fonctionnalités
 
 ### Calendrier de cours
 
+::img{src="/stoneybatter/calendar.webp" alt="Capture du calendrier" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=517}
+
 ### Paiements récurrents et uniques
 
-### Gestion par les coachs
+::img{src="/stoneybatter/paiement.webp" alt="Capture page de paiement" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=525}
 
-### Administration par le gérant
+### Authentification et gestion du compte membre
+
+::img{src="/stoneybatter/account.webp" alt="Capture page de gestion du compte" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=550}
+
+::img{src="/stoneybatter/login.webp" alt="Capture page de connexion" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=527}
+
+### Administration par le gérant et les coachs
+
+Le gérant et les coachs ont accès à des fonctionnalités d'administration pour créer, modifier et supprimer des éléments de l'app, en fonction de leur rôle.
+
+::img{src="/stoneybatter/admin.webp" alt="Capture exemple d'administration" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=518}
+
+::img{src="/stoneybatter/gestion.webp" alt="Capture page de gestion" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=386}
 
 ### Envoi automatique de mails
 
 ### Tâches serveur récurrentes
 
-## Aspects techniques
+## Stack technique
 
-L'architecture de l'app web est hébergée sur un serveur contenant la base de données et **Nuxt**.
+L'architecture de l'app est hébergée sur un serveur :icon{name="i-mingcute-server-line" class="size-5"} contenant la base de données et **Nuxt** :icon{name="i-simple-icons-nuxt" class="size-5"}.
 
-<!-- ![Schéma FigJam]() -->
-
-La base de donnée **SQLite** est gérée via **Directus**, pour faciliter les fonctionnalités d'authentification et d'autorisations des utilisateurs, et également pour simplifier les requêtes via l'*API*. **Nuxt** est utilisé en mode *SPA* afin de garantir une utilisation fluide du dashboard et est épaulé par **Nuxt UI** pour les styles.  Le serveur **Nitro**, intégré dans **Nuxt**, permet à la fois de gérer les paiements via **Stripe**, de servir d'intermédiaire entre le Front-end et le Backend (*BFF*) mais aussi d'effectuer des tâches récurrentes (cron). Les mails automatiques sont envoyés via **Amazon SES** et leurs flux sont gérés par une instance personelle de **Plunk**. Une sauvegarde automatique de la base de données est mise en place avec **Duplicati**.
-
-
-::collapsible{name="la stack technique" openText="Voir" closeText="Cacher"}
-
-::field-group
-  ::field{name="Front-end"}
-    :icon{name="i-logos-nuxt-icon"} [Nuxt](https://nuxt.com/), :icon{name="i-logos-vue"} Vue.js, TypeScript, Nuxt UI ::badgev1::
-  ::
-
-  ::field{name="Back-end"}
-    Nitro, Directus, SQLite
-  ::
-
-  ::field{name="Paiements"}
-    Stripe
-  ::
-
-  ::field{name="Emails"}
-    Plunk, Amazon SES
-  ::
-::
-
-::
-
-::collapsible{name="le défi technique" openText="Voir" closeText="Cacher"}
-
-
-
-::
+La base de données **SQLite** :icon{name="i-simple-icons-sqlite" class="size-5"} est gérée via **Directus** :icon{name="i-simple-icons-directus" class="size-5"}. **Nuxt** :icon{name="i-simple-icons-nuxt" class="size-5"} est utilisé en mode *SPA* afin de garantir une utilisation fluide du dashboard et est épaulé par **Nuxt UI** pour les styles. Le serveur **Nitro** :icon{name="i-unjs-nitro" class="size-4"}, intégré dans **Nuxt**, permet à la fois de gérer les paiements via **Stripe** :icon{name="i-simple-icons-stripe" class="size-5"}, de servir d'intermédiaire entre le Front-end et le Backend (*BFF*) mais aussi d'effectuer des tâches récurrentes (cron). Les mails automatiques sont envoyés via **Amazon SES** :icon{name="i-simple-icons-amazonsimpleemailservice" class="size-5"} et leurs flux sont gérés par une instance de **Plunk**. Une sauvegarde automatique de la base de données est mise en place avec **Duplicati** :icon{name="i-simple-icons-duplicati" class="size-5"}.
 
 ## Processus
 
+Création d'un site web caché (restriction IP) mis à jour automatiquement à chaque ajout de code afin de pouvoir mettre en place une méthode Agile adaptée. Le propriétaire de la salle de crossfit a pu utiliser et tester le site régulièrement afin de remonter les ajustements nécessaires lors de la phase de développement.
 
+Le jour du déploiement, l'ensemble de la base des membres a été importée dans l'app, puis le site a été ouvert au public. Les membres ont pu se connecter et utiliser l'app immédiatement, en choisissant simplement un nouveau mot de passe.
+
+## Maintenance et évolutions
+
+Dans les semaines qui ont suivi le déploiement, nous avons apporté des améliorations et corrections de bugs mineurs remontés par les utilisateurs.
+
+Environ un mois après la stabilisation de l'app, nous avons rajouté une nouvelle fonctionnalité d'ajouts de records personnels (*PRs*) pour les membres, qui leur permet de suivre leurs progrès sur tous les exercices de crossfit et de les comparer avec les records des autres membres, s'ils le souhaitent.
+
+::img{src="/stoneybatter/prs.webp" alt="Capture classement personal records" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=422}
 
 ## Résultats et impact
 
-version mobile nickel ! interface légère
+Le retour utilisateur qui a été le plus marquant est celui de la fluidité d'utilisation. La stack étant légère et les requêtes optimisées, l'app est très réactive et rapide (parfois trop pour certains membres habitués à l'ancienne solution !)
 
-273€ -> 8€
+L'intégration des fonctionnalités PWA a permis de rassurer certains membres, en l'installant sur leur téléphone comme une application native.
 
-## Conclusion
+Bien que pour la plupart des tâches d'administration le manager utilise son ordinateur pour être plus efficace, il a adoré pouvoir gérer certaines tâches rapides depuis son téléphone lorsqu'il est en déplacement, sans devoir les remettre à plus tard.
 
-
-
-
-
-
-
-
-
+Le gérant de la salle a également pu réduire ses frais de gestion mensuels de 97% en passant de 273€ à 8€ par mois, en utilisant une solution sur mesure qui répond exactement à ses besoins métier.

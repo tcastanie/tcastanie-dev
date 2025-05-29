@@ -1,0 +1,149 @@
+---
+type: pro
+date: 2024-07-01
+image: /doma_social.webp
+---
+
+# Domaine l'Angélus
+
+Website for Domaine l'Angélus, located in Figeac in the Lot, offering gîtes and sheep dog breeding.
+
+::img{src="/doma_social.webp" alt="Project overview" class="rounded-lg mx-auto mb-8" width=640 height=320}
+
+::card-group
+  ::card
+  ---
+  icon: i-mingcute-link-line
+  title: Website
+  to: https://www.domaine-langelus.fr
+  target: _blank
+  ---
+  www.domaine-langelus.fr
+  ::
+
+  ::card
+  ---
+  icon: i-mingcute-calendar-2-line
+  title: Deployment
+  ---
+  July 2024
+  ::
+
+  ::card
+  ---
+  title: Lighthouse scores
+  icon: i-mingcute-lighthouse-line
+  ---
+  - Performance: 85
+  - Accessibility: 98
+  - Best Practices: 100
+  - SEO: 100
+
+  *(Average across 26 pages via [Unlighthouse](https://unlighthouse.dev/))*
+  ::
+
+  ::card
+  ---
+  icon: i-mingcute-tool-line
+  title: Tech stack
+  ---
+
+  ::field-group
+    ::field{name="Front-end" type=""}
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-nuxt"} Nuxt (SSG)
+      ::
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-vuedotjs"} Vue.js
+      ::
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-unocss"} UnoCSS
+      ::
+    ::
+    ::field{name="Back-end & Payments" type=""}
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-directus"} Directus
+      ::
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-sqlite"} SQLite
+      ::
+      <span>&nbsp;&nbsp;&nbsp;</span>
+
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-hono"} Hono
+      ::
+      ::badge{variant="outline" color="neutral"}
+      :icon{name="i-simple-icons-stripe"} Stripe API
+      ::
+    ::
+  ::
+  ::
+
+::
+
+Domaine l'Angélus, located in Sainte-Colombe (Figeac) in the Lot, is a place that combines restful gîtes with sheep dog training. The objective was to create a website enabling the presentation of the various services offered by the estate, as well as the booking of overnight stays and sheep dog training courses.
+
+## Overview
+
+::img{src="/doma/homepage.png" alt="Homepage" class="rounded-lg mx-auto mb-8" width=640 height=381}
+
+The site is divided into two distinct parts:
+
+  - Gîtes section for presenting the estate and booking overnight stays.
+  - Dogs section for presenting the breeding, its services and lineage, and booking courses.
+
+Each section has its own design: a light one for the gîtes, a dark one for the breeding. Their common element is the bronze colour which was subsequently adopted for the estate's various communication materials (social media and flyers).
+
+## Features
+
+### Online booking
+
+Visitors can easily choose a date range based on availability and quickly pay for their reservation. Gîte bookings are separate from dog training course bookings.
+
+::img{src="/doma/booking-bar.png" alt="Booking bar" class="rounded-lg mx-auto mb-8" width=640 height=118}
+
+### Presentation of gîtes and estate
+
+Simple pages displaying photos of the estate and gîtes, as well as all the amenities. Each gîte listing also includes an availability calendar.
+
+::img{src="/doma/fiche-gite.png" alt="Gîte listing preview" class="rounded-lg mx-auto mb-8" width=640 height=381}
+
+### Breeding presentation
+
+Several pages with details about the estate's breeding services, dogs for sale or available for stud, as well as displaying the lineage family tree.
+
+::img{src="/doma/page-lignee.png" alt="Lineage page preview" class="rounded-lg mx-auto mb-8" width=640 height=379}
+
+## Technical aspects
+
+The project architecture is simple: a database to store all business data (bookings, pricing grid, availability, high season, pages...) and a server to host the static site, CMS and handle payments.
+
+### Tech stack
+
+The *CMS* is **Directus** :icon{name="i-simple-icons-directus" class="size-5"}, directly connected to the **SQLite** :icon{name="i-simple-icons-sqlite" class="size-5"} database. Payments are processed with **Stripe** :icon{name="i-simple-icons-stripe" class="size-5"} and managed with the **Hono** :icon{name="i-simple-icons-hono" class="size-5"} framework. The *front-end* is built with **Nuxt** :icon{name="i-simple-icons-nuxt" class="size-5"} and **Vue.js** :icon{name="i-simple-icons-vuedotjs" class="size-5"} in static mode (*SSG*), with the help of **UnoCSS** :icon{name="i-simple-icons-unocss" class="size-5"} (**Tailwind** syntax).
+
+As the site is primarily a showcase website, the choice to generate a static site was obvious, due to the significant performance gains.
+
+To ensure data security, automatic database backups are implemented with **Duplicati** :icon{name="i-simple-icons-duplicati" class="size-5"}.
+
+### SEO
+
+Most of the SEO was implemented using the **Nuxt SEO** plugin. It greatly simplifies Schema.org graph management and enables quick generation of multiple SEO tags, OpenGraph images, as well as *robots.txt* and *sitemap.xml* files.
+
+I also used the [Google Indexing Script](https://github.com/goenning/google-indexing-script) to quickly index all the site's pages on Google and rank at the top of search results based on the domain name, in less than a month.
+
+## Process
+
+Created a hidden website (IP restriction) automatically updated with each code addition to implement a suitable Agile methodology. The estate hosts were able to test the site at their leisure and provide feedback to adjust features. On deployment day, the site was simply opened to the public.
+
+Training the estate managers to use the CMS was also necessary to give them free rein for future content additions or modifications, as well as to handle booking emergencies.
+
+## Results and impact
+
+The estate's clients are happy to be able to book directly via the internet, without going through an intermediary, which is rare in the gîte booking sector. The simple, uncluttered display of gîte listings and their availability is also very popular. The estate managers can directly interact with bookings, particularly creating them manually.
+
+The detailed display of the breeding's lineage dogs and dogs offered by the estate is an innovative element in the sheep dog breeding sector, which is still slow to adopt modern web practices.
+
+::img{src="/doma/fb-feedback.png" alt="Facebook feedback" class="rounded-lg mx-auto mb-8" width=551 height=1133}
+
+The deployed website properly reflects the combination of gîtes and sheep dog breeding and remains simple and effective in its objectives: presenting the estate and enabling bookings.
