@@ -91,7 +91,7 @@ const skills = shallowRef([
         </UTooltip>
       </UPageMarquee>
 
-      <UContainer class="max-w-2xl text-justify">
+      <UContainer class="max-w-2xl">
         <UPageList divide>
           <UPageCard
             v-for="{ title, description, icon, company, date_begin, date_end, actions } of cv.experiences"
