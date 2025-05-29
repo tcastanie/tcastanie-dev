@@ -70,7 +70,7 @@ En passant d'une solution SaaS à une application web sur mesure, le gérant de 
   :icon{name="i-simple-icons-directus"} Directus
   ::
   ::badge{variant="outline" color="neutral" class="mr-2"}
-  :icon{name="i-simple-icons-unjs"} Nitro
+  :icon{name="i-unjs-nitro"} Nitro
   ::
 
   ::badge{variant="outline" color="neutral" class="mr-2"}
