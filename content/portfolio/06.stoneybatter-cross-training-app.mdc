@@ -61,15 +61,13 @@ En passant d'une solution SaaS à une application web sur mesure, le gérant de 
   ::badge{variant="outline" color="neutral"}
   :icon{name="i-simple-icons-directus"} Directus
   ::
-  ::badge{variant="outline" color="neutral"}
+  ::badge{variant="outline" color="neutral" class="mr-2"}
   :icon{name="i-simple-icons-unjs"} Nitro
   ::
-  <span>&nbsp;&nbsp;&nbsp;</span>
 
-  ::badge{variant="outline" color="neutral"}
+  ::badge{variant="outline" color="neutral" class="mr-2"}
   :icon{name="i-simple-icons-stripe"} Stripe
   ::
-  <span>&nbsp;&nbsp;&nbsp;</span>
 
   ::badge{variant="outline" color="neutral"}
   :icon{name="i-simple-icons-amazonsimpleemailservice"} aws SES
