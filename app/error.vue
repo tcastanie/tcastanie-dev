@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
-import * as locales from '@nuxt/ui-pro/locale'
+import { en, fr } from '@nuxt/ui-pro/locale'
+
+const locales = { fr, en }
 
 const { error } = defineProps<{
   error: NuxtError
@@ -27,7 +29,7 @@ useHead({ ...head.value })
         <p class="text-2xl mb-8">
           You found a <b>dead link</b> 😱
         </p>
-        <NuxtImg
+        <img
           src="/404link.jpg"
           alt="dead link"
           width="512"
