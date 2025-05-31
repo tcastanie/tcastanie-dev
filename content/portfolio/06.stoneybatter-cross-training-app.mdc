@@ -1,6 +1,6 @@
 ---
 type: pro
-date: 2025-03-01
+date: 2025-04-01
 description: Une application web sur mesure qui a réduit les frais de gestion web mensuels d'une salle de crossfit dublinoise de 97%
 image: /stoneybatter_social.webp
 ogImage:
@@ -10,7 +10,7 @@ ogImage:
     theme: "#E6375A"
     siteName: "tcastanie.dev"
 sitemap:
-  lastmod: 2025-05-29
+  lastmod: 2025-06-01
 ---
 
 # App Stoneybatter Cross Training
@@ -130,7 +130,13 @@ Le gérant et les coachs ont accès à des fonctionnalités d'administration pou
 
 ### Envoi automatique de mails
 
-### Tâches serveur récurrentes
+Des mails automatiques sont envoyés aux membres pour les informer de divers événements, comme la confirmation de réservation, la validation ou l'annulation d'une réservation en liste d'attente.
+
+### Affichage plein écran de la séance
+
+Pour afficher sur l'écran de télévision de la salle de sport.
+
+::img{src="/stoneybatter/fullscreen.jpg" alt="Photo écran" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=296}
 
 ## Stack technique
 

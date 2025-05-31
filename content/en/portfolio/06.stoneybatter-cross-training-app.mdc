@@ -1,6 +1,6 @@
 ---
 type: pro
-date: 2025-03-01
+date: 2025-04-01
 description: A bespoke web application that reduced a Dublin CrossFit gym's monthly web management costs by 97%
 image: /stoneybatter_social.webp
 ogImage:
@@ -10,7 +10,7 @@ ogImage:
     theme: "#E6375A"
     siteName: "tcastanie.dev"
 sitemap:
-  lastmod: 2025-05-29
+  lastmod: 2025-06-01
 ---
 
 # Stoneybatter Cross Training App
@@ -104,21 +104,21 @@ The Stoneybatter Cross Training web app allows members to purchase credits and t
 
 ## Features
 
-### Class Calendar
+### Class calendar
 
 ::img{src="/stoneybatter/calendar.webp" alt="Calendar screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=517}
 
-### Recurring and One-off Payments
+### Recurring and one-off payments
 
 ::img{src="/stoneybatter/paiement.webp" alt="Payment page screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=525}
 
-### Authentication and Member Account Management
+### Authentication and member account management
 
 ::img{src="/stoneybatter/account.webp" alt="Account management page screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=550}
 
 ::img{src="/stoneybatter/login.webp" alt="Login page screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=527}
 
-### Administration by Manager and Coaches
+### Administration by manager and coaches
 
 The manager and coaches have access to administrative functionality to create, modify and delete app elements, depending on their role.
 
@@ -126,11 +126,17 @@ The manager and coaches have access to administrative functionality to create, m
 
 ::img{src="/stoneybatter/gestion.webp" alt="Management page screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=386}
 
-### Automatic Email Sending
+### Automatic email sending
 
-### Recurring Server Tasks
+Automatic emails are sent to members to inform them of various events, such as booking confirmation, validation or cancellation of a waiting list booking.
 
-## Technical Stack
+### Full-screen session display
+
+For displaying on the gym's television screen.
+
+::img{src="/stoneybatter/fullscreen.jpg" alt="Screen photo" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=296}
+
+## Technical stack
 
 The app's architecture is hosted on a server :icon{name="i-mingcute-server-line" class="size-5"} containing the database and **Nuxt** :icon{name="i-simple-icons-nuxt" class="size-5"}.
 
@@ -142,7 +148,7 @@ Created a hidden website (IP restriction) automatically updated with each code a
 
 On deployment day, the entire member database was imported into the app, then the site was opened to the public. Members were able to log in and use the app immediately, simply by choosing a new password.
 
-## Maintenance and Evolution
+## Maintenance and evolution
 
 In the weeks following deployment, we made improvements and minor bug fixes reported by users.
 
@@ -150,7 +156,7 @@ About a month after the app stabilised, we added a new personal records (*PRs*) 
 
 ::img{src="/stoneybatter/prs.webp" alt="Personal records leaderboard screenshot" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=422}
 
-## Results and Impact
+## Results and impact
 
 The most striking user feedback was about the fluidity of use. With the lightweight stack and optimised queries, the app is very responsive and fast (sometimes too fast for some members used to the old solution!)
 
