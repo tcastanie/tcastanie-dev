@@ -57,7 +57,7 @@ watch(activeTab, updateHash)
         size="lg"
         :ui="{ content: 'mt-8' }"
       />
-      <UBlogPosts :id="activeTab === 'pro' ? 'pro' : 'perso'">
+      <UBlogPosts :id="activeTab === 'pro' ? 'pro' : 'perso'" class="scroll-mt-50">
         <UBlogPost
           v-for="project in filteredProjects"
           :key="project.id"
