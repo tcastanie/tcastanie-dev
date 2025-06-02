@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
+useHead({ titleTemplate: '%siteName' })
 defaultOgImage('Thibaut Castanié')
 
 const features = ref([
