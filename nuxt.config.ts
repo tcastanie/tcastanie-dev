@@ -65,7 +65,12 @@ export default defineNuxtConfig({
   },
   icon: {
     clientBundle: {
-      scan: true,
+      scan: {
+        globInclude: [
+          '**/*.{vue,jsx,tsx,md,mdc,mdx,yml,yaml}',
+          '**/app.config.ts',
+        ],
+      },
     },
   },
   schemaOrg: {
