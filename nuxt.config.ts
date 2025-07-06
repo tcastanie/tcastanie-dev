@@ -78,7 +78,7 @@ export default defineNuxtConfig({
       name: 'Thibaut Castanié',
       givenName: 'Thibaut',
       familyName: 'Castanié',
-      image: '/profile-photo.jpg',
+      image: '/avatar.jpg',
       description: 'Freelance front-end web developer specialized in JavaScript, Vue, and Nuxt',
       jobTitle: 'Front-end web developer',
       email: 'contact@tcastanie.dev',

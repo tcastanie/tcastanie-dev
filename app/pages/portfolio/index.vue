@@ -3,10 +3,8 @@ const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 
-useSeoMeta({
-  title: t('nav1'),
-  description: t('my_projects'),
-})
+useSeoMeta({ title: t('nav1') })
+useHead({ titleTemplate: `%s ${t('of')} %siteName` })
 defaultOgImage()
 
 const { data: projects } = await useAsyncData(`${locale.value}_projects`, () => {

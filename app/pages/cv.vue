@@ -1,10 +1,8 @@
 <script lang="ts" setup>
 const { locale, t } = useI18n()
 
-useSeoMeta({
-  title: 'Curriculum Vitæ',
-  description: t('my_skills'),
-})
+useSeoMeta({ title: 'CV' })
+useHead({ titleTemplate: `%s ${t('of')} %siteName` })
 defaultOgImage()
 
 const { data: cv } = await useAsyncData(`${locale.value}_cv`, () => {
@@ -66,7 +64,7 @@ const skills = shallowRef([
               :description="cv.description"
               size="3xl"
               :avatar="{
-                src: '/profile-photo.jpg',
+                src: '/avatar.jpg',
                 alt: 'Thibaut Castanié',
                 quality: 95,
               }"

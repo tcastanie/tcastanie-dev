@@ -36,7 +36,7 @@ function getY(index: number) {
 function getRectClass(index: number) {
   return [
     'stroke-gray-400/30 transition-all duration-100 ease-in-out [&:not(:hover)]:duration-1000',
-    hoveredSquare.value === index ? 'fill-primary-300/30' : 'fill-transparent',
+    hoveredSquare.value === index ? 'fill-primary-300/50' : 'fill-transparent',
   ]
 }
 
@@ -53,7 +53,7 @@ function handleMouseLeave() {
   <svg
     :width="gridWidth"
     :height="gridHeight"
-    class="absolute inset-0 h-full w-full border border-primary-400/30"
+    class="absolute inset-0 h-full w-full border border-primary-400/50"
   >
     <rect
       v-for="(_, index) in totalSquares"

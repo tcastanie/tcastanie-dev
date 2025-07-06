@@ -47,14 +47,12 @@ const links = ref([
         :features="features"
         :ui="{ description: 'text-lg', links: 'flex-col' }"
       >
-        <template #title>
-          <div class="relative grid h-[240px] content-end overflow-hidden">
+        <template #top>
+          <div class="relative h-[252px] content-end overflow-hidden w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
             <UUser
-              name="Thibaut Castanié"
-              :description="$t('main_subtitle')"
               :avatar="{
-                src: '/profile-photo.jpg',
-                alt: 'Thibaut Castanié',
+                src: '/avatar.jpg',
+                alt: 'Thibaut Castanié photo',
                 quality: 95,
                 width: 64,
                 height: 64,
@@ -62,9 +60,16 @@ const links = ref([
               size="3xl"
               :ui="{ name: 'font-hubot text-4xl', description: 'font-normal text-2xl tracking-normal', root: 'gap-4', avatar: 'size-16' }"
               class="mb-16"
-            />
+            >
+              <template #name>
+                <h1>Thibaut Castanié</h1>
+              </template>
+              <template #description>
+                <h2>{{ $t('main_subtitle') }}</h2>
+              </template>
+            </UUser>
             <InteractiveGridPattern
-              class="[mask-image:radial-gradient(250px_circle_at_center,white,transparent)] inset-0 h-[200%] -skew-x-6 -skew-y-3"
+              class="[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] inset-0 h-[200%] -skew-x-6 -skew-y-3"
             />
           </div>
         </template>
