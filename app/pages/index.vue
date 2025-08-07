@@ -58,14 +58,16 @@ const links = ref([
                 height: 64,
               }"
               size="3xl"
-              :ui="{ name: 'font-hubot text-4xl', description: 'font-normal text-2xl tracking-normal', root: 'gap-4', avatar: 'size-16' }"
+              :ui="{ root: 'gap-4', avatar: 'size-16' }"
               class="mb-16"
             >
-              <template #name>
-                <h1>Thibaut Castanié</h1>
-              </template>
-              <template #description>
-                <h2>{{ $t('main_subtitle') }}</h2>
+              <template #default>
+                <h1 class="font-medium text-highlighted font-hubot text-4xl">
+                  Thibaut Castanié
+                </h1>
+                <h2 class="text-muted font-normal text-2xl tracking-normal">
+                  {{ $t('main_subtitle') }}
+                </h2>
               </template>
             </UUser>
             <InteractiveGridPattern
@@ -93,9 +95,7 @@ const links = ref([
             />
           </div>
         </template>
-        <ClientOnly>
-          <ThePlanet />
-        </ClientOnly>
+        <ThePlanet />
       </UPageSection>
     </UPageBody>
   </UPage>

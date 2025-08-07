@@ -2,12 +2,11 @@
 import type { NuxtError } from '#app'
 import { en, fr } from '@nuxt/ui-pro/locale'
 
-const locales = { fr, en }
-
 const { error } = defineProps<{
   error: NuxtError
 }>()
 
+const locales = { fr, en }
 const { locale } = useI18n()
 const head = useLocaleHead()
 const localePath = useLocalePath()
@@ -35,7 +34,7 @@ useHead({ ...head.value })
           width="512"
           height="384"
           class="rounded-xl"
-        />
+        >
       </div>
     </UContainer>
 

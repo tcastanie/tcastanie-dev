@@ -26,9 +26,6 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
-  site: {
-    url: 'https://tcastanie.dev',
-  },
   future: {
     compatibilityVersion: 4,
   },
@@ -59,9 +56,6 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'fr',
     strategy: 'prefix_except_default',
-    bundle: {
-      optimizeTranslationDirective: false,
-    },
   },
   icon: {
     clientBundle: {
