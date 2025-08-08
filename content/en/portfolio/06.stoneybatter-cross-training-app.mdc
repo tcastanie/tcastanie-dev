@@ -134,7 +134,7 @@ Automatic emails are sent to members to inform them of various events, such as b
 
 For displaying on the gym's television screen.
 
-::img{src="/stoneybatter/fullscreen.jpg" alt="Screen photo" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=296}
+::img{src="/stoneybatter/fullscreen.webp" alt="TV picture" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=684}
 
 ## Technical stack
 

@@ -27,7 +27,7 @@ Page d'état & healthchecks automatisés pour mes projets.
   ::
 
   ::card
-  ::img{src="https://status.tcastanie.dev/logo.svg" alt="Star Status logo" style="max-height: 92px; margin-inline: auto;"}
+  ::img{src="https://status.tcastanie.dev/logo.svg" alt="Star Status logo" style="max-height: 92px; margin-inline: auto;" zoom=false}
   ::
   ::
 
