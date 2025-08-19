@@ -29,7 +29,3 @@ const { locale, setLocale } = useI18n()
     </template>
   </UFooter>
 </template>
-
-<style scoped>
-
-</style>

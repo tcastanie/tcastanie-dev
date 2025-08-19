@@ -12,11 +12,16 @@ const features = ref([
   },
   {
     description: t('home2'),
-    icon: 'i-mingcute-code-line',
+    icon: 'i-mingcute-chart-bar-2-line',
     ui: { description: 'text-lg', leadingIcon: 'mt-0.5' },
   },
   {
     description: t('home3'),
+    icon: 'i-mingcute-code-line',
+    ui: { description: 'text-lg', leadingIcon: 'mt-0.5' },
+  },
+  {
+    description: t('home4'),
     icon: 'i-mingcute-briefcase-line',
     ui: { description: 'text-lg', leadingIcon: 'mt-0.5' },
   },
@@ -77,7 +82,7 @@ const links = ref([
         </template>
         <template #links>
           <div class="text-muted text-pretty text-lg">
-            {{ $t('home4') }}
+            {{ $t('home5') }}
           </div>
           <div class="flex flex-wrap gap-x-6 gap-y-3 justify-start mt-8 ">
             <DrawerContact>
