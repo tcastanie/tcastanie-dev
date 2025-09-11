@@ -26,10 +26,31 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
+  routeRules: {
+    '/projets': {
+      redirect: { to: '/portfolio', statusCode: 308 },
+    },
+  },
   future: {
     compatibilityVersion: 4,
   },
   compatibilityDate: '2025-05-29',
+  nitro: {
+    prerender: {
+      routes: [
+        '/portfolio/star-status',
+        '/portfolio/quick-ui-designs',
+        '/portfolio/wacky-planets',
+        '/portfolio/nuxt-bego-ui',
+        '/portfolio/another-apod-viewer',
+        '/en/portfolio/star-status',
+        '/en/portfolio/quick-ui-designs',
+        '/en/portfolio/wacky-planets',
+        '/en/portfolio/nuxt-bego-ui',
+        '/en/portfolio/another-apod-viewer',
+      ],
+    },
+  },
   eslint: {
     config: {
       standalone: false,
