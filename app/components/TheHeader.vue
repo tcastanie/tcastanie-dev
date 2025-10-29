@@ -27,6 +27,7 @@ const items = computed(() => [
 <template>
   <UHeader
     title="tcastanie.dev"
+    :to="localePath('/')"
     mode="slideover"
     :ui="{ title: 'font-hubot' }"
   >
