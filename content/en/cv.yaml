@@ -4,6 +4,7 @@ location: Montpellier, France
 intro: With 8 years of experience in web development, I offer my skills as a senior web developer, specialised particularly in the Vue.js and Nuxt ecosystem. I strive to ensure technical modernity and streamlined web services.
 experiences:
   - title: Freelance web developer
+    icon: i-mingcute-user-heart-line
     date_begin: Sept. 2023
     date_end: Present
     location: Montpellier
@@ -14,6 +15,7 @@ experiences:
       - Development of personal projects
   - title: Research and Development Engineer
     company: Smile
+    icon: i-mingcute-building-6-line
     description: Front-end web developer for high-traffic e-commerce websites
     date_begin: Feb. 2021
     date_end: May 2023
@@ -33,6 +35,7 @@ experiences:
       - Creation of Gameji, a web & mobile application allowing users to create and share serious games in minutes.
   - title: Front-end Engineer
     company: SATT AxLR / WeAreLearning
+    icon: i-mingcute-building-2-line
     date_begin: Jan. 2017
     date_end: Dec. 2018
     location: Montpellier

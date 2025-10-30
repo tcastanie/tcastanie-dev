@@ -4,6 +4,7 @@ location: Montpellier, France
 intro: Fort de 8 ans d'expérience dans le développement web, je mets à disposition mes compétences de développeur web senior, spécialisé notamment avec l'écosystème Vue.js et Nuxt. Je m'applique à assurer une modernité technique et des services web épurés.
 experiences:
   - title: Développeur web freelance
+    icon: i-mingcute-user-heart-line
     date_begin: Sept. 2023
     date_end: Aujourd'hui
     location: Montpellier
@@ -14,6 +15,7 @@ experiences:
       - Développement de projets personnels
   - title: Ingénieur étude et développement
     company: Smile
+    icon: i-mingcute-building-6-line
     description: Développeur web front-end sur des sites web e-commerce à fort trafic
     date_begin: Fév. 2021
     date_end: Mai 2023
@@ -32,6 +34,7 @@ experiences:
       - Développement de Grammaticus, un jeu mobile d’apprentissage de la grammaire française à destination des enfants en ﬁn du primaire.
       - Création de Gameji, une application web & mobile permettant de créer et partager son jeu sérieux en quelques minutes.
   - title: Ingénieur front-end
+    icon: i-mingcute-building-2-line
     company: SATT AxLR / WeAreLearning
     date_begin: Janv. 2017
     date_end: Déc. 2018
