@@ -2,7 +2,7 @@ import { definePerson } from 'nuxt-schema-org/schema'
 
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/ui-pro',
+    '@nuxt/ui',
     '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxtjs/i18n',

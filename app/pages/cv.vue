@@ -78,7 +78,7 @@ const skills = shallowRef([
         </UPageCard>
       </UContainer>
 
-      <UPageMarquee pause-on-hover>
+      <UMarquee pause-on-hover>
         <UTooltip
           v-for="{ icon, label } of skills"
           :key="label"
@@ -87,7 +87,7 @@ const skills = shallowRef([
         >
           <UIcon :name="icon" class="size-16" />
         </UTooltip>
-      </UPageMarquee>
+      </UMarquee>
 
       <UContainer class="max-w-2xl">
         <UPageList divide>

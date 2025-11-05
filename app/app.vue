@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { en, fr } from '@nuxt/ui-pro/locale'
+import { en, fr } from '@nuxt/ui/locale'
 
 const locales = { fr, en }
 const { locale } = useI18n()
