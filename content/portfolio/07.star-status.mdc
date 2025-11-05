@@ -24,14 +24,14 @@ Page d'état & healthchecks automatisés pour mes projets.
   ---
   icon: i-mingcute-link-line
   title: Star Status
-  to: https://status.tcastanie.dev/
+  to: https://star-status.tcastanie.workers.dev/
   target: _blank
   ---
-  status.tcastanie.dev
+  star-status.tcastanie.workers.dev
   ::
 
   ::card
-  ::img{src="https://status.tcastanie.dev/logo.svg" alt="Star Status logo" style="max-height: 92px; margin-inline: auto;" :zoom="false"}
+  ::img{src="https://star-status.tcastanie.workers.dev/logo.svg" alt="Star Status logo" style="max-height: 92px; margin-inline: auto;" :zoom="false"}
   ::
   ::
 
