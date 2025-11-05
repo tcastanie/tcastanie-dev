@@ -6,7 +6,7 @@
   "packageManager": "pnpm@10.20.0",
   "author": "tcastanie",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "scripts": {
     "build": "nuxt build",
