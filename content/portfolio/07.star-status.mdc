@@ -13,6 +13,10 @@ sitemap:
 
 # 🌠 Star Status
 
+::warning
+Projet archivé et désactivé en novembre 2025.
+::
+
 Page d'état & healthchecks automatisés pour mes projets.
 
 ::card-group
@@ -63,6 +67,10 @@ Page d'état & healthchecks automatisés pour mes projets.
 ::
 
 C'était une occasion de tester la fonctionnalité de cache de Nitro[^1] ainsi que NuxtHub avec Cloudflare D1[^2].
+
+| Capture d'écran de l'accueil | Capture mobile d'un projet |
+|---|---|
+| ![Capture d'écran star-status](/star-status/screenshot0.webp){width="640" :zoom="false"}  | ![Capture d'écran star-status](/star-status/screenshot1.webp){:zoom="false"} |
 
 [^1]: [Cache Nitro](https://nitro.build/guide/cache)
 [^2]: [Base de données NuxtHub](https://hub.nuxt.com/docs/features/database)

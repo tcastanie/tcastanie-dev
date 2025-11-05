@@ -13,6 +13,10 @@ sitemap:
 
 # 🌠 Star Status
 
+::warning
+Project archived and deactivated in November 2025.
+::
+
 Status page & automated healthchecks for my projects.
 
 ::card-group
@@ -61,6 +65,10 @@ Status page & automated healthchecks for my projects.
   ::
 
 ::
+
+| Homepage screenshot | Mobile screenshot of a project |
+|---|---|
+| ![star-status screenshot](/star-status/screenshot0.webp){width="640" :zoom="false"}  | ![star-status screenshot](/star-status/screenshot1.webp){:zoom="false"} |
 
 This was an opportunity to test Nitro's caching functionality[^1] as well as NuxtHub with Cloudflare D1[^2].
 
