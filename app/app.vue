@@ -5,6 +5,7 @@ const locales = { fr, en }
 const { locale } = useI18n()
 const head = useLocaleHead()
 useHead({ ...head.value })
+useUmami()
 </script>
 
 <template>

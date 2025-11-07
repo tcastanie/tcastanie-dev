@@ -11,6 +11,17 @@ const { locale } = useI18n()
 const head = useLocaleHead()
 const localePath = useLocalePath()
 useHead({ ...head.value })
+const { proxy } = useUmami()
+
+onMounted(() => {
+  const route = useRoute()
+  proxy.track('error-page', {
+    statusCode: error.statusCode,
+    statusMessage: error.statusMessage,
+    message: error.message,
+    path: route.fullPath,
+  })
+})
 </script>
 
 <template>

@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/image',
     '@nuxt/eslint',
+    '@nuxt/scripts',
   ],
   devtools: { enabled: true },
   app: {
@@ -26,6 +27,16 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
+  runtimeConfig: {
+    public: {
+      scripts: {
+        umamiAnalytics: {
+          websiteId: '',
+          src: '',
+        },
+      },
+    },
+  },
   routeRules: {
     '/projets': {
       redirect: { to: '/portfolio', statusCode: 308 },
