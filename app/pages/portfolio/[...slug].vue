@@ -16,8 +16,12 @@ if (!page.value) {
 if (page.value?.ogImage) {
   defineOgImage(page.value?.ogImage)
 }
-useHead(page.value.head || {})
-useSeoMeta(page.value.seo || {})
+if (page.value?.head) {
+  useHead(page.value.head as any)
+}
+if (page.value?.seo) {
+  useSeoMeta(page.value.seo)
+}
 
 const items = useBreadcrumbItems({
   overrides: [

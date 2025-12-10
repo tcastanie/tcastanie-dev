@@ -76,7 +76,7 @@ const links = ref([
               </template>
             </UUser>
             <InteractiveGridPattern
-              class="[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] inset-0 h-[200%] -skew-x-6 -skew-y-3"
+              class="mask-[radial-gradient(300px_circle_at_center,white,transparent)] inset-0 h-[200%] -skew-x-6 -skew-y-3"
             />
           </div>
         </template>
