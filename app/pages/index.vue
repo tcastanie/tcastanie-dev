@@ -53,7 +53,7 @@ const links = ref([
         :ui="{ description: 'text-lg', links: 'flex-col' }"
       >
         <template #top>
-          <div class="relative h-[252px] content-end overflow-hidden w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="relative h-63 content-end overflow-hidden w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
             <UUser
               :avatar="{
                 src: '/avatar.jpg',
