@@ -11,7 +11,7 @@ const { locale } = useI18n()
 const head = useLocaleHead()
 const localePath = useLocalePath()
 useHead({ ...head.value })
-const { proxy } = useUmami()
+const { proxy } = useScriptUmamiAnalytics()
 
 onMounted(() => {
   const route = useRoute()
@@ -48,7 +48,5 @@ onMounted(() => {
         >
       </div>
     </UContainer>
-
-    <TheFooter />
   </UApp>
 </template>

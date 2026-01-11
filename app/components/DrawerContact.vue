@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const { partyMode } = usePartyMode()
 
 const cards = computed(() => [
   {
@@ -27,12 +28,13 @@ const cards = computed(() => [
 
 <template>
   <UDrawer
-    should-scale-background
-    :set-background-color-on-scale="false"
     :title="$t('contact')"
     :ui="{ title: 'font-hubot text-2xl' }"
   >
     <slot />
+    <template v-if="partyMode" #title>
+      <img src="/gifs/contact.gif" width="141" height="52">
+    </template>
     <template #body>
       <UPageGrid class="mb-4">
         <UPageCard
@@ -40,8 +42,9 @@ const cards = computed(() => [
           :key="title" :title :description :icon :to :target
           spotlight
         >
-          <template v-if="title === 'Malt'" #leading>
-            <SvgMalt class="size-5 text-primary" />
+          <template #leading>
+            <SvgMalt v-if="title === 'Malt'" class="size-5 text-primary" />
+            <img v-if="partyMode && title === 'Courriel'" src="/gifs/email.gif" width="107" height="35">
           </template>
         </UPageCard>
       </UPageGrid>

@@ -10,11 +10,22 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/scripts',
   ],
+  $production: {
+    runtimeConfig: {
+      public: {
+        scripts: {
+          umamiAnalytics: {
+            websiteId: '',
+            src: '',
+          },
+        },
+      },
+    },
+  },
   devtools: { enabled: true },
   app: {
     rootAttrs: {
-      'data-vaul-drawer-wrapper': '',
-      'class': 'font-mona',
+      class: 'font-mona',
     },
     head: {
       link: [
@@ -27,16 +38,6 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
-  runtimeConfig: {
-    public: {
-      scripts: {
-        umamiAnalytics: {
-          websiteId: '',
-          src: '',
-        },
-      },
-    },
-  },
   routeRules: {
     '/projets': {
       redirect: { to: '/portfolio', statusCode: 308 },
@@ -112,5 +113,8 @@ export default defineNuxtConfig({
         'https://www.malt.fr/profile/tcastanie',
       ],
     }),
+  },
+  sitemap: {
+    zeroRuntime: true,
   },
 })

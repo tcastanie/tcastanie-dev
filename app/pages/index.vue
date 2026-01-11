@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const { partyMode } = usePartyMode()
 
 useHead({ titleTemplate: '%siteName' })
 defaultOgImage('Thibaut Castanié')
@@ -65,6 +66,7 @@ const links = ref([
               size="3xl"
               :ui="{ root: 'gap-4', avatar: 'size-16' }"
               class="mb-16"
+              :class="{ 'animate-bounce': partyMode }"
             >
               <template #default>
                 <h1 class="font-medium text-highlighted font-hubot text-4xl">
@@ -89,8 +91,12 @@ const links = ref([
               <UButton
                 :label="$t('contact_me')"
                 size="lg"
-                icon="i-mingcute-send-plane-line"
-              />
+              >
+                <template #leading>
+                  <img v-if="partyMode" src="/gifs/mail.gif" width="20" height="20">
+                  <UIcon v-else name="i-mingcute-send-plane-line" class="size-5" />
+                </template>
+              </UButton>
             </DrawerContact>
             <ButtonLocale
               v-for="{ label, icon, to, variant } in links"
@@ -101,6 +107,11 @@ const links = ref([
           </div>
         </template>
         <ThePlanet />
+
+        <template v-if="partyMode">
+          <img src="/gifs/alien.gif" width="90" height="200" class="absolute right-0 bottom-0">
+          <img src="/gifs/ufo.gif" width="200" height="42" class="absolute left-0 bottom-0">
+        </template>
       </UPageSection>
     </UPageBody>
   </UPage>

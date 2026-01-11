@@ -2,6 +2,7 @@
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
+const { partyMode } = usePartyMode()
 
 useSeoMeta({ title: t('nav1') })
 useHead({ titleTemplate: `%s ${t('of')} %siteName` })
@@ -45,7 +46,15 @@ watch(activeTab, updateHash)
 
 <template>
   <UPage>
-    <UPageHero :title="$t('nav1')" :description="$t('my_projects')" />
+    <UPageHero :title="$t('nav1')" :description="$t('my_projects')">
+      <template v-if="partyMode" #headline>
+        <div class="flex justify-center gap-8">
+          <img src="/gifs/construction.gif" width="96" height="66">
+          <img src="/gifs/construction2.gif" width="90" height="85">
+          <img src="/gifs/cmcdconstruction.gif" width="50" height="82">
+        </div>
+      </template>
+    </UPageHero>
 
     <UPageBody>
       <UTabs

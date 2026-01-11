@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const { locale, t } = useI18n()
+const { partyMode } = usePartyMode()
 
 useSeoMeta({ title: 'CV' })
 useHead({ titleTemplate: `%s ${t('of')} %siteName` })
@@ -53,7 +54,11 @@ const skills = shallowRef([
       title="Curriculum Vitæ"
       :description="$t('my_skills')"
       :links="links"
-    />
+    >
+      <template v-if="partyMode" #headline>
+        <img src="/gifs/corgiswim.gif" width="700" height="700" class="mx-auto absolute -z-1">
+      </template>
+    </UPageHero>
 
     <UPageBody v-if="cv">
       <UContainer class="max-w-2xl">

@@ -2,6 +2,7 @@
 const route = useRoute()
 const { t } = useI18n()
 const localePath = useLocalePath()
+const { partyMode } = usePartyMode()
 
 const items = computed(() => [
   {
@@ -34,6 +35,7 @@ const items = computed(() => [
     <UNavigationMenu :items="items" variant="link" />
 
     <template #right>
+      <img v-if="partyMode" src="/gifs/earth.gif" width="36" height="36">
       <DrawerContact>
         <UButton :label="$t('contact')" icon="i-mingcute-send-plane-line" />
       </DrawerContact>

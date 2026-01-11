@@ -4,8 +4,21 @@ import { en, fr } from '@nuxt/ui/locale'
 const locales = { fr, en }
 const { locale } = useI18n()
 const head = useLocaleHead()
-useHead({ ...head.value })
-useUmami()
+const { partyMode } = usePartyMode()
+const bodyAttrs = computed(() => {
+  return {
+    style: {
+      'background-image': partyMode.value ? 'url(/gifs/stars.gif)' : '',
+      'background-repeat': partyMode.value ? 'repeat' : '',
+      'cursor': partyMode.value ? 'url("/gifs/rocket.gif"), auto' : '',
+    },
+  }
+})
+useHead({
+  ...head.value,
+  // @ts-expect-error: doesn't match useHead typings
+  bodyAttrs,
+})
 </script>
 
 <template>
@@ -15,11 +28,11 @@ useUmami()
 
     <TheHeader />
 
-    <UContainer>
-      <UMain>
+    <UMain as="main">
+      <UContainer>
         <NuxtPage />
-      </UMain>
-    </UContainer>
+      </UContainer>
+    </UMain>
 
     <TheFooter />
   </UApp>
