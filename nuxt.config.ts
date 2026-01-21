@@ -21,6 +21,11 @@ export default defineNuxtConfig({
         },
       },
     },
+    scripts: {
+      registry: {
+        umamiAnalytics: true,
+      },
+    },
   },
   devtools: { enabled: true },
   app: {
@@ -114,6 +119,7 @@ export default defineNuxtConfig({
       ],
     }),
   },
+
   sitemap: {
     zeroRuntime: true,
   },
