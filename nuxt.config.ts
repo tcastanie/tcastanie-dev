@@ -23,6 +23,16 @@ export default defineNuxtConfig({
         },
       },
     },
+    scripts: {
+      registry: {
+        umamiAnalytics: {
+          websiteId: import.meta.env.NUXT_PUBLIC_SCRIPTS_UMAMI_ANALYTICS_WEBSITE_ID,
+          scriptInput: {
+            src: import.meta.env.NUXT_PUBLIC_SCRIPTS_UMAMI_ANALYTICS_SCRIPT_INPUT_SRC,
+          },
+        },
+      },
+    },
   },
   devtools: { enabled: true },
   app: {
