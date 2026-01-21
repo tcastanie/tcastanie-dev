@@ -16,14 +16,11 @@ export default defineNuxtConfig({
         scripts: {
           umamiAnalytics: {
             websiteId: '',
-            src: '',
+            scriptInput: {
+              src: '',
+            },
           },
         },
-      },
-    },
-    scripts: {
-      registry: {
-        umamiAnalytics: true,
       },
     },
   },
