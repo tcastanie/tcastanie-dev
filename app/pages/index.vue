@@ -62,6 +62,7 @@ const links = ref([
                 quality: 95,
                 width: 64,
                 height: 64,
+                style: 'view-transition-name: avatar',
               }"
               size="3xl"
               :ui="{ root: 'gap-4', avatar: 'size-16' }"

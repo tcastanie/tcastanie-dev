@@ -1,7 +1,7 @@
 ---
 type: pro
 wip: true
-image: /default-project.jpg
+image: /portfolio/default-project.jpg
 ogImage:
   component: NuxtSeo
   props:

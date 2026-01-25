@@ -72,6 +72,7 @@ const skills = shallowRef([
                 src: '/avatar.jpg',
                 alt: 'Thibaut Castanié',
                 quality: 95,
+                style: 'view-transition-name: avatar',
               }"
               :ui="{ name: 'font-hubot font-bold tracking-wider' }"
             />

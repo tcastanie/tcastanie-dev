@@ -2,7 +2,7 @@
 type: pro
 date: 2025-04-01
 description: Une application web sur mesure qui a réduit les frais de gestion web mensuels d'une salle de crossfit dublinoise de 97%
-image: /stoneybatter_social.webp
+image: /portfolio/stoneybatter_social.webp
 ogImage:
   component: NuxtSeo
   props:
@@ -17,7 +17,7 @@ sitemap:
 
 Application web pour *Stoneybatter Cross Training*, une salle de crossfit située à Dublin, en Irlande.
 
-::img{src="/stoneybatter_social.webp" alt="Aperçu récapitulatif du projet Stoneybatter Cross Training" class="rounded-lg mx-auto mb-8" width=640 height=320}
+![Aperçu récapitulatif du projet Stoneybatter Cross Training](/portfolio/stoneybatter_social.webp){width="1280" height="640"}
 
 ::callout{icon="i-mingcute-fast-forward-line"}
 En passant d'une solution SaaS à une application web sur mesure, le gérant de la salle a réduit ses frais de gestion mensuels de 273€ à 8€.
@@ -47,18 +47,18 @@ En passant d'une solution SaaS à une application web sur mesure, le gérant de 
   icon: i-mingcute-layout-11-line
   title: Stack front-end
   ---
-  ::badge{variant="outline" color="neutral"}
-  :icon{name="i-simple-icons-nuxt"} Nuxt
-  ::
-  ::badge{variant="outline" color="neutral"}
-  :icon{name="i-simple-icons-vuedotjs"} Vue.js
-  ::
-  ::badge{variant="outline" color="neutral"}
-  :icon{name="i-simple-icons-nuxt"} Nuxt UI
-  ::
-  ::badge{variant="outline" color="neutral"}
-  :icon{name="i-simple-icons-typescript"} TypeScript
-  ::
+    ::badge{variant="outline" color="neutral"}
+    :icon{name="i-simple-icons-nuxt"} Nuxt
+    ::
+    ::badge{variant="outline" color="neutral"}
+    :icon{name="i-simple-icons-vuedotjs"} Vue.js
+    ::
+    ::badge{variant="outline" color="neutral"}
+    :icon{name="i-simple-icons-nuxt"} Nuxt UI
+    ::
+    ::badge{variant="outline" color="neutral"}
+    :icon{name="i-simple-icons-typescript"} TypeScript
+    ::
   ::
 
   ::card
@@ -66,23 +66,21 @@ En passant d'une solution SaaS à une application web sur mesure, le gérant de 
   icon: i-mingcute-server-2-line
   title: Stack back-end, paiements & emails
   ---
-  ::badge{variant="outline" color="neutral"}
-  :icon{name="i-simple-icons-directus"} Directus
-  ::
-  ::badge{variant="outline" color="neutral" class="mr-2"}
-  :icon{name="i-unjs-nitro"} Nitro
-  ::
-
-  ::badge{variant="outline" color="neutral" class="mr-2"}
-  :icon{name="i-simple-icons-stripe"} Stripe
-  ::
-
-  ::badge{variant="outline" color="neutral"}
-  :icon{name="i-simple-icons-amazonsimpleemailservice"} aws SES
-  ::
-  ::badge{variant="outline" color="neutral"}
-  ::img{src="https://mintlify.s3.us-west-1.amazonaws.com/plunk/logo/plunk-dark.svg" alt="plunk" class="" width=16 height=16}
-  Plunk
+    ::badge{variant="outline" color="neutral"}
+    :icon{name="i-simple-icons-directus"} Directus
+    ::
+    ::badge{variant="outline" color="neutral" class="mr-2"}
+    :icon{name="i-unjs-nitro"} Nitro
+    ::
+    ::badge{variant="outline" color="neutral" class="mr-2"}
+    :icon{name="i-simple-icons-stripe"} Stripe
+    ::
+    ::badge{variant="outline" color="neutral"}
+    :icon{name="i-simple-icons-amazonsimpleemailservice"} aws SES
+    ::
+    ::badge{variant="outline" color="neutral"}
+      ![Logo Plunk](/portfolio/plunk-dark.svg){width="16" height="16" class="size-4 invert dark:invert-0" :zoom="false"} Plunk
+    ::
   ::
 ::
 
@@ -100,7 +98,7 @@ Ce qui peut se résumer à un carnet et un stylo  au tarif de 273€ par mois.
 
 ## Aperçu
 
-::img{src="/stoneybatter/home.webp" alt="Capture page d'accueil" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=408}
+![Capture page d'accueil](/stoneybatter/home.webp){width="640" height="408" class="w-auto mx-auto ring" :zoom="false"}
 
 L'app web Stoneybatter Cross Training propose à ses membres d'acheter des crédits pour ensuite réserver une place pour un cours de crossfit. Les cours sont composés d'une série d'exercices propre à chaque type de séance, et qui sont créés par les coachs de la salle. Le manager et les coachs ont accès à des fonctionnalités supplémentaires de type *CRUD* pour gérer les cours, les *workouts* et les membres.
 
@@ -108,25 +106,25 @@ L'app web Stoneybatter Cross Training propose à ses membres d'acheter des créd
 
 ### Calendrier de cours
 
-::img{src="/stoneybatter/calendar.webp" alt="Capture du calendrier" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=517}
+![Capture du calendrier](/stoneybatter/calendar.webp){width="640" height="517" class="w-auto mx-auto ring" :zoom="false"}
 
 ### Paiements récurrents et uniques
 
-::img{src="/stoneybatter/paiement.webp" alt="Capture page de paiement" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=525}
+![Capture page de paiement](/stoneybatter/paiement.webp){width="640" height="525" class="w-auto mx-auto ring" :zoom="false"}
 
 ### Authentification et gestion du compte membre
 
-::img{src="/stoneybatter/account.webp" alt="Capture page de gestion du compte" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=550}
+![Capture page de gestion du compte](/stoneybatter/account.webp){width="640" height="550" class="w-auto mx-auto ring" :zoom="false"}
 
-::img{src="/stoneybatter/login.webp" alt="Capture page de connexion" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=527}
+![Capture page de connexion](/stoneybatter/login.webp){width="640" height="527" class="w-auto mx-auto ring" :zoom="false"}
 
 ### Administration par le gérant et les coachs
 
 Le gérant et les coachs ont accès à des fonctionnalités d'administration pour créer, modifier et supprimer des éléments de l'app, en fonction de leur rôle.
 
-::img{src="/stoneybatter/admin.webp" alt="Capture exemple d'administration" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=518}
+![Capture exemple d'administration](/stoneybatter/admin.webp){width="640" height="518" class="w-auto mx-auto ring" :zoom="false"}
 
-::img{src="/stoneybatter/gestion.webp" alt="Capture page de gestion" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=386}
+![Capture page de gestion](/stoneybatter/gestion.webp){width="640" height="386" class="w-auto mx-auto ring" :zoom="false"}
 
 ### Envoi automatique de mails
 
@@ -136,7 +134,7 @@ Des mails automatiques sont envoyés aux membres pour les informer de divers év
 
 Pour afficher sur l'écran de télévision de la salle de sport.
 
-::img{src="/stoneybatter/fullscreen.webp" alt="Photo télévision" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=684}
+![Photo télévision](/stoneybatter/fullscreen.webp){width="640" height="684" class="w-auto mx-auto ring" :zoom="false"}
 
 ## Stack technique
 
@@ -156,7 +154,7 @@ Dans les semaines qui ont suivi le déploiement, nous avons apporté des amélio
 
 Environ un mois après la stabilisation de l'app, nous avons rajouté une nouvelle fonctionnalité d'ajouts de records personnels (*PRs*) pour les membres, qui leur permet de suivre leurs progrès sur tous les exercices de crossfit et de les comparer avec les records des autres membres, s'ils le souhaitent.
 
-::img{src="/stoneybatter/prs.webp" alt="Capture classement personal records" class="rounded-lg mx-auto mb-8 ring ring-primary" width=640 height=422}
+![Capture classement personal records](/stoneybatter/prs.webp){width="640" height="422" class="w-auto mx-auto ring" :zoom="false"}
 
 ## Résultats et impact
 

@@ -1,7 +1,7 @@
 ---
 type: pro
 date: 2024-07-01
-image: /doma_social.webp
+image: /portfolio/doma_social.webp
 ogImage:
   component: NuxtSeo
   props:
@@ -16,9 +16,10 @@ sitemap:
 
 Website for Domaine l'Angélus, located in Figeac in the Lot, offering gîtes and sheep dog breeding.
 
-::img{src="/doma_social.webp" alt="Project overview" class="rounded-lg mx-auto mb-8" width=640 height=320}
+![Project overview](/portfolio/doma_social.webp){width="1280" height="640"}
 
 ::card-group
+
   ::card
   ---
   icon: i-mingcute-link-line
@@ -55,43 +56,41 @@ Website for Domaine l'Angélus, located in Figeac in the Lot, offering gîtes an
   icon: i-mingcute-tool-line
   title: Tech stack
   ---
-
-  ::field-group
-    ::field{name="Front-end" type=""}
-      ::badge{variant="outline" color="neutral"}
-      :icon{name="i-simple-icons-nuxt"} Nuxt (SSG)
+    ::field-group
+      ::field{name="Front-end" type=""}
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-nuxt"} Nuxt (SSG)
+        ::
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-vuedotjs"} Vue.js
+        ::
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-unocss"} UnoCSS
+        ::
       ::
-      ::badge{variant="outline" color="neutral"}
-      :icon{name="i-simple-icons-vuedotjs"} Vue.js
-      ::
-      ::badge{variant="outline" color="neutral"}
-      :icon{name="i-simple-icons-unocss"} UnoCSS
-      ::
-    ::
-    ::field{name="Back-end & Payments" type=""}
-      ::badge{variant="outline" color="neutral"}
-      :icon{name="i-simple-icons-directus"} Directus
-      ::
-      ::badge{variant="outline" color="neutral" class="mr-2"}
-      :icon{name="i-simple-icons-sqlite"} SQLite
-      ::
-      ::badge{variant="outline" color="neutral"}
-      :icon{name="i-simple-icons-hono"} Hono
-      ::
-      ::badge{variant="outline" color="neutral"}
-      :icon{name="i-simple-icons-stripe"} Stripe API
+      ::field{name="Back-end & Payments" type=""}
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-directus"} Directus
+        ::
+        ::badge{variant="outline" color="neutral" class="mr-2"}
+        :icon{name="i-simple-icons-sqlite"} SQLite
+        ::
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-hono"} Hono
+        ::
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-stripe"} Stripe API
+        ::
       ::
     ::
   ::
-  ::
-
 ::
 
 Domaine l'Angélus, located in Sainte-Colombe (Figeac) in the Lot, is a place that combines restful gîtes with sheep dog training. The objective was to create a website enabling the presentation of the various services offered by the estate, as well as the booking of overnight stays and sheep dog training courses.
 
 ## Overview
 
-::img{src="/doma/homepage.png" alt="Homepage" class="rounded-lg mx-auto mb-8" width=640 height=381}
+![Homepage](/doma/homepage.png){width="640" height="381" class="w-auto mx-auto" :zoom="false"}
 
 The site is divided into two distinct parts:
 
@@ -106,19 +105,19 @@ Each section has its own design: a light one for the gîtes, a dark one for the 
 
 Visitors can easily choose a date range based on availability and quickly pay for their reservation. Gîte bookings are separate from dog training course bookings.
 
-::img{src="/doma/booking-bar.png" alt="Booking bar" class="rounded-lg mx-auto mb-8" width=640 height=118}
+![Booking bar](/doma/booking-bar.png){width="640" height="118" class="w-auto mx-auto" :zoom="false"}
 
 ### Presentation of gîtes and estate
 
 Simple pages displaying photos of the estate and gîtes, as well as all the amenities. Each gîte listing also includes an availability calendar.
 
-::img{src="/doma/fiche-gite.png" alt="Gîte listing preview" class="rounded-lg mx-auto mb-8" width=640 height=381}
+![Gîte listing preview](/doma/fiche-gite.png){width="640" height="381" class="w-auto mx-auto" :zoom="false"}
 
 ### Breeding presentation
 
 Several pages with details about the estate's breeding services, dogs for sale or available for stud, as well as displaying the lineage family tree.
 
-::img{src="/doma/page-lignee.png" alt="Lineage page preview" class="rounded-lg mx-auto mb-8" width=640 height=379}
+![Lineage page preview](/doma/page-lignee.png){width="640" height="379" class="w-auto mx-auto" :zoom="false"}
 
 ## Technical aspects
 
@@ -150,6 +149,6 @@ The estate's clients are happy to be able to book directly via the internet, wit
 
 The detailed display of the breeding's lineage dogs and dogs offered by the estate is an innovative element in the sheep dog breeding sector, which is still slow to adopt modern web practices.
 
-::img{src="/doma/fb-feedback.png" alt="Facebook feedback" class="rounded-lg mx-auto mb-8" width=551 height=1133}
+![Facebook feedback](/doma/fb-feedback.png){width="551" height="1133" class="w-auto mx-auto" :zoom="false"}
 
 The deployed website properly reflects the combination of gîtes and sheep dog breeding and remains simple and effective in its objectives: presenting the estate and enabling bookings.

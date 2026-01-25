@@ -20,6 +20,7 @@ Projet archivé et désactivé en novembre 2025.
 ::
 
 ::card-group
+
   ::card
   ---
   icon: i-mingcute-link-line
@@ -31,8 +32,7 @@ Projet archivé et désactivé en novembre 2025.
   ::
 
   ::card
-  ::img{src="https://star-status.tcastanie.workers.dev/logo.svg" alt="Star Status logo" style="max-height: 92px; margin-inline: auto;" :zoom="false"}
-  ::
+  :img{src="https://star-status.tcastanie.workers.dev/logo.svg" alt="Star Status logo" style="max-height: 92px; margin-inline: auto;" :zoom="false"}
   ::
 
   ::card

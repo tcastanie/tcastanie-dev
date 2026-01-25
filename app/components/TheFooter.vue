@@ -1,17 +1,9 @@
 <script lang="ts" setup>
-import { en, fr } from '@nuxt/ui/locale'
-
-const { locale, setLocale } = useI18n()
-
 const { partyMode, togglePartyMode } = usePartyMode()
 </script>
 
 <template>
   <UFooter :ui="{ left: 'text-muted' }">
-    <!-- <template v-if="partyMode" #top>
-      <img src="/gifs/bluline.gif" width="575" height="10" class="mx-auto">
-    </template> -->
-
     <template #left>
       <UIcon name="i-mingcute-copyright-line" />
       <div class="text-sm mx-2">
@@ -30,14 +22,13 @@ const { partyMode, togglePartyMode } = usePartyMode()
     <img v-if="partyMode" src="/gifs/valid-css2.png" width="88" height="31">
 
     <template #right>
-      <ULocaleSelect
-        v-model="locale"
-        :locales="[en, fr]"
-        trailing-icon="i-mingcute-up-line"
-        variant="ghost"
-        @change="setLocale(locale)"
-      />
-      <UColorModeButton variant="ghost" />
+      <DrawerContact>
+        <UButton
+          :label="$t('contact')"
+          trailing-icon="i-mingcute-send-plane-line"
+          variant="ghost"
+        />
+      </DrawerContact>
     </template>
   </UFooter>
   <audio

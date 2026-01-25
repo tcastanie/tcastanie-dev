@@ -55,6 +55,9 @@ export default defineNuxtConfig({
       redirect: { to: '/portfolio', statusCode: 308 },
     },
   },
+  experimental: {
+    viewTransition: true,
+  },
   compatibilityDate: '2025-05-29',
   nitro: {
     prerender: {

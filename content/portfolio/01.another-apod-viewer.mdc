@@ -16,6 +16,7 @@ sitemap:
 Simple appli de visualisation de l'image du jour de la NASA (Astronomy Picture of the Day)
 
 ::card-group
+
   ::card
   ---
   icon: i-mingcute-link-line
@@ -41,41 +42,36 @@ Simple appli de visualisation de l'image du jour de la NASA (Astronomy Picture o
   icon: i-mingcute-tool-line
   title: Stack technique
   ---
-
-  ::field-group
-    ::field{name="v2" type="current"}
-      ::badge{variant="outline" color="neutral"}
-      :icon{name="i-simple-icons-nuxt"} Nuxt
+    ::field-group
+      ::field{name="v2" type="current"}
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-nuxt"} Nuxt
+        ::
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-vuedotjs"} Vue.js
+        ::
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-tailwindcss"} Tailwind
+        ::
       ::
-      ::badge{variant="outline" color="neutral"}
-      :icon{name="i-simple-icons-vuedotjs"} Vue.js
-      ::
-      ::badge{variant="outline" color="neutral"}
-      :icon{name="i-simple-icons-tailwindcss"} Tailwind
-      ::
-    ::
-    ::field{name="v1" type=""}
-      ::badge{variant="outline" color="neutral"}
-      Nuxt
-      ::
-
-      ::badge{variant="outline" color="neutral"}
-      Vue.js
-      ::
-
-      ::badge{variant="outline" color="neutral"}
-      Sass
-      ::
-
-      ::badge{variant="outline" color="neutral"}
-      Pinia
-      ::
-      
-      ::badge{variant="outline" color="neutral"}
-      Vitest
+      ::field{name="v1" type=""}
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-nuxt"} Nuxt
+        ::
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-vuedotjs"} Vue.js
+        ::
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-sass"} Sass
+        ::
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-pinia"} Pinia
+        ::
+        ::badge{variant="outline" color="neutral"}
+        :icon{name="i-simple-icons-vitest"} Vitest
+        ::
       ::
     ::
-  ::
   ::
 
   ::card
@@ -83,16 +79,15 @@ Simple appli de visualisation de l'image du jour de la NASA (Astronomy Picture o
   icon: i-mingcute-calendar-2-line
   title: Déploiement
   ---
+    ::field-group
+      ::field{name="v2" type="current"}
+        Juin 2024
+      ::
 
-  ::field-group
-    ::field{name="v2" type="current"}
-    Juin 2024
+      ::field{name="v1" type=""}
+        Août 2022
+      ::
     ::
-
-    ::field{name="v1" type=""}
-    Août 2022
-    ::
-  ::
   ::
 
 ::

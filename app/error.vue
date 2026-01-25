@@ -16,8 +16,8 @@ const { proxy } = useScriptUmamiAnalytics()
 onMounted(() => {
   const route = useRoute()
   proxy.track('error-page', {
-    statusCode: error.statusCode,
-    statusMessage: error.statusMessage,
+    status: String(error.status),
+    statusText: error.statusText,
     message: error.message,
     path: route.fullPath,
   })

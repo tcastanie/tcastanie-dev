@@ -2,7 +2,7 @@
 const route = useRoute()
 const { t } = useI18n()
 const localePath = useLocalePath()
-const { partyMode } = usePartyMode()
+const { partyMode, togglePartyMode } = usePartyMode()
 
 const items = computed(() => [
   {
@@ -15,12 +15,6 @@ const items = computed(() => [
     label: t('nav2'),
     icon: 'i-mingcute-profile-line',
     to: localePath('/cv'),
-  },
-  {
-    label: 'GitHub',
-    icon: 'i-mingcute-github-line',
-    to: 'https://github.com/tcastanie/',
-    target: '_blank',
   },
 ])
 </script>
@@ -35,10 +29,17 @@ const items = computed(() => [
     <UNavigationMenu :items="items" variant="link" />
 
     <template #right>
-      <img v-if="partyMode" src="/gifs/earth.gif" width="36" height="36">
-      <DrawerContact>
-        <UButton :label="$t('contact')" icon="i-mingcute-send-plane-line" />
-      </DrawerContact>
+      <img
+        v-if="partyMode"
+        src="/gifs/earth.gif"
+        width="36" height="36" class="me-4"
+        @click="togglePartyMode()"
+      >
+      <SelectLocale />
+
+      <UColorModeButton variant="ghost" />
+
+      <UButton icon="i-mingcute-github-line" to="https://github.com/tcastanie" target="_blank" variant="ghost" color="neutral" />
     </template>
 
     <template #body>
