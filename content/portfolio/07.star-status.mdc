@@ -32,7 +32,7 @@ Projet archivé et désactivé en novembre 2025.
   ::
 
   ::card
-  :img{src="https://star-status.tcastanie.workers.dev/logo.svg" alt="Star Status logo" style="max-height: 92px; margin-inline: auto;" :zoom="false"}
+    ![Logo Star Status](https://star-status.tcastanie.workers.dev/logo.svg){width="300" height="85" style="max-height: 92px;"}
   ::
 
   ::card
@@ -70,7 +70,7 @@ C'était une occasion de tester la fonctionnalité de cache de Nitro[^1] ainsi q
 
 | Capture d'écran de l'accueil | Capture mobile d'un projet |
 |---|---|
-| ![Capture d'écran star-status](/star-status/screenshot0.webp){width="640" :zoom="false"}  | ![Capture d'écran star-status](/star-status/screenshot1.webp){:zoom="false"} |
+| ![Capture d'écran star-status](/star-status/screenshot0.webp){width="602" height="841" class="w-auto mx-auto"}  | ![Capture d'écran star-status](/star-status/screenshot1.webp){width="488" height="800" class="w-auto mx-auto"} |
 
 [^1]: [Cache Nitro](https://nitro.build/guide/cache)
 [^2]: [Base de données NuxtHub](https://hub.nuxt.com/docs/features/database)
