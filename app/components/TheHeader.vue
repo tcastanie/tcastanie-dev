@@ -24,7 +24,7 @@ const items = computed(() => [
     title="tcastanie.dev"
     :to="localePath('/')"
     mode="slideover"
-    :ui="{ title: 'font-hubot' }"
+    :ui="{ title: 'font-hubot', body: 'grid' }"
   >
     <UNavigationMenu :items="items" variant="link" />
 
@@ -35,7 +35,7 @@ const items = computed(() => [
         width="36" height="36" class="me-4"
         @click="togglePartyMode()"
       >
-      <SelectLocale />
+      <SelectLocale class="hidden sm:flex" />
 
       <UColorModeButton variant="ghost" />
 
@@ -43,6 +43,7 @@ const items = computed(() => [
     </template>
 
     <template #body>
+      <SelectLocale class="sm:hidden justify-self-end mb-4" />
       <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
     </template>
   </UHeader>
