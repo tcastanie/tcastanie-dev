@@ -72,9 +72,9 @@ const skills = shallowRef([
                 src: '/avatar.jpg',
                 alt: 'Thibaut Castanié',
                 quality: 95,
-                style: 'view-transition-name: avatar',
               }"
               :ui="{ name: 'font-hubot font-bold tracking-wider' }"
+              class="[view-transition-name:uuser]"
             />
             <div class="flex items-center gap-x-2 mt-4 text-toned">
               <UIcon name="i-mingcute-location-3-line" class="size-6" />

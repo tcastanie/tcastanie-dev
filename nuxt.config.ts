@@ -50,6 +50,9 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
+  content: {
+    experimental: { nativeSqlite: true },
+  },
   routeRules: {
     '/projets': {
       redirect: { to: '/portfolio', statusCode: 308 },
