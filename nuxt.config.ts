@@ -55,7 +55,13 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/projets': {
-      redirect: { to: '/portfolio', statusCode: 308 },
+      redirect: { to: '/portfolio', statusCode: 301 },
+    },
+    '/projects': {
+      redirect: { to: '/portfolio', statusCode: 301 },
+    },
+    '/blog': {
+      redirect: { to: '/portfolio', statusCode: 301 },
     },
   },
   experimental: {

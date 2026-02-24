@@ -26,6 +26,7 @@ function getEmojiFlag(locale: string): string {
     :ui="{
       trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200',
     }"
+    class="font-medium"
     @change="setLocale(locale)"
   >
     <template #leading>

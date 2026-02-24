@@ -40,11 +40,11 @@ const items = useBreadcrumbItems({
   <UPage v-if="page">
     <UPageBody>
       <UBreadcrumb :items="items" />
-      <ContentRenderer :value="page" />
+      <ContentRenderer :value="page" class="[&>h1,h2,h3]:font-hubot" />
     </UPageBody>
 
     <template v-if="page.type === 'pro'" #right>
-      <UContentToc :links="page.body?.toc?.links" />
+      <UContentToc :links="page.body?.toc?.links" highlight class="backdrop-blur-none" />
     </template>
   </UPage>
 </template>

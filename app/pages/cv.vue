@@ -54,6 +54,7 @@ const skills = shallowRef([
       title="Curriculum Vitæ"
       :description="$t('my_skills')"
       :links="links"
+      :ui="{ title: 'font-hubot'}"
     >
       <template v-if="partyMode" #headline>
         <img src="/gifs/corgiswim.gif" width="700" height="700" class="mx-auto absolute -z-1">
@@ -103,7 +104,7 @@ const skills = shallowRef([
             :title="`${title}${company ? ` - ${company}` : ''}`"
             :description
             variant="ghost"
-            :ui="{ leading: 'text-primary' }"
+            :ui="{ leading: 'text-primary', title: 'font-hubot' }"
           >
             <template #leading>
               <UIcon v-if="icon" :name="icon" class="size-5 mr-2" />

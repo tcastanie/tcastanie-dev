@@ -46,7 +46,7 @@ watch(activeTab, updateHash)
 
 <template>
   <UPage>
-    <UPageHero :title="$t('nav1')" :description="$t('my_projects')">
+    <UPageHero :title="$t('nav1')" :description="$t('my_projects')" :ui="{ title: 'font-hubot'}">
       <template v-if="partyMode" #headline>
         <div class="flex justify-center gap-8">
           <img src="/gifs/construction.gif" width="96" height="66">
@@ -72,7 +72,7 @@ watch(activeTab, updateHash)
           :to="localePath(project.path)"
           :date="project.date"
           :badge="project.wip ? $t('wip') : undefined"
-          :ui="{ image: 'object-center' }"
+          :ui="{ image: 'object-center', title: 'font-hubot' }"
         />
       </UBlogPosts>
     </UPageBody>
