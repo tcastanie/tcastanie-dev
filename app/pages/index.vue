@@ -5,43 +5,35 @@ const { partyMode } = usePartyMode()
 useHead({ titleTemplate: '%siteName' })
 defaultOgImage('Thibaut Castanié')
 
-const features = ref([
-  {
-    description: t('home1'),
-    icon: 'i-mingcute-layout-6-line',
-    ui: { description: 'text-lg', leadingIcon: 'mt-0.5' },
-  },
-  {
-    description: t('home2'),
-    icon: 'i-mingcute-chart-bar-2-line',
-    ui: { description: 'text-lg', leadingIcon: 'mt-0.5' },
-  },
-  {
-    description: t('home3'),
-    icon: 'i-mingcute-code-line',
-    ui: { description: 'text-lg', leadingIcon: 'mt-0.5' },
-  },
-  {
-    description: t('home4'),
-    icon: 'i-mingcute-briefcase-line',
-    ui: { description: 'text-lg', leadingIcon: 'mt-0.5' },
-  },
-])
+const features = shallowRef([{
+  description: t('home1'),
+  icon: 'i-mingcute-layout-6-line',
+  ui: { description: 'text-lg', leadingIcon: 'size-6' },
+}, {
+  description: t('home2'),
+  icon: 'i-mingcute-chart-bar-2-line',
+  ui: { description: 'text-lg', leadingIcon: 'size-6' },
+}, {
+  description: t('home3'),
+  icon: 'i-mingcute-code-line',
+  ui: { description: 'text-lg', leadingIcon: 'size-6' },
+}, {
+  description: t('home4'),
+  icon: 'i-mingcute-briefcase-line',
+  ui: { description: 'text-lg', leadingIcon: 'size-6' },
+}])
 
-const links = ref([
-  {
-    label: t('nav1'),
-    icon: 'i-mingcute-folder-open-2-line',
-    to: '/portfolio',
-    variant: 'soft',
-  },
-  {
-    label: t('nav2'),
-    icon: 'i-mingcute-profile-line',
-    to: '/cv',
-    variant: 'soft',
-  },
-])
+const links = shallowRef([{
+  label: t('nav1'),
+  icon: 'i-mingcute-folder-open-2-line',
+  to: '/portfolio',
+  variant: 'soft',
+}, {
+  label: t('nav2'),
+  icon: 'i-mingcute-profile-line',
+  to: '/cv',
+  variant: 'soft',
+}])
 </script>
 
 <template>

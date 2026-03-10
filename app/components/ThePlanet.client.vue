@@ -31,8 +31,7 @@ onMounted(async () => {
       addTo: sphere,
       rotate: { y: TAU * (i / nbParts), x: TAU / 18 },
     })
-    // eslint-disable-next-line no-new
-    new Shape({
+    const _ring = new Shape({
       addTo: anchor,
       path: [{ z: -(sizeParts / 2) }, { z: sizeParts / 2 }],
       translate: { x: 54, y: 0, z: 0 },

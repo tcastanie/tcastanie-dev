@@ -31,6 +31,7 @@ const skills = shallowRef([
   { icon: 'i-simple-icons-typescript', label: 'TypeScript' },
   { icon: 'i-simple-icons-vuedotjs', label: 'Vue.js' },
   { icon: 'i-simple-icons-nuxt', label: 'Nuxt' },
+  { icon: 'i-unjs-nitro', label: 'Nitro', class: 'grayscale' },
   { icon: 'i-simple-icons-directus', label: 'Directus' },
   { icon: 'i-simple-icons-tailwindcss', label: 'TailwindCSS' },
   { icon: 'i-simple-icons-unocss', label: 'UnoCSS' },
@@ -53,8 +54,8 @@ const skills = shallowRef([
     <UPageHero
       title="Curriculum Vitæ"
       :description="$t('my_skills')"
-      :links="links"
-      :ui="{ title: 'font-hubot'}"
+      :links
+      :ui="{ title: 'font-hubot' }"
     >
       <template v-if="partyMode" #headline>
         <img src="/gifs/corgiswim.gif" width="700" height="700" class="mx-auto absolute -z-1">
@@ -87,12 +88,12 @@ const skills = shallowRef([
 
       <UMarquee pause-on-hover>
         <UTooltip
-          v-for="{ icon, label } of skills"
+          v-for="{ icon, label, class: c } of skills"
           :key="label"
           :text="label"
           :delay-duration="0"
         >
-          <UIcon :name="icon" class="size-16" />
+          <UIcon :name="icon" class="size-16" :class="c" />
         </UTooltip>
       </UMarquee>
 

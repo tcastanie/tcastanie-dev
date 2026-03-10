@@ -15,11 +15,11 @@ const { data: projects } = await useAsyncData(`${locale.value}_projects`, () => 
     .all()
 })
 
-const tabsItems = [
+const tabsItems = shallowRef([
   { label: 'Pro', icon: 'i-mingcute-necktie-line', value: 'pro' },
   { label: 'Perso', icon: 'i-mingcute-flask-line', value: 'perso' },
-]
-const activeTab = ref('pro')
+])
+const activeTab = shallowRef('pro')
 
 const filteredProjects = computed(() => {
   if (activeTab.value === 'perso') {
@@ -30,15 +30,13 @@ const filteredProjects = computed(() => {
 
 const hash = route.hash?.replace('#', '')
 onMounted(() => {
-  if (hash && tabsItems.some(tab => tab.value === hash)) {
+  if (hash && tabsItems.value.some(tab => tab.value === hash)) {
     activeTab.value = hash
   }
 })
 function updateHash(newTab: any) {
   if (route.hash !== `#${newTab}`) {
-    navigateTo({
-      hash: `#${newTab}`,
-    }, { replace: true })
+    navigateTo({ hash: `#${newTab}` }, { replace: true })
   }
 }
 watch(activeTab, updateHash)
@@ -46,7 +44,11 @@ watch(activeTab, updateHash)
 
 <template>
   <UPage>
-    <UPageHero :title="$t('nav1')" :description="$t('my_projects')" :ui="{ title: 'font-hubot'}">
+    <UPageHero
+      :title="$t('nav1')"
+      :description="$t('my_projects')"
+      :ui="{ title: 'font-hubot' }"
+    >
       <template v-if="partyMode" #headline>
         <div class="flex justify-center gap-8">
           <img src="/gifs/construction.gif" width="96" height="66">
