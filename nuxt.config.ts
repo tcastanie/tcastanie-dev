@@ -64,8 +64,12 @@ export default defineNuxtConfig({
       redirect: { to: '/portfolio', statusCode: 301 },
     },
   },
+  future: {
+    compatibilityVersion: 5,
+  },
   experimental: {
     viewTransition: true,
+    nitroAutoImports: true,
   },
   compatibilityDate: '2025-05-29',
   nitro: {
@@ -81,6 +85,13 @@ export default defineNuxtConfig({
         '/en/portfolio/wacky-planets',
         '/en/portfolio/nuxt-bego-ui',
         '/en/portfolio/another-apod-viewer',
+      ],
+    },
+  },
+  vite: {
+    optimizeDeps: {
+      include: [
+        'zdog', // CJS
       ],
     },
   },
