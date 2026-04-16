@@ -13,9 +13,12 @@ if (!page.value) {
     fatal: true,
   })
 }
-if (page.value?.ogImage) {
-  defineOgImage(page.value?.ogImage)
-}
+defineOgImage('DocsTakumi', {
+  colorMode: 'dark',
+  primaryColor: '#E6375A',
+  primaryTextColor: '#E6375A',
+  site: route?.fullPath || '',
+})
 if (page.value?.head) {
   useHead(page.value.head as any)
 }

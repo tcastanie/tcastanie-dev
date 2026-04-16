@@ -3,12 +3,6 @@ type: pro
 date: 2025-04-01
 description: Une application web sur mesure qui a réduit les frais de gestion web mensuels d'une salle de crossfit dublinoise de 97%
 image: /portfolio/stoneybatter_social.webp
-ogImage:
-  component: NuxtSeo
-  props:
-    colorMode: "dark"
-    theme: "#E6375A"
-    siteName: "tcastanie.dev"
 sitemap:
   lastmod: 2025-06-01
 ---

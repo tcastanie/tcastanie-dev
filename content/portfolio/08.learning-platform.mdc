@@ -2,12 +2,6 @@
 type: pro
 wip: true
 image: /portfolio/default-project.jpg
-ogImage:
-  component: NuxtSeo
-  props:
-    colorMode: "dark"
-    theme: "#E6375A"
-    siteName: "tcastanie.dev"
 sitemap:
   lastmod: 2025-06-04
 ---

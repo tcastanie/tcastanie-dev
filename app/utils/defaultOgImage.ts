@@ -1,8 +1,10 @@
 export default (title?: string) => {
-  return defineOgImageComponent('NuxtSeo', {
-    theme: '#E6375A',
+  const route = useRoute()
+  return defineOgImage('DocsTakumi', {
     colorMode: 'dark',
-    siteName: 'tcastanie.dev',
+    primaryColor: '#E6375A',
+    primaryTextColor: '#E6375A',
+    site: route?.fullPath || '',
     ...(title && { title }),
   })
 }

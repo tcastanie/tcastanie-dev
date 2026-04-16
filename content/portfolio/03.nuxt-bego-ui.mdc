@@ -1,12 +1,6 @@
 ---
 type: perso
 date: 2024-07
-ogImage:
-  component: NuxtSeo
-  props:
-    colorMode: "dark"
-    theme: "#E6375A"
-    siteName: "tcastanie.dev"
 sitemap:
   lastmod: 2025-05-29
 ---

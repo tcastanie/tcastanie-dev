@@ -1,7 +1,8 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
-import { asSeoCollection } from '@nuxtjs/seo/content'
+import { defineSitemapSchema } from '@nuxtjs/sitemap/content'
 
 const projectSchema = z.object({
+  sitemap: defineSitemapSchema(),
   date: z.string(),
   type: z.enum(['pro', 'perso']),
   image: z.string(),
@@ -31,20 +32,16 @@ const cvSchema = z.object({
 
 export default defineContentConfig({
   collections: {
-    fr_projects: defineCollection(
-      asSeoCollection({
-        type: 'page',
-        source: 'portfolio/*.mdc',
-        schema: projectSchema,
-      }),
-    ),
-    en_projects: defineCollection(
-      asSeoCollection({
-        type: 'page',
-        source: 'en/portfolio/*.mdc',
-        schema: projectSchema,
-      }),
-    ),
+    fr_projects: defineCollection({
+      type: 'page',
+      source: 'portfolio/*.mdc',
+      schema: projectSchema,
+    }),
+    en_projects: defineCollection({
+      type: 'page',
+      source: 'en/portfolio/*.mdc',
+      schema: projectSchema,
+    }),
     fr_cv: defineCollection({
       type: 'page',
       source: 'cv.yaml',

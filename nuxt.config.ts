@@ -3,13 +3,18 @@ import { definePerson } from 'nuxt-schema-org/schema'
 export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
+    '@nuxtjs/i18n',
     '@nuxtjs/seo',
     '@nuxt/content',
-    '@nuxtjs/i18n',
     '@nuxt/image',
     '@nuxt/eslint',
     '@nuxt/scripts',
   ],
+  $development: {
+    site: {
+      url: 'http://localhost:3000',
+    },
+  },
   $production: {
     runtimeConfig: {
       public: {
@@ -30,6 +35,9 @@ export default defineNuxtConfig({
           scriptInput: {
             src: import.meta.env.NUXT_PUBLIC_SCRIPTS_UMAMI_ANALYTICS_SCRIPT_INPUT_SRC,
           },
+          trigger: 'onNuxtReady',
+          proxy: false,
+          bundle: false,
         },
       },
     },
@@ -47,9 +55,17 @@ export default defineNuxtConfig({
         { rel: 'icon', href: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
         { rel: 'icon', href: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       ],
+      meta: [
+        { name: 'theme-color', content: '#E6375A' },
+        { name: 'theme-color', content: '#E02956', media: '(prefers-color-scheme: dark)' },
+      ],
     },
   },
   css: ['~/assets/css/main.css'],
+  site: {
+    name: 'Thibaut Castanié',
+    url: 'https://tcastanie.dev',
+  },
   content: {
     experimental: { nativeSqlite: true },
   },
@@ -92,6 +108,9 @@ export default defineNuxtConfig({
     optimizeDeps: {
       include: [
         'zdog', // CJS
+        '@unhead/schema-org/vue',
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
       ],
     },
   },
@@ -132,6 +151,23 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  robots: {
+    groups: [{
+      userAgent: '*',
+      disallow: '',
+      contentUsage: {
+        'bots': 'y',
+        'train-ai': 'n',
+        'search': 'y',
+      },
+      contentSignal: {
+        'ai-train': 'no',
+        'search': 'yes',
+      },
+    }],
+  },
+
   schemaOrg: {
     identity: definePerson({
       name: 'Thibaut Castanié',
