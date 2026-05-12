@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ButtonProps } from '@nuxt/ui'
+
 const { t } = useI18n()
 const { partyMode } = usePartyMode()
 
@@ -23,7 +25,7 @@ const features = shallowRef([{
   ui: { description: 'text-lg', leadingIcon: 'size-6' },
 }])
 
-const links = shallowRef([{
+const links = shallowRef<ButtonProps[]>([{
   label: t('nav1'),
   icon: 'i-mingcute-folder-open-2-line',
   to: '/portfolio',
@@ -92,8 +94,7 @@ const links = shallowRef([{
             </DrawerContact>
             <ButtonLocale
               v-for="{ label, icon, to, variant } in links"
-              :key="label"
-              size="lg"
+              :key="label" size="lg"
               :label :icon :variant :to
             />
           </div>

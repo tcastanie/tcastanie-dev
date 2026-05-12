@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-const { to } = defineProps<{ to?: string }>()
+import type { RouteLocationRaw } from 'vue-router'
+
+const { to } = defineProps<{ to?: RouteLocationRaw }>()
 const localePath = useLocalePath()
 </script>
 

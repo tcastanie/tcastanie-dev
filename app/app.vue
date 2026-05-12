@@ -24,7 +24,7 @@ useHead({
 
     <TheHeader />
 
-    <UMain as="main">
+    <UMain>
       <UContainer>
         <NuxtPage />
       </UContainer>

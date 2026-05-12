@@ -25,7 +25,7 @@ const cards = computed(() => [{
 <template>
   <UDrawer
     :title="$t('contact')"
-    :ui="{ title: 'font-hubot text-2xl' }"
+    :ui="{ container: 'max-w-7xl mx-auto', title: 'font-hubot text-2xl' }"
   >
     <slot />
     <template v-if="partyMode" #title>

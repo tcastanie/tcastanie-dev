@@ -14,14 +14,14 @@ const links = shallowRef([
   {
     label: t('in_french'),
     icon: 'i-mingcute-pdf-line',
-    to: '/cv/CV_Thibaut_Castanié.pdf',
+    to: '/cv/cv-thibaut-castanie.pdf',
     external: true,
     class: locale.value === 'fr' ? 'order-1' : 'order-2',
   },
   {
     label: t('in_english'),
     icon: 'i-mingcute-pdf-line',
-    to: '/cv/CV_Thibaut_Castanié_EN.pdf',
+    to: '/cv/cv-thibaut-castanie-en.pdf',
     external: true,
     class: locale.value === 'fr' ? 'order-2' : 'order-1',
   },

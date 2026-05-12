@@ -67,7 +67,7 @@ export default defineNuxtConfig({
     url: 'https://tcastanie.dev',
   },
   content: {
-    experimental: { nativeSqlite: true },
+    experimental: { sqliteConnector: 'native' },
   },
   routeRules: {
     '/projets': {
