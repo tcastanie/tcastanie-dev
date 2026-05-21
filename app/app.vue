@@ -14,6 +14,7 @@ useHead({
       'cursor': () => partyMode.value ? 'url("/gifs/rocket.gif"), auto' : false,
     },
   },
+  script: useScripts(),
 })
 </script>
 

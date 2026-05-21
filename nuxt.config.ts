@@ -8,38 +8,10 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/eslint',
-    '@nuxt/scripts',
   ],
   $development: {
     site: {
       url: 'http://localhost:3000',
-    },
-  },
-  $production: {
-    runtimeConfig: {
-      public: {
-        scripts: {
-          umamiAnalytics: {
-            websiteId: '',
-            scriptInput: {
-              src: '',
-            },
-          },
-        },
-      },
-    },
-    scripts: {
-      registry: {
-        umamiAnalytics: {
-          websiteId: import.meta.env.NUXT_PUBLIC_SCRIPTS_UMAMI_ANALYTICS_WEBSITE_ID,
-          scriptInput: {
-            src: import.meta.env.NUXT_PUBLIC_SCRIPTS_UMAMI_ANALYTICS_SCRIPT_INPUT_SRC,
-          },
-          trigger: 'onNuxtReady',
-          proxy: false,
-          bundle: false,
-        },
-      },
     },
   },
   devtools: { enabled: true },
@@ -68,6 +40,12 @@ export default defineNuxtConfig({
   },
   content: {
     experimental: { sqliteConnector: 'native' },
+  },
+  runtimeConfig: {
+    public: {
+      umami: '',
+      pallas: '',
+    },
   },
   routeRules: {
     '/projets': {

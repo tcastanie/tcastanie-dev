@@ -13,7 +13,7 @@ if (!page.value) {
     fatal: true,
   })
 }
-defineOgImage('DocsTakumi', {
+defineOgImage('Carte', {
   colorMode: 'dark',
   primaryColor: '#E6375A',
   primaryTextColor: '#E6375A',

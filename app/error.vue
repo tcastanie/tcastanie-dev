@@ -10,17 +10,15 @@ const locales = { fr, en }
 const { locale } = useI18n()
 const head = useLocaleHead()
 const localePath = useLocalePath()
-useHead({ ...head.value })
-const { proxy } = useScriptUmamiAnalytics()
+useHead({
+  ...head.value,
+  script: useScripts(),
+})
 
 onMounted(() => {
-  const route = useRoute()
-  proxy.track('error-page', {
-    status: String(error.status),
-    statusText: error.statusText,
-    message: error.message,
-    path: route.fullPath,
-  })
+  const { status, statusText, data } = error
+  // @ts-expect-error umami is a global script (useScripts.ts)
+  umami?.track('error', { status, statusText, data })
 })
 </script>
 
