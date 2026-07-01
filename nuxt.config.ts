@@ -131,6 +131,7 @@ export default defineNuxtConfig({
   },
 
   robots: {
+    credits: false,
     groups: [{
       userAgent: '*',
       disallow: '',
