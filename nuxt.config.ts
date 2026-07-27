@@ -98,6 +98,12 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
+  fonts: {
+    families: [
+      { name: 'Roboto', weights: [400, 600, 700], global: true },
+      { name: 'Noto Sans', weights: [400, 600, 700], global: true },
+    ],
+  },
   i18n: {
     baseUrl: 'https://tcastanie.dev',
     locales: [

@@ -80,7 +80,7 @@ Site web pour le domaine l'Angélus, situé à Figeac dans le Lot, proposant des
   ::
 ::
 
-Le Domaine l'Angélus, situé à Sainte-Colombe (Figeac) dans le Lot, est un lieu qui combine des gîtes reposants avec le dressage de chiens de troupeaux. L'objectif étant de créer un site web permettant la présentation des différentes prestations proposées par le domaine, ainsi que la réservation de nuitées et de cours de dressage de chiens de troupeau.
+Le Domaine l'Angélus, situé à Sainte-Colombe (Figeac) dans le Lot, est un lieu qui propose de la location de gîtes et du dressage de chiens de troupeaux. L'objectif étant de créer un site web permettant la présentation des différentes prestations proposées par le domaine, ainsi que la réservation de nuitées et de cours de dressage de chiens de troupeau.
 
 ## Aperçu
 
@@ -146,10 +146,3 @@ L'affichage détaillé des chiens de lignée de l'élevage et des chiens propos�
 ![Feedback Facebook](/doma/fb-feedback.png){width="551" height="1133" class="w-auto mx-auto" :zoom="false"}
 
 Le site web déployé reflète bien la combinaison des gîtes et de l'élevage de chiens de troupeaux et reste simple et efficace dans ses objectifs : présenter le domaine et permettre la réservation.
-
-
-
-
-
-
-
