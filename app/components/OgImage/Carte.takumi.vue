@@ -1,8 +1,8 @@
 <script setup>
 defineProps({
   colorMode: { type: String, required: false, default: 'dark' },
-  title: { type: String, required: false, default: 'Documentation' },
-  description: { type: String, required: false, default: 'Comprehensive documentation for your project' },
+  title: { type: String, required: false, default: 'Thibaut Castanié' },
+  description: { type: String, required: false, default: 'Développeur Web Front-End' },
   icon: { type: String, required: false },
   primaryColor: { type: String, required: false, default: 'hsla(354, 90%, 54%, 0.3)' },
   primaryTextColor: { type: String, required: false, default: 'hsl(354, 90%, 60%)' },

@@ -159,3 +159,12 @@ L'intégration des fonctionnalités PWA a permis de rassurer certains membres, e
 Bien que pour la plupart des tâches d'administration le manager utilise son ordinateur pour être plus efficace, il a adoré pouvoir gérer certaines tâches rapides depuis son téléphone lorsqu'il est en déplacement, sans devoir les remettre à plus tard.
 
 Le gérant de la salle a également pu réduire ses frais de gestion mensuels de 97% en passant de 273€ à 8€ par mois, en utilisant une solution sur mesure qui répond exactement à ses besoins métier.
+
+## Mise à jour Avril 2026
+
+Mise à jour de la stack technique du site et refonte front :
+  - Migration de **Nuxt** `v3` -> `v4`
+  - Migration de **Nuxt UI** `v2` -> `v3` -> `v4`
+  - Remplacement de **Zod** par **Valibot**
+  - Montées de version de **Directus** et **Stripe**
+  - Réécriture complète du code front pour être plus optimisé avec la logique métier et pour une expérience utilisateur plus rapide que jamais !

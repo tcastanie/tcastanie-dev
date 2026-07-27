@@ -146,3 +146,33 @@ L'affichage détaillé des chiens de lignée de l'élevage et des chiens propos�
 ![Feedback Facebook](/doma/fb-feedback.png){width="551" height="1133" class="w-auto mx-auto" :zoom="false"}
 
 Le site web déployé reflète bien la combinaison des gîtes et de l'élevage de chiens de troupeaux et reste simple et efficace dans ses objectifs : présenter le domaine et permettre la réservation.
+
+## Version 2 en août 2025
+
+Pour mieux répondre aux besoins du métier et pour suivre l'évolution de la demande des clients du Domaine, plusieurs fonctionnalités ont été revues et d'autres ont été ajoutées.
+
+### Back-office sur-mesure
+
+Développement d'un back-office répondant exactement aux besoins de gestion des réservations des gîtes, mais aussi des cours de dressage de chiens. Les opérations effectuées par les hôtes sont maintenant bien plus rapides et plus faciles à comprendre.
+
+![Aperçu back-office](/doma/back-office.webp){width="640" height="407" class="w-auto mx-auto" :zoom="false"}
+
+Un planning simplifié permettant de voir en un coup d'œil l'ensemble des visites attendues sur le Domaine ainsi que les informations importantes associées.
+
+![Aperçu planning](/doma/planning.webp){width="640" height="315" class="w-auto mx-auto" :zoom="false"}
+
+### Refonte du site et améliorations des pages d'accueil
+
+  - Un seul gîte est maintenant proposé à la location. Le code a été réécrit pour une meilleure maintenance.
+  - Réécriture des tunnels de réservation de location et de cours de dressage pour simplifier leur utilisation, suite aux retours des utilisateurs.
+  - Simplification du squelette du site et du menu d'en-tête.
+  - Ajout d'un formulaire de demande de pension, d'une page d'avis clients et d'une FAQ.
+  - Amélioration des *landing pages* avec plus de photos, de vidéos et d'animations agréables.
+  - Améliorations des fonctionnalités SEO (schémas, metadonnées, images OG...).
+  - Correction des erreurs liées au fuseau horaire de l'utilisateur.
+
+### Mise à jour de la stack technique du site :
+  - Migration de **Nuxt** `v3` -> `v4`
+  - Utilisation de **Nuxt UI** et suppression de **UnoCSS**
+  - Paiements **Stripe** gérés directement par Nuxt (**Nitro**)
+  - Utilisation de **Motion** pour les animations

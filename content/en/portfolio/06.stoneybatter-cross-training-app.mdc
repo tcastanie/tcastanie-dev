@@ -159,3 +159,12 @@ The integration of PWA features reassured some members by allowing them to insta
 Although the manager uses his computer for most administrative tasks to be more efficient, he loved being able to handle certain quick tasks from his phone when travelling, without having to postpone them.
 
 The gym manager was also able to reduce his monthly management costs by 97%, from €273 to €8 per month, by using a bespoke solution that exactly meets his business needs.
+
+## April 2026 Update
+
+Update website’s technical stack and front-end redesign:
+  - Migration from **Nuxt** `v3` -> `v4`
+  - Migration from **Nuxt UI** `v2` -> `v3` -> `v4`
+  - Replacement of **Zod** with **Valibot**
+  - Upgrades to **Directus** and **Stripe**
+  - Complete rewrite of the front-end code to better align with business logic and deliver a faster user experience than ever before!

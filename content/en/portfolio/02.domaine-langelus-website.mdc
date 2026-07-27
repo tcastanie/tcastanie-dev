@@ -146,3 +146,29 @@ The detailed display of the breeding's lineage dogs and dogs offered by the esta
 ![Facebook feedback](/doma/fb-feedback.png){width="551" height="1133" class="w-auto mx-auto" :zoom="false"}
 
 The deployed website properly reflects the combination of gîtes and sheep dog breeding and remains simple and effective in its objectives: presenting the estate and enabling bookings.
+
+## Version 2 in August 2025
+
+To better meet the business’s needs and keep pace with changing customer demand at the Domaine, several features have been revamped and others added.
+
+### Bespoke back-office system
+
+Development of a back-office system specifically designed to meet the needs of managing bookings for holiday cottages, as well as dog training courses. The processes carried out by hosts are now much quicker and easier to understand.
+
+A simplified schedule allows owners to see, at a glance, all expected visits to the Domaine, along with the relevant key information.
+
+### Website redesign and improvements to the home pages
+
+  - Only one holiday cottage is now available for bookings. The code has been rewritten to ensure better maintenance.
+  - The booking flows for holiday rentals and training courses have been rewritten to make them easier to use, following user feedback.
+  - The website’s structure and header menu have been simplified.
+  - A boarding request form, a customer reviews page and an FAQ section have been added.
+  - Improved *landing pages* with more photos, videos and engaging animations.
+  - Improvements to SEO features (schemas, metadata, OG images, etc.).
+  - Fixed errors related to the user’s time zone.
+
+### Update to the site’s technical stack:
+  - Migration from **Nuxt** `v3` to `v4`
+  - Use of **Nuxt UI** and removal of **UnoCSS**
+  - **Stripe** payments handled directly by Nuxt (**Nitro**)
+  - Use of **Motion** for animations
