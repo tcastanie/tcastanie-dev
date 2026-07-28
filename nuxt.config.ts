@@ -69,6 +69,10 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
+        '/_ipx/s_1024x684/404-dark.webp',
+        '/_ipx/s_1024x684/404-light.webp',
+        '/_ipx/s_512x342/404-dark.webp',
+        '/_ipx/s_512x342/404-light.webp',
         '/portfolio/star-status',
         '/portfolio/quick-ui-designs',
         '/portfolio/wacky-planets',

@@ -38,7 +38,7 @@ onMounted(() => {
           You found a <b>dead link</b> 😱
         </p>
         <UColorModeImage
-          light="/404-white.webp"
+          light="/404-light.webp"
           dark="/404-dark.webp"
           alt="dead link"
           :width="512"
