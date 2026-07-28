@@ -37,14 +37,16 @@ onMounted(() => {
         <p class="text-2xl mb-8">
           You found a <b>dead link</b> 😱
         </p>
-        <img
-          src="/404link.jpg"
+        <UColorModeImage
+          light="/404-white.webp"
+          dark="/404-dark.webp"
           alt="dead link"
-          width="512"
-          height="384"
+          :width="512"
+          :height="342"
           class="rounded-xl"
-        >
+        />
       </div>
+      <UColorModeSwitch />
     </UContainer>
   </UApp>
 </template>
