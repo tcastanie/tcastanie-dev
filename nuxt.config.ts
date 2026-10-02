@@ -144,15 +144,17 @@ export default defineNuxtConfig({
     credits: false,
     groups: [{
       userAgent: '*',
-      disallow: '',
+      allow: '/',
       contentUsage: {
         'bots': 'y',
         'train-ai': 'n',
         'search': 'y',
+        'ai-output': 'y',
       },
       contentSignal: {
         'ai-train': 'no',
         'search': 'yes',
+        'ai-input': 'yes',
       },
     }],
   },
