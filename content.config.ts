@@ -1,11 +1,12 @@
-import { defineCollection, defineContentConfig, z } from '@nuxt/content'
+import { defineCollection, defineContentConfig } from '@nuxt/content'
 import { defineSitemapSchema } from '@nuxtjs/sitemap/content'
+import { z } from 'zod'
 
 const projectSchema = z.object({
   sitemap: defineSitemapSchema(),
   date: z.string(),
   type: z.enum(['pro', 'perso']),
-  image: z.string(),
+  image: z.string().optional(),
   wip: z.boolean().optional(),
 })
 

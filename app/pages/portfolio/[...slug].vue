@@ -13,18 +13,16 @@ if (!page.value) {
     fatal: true,
   })
 }
+if (page.value?.seo) {
+  useSeoMeta(page.value.seo)
+}
+
 defineOgImage('Carte', {
   colorMode: 'dark',
   primaryColor: '#E6375A',
   primaryTextColor: '#E6375A',
   site: route?.fullPath || '',
 })
-if (page.value?.head) {
-  useHead(page.value.head as any)
-}
-if (page.value?.seo) {
-  useSeoMeta(page.value.seo)
-}
 
 const items = useBreadcrumbItems({
   overrides: [

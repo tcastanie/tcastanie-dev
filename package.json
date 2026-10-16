@@ -3,7 +3,7 @@
   "type": "module",
   "version": "2.0.0",
   "private": true,
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "pnpm@11.28.5",
   "author": "tcastanie",
   "engines": {
     "node": ">=24"
@@ -15,29 +15,33 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "analyze": "nuxt analyze",
+    "typecheck": "nuxt typecheck",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
   "dependencies": {
-    "@nuxt/content": "3.15.2",
+    "@nuxt/content": "3.16.1",
     "@nuxt/image": "2.1.0",
-    "@nuxt/ui": "4.10.0",
+    "@nuxt/ui": "4.11.3",
     "@nuxtjs/i18n": "10.6.0",
-    "@nuxtjs/seo": "5.3.10",
-    "@takumi-rs/core": "2.5.6",
-    "nuxt": "4.5.1",
-    "vue": "3.5.40",
-    "vue-router": "5.2.0",
+    "@nuxtjs/seo": "5.3.16",
+    "@takumi-rs/core": "2.14.0",
+    "nuxt": "4.6.1",
+    "vue": "3.5.43",
+    "vue-router": "5.4.0",
     "zdog": "1.1.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "9.2.0",
+    "@antfu/eslint-config": "9.5.1",
     "@iconify-json/mingcute": "1.2.8",
-    "@iconify-json/simple-icons": "1.2.93",
+    "@iconify-json/simple-icons": "1.2.99",
     "@iconify-json/unjs": "1.2.4",
-    "@nuxt/eslint": "1.16.0",
+    "@nuxt/eslint": "1.17.0",
     "@types/zdog": "1.1.7",
-    "eslint": "10.8.0",
-    "nuxtseo-layer-devtools": "5.3.10"
+    "eslint": "10.12.0",
+    "nuxtseo-layer-devtools": "5.3.16",
+    "typescript": "6.0.3",
+    "vue-tsc": "3.3.13",
+    "zod": "4.6.5"
   }
 }

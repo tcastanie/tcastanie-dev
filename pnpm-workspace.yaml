@@ -1,7 +1,9 @@
-shamefullyHoist: true
-shellEmulator: true
+minimumReleaseAgeExcludePrune: true
 trustPolicy: no-downgrade
 trustPolicyIgnoreAfter: 10080
+shamefullyHoist: true
+shellEmulator: true
+
 allowBuilds:
   esbuild: true
   sharp: true
