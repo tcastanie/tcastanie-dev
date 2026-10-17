@@ -97,7 +97,7 @@ const links = shallowRef<ButtonProps[]>([{
             />
           </div>
         </template>
-        <ThePlanet />
+        <LazyThePlanet />
 
         <template v-if="partyMode">
           <img src="/gifs/alien.gif" width="90" height="200" class="absolute right-0 bottom-0">
