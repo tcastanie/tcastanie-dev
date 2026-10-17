@@ -3,13 +3,11 @@ const { partyMode, togglePartyMode } = usePartyMode()
 </script>
 
 <template>
-  <UFooter :ui="{ left: 'text-muted' }">
+  <UFooter :ui="{ left: 'text-muted text-sm gap-x-2' }">
     <template #left>
-      <UIcon name="i-mingcute-copyright-line" />
-      <div class="text-sm mx-2">
-        CC BY-NC-SA 4.0
-      </div>
-      <div>tcastanie.dev {{ new Date().getFullYear() }}</div>
+      <UIcon name="i-mingcute-copyright-line" class="size-4" />
+      <div>CC BY-NC-SA 4.0</div>
+      <div>tcastanie.dev <NuxtTime :datetime="Date.now()" year="numeric" /></div>
     </template>
 
     <img v-if="partyMode" src="/gifs/valid-html40.png" width="88" height="31">

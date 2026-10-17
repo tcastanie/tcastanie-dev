@@ -25,7 +25,7 @@ const cards = computed(() => [{
 <template>
   <UDrawer
     :title="$t('contact')"
-    :ui="{ container: 'max-w-7xl mx-auto', title: 'font-hubot text-2xl' }"
+    :ui="{ container: 'max-w-7xl mx-auto', title: 'font-hubot text-xl font-semibold' }"
   >
     <slot />
     <template v-if="partyMode" #title>
@@ -39,7 +39,7 @@ const cards = computed(() => [{
         >
           <template #leading>
             <SvgMalt v-if="title === 'Malt'" class="size-5 text-primary" />
-            <img v-if="partyMode && title === 'Courriel'" src="/gifs/email.gif" width="107" height="35">
+            <img v-if="partyMode && to.startsWith('mailto:')" src="/gifs/email.gif" width="107" height="35">
           </template>
         </UPageCard>
       </UPageGrid>

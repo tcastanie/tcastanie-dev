@@ -4,6 +4,22 @@ export default defineAppConfig({
       primary: 'bego',
       neutral: 'zinc',
     },
+    pageHero: {
+      slots: {
+        container: 'py-16 sm:py-24 lg:py-32',
+        title: 'font-hubot text-4xl sm:text-5xl font-semibold',
+      },
+    },
+    pageFeature: {
+      slots: {
+        description: 'text-base',
+      },
+    },
+    blogPost: {
+      slots: {
+        title: 'font-hubot',
+      },
+    },
     icons: {
       arrowUp: 'i-mingcute-arrow-up-line',
       arrowDown: 'i-mingcute-arrow-down-line',

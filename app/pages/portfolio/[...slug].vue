@@ -41,7 +41,7 @@ const items = useBreadcrumbItems({
   <UPage v-if="page">
     <UPageBody>
       <UBreadcrumb :items="items" />
-      <ContentRenderer :value="page" class="[&>h1,h2,h3]:font-hubot" />
+      <ContentRenderer :value="page" class="[&_:is(h1,h2,h3)]:font-hubot" />
     </UPageBody>
 
     <template v-if="page.type === 'pro'" #right>

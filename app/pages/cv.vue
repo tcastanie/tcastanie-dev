@@ -55,7 +55,6 @@ const skills = shallowRef([
       title="Curriculum Vitæ"
       :description="$t('my_skills')"
       :links
-      :ui="{ title: 'font-hubot' }"
     >
       <template v-if="partyMode" #headline>
         <img src="/gifs/corgiswim.gif" width="700" height="700" class="mx-auto absolute -z-1">
@@ -63,8 +62,8 @@ const skills = shallowRef([
     </UPageHero>
 
     <UPageBody v-if="cv">
-      <UContainer class="max-w-2xl">
-        <UPageCard :description="cv.intro" variant="subtle" spotlight>
+      <div class="max-w-2xl mx-auto w-full">
+        <UPageCard :description="cv.intro" variant="soft" spotlight>
           <template #header>
             <UUser
               :name="cv.title"
@@ -75,16 +74,16 @@ const skills = shallowRef([
                 alt: 'Thibaut Castanié',
                 quality: 95,
               }"
-              :ui="{ name: 'font-hubot font-bold tracking-wider' }"
+              :ui="{ name: 'font-hubot font-semibold' }"
               class="[view-transition-name:uuser]"
             />
-            <div class="flex items-center gap-x-2 mt-4 text-toned">
-              <UIcon name="i-mingcute-location-3-line" class="size-6" />
+            <div class="flex items-center gap-x-2 mt-3 text-toned">
+              <UIcon name="i-mingcute-location-3-line" class="size-5" />
               <span>{{ cv.location }}</span>
             </div>
           </template>
         </UPageCard>
-      </UContainer>
+      </div>
 
       <UMarquee pause-on-hover>
         <UTooltip
@@ -93,33 +92,31 @@ const skills = shallowRef([
           :text="label"
           :delay-duration="0"
         >
-          <UIcon :name="icon" class="size-16" :class="c" />
+          <UIcon :name="icon" class="size-12" :class="c" />
         </UTooltip>
       </UMarquee>
 
-      <UContainer class="max-w-2xl">
-        <UPageList divide>
-          <UPageCard
-            v-for="{ title, description, icon, company, date_begin, date_end, actions } of cv.experiences"
-            :key="title"
-            :title="`${title}${company ? ` - ${company}` : ''}`"
-            :description
-            variant="ghost"
-            :ui="{ leading: 'text-primary', title: 'font-hubot' }"
-          >
-            <template #leading>
-              <UIcon v-if="icon" :name="icon" class="size-5 mr-2" />
-              <span>{{ date_begin }} - {{ date_end }}</span>
-            </template>
-            <UPageFeature
-              v-for="action of actions"
-              :key="action.substring(0, 8)"
-              :description="action"
-              icon="i-mingcute-right-small-line"
-            />
-          </UPageCard>
-        </UPageList>
-      </UContainer>
+      <div class="max-w-2xl mx-auto w-full flex flex-col gap-8">
+        <UPageCard
+          v-for="{ title, description, icon, company, date_begin, date_end, actions } of cv.experiences"
+          :key="`${title}-${company}-${date_begin}`"
+          :title="`${title}${company ? ` - ${company}` : ''}`"
+          :description
+          variant="ghost"
+          :ui="{ leading: 'text-primary', title: 'font-hubot' }"
+        >
+          <template #leading>
+            <UIcon v-if="icon" :name="icon" class="size-5 mr-2" />
+            <span class="text-sm font-medium">{{ date_begin }} – {{ date_end }}</span>
+          </template>
+          <UPageFeature
+            v-for="action of actions"
+            :key="action"
+            :description="action"
+            icon="i-mingcute-right-small-line"
+          />
+        </UPageCard>
+      </div>
     </UPageBody>
   </UPage>
 </template>

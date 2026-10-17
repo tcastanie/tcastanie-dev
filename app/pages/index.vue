@@ -10,31 +10,29 @@ defaultOgImage('Thibaut Castanié')
 const features = shallowRef([{
   description: t('home1'),
   icon: 'i-mingcute-layout-6-line',
-  ui: { description: 'text-lg', leadingIcon: 'size-6' },
 }, {
   description: t('home2'),
   icon: 'i-mingcute-chart-bar-2-line',
-  ui: { description: 'text-lg', leadingIcon: 'size-6' },
 }, {
   description: t('home3'),
   icon: 'i-mingcute-code-line',
-  ui: { description: 'text-lg', leadingIcon: 'size-6' },
 }, {
   description: t('home4'),
   icon: 'i-mingcute-briefcase-line',
-  ui: { description: 'text-lg', leadingIcon: 'size-6' },
 }])
 
 const links = shallowRef<ButtonProps[]>([{
   label: t('nav1'),
   icon: 'i-mingcute-folder-open-2-line',
   to: '/portfolio',
-  variant: 'soft',
+  variant: 'outline',
+  color: 'neutral',
 }, {
   label: t('nav2'),
   icon: 'i-mingcute-profile-line',
   to: '/cv',
-  variant: 'soft',
+  variant: 'outline',
+  color: 'neutral',
 }])
 </script>
 
@@ -45,7 +43,7 @@ const links = shallowRef<ButtonProps[]>([{
         :description="$t('hello')"
         orientation="horizontal"
         :features="features"
-        :ui="{ description: 'text-lg', links: 'flex-col' }"
+        :ui="{ description: 'text-lg text-toned', links: 'flex-col' }"
       >
         <template #top>
           <div class="relative h-63 content-end overflow-hidden w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,10 +61,10 @@ const links = shallowRef<ButtonProps[]>([{
               :class="{ 'animate-bounce': partyMode }"
             >
               <template #default>
-                <h1 class="font-medium text-highlighted font-hubot text-4xl">
+                <h1 class="font-semibold text-highlighted font-hubot text-4xl">
                   Thibaut Castanié
                 </h1>
-                <h2 class="text-muted font-normal text-2xl tracking-normal">
+                <h2 class="text-toned font-normal text-xl tracking-normal">
                   {{ $t('main_subtitle') }}
                 </h2>
               </template>
@@ -77,10 +75,10 @@ const links = shallowRef<ButtonProps[]>([{
           </div>
         </template>
         <template #links>
-          <div class="text-muted text-pretty text-lg font-hubot tracking-wider italic">
+          <div class="text-toned text-pretty text-lg font-hubot">
             {{ $t('home5') }}
           </div>
-          <div class="flex flex-wrap gap-x-6 gap-y-3 justify-start mt-8 ">
+          <div class="flex flex-wrap gap-3 justify-start mt-8">
             <DrawerContact>
               <UButton
                 :label="$t('contact_me')"
@@ -93,9 +91,9 @@ const links = shallowRef<ButtonProps[]>([{
               </UButton>
             </DrawerContact>
             <ButtonLocale
-              v-for="{ label, icon, to, variant } in links"
+              v-for="{ label, icon, to, variant, color } in links"
               :key="label" size="lg"
-              :label :icon :variant :to
+              :label :icon :variant :color :to
             />
           </div>
         </template>

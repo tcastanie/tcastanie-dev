@@ -2,6 +2,7 @@
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
+const router = useRouter()
 const { partyMode } = usePartyMode()
 
 useSeoMeta({ title: t('nav1') })
@@ -19,7 +20,8 @@ const tabsItems = shallowRef([
   { label: 'Pro', icon: 'i-mingcute-necktie-line', value: 'pro' },
   { label: 'Perso', icon: 'i-mingcute-flask-line', value: 'perso' },
 ])
-const activeTab = shallowRef('pro')
+const isTab = (value: unknown): value is string => tabsItems.value.some(tab => tab.value === value)
+const activeTab = shallowRef(isTab(route.query.tab) ? route.query.tab : 'pro')
 
 const filteredProjects = computed(() => {
   if (activeTab.value === 'perso') {
@@ -28,18 +30,14 @@ const filteredProjects = computed(() => {
   return projects.value?.filter(p => p.type === 'pro')
 })
 
-const hash = route.hash?.replace('#', '')
 onMounted(() => {
-  if (hash && tabsItems.value.some(tab => tab.value === hash)) {
+  const hash = route.hash.slice(1)
+  if (isTab(hash)) {
     activeTab.value = hash
   }
 })
-function updateHash(newTab: any) {
-  if (route.hash !== `#${newTab}`) {
-    navigateTo({ hash: `#${newTab}` }, { replace: true })
-  }
-}
-watch(activeTab, updateHash)
+
+watch(activeTab, tab => router.replace({ query: { ...route.query, tab }, hash: '' }))
 </script>
 
 <template>
@@ -47,7 +45,6 @@ watch(activeTab, updateHash)
     <UPageHero
       :title="$t('nav1')"
       :description="$t('my_projects')"
-      :ui="{ title: 'font-hubot' }"
     >
       <template v-if="partyMode" #headline>
         <div class="flex justify-center gap-8">
@@ -63,18 +60,19 @@ watch(activeTab, updateHash)
         v-model="activeTab"
         :items="tabsItems"
         :unmount-on-hide="false"
+        variant="link"
         size="lg"
-        :ui="{ content: 'mt-8' }"
+        class="mb-8"
       />
-      <UBlogPosts :id="activeTab === 'pro' ? 'pro' : 'perso'" class="scroll-mt-50">
+      <UBlogPosts>
         <UBlogPost
           v-for="project in filteredProjects"
           :key="project.id"
           v-bind="project"
           :to="localePath(project.path)"
           :date="project.date"
-          :badge="project.wip ? $t('wip') : undefined"
-          :ui="{ image: 'object-center', title: 'font-hubot' }"
+          :badge="project.wip ? { label: $t('wip'), variant: 'subtle' } : undefined"
+          :ui="{ image: 'object-center' }"
         />
       </UBlogPosts>
     </UPageBody>
