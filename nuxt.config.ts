@@ -2,6 +2,7 @@ import { definePerson } from 'nuxt-schema-org/schema'
 
 export default defineNuxtConfig({
   modules: [
+    '@nuxt/fonts',
     '@nuxt/ui',
     '@nuxtjs/i18n',
     '@nuxtjs/seo',
@@ -140,10 +141,8 @@ export default defineNuxtConfig({
       userAgent: '*',
       allow: '/',
       contentUsage: {
-        'bots': 'y',
         'train-ai': 'n',
         'search': 'y',
-        'ai-output': 'y',
       },
       contentSignal: {
         'ai-train': 'no',
