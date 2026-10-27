@@ -3,10 +3,10 @@
   "type": "module",
   "version": "2.0.0",
   "private": true,
-  "packageManager": "pnpm@11.28.6",
+  "packageManager": "pnpm@12.14.0",
   "author": "tcastanie",
   "engines": {
-    "node": ">=24"
+    "node": "24.22.1"
   },
   "scripts": {
     "build": "nuxt build",
@@ -22,11 +22,11 @@
   "dependencies": {
     "@nuxt/content": "3.16.2",
     "@nuxt/fonts": "1.1.0",
-    "@nuxt/image": "2.1.0",
+    "@nuxt/image": "2.2.0",
     "@nuxt/ui": "4.12.0",
     "@nuxtjs/i18n": "10.6.0",
     "@nuxtjs/seo": "6.0.1",
-    "@takumi-rs/core": "2.16.3",
+    "@takumi-rs/core": "2.17.0",
     "nuxt": "4.6.2",
     "vue": "3.5.44",
     "vue-router": "5.4.0",

@@ -158,9 +158,10 @@ export default defineNuxtConfig({
       givenName: 'Thibaut',
       familyName: 'Castanié',
       image: '/avatar.jpg',
-      description: 'Freelance front-end web developer specialized in JavaScript, Vue, and Nuxt',
-      jobTitle: 'Front-end web developer',
+      description: 'Freelance web developer, front-end expert specialized in Vue.js, Nuxt and Directus',
+      jobTitle: 'Freelance web developer',
       email: 'contact@tcastanie.dev',
+      alternateName: 'tcastanie.dev',
       url: 'https://tcastanie.dev',
       sameAs: [
         'https://github.com/tcastanie',
