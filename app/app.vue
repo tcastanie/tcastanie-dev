@@ -1,12 +1,7 @@
 <script setup lang="ts">
-import { en, fr } from '@nuxt/ui/locale'
-
-const locales = { fr, en }
-const { locale } = useI18n()
-const head = useLocaleHead()
 const { partyMode } = usePartyMode()
+useHead(useLocaleHead())
 useHead({
-  ...head.value,
   bodyAttrs: {
     style: {
       'background-image': () => partyMode.value ? 'url(/gifs/stars.gif)' : false,
@@ -19,7 +14,7 @@ useHead({
 </script>
 
 <template>
-  <UApp :locale="locales[locale]">
+  <UApp>
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator color="var(--ui-primary)" />
 

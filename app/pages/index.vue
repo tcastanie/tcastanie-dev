@@ -90,7 +90,7 @@ const links = shallowRef<ButtonProps[]>([{
                 </template>
               </UButton>
             </DrawerContact>
-            <ButtonLocale
+            <UButton
               v-for="{ label, icon, to, variant, color } in links"
               :key="label" size="lg"
               :label :icon :variant :color :to

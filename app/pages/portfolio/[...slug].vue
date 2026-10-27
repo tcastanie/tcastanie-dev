@@ -30,7 +30,7 @@ const items = useBreadcrumbItems({
     {
       label: 'Portfolio',
       icon: 'i-mingcute-folder-open-2-line',
-      to: localePath(`/portfolio#${page.value.type}`),
+      to: localePath({ name: 'portfolio', hash: `#${page.value.type}` }),
     },
     { label: page.value.title },
   ],

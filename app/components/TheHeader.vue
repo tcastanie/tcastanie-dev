@@ -1,28 +1,32 @@
 <script lang="ts" setup>
 const route = useRoute()
 const { t } = useI18n()
-const localePath = useLocalePath()
+const getRouteBaseName = useRouteBaseName()
 const { partyMode, togglePartyMode } = usePartyMode()
 
 const items = computed(() => [{
   label: t('nav1'),
   icon: 'i-mingcute-folder-open-2-line',
-  to: localePath('/portfolio'),
-  active: route.path.startsWith('/portfolio') || route.path.startsWith('/en/portfolio'),
+  to: '/portfolio',
+  active: getRouteBaseName(route)?.startsWith('portfolio'),
 }, {
   label: t('nav2'),
   icon: 'i-mingcute-profile-line',
-  to: localePath('/cv'),
+  to: '/cv',
 }])
 </script>
 
 <template>
   <UHeader
     title="tcastanie.dev"
-    :to="localePath('/')"
+    to="/"
     mode="slideover"
     class="font-hubot"
-    :ui="{ body: 'grid', content: 'max-w-xs' }"
+    :ui="{
+      root: partyMode ? 'backdrop-blur-none' : undefined,
+      body: 'grid',
+      content: 'max-w-xs',
+    }"
   >
     <UNavigationMenu :items="items" variant="link" />
 

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { locale, t } = useI18n()
-const localePath = useLocalePath()
 const route = useRoute()
 const router = useRouter()
 const { partyMode } = usePartyMode()
@@ -69,7 +68,7 @@ watch(activeTab, tab => router.replace({ query: { ...route.query, tab }, hash: '
           v-for="project in filteredProjects"
           :key="project.id"
           v-bind="project"
-          :to="localePath(project.path)"
+          :to="project.path"
           :date="project.date"
           :badge="project.wip ? { label: $t('wip'), variant: 'subtle' } : undefined"
           :ui="{ image: 'object-center' }"

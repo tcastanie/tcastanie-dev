@@ -1,19 +1,13 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
-import { en, fr } from '@nuxt/ui/locale'
 
 const { error } = defineProps<{
   error: NuxtError
 }>()
 
-const locales = { fr, en }
-const { locale } = useI18n()
-const head = useLocaleHead()
 const localePath = useLocalePath()
-useHead({
-  ...head.value,
-  script: useScripts(),
-})
+useHead(useLocaleHead())
+useHead({ script: useScripts() })
 
 onMounted(() => {
   const { status, statusText, data } = error
@@ -23,14 +17,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <UApp :locale="locales[locale]">
+  <UApp>
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator color="var(--ui-primary)" />
 
     <UContainer class="min-h-[calc(100vh-var(--ui-header-height))] flex flex-col items-center justify-center text-center gap-y-16">
       <UError
         :error="error"
-        :redirect="localePath('/')"
+        :redirect="localePath('index')"
         :ui="{ root: 'min-h-auto' }"
       />
       <div class="grid items-center justify-center">
