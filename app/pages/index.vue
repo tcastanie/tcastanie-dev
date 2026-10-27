@@ -1,11 +1,33 @@
 <script setup lang="ts">
 import type { ButtonProps } from '@nuxt/ui'
+import { joinURL } from 'ufo'
 
 const { t } = useI18n()
 const { partyMode } = usePartyMode()
 
-useHead({ titleTemplate: '%siteName' })
+useSeoMeta({ title: t('seo_home_title'), description: t('seo_home_desc') })
+useHead({ titleTemplate: '%s' })
 defaultOgImage('Thibaut Castanié')
+
+const siteConfig = useSiteConfig()
+useSchemaOrg([
+  defineService({
+    name: t('seo_service_name'),
+    serviceType: t('seo_service_type'),
+    description: t('seo_service_desc'),
+    category: [1, 2, 3, 4].map(i => t(`seo_service_category${i}`)),
+    provider: { '@id': joinURL(siteConfig.url, '/#identity') },
+    areaServed: [
+      { '@type': 'City', 'name': 'Montpellier' },
+      { '@type': 'Country', 'name': 'France', 'identifier': 'FR' },
+    ],
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      'serviceUrl': siteConfig.url,
+      'availableLanguage': ['fr', 'en'],
+    },
+  }),
+])
 
 const features = shallowRef([{
   description: t('home1'),
@@ -54,6 +76,7 @@ const links = shallowRef<ButtonProps[]>([{
                 quality: 95,
                 width: 64,
                 height: 64,
+                loading: 'eager',
               }"
               size="3xl"
               :ui="{ root: 'gap-4', avatar: 'size-16' }"

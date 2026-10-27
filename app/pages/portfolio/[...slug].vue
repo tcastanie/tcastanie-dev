@@ -16,6 +16,20 @@ if (!page.value) {
 if (page.value?.seo) {
   useSeoMeta(page.value.seo)
 }
+if (page.value?.robots !== undefined) {
+  useRobotsRule(page.value.robots)
+}
+
+useSchemaOrg([
+  defineArticle({
+    headline: page.value.title,
+    description: page.value.description,
+    image: page.value.image,
+    datePublished: page.value.date,
+    dateModified: page.value.sitemap?.lastmod,
+    inLanguage: locale.value,
+  }),
+])
 
 defineOgImage('Carte', {
   colorMode: 'dark',

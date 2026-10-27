@@ -1,10 +1,20 @@
 <script lang="ts" setup>
+import { joinURL } from 'ufo'
+
 const { locale, t } = useI18n()
 const { partyMode } = usePartyMode()
 
-useSeoMeta({ title: 'CV' })
-useHead({ titleTemplate: `%s ${t('of')} %siteName` })
-defaultOgImage()
+useSeoMeta({ title: t('seo_cv_title'), description: t('seo_cv_desc') })
+useHead({ titleTemplate: '%s' })
+defaultOgImage(`CV ${t('of')} Thibaut Castanié`)
+
+const siteConfig = useSiteConfig()
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'ProfilePage',
+    'mainEntity': { '@id': joinURL(siteConfig.url, '/#identity') },
+  }),
+])
 
 const { data: cv } = await useAsyncData(`${locale.value}_cv`, () => {
   return queryCollection(`${locale.value}_cv`).first()
@@ -73,6 +83,7 @@ const skills = shallowRef([
                 src: '/avatar.jpg',
                 alt: 'Thibaut Castanié',
                 quality: 95,
+                loading: 'eager',
               }"
               :ui="{ name: 'font-hubot font-semibold' }"
               class="[view-transition-name:uuser]"
@@ -107,7 +118,7 @@ const skills = shallowRef([
         >
           <template #leading>
             <UIcon v-if="icon" :name="icon" class="size-5 mr-2" />
-            <span class="text-sm font-medium">{{ date_begin }} – {{ date_end }}</span>
+            <span class="text-sm font-medium">{{ date_begin }} - {{ date_end }}</span>
           </template>
           <UPageFeature
             v-for="action of actions"

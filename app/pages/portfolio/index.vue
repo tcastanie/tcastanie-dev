@@ -4,9 +4,9 @@ const route = useRoute()
 const router = useRouter()
 const { partyMode } = usePartyMode()
 
-useSeoMeta({ title: t('nav1') })
-useHead({ titleTemplate: `%s ${t('of')} %siteName` })
-defaultOgImage()
+useSeoMeta({ title: t('seo_portfolio_title'), description: t('seo_portfolio_desc') })
+useHead({ titleTemplate: '%s' })
+defaultOgImage(`Portfolio ${t('of')} Thibaut Castanié`)
 
 const { data: projects } = await useAsyncData(`${locale.value}_projects`, () => {
   return queryCollection(`${locale.value}_projects`)
@@ -22,12 +22,7 @@ const tabsItems = shallowRef([
 const isTab = (value: unknown): value is string => tabsItems.value.some(tab => tab.value === value)
 const activeTab = shallowRef(isTab(route.query.tab) ? route.query.tab : 'pro')
 
-const filteredProjects = computed(() => {
-  if (activeTab.value === 'perso') {
-    return projects.value?.filter(p => p.type === 'perso')
-  }
-  return projects.value?.filter(p => p.type === 'pro')
-})
+const projectsOfType = (type?: string | number) => projects.value?.filter(p => p.type === type)
 
 onMounted(() => {
   const hash = route.hash.slice(1)
@@ -61,19 +56,22 @@ watch(activeTab, tab => router.replace({ query: { ...route.query, tab }, hash: '
         :unmount-on-hide="false"
         variant="link"
         size="lg"
-        class="mb-8"
-      />
-      <UBlogPosts>
-        <UBlogPost
-          v-for="project in filteredProjects"
-          :key="project.id"
-          v-bind="project"
-          :to="project.path"
-          :date="project.date"
-          :badge="project.wip ? { label: $t('wip'), variant: 'subtle' } : undefined"
-          :ui="{ image: 'object-center' }"
-        />
-      </UBlogPosts>
+        :ui="{ list: 'mb-8' }"
+      >
+        <template #content="{ item }">
+          <UBlogPosts>
+            <UBlogPost
+              v-for="project in projectsOfType(item.value)"
+              :key="project.id"
+              v-bind="project"
+              :to="project.path"
+              :date="project.date"
+              :badge="project.wip ? { label: $t('wip'), variant: 'subtle' } : undefined"
+              :ui="{ image: 'object-center' }"
+            />
+          </UBlogPosts>
+        </template>
+      </UTabs>
     </UPageBody>
   </UPage>
 </template>

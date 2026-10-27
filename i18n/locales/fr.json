@@ -10,7 +10,7 @@
   "contact_me": "Contactez-moi",
   "home1": "Je crée des sites web complets sur mesure, pour tous types de métiers et de contraintes.",
   "home2": "Du site vitrine optimisé SEO, à une app complexe automatisée, en passant par un dashboard personnalisé, je vous conseille et vous accompagne à chaque étape.",
-  "home3": "Après 8 ans de développement web, mon expertise se situe côté front-end (notamment Vue.js & Nuxt).",
+  "home3": "Après 9 ans de développement web, mon expertise se situe côté front-end (notamment Vue.js & Nuxt).",
   "home4": "TJM de référence : 500€",
   "home5": "Discutons de votre projet !",
   "email": "Courriel",
@@ -21,5 +21,18 @@
   "in_french": "Pdf en français",
   "in_english": "Pdf en anglais",
   "wip": "Dev en cours",
-  "of": "de"
+  "of": "de",
+  "seo_home_title": "Thibaut Castanié - Développeur web freelance Vue.js & Nuxt",
+  "seo_home_desc": "Développeur web freelance, 9 ans sur Vue.js, Nuxt et Directus. Je conçois des sites vitrines bien référencés et des applications métier complètes sur mesure.",
+  "seo_cv_title": "CV de Thibaut Castanié - Développeur front-end Vue.js & Nuxt",
+  "seo_cv_desc": "Parcours et compétences de Thibaut Castanié, développeur front-end freelance Vue.js et Nuxt. Le CV se télécharge en PDF en français ou en anglais.",
+  "seo_portfolio_title": "Portfolio de Thibaut Castanié - Sites et apps web sur mesure",
+  "seo_portfolio_desc": "Applications métier, sites vitrines et projets personnels développés par Thibaut Castanié avec Vue.js, Nuxt et Directus.",
+  "seo_service_name": "Développement web freelance",
+  "seo_service_type": "Développement web front-end",
+  "seo_service_desc": "Création de sites web et d'applications sur mesure avec Vue.js, Nuxt et Directus, du conseil à la mise en ligne.",
+  "seo_service_category1": "Site web sur mesure",
+  "seo_service_category2": "Application web sur mesure",
+  "seo_service_category3": "Back-office sur mesure",
+  "seo_service_category4": "Migration et optimisation Vue.js / Nuxt"
 }

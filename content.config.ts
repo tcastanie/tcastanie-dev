@@ -1,9 +1,11 @@
 import { defineCollection, defineContentConfig } from '@nuxt/content'
+import { defineRobotsSchema } from '@nuxtjs/robots/content'
 import { defineSitemapSchema } from '@nuxtjs/sitemap/content'
 import { z } from 'zod'
 
 const projectSchema = z.object({
   sitemap: defineSitemapSchema(),
+  robots: defineRobotsSchema(),
   date: z.string(),
   type: z.enum(['pro', 'perso']),
   image: z.string().optional(),

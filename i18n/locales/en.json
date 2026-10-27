@@ -10,7 +10,7 @@
   "contact_me": "Contact Me",
   "home1": "I create complete and customised websites for all types of businesses and requirements.",
   "home2": "From SEO-optimised showcase websites to a complex automated app or customised dashboard, I advise and support you every step of the way.",
-  "home3": "After 8 years in web development, my expertise lies in front-end (especially Vue.js & Nuxt).",
+  "home3": "After 9 years in web development, my expertise lies in front-end (especially Vue.js & Nuxt).",
   "home4": "Reference Daily Rate: €500",
   "home5": "Let's talk about your project!",
   "email": "Email",
@@ -21,5 +21,18 @@
   "in_french": "Pdf in French",
   "in_english": "Pdf in English",
   "wip": "Work in progress",
-  "of": "of"
+  "of": "of",
+  "seo_home_title": "Thibaut Castanié - Freelance Vue.js & Nuxt Developer",
+  "seo_home_desc": "Freelance web developer with 9 years on Vue.js, Nuxt and Directus. I build SEO-friendly showcase websites and complete customized business web apps.",
+  "seo_cv_title": "Thibaut Castanié's CV - Vue.js & Nuxt Front-end Developer",
+  "seo_cv_desc": "Career and skills of Thibaut Castanié, freelance Vue.js and Nuxt front-end developer. The CV can be downloaded as a PDF in French or English.",
+  "seo_portfolio_title": "Thibaut Castanié's Portfolio - Custom Websites & Web Apps",
+  "seo_portfolio_desc": "Business web apps, showcase websites and side projects built by Thibaut Castanié with Vue.js, Nuxt and Directus.",
+  "seo_service_name": "Freelance web development",
+  "seo_service_type": "Front-end web development",
+  "seo_service_desc": "Custom websites and web applications built with Vue.js, Nuxt and Directus, from advice to launch.",
+  "seo_service_category1": "Custom website",
+  "seo_service_category2": "Custom web application",
+  "seo_service_category3": "Custom back-office",
+  "seo_service_category4": "Vue.js / Nuxt migration and optimisation"
 }

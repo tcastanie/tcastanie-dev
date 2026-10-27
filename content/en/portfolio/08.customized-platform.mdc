@@ -1,9 +1,11 @@
 ---
 type: pro
 wip: true
+# todo: allow index once it's done
+robots: noindex, follow
 image: /portfolio/default-project.jpg
 sitemap:
-  lastmod: 2025-06-04
+  lastmod: 2026-10-27
 ---
 
 # Customized platform
