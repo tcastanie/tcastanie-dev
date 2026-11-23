@@ -43,6 +43,7 @@ const skills = shallowRef([
   { icon: 'i-simple-icons-nuxt', label: 'Nuxt' },
   { icon: 'i-unjs-nitro', label: 'Nitro', class: 'grayscale' },
   { icon: 'i-simple-icons-directus', label: 'Directus' },
+  { icon: 'i-simple-icons-claudecode', label: 'Claude Code' },
   { icon: 'i-simple-icons-tailwindcss', label: 'TailwindCSS' },
   { icon: 'i-simple-icons-unocss', label: 'UnoCSS' },
   { icon: 'i-simple-icons-css', label: 'CSS' },
